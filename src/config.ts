@@ -16,7 +16,7 @@ export const SITE = {
     text: "编辑此文章",
     url: "https://github.com/cloudzun/cloudzun.github.io/edit/master/",
   },
-  dynamicOgImage: true,
+  dynamicOgImage: false, // 临时禁用，避免 Google Fonts 502 错误
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"
   timezone: "UTC",
