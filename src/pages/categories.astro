@@ -180,39 +180,42 @@ const postsByCategory = Object.entries(categories).map(([name, { id, keywords }]
   <Footer />
 </Layout>
 
-<script>
-  function showCategory(id: string) {
+<script is:inline>
+  // 使函数在全局作用域可用
+  window.showCategory = function(id) {
+    console.log('Showing category:', id);
+    
     // 隐藏所有分类
     document.querySelectorAll('.category-section').forEach(el => {
       el.classList.add('hidden');
     });
     
     // 显示选中的分类
-    const target = document.getElementById(`category-${id}`);
+    const target = document.getElementById('category-' + id);
     if (target) {
       target.classList.remove('hidden');
       // 平滑滚动到分类位置
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }
+  };
 
-  function hideCategory(id: string) {
-    const target = document.getElementById(`category-${id}`);
+  window.hideCategory = function(id) {
+    const target = document.getElementById('category-' + id);
     if (target) {
       target.classList.add('hidden');
       // 滚动回顶部
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }
+  };
 
   // 页面加载时检查 URL hash
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', function() {
     const hash = window.location.hash.slice(1);
     if (hash) {
       // 检查是否是分类 ID
       const categoryIds = ['ai-coding', 'vibe-coding', 'automation', 'thinking', 'practice'];
       if (categoryIds.includes(hash)) {
-        showCategory(hash);
+        window.showCategory(hash);
       }
     }
   });
