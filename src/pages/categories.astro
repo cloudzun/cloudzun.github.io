@@ -1,0 +1,127 @@
+---
+import { getCollection } from "astro:content";
+import Main from "@/layouts/Main.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+
+const posts = await getCollection("blog");
+
+// 定义分类
+const categories = {
+  "AI 协同编程": {
+    desc: "OpenCode、Claude Code、多 Agent 工作流、SDD 规格驱动开发",
+    keywords: ["openclaw", "opencode", "claude code", "agent", "sdd", "协同编程", "ai 编程"],
+    color: "from-blue-500/10 to-blue-600/10 border-blue-500/30"
+  },
+  "Vibe Coding": {
+    desc: "放手让 AI 写代码的边界与质量保障机制",
+    keywords: ["vibe coding", "vibe", "7-gate", "质量门控", "迭代"],
+    color: "from-purple-500/10 to-purple-600/10 border-purple-500/30"
+  },
+  "办公自动化": {
+    desc: "Microsoft 365 Copilot、Excel/Word/PPT 自动化、Vibe Working",
+    keywords: ["办公自动化", "microsoft", "excel", "word", "ppt", "vibe working", "copilot"],
+    color: "from-green-500/10 to-green-600/10 border-green-500/30"
+  },
+  "技术思考": {
+    desc: "架构决策、技术复盘、AI 时代的开发流程重构",
+    keywords: ["思考", "复盘", "反思", "架构", "流程", "copilot", "opencode"],
+    color: "from-orange-500/10 to-orange-600/10 border-orange-500/30"
+  },
+  "工程实践": {
+    desc: "架构决策记录、技术债管理、Docker 部署、项目实战",
+    keywords: ["工程", "部署", "docker", "架构", "实战", "项目"],
+    color: "from-cyan-500/10 to-cyan-600/10 border-cyan-500/30"
+  }
+};
+
+// 为每篇文章匹配分类
+const postsByCategory = Object.entries(categories).map(([name, { desc, keywords, color }]) => {
+  const categoryPosts = posts.filter(post => {
+    const title = post.data.title.toLowerCase();
+    const tags = post.data.tags?.map(t => t.toLowerCase()) || [];
+    const description = post.data.description?.toLowerCase() || "";
+    
+    return keywords.some(keyword => 
+      title.includes(keyword.toLowerCase()) || 
+      tags.some(tag => tag.includes(keyword.toLowerCase())) ||
+      description.includes(keyword.toLowerCase())
+    );
+  });
+  
+  return {
+    name,
+    desc,
+    color,
+    count: categoryPosts.length,
+    posts: categoryPosts.sort((a, b) => 
+      new Date(b.data.pubDatetime).getTime() - new Date(a.data.pubDatetime).getTime()
+    )
+  };
+}).filter(cat => cat.count > 0);
+---
+
+<Layout title={`Categories | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="文章分类" pageDesc="按主题浏览博客文章">
+    <!-- 分类卡片 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      {postsByCategory.map(({ name, desc, color, count, posts: categoryPosts }) => (
+        <div class={`p-6 rounded-2xl border-2 bg-gradient-to-br ${color} hover:shadow-lg transition-shadow`}>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold">{name}</h3>
+            <span class="px-4 py-2 rounded-full bg-accent text-white font-bold text-sm">
+              {count} 篇
+            </span>
+          </div>
+          <p class="text-foreground/70 mb-6">{desc}</p>
+          
+          <!-- 最新文章列表 -->
+          <div class="space-y-3">
+            {categoryPosts.slice(0, 5).map(post => (
+              <a
+                href={`/posts/${post.id}/`}
+                class="block p-3 rounded-lg bg-white/50 hover:bg-accent/10 transition-colors group"
+              >
+                <div class="font-medium group-hover:text-accent transition-colors line-clamp-2">
+                  {post.data.title}
+                </div>
+                <div class="text-sm text-foreground/60 mt-1">
+                  {new Date(post.data.pubDatetime).toLocaleDateString('zh-CN', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  })}
+                </div>
+              </a>
+            ))}
+            {categoryPosts.length > 5 && (
+              <a
+                href={`#${name.toLowerCase().replace(/\s+/g, '-')}-more`}
+                class="block text-center py-2 text-accent hover:underline font-medium"
+              >
+                查看更多 ({categoryPosts.length - 5} 篇) →
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- 统计信息 -->
+    <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-muted/50 to-muted/30 border border-foreground/10">
+      <h3 class="text-xl font-bold mb-6 text-center">📊 分类统计</h3>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+        {postsByCategory.map(({ name, count }) => (
+          <div class="text-center">
+            <div class="text-3xl font-bold text-accent mb-2">{count}</div>
+            <div class="text-sm text-foreground/70">{name}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Main>
+  <Footer />
+</Layout>
