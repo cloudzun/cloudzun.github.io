@@ -17,15 +17,20 @@
 
 <script>
   // 在客户端生成目录
-  document.addEventListener('DOMContentLoaded', () => {
+  function generateTOC() {
     const article = document.getElementById('article');
     const tocContainer = document.getElementById('toc-container');
     const tocList = document.getElementById('toc-list');
     
-    if (!article || !tocContainer || !tocList) return;
+    if (!article || !tocContainer || !tocList) {
+      console.log('TOC: Elements not found');
+      return;
+    }
     
     // 获取所有 h2, h3, h4 标题
     const headings = article.querySelectorAll('h2, h3, h4');
+    
+    console.log('TOC: Found', headings.length, 'headings');
     
     if (headings.length === 0) {
       tocContainer.style.display = 'none';
@@ -64,5 +69,12 @@
     
     // 显示目录容器
     tocContainer.style.display = 'block';
-  });
+    console.log('TOC: Generated successfully');
+  }
+
+  // 页面加载时生成目录
+  document.addEventListener('DOMContentLoaded', generateTOC);
+  
+  // Astro 页面切换后重新生成
+  document.addEventListener('astro:page-load', generateTOC);
 </script>
