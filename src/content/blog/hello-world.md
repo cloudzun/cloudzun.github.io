@@ -1,8 +1,8 @@
 ---
 title: 'Hello, World! 我的新网站上线了'
 description: '经过重新设计，我的个人网站现在使用 Astro 构建了！'
-	pubDate: 'Mar 21 2026'
-heroImage: '/blog-placeholder-1.jpg'
+pubDate: 'Mar 21 2026'
+heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 
 ## 👋 你好！
