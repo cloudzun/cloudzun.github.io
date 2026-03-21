@@ -1,0 +1,576 @@
+---
+title: '真钱买假模型：Shadow API 中的欺骗行为系统性审计'
+description: '解读 CISPA 最新论文 arXiv:2603.01919，揭示 Shadow API 市场中的模型替换、性能降级和安全隐患'
+pubDatetime: 2026-03-06T00:00:00Z
+tags: ['ai-security', 'llm', 'api', 'research-integrity', 'shadow-api']
+---
+
+引言
+当你花钱调用 GPT-5 或 Gemini-2.5 的 API 时，你真的得到了官方模型吗？
+2026 年 3 月，CISPA 亥姆霍兹信息安全中心的研究人员发表了一篇重磅论文《Real Money, Fake Models: Deceptive Model Claims in Shadow APIs》，首次对 Shadow API 市场进行了系统性审计。结果令人震惊：
+45.83% 的端点无法通过模型身份验证，性能差异最高达 47.21%，安全隐患不可预测。
+这篇论文不仅揭露了一个庞大的灰色产业链，更对依赖这些服务的 187 篇学术论文（包括 ACL、CVPR、ICLR 等顶会）的可重复性提出了严峻质疑。
+什么是 Shadow API？
+定义
+Shadow API
+指的是第三方 LLM API 服务，具有以下特征：
+间接访问
+：不直接连接官方基础设施
+绕过区域限制
+：在官方 API 受限地区（如中国、俄罗斯、伊朗）提供服务
+兴起原因
+Shadow API 市场的繁荣源于三大痛点：
+痛点
+官方 API 限制
+Shadow API 承诺
+地理限制
+OpenAI API 在中国、俄罗斯、伊朗等地区无法直接访问
+无区域限制
+支付门槛
+需要国际信用卡、企业账户
+支持本地支付（支付宝、微信等）
+价格压力
+GPT-5 定价：$1.25/$10.00 per 1M tokens
+官方价格的 0.5-1.5 倍
+市场规模
+截至 2025 年 12 月 6 日：
+17 个主流 Shadow API
+被识别
+187 篇学术论文
+使用这些服务
+5,966 次引用
+（最流行的单个服务）
+58,639 GitHub Stars
+（相关项目）
+研究方法
+研究问题
+论文围绕三个核心问题展开：
+RQ1
+: 目前存在哪些 Shadow API？它们的使用程度如何？
+RQ2
+: Shadow API 的性能是否与官方 API 一致？
+RQ3
+: 模型验证方法能提供什么证据？
+研究对象
+研究人员选择了 3 个最具代表性的 Shadow API（匿名化为 A、E、H），覆盖 3 大模型家族：
+模型家族
+具体模型
+F-A (OpenAI)
+GPT-4o-mini, GPT-5, GPT-5-mini
+F-B (Google)
+Gemini-2.0-flash, Gemini-2.5-flash, Gemini-2.5-pro
+F-C (DeepSeek)
+DeepSeek-Chat, DeepSeek-Reasoner
+评估维度
+┌─────────────────────────────────────────────────────────┐
+│              多维度审计框架                              │
+├─────────────────────────────────────────────────────────┤
+│  1. 效用评估 (Utility)                                   │
+│     - 科学领域：AIME 2025 (数学), GPQA (博士级科学问题)  │
+│     - 敏感领域：MedQA (医学), LegalBench (法律)          │
+├─────────────────────────────────────────────────────────┤
+│  2. 安全评估 (Safety)                                    │
+│     - JailbreakBench (520 个有害请求)                    │
+│     - AdvBench (100 个对抗样本)                          │
+│     - 4 种越狱攻击：GCG, Base64, Combination, FlipAttack │
+├─────────────────────────────────────────────────────────┤
+│  3. 模型验证 (Verification)                              │
+│     - LLMmap 指纹识别                                    │
+│     - MET (Model Equality Testing) 统计检验              │
+│     - 元数据分析（延迟、Token 计数）                      │
+└─────────────────────────────────────────────────────────┘
+核心发现
+发现 1：性能严重降级
+科学领域表现
+在
+AIME 2025
+（竞赛级数学）和
+GPQA
+（博士级科学问题）基准测试中：
+Shadow API E
+表现最佳，平均差异仅
+2.64%
+Shadow API A
+和
+H
+表现较差，平均差异分别为
+9.81%
+和
+6.46%
+在推理密集型任务上，降级尤为严重：
+Gemini-2.5-pro 在 AIME 2025 上下降
+40.00%
+DeepSeek-Reasoner 在 AIME 2025 上下降
+38.89%
+敏感领域崩溃
+在
+医学
+和
+法律
+领域，情况更加严峻：
+模型
+官方 API 准确率
+Shadow API 平均准确率
+性能损失
+Gemini-2.5-flash (MedQA)
+83.82%
+36.95%
+46.87%
+Gemini-2.5-flash (LegalBench)
+~85%
+~43%
+40-42%
+DeepSeek-Chat (LegalBench)
+~80%
+~70%
+9.98%
+(API A)
+关键失败案例
+：
+医学领域：
+Shadow API 混淆 HIV 诊断协议，给出错误的检测流程建议
+
+法律领域：
+Shadow API 误解陪审团诚实先例，提供错误的法律推理
+发现 2：安全行为不可预测
+在
+JailbreakBench
+和
+AdvBench
+安全基准测试中，Shadow API 表现出不可预测的偏差：
+GPT-5-mini
+Base64 攻击
+：Shadow API A 的有害性得分
+0.04
+，是官方 API
+0.02
+的
+2 倍
+FlipAttack
+：Shadow API A 和 E 显著低估风险
+Gemini-2.5-flash
+FlipAttack
+：官方 API 有害性得分
+0.90
+，所有 Shadow API 约
+0.67-0.68
+风险被
+低估约 0.23
+DeepSeek-Chat
+差异相对较小，但仍存在
+Combination 攻击
+：Shadow API A 和 H 生成更多有害内容
+FlipAttack
+：生成更少有害内容
+结论
+：依赖 Shadow API 进行安全评估是不可靠的，因为它们可能无法复现官方端点的安全行为。
+发现 3：模型身份欺诈
+研究人员使用
+LLMmap
+主动指纹识别框架和
+MET
+（Model Equality Testing）统计检验来验证模型身份。
+LLMmap 指纹识别结果
+在评估的
+24 个端点
+中：
+验证结果
+数量
+占比
+通过指纹验证
+10
+41.67%
+指纹验证失败
+11
+45.83%
+余弦距离显著偏离
+3
+12.50%
+典型欺诈模式
+模式 1：高价卖低价模型
+Shadow API A 广告：Gemini-2.0-flash
+实际指纹识别：Gemini-2.5-flash
+价格比率：7.1-7.25 倍（信息溢价）
+模式 2：高端模型用开源替代
+Shadow API A 广告：GPT-5（官方定价）
+实际指纹识别：GLM-4-9B-Chat
+价格比率：1.00 倍（折扣替换）
+模式 3：推理模型用非推理替代
+Shadow API A/H 广告：DeepSeek-Reasoner（思考模式）
+实际指纹识别：DeepSeek-Chat（非思考模式）
+模式 4：旧模型用新模型替代
+Shadow API 广告：Gemini-2.0-flash
+实际服务：Gemini-2.5-flash
+（看似升级，实则未经用户同意）
+MET 统计检验
+MET 通过双样本假设检验判断 Shadow API 输出是否与官方模型来自同一分布：
+一致性
+：MET 和 LLMmap 在
+74.1%
+的案例中达成一致（40/54）
+Cohen’s κ = 0.512
+，表明中高度一致性
+典型案例
+：
+GPT-4o-mini 和 GPT-5 在 Shadow API A 中被标记为统计显著不同
+DeepSeek-Chat 在几乎所有提供商 - 基准组合中被拒绝
+Gemini-2.5-pro
+是例外，在所有 3 个提供商中均通过验证
+发现 4：经济欺骗机制
+论文揭示了三种经济欺骗模式：
+机制
+描述
+案例
+信息溢价
+收取高价，静默替换为更便宜的模型
+API A：Gemini-2.0→2.5-flash，7.25 倍溢价
+折扣替换
+按官方定价收费，但用低成本开源后端替换
+API A：GPT-5→GLM-4-9B，1.00 倍定价
+转售加价
+适度加价，同时静默降级后端
+API H：GPT-5，1.09 倍加价
+用户损失量化
+以
+GPQA 基准测试
+（GPT-5，n=1,273 次查询）为例：
+指标
+官方 API
+Shadow API A
+收费
+$14.84
+$14.84（相同）
+实际 Token 量
+100%
+38%
+实际价值
+$14.84
+$5.70-$7.77
+提供商利润
+-
+$7.07-$9.14
+每美元错误数
+1x
+22-4x
+用户按官方价格付费，却只收到
+38%
+的输出量，每 1,273 次查询被窃取
+$7-9
+。
+研究社区成本
+保守估计，187 篇使用 Shadow API 的论文中，
+30%
+需要重新执行（56 篇）：
+直接成本估算：
+- API 重运行：$50-$500/篇
+- 研究人员时间：40 小时 × $50/小时 = $2,000/篇
+- 总成本：$115,000 - $140,000
+
+这还不包括：
+- 5,966 篇引用这些论文的下游工作
+- 静默模型替换可能污染的依赖实验结果
+基础设施分析
+Shadow API 技术栈
+在 17 个识别的 Shadow API 中：
+11 个
+基于开源 AI 模型聚合和分发系统
+主要使用
+OneAPI
+和
+NewAPI
+（其衍生产品）
+OneAPI 功能
+：
+统一接口（OpenAI 兼容格式）
+API 密钥管理
+二次分发
+请求路由
+自动重试
+这些功能本意是方便自托管部署，但也被滥用于转售和欺诈。
+合规与透明度
+合规指标
+符合的提供商
+占比
+ICP 备案
+1 (API H)
+5.9%
+企业注册
+1 (API N)
+5.9%
+法律文档 (ToS/隐私政策)
+2
+11.8%
+透明身份
+2
+11.8%
+可验证来源
+2
+11.8%
+关键发现
+：
+15/17 (88.2%)
+由个人运营，无透明身份信息
+2 个
+服务已停止运营
+所有提供商频繁更换上游模型来源，无透明通知
+建议与对策
+研究者预注册清单
+论文建议研究者在依赖 LLM API 前完成以下检查：
+□ 记录完整端点 URL、声称的模型版本、访问日期、定价层级
+□ 通过审计协议的四个阶段验证端点
+□ 不报告失败端点的结果作为声称模型的代表
+□ 报告每次运行的准确率（至少 3 次独立运行）
+□ 报告 LLMmap 指纹余弦距离和 MET p 值
+□ 将上述信息作为脚注或实验设置部分公开
+审计师验证协议
+四阶段验证流程（任一阶段失败应立即避免使用该端点）：
+阶段 1: LLMmap 指纹识别
+- 至少 24 个探针查询
+- 标记条件：余弦距离 > 1.2× 官方基线 或 模型不匹配
+
+阶段 2: MET 统计检验
+- 至少 500 个样本，α=0.05
+- 标记条件：拒绝分布相等假设
+
+阶段 3: 基准测试稳定性
+- 至少 3 次独立会话
+- 标记条件：准确率标准差 > 5 个百分点 或 延迟变异系数 > 0.15
+
+阶段 4: 合规验证
+- 验证 ICP 注册和法律实体披露
+- 标记条件：无注册个人运营，无可验证来源
+社区级行动
+会议组织者：
+- 更新审稿指南，将未披露/未验证的第三方 API 端点标记为可重复性风险
+- 类比未验证数据集来源的处理方式
+
+官方模型提供商：
+- 放宽地理访问限制
+- 提供学术定价层级
+- 提供轻量级官方验证端点（研究者可独立查询模型身份）
+局限性与未来工作
+时间范围与市场波动
+研究窗口：2025 年 9 月至 12 月（固定快照）
+Shadow API 市场极度不透明，提供商频繁更换上游来源
+核心风险信号（非透明模型替换、能力降级、安全行为偏差）反映结构性问题，而非单一测量时期的产物
+检测覆盖范围
+缺乏 Shadow API 后端基础设施的地面真实信息
+依赖性能指标、元信息和审计框架（LLMmap、MET）
+无法区分某些细粒度实现细节
+提供商和模型家族覆盖
+17 个提供商可能不代表完整市场
+仅覆盖 3 个代表性模型家族（GPT、Gemini、DeepSeek）
+审计流程可推广到更多模型家族
+与我们的工作关联
+Deep Research 工作流的启示
+这篇论文对我们的
+Deep Research
+和
+Vibecoding 工具对比调研
+项目有重要启示：
+1. API 来源验证的必要性
+我们在调研 vibecoding 工具时，大量依赖官方文档、GitHub 仓库和第三方评测。论文提醒我们：
+交叉验证
+：关键信息应从多个独立来源验证
+元数据记录
+：在
+context/history/fetches/
+中记录每个信息来源的可信度
+置信度标注
+：对来自非官方渠道的信息标注较低的置信度
+2. 可重复性保障
+论文揭示的模型替换问题直接影响研究可重复性。我们的改进措施：
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+# 在 metadata.json 中增加 API 验证记录
+{
+"api_verification":
+{
+"endpoint":
+"https://api.example.com/v1/chat/completions"
+,
+"claimed_model":
+"gpt-5"
+,
+"fingerprint_cosine_distance":
+14.57
+,
+"met_p_value":
+0.82
+,
+"verification_date":
+"2026-03-06"
+,
+"passed":
+true
+}
+}
+3. 审计协议集成
+我们可以在
+context_engineering.py
+中增加 API 验证模块：
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+class
+APIVerifier
+:
+def
+verify_endpoint
+(
+self
+,
+endpoint_url
+,
+claimed_model
+):
+# 阶段 1: LLMmap 指纹识别
+cosine_distance
+=
+self
+.
+llmmap_probe
+(
+endpoint_url
+)
+if
+cosine_distance
+>
+1.2
+*
+self
+.
+official_baseline
+:
+return
+False
+,
+"指纹距离异常"
+# 阶段 2: MET 统计检验
+met_result
+=
+self
+.
+met_test
+(
+endpoint_url
+,
+claimed_model
+)
+if
+met_result
+.
+reject_null
+:
+return
+False
+,
+"分布显著不同"
+# 阶段 3: 稳定性测试
+std_dev
+=
+self
+.
+benchmark_stability
+(
+endpoint_url
+)
+if
+std_dev
+>
+5.0
+:
+return
+False
+,
+"性能不稳定"
+return
+True
+,
+"验证通过"
+总结
+核心贡献
+首次系统性审计
+：识别 17 个主流 Shadow API，覆盖 187 篇学术论文
+多维度评估
+：效用、安全、模型验证三个维度全面审计
+欺骗证据
+：45.83% 端点指纹验证失败，性能差异最高 47.21%
+经济分析
+：量化用户损失和研究社区成本（$115K-$140K）
+实践建议
+：审计师协议 + 研究者清单 + 社区级行动
+关键警示
+Shadow API 不应在研究工作流中使用。根本解决方案是直接使用官方 API。
+在无法直接访问官方 API 的情况下，必须完成四阶段验证协议，并公开报告验证结果。
+更广泛的影响
+这篇论文不仅揭露了 Shadow API 市场的问题，更提出了 AI 研究基础设施的深层挑战：
+供应链安全
+：AI 研究依赖的 API 服务缺乏透明度和可追溯性
+可重复性危机
+：187 篇顶会论文的结果可能因模型替换而不可复现
+学术诚信
+：研究者有责任验证和报告所使用的 API 来源
+参考资料
+论文信息
+标题
+: Real Money, Fake Models: Deceptive Model Claims in Shadow APIs
+作者
+: Yage Zhang, Yukun Jiang, Zeyuan Chen, Michael Backes, Xinyue Shen, Yang Zhang
+机构
+: CISPA Helmholtz Center for Information Security
+arXiv
+:
+2603.01919
+DOI
+:
+10.48550/arXiv.2603.01919
+提交日期
+: 2026 年 3 月 2 日 (v1), 3 月 5 日 (v2)
+领域
+: 密码学与安全 (cs.CR), 人工智能 (cs.AI), 软件工程 (cs.SE)
+相关工具
+LLMmap
+:
+https://github.com/LLMmap/LLMmap
+(主动指纹识别)
+MET
+:
+https://github.com/model-equality-testing/met
+(模型平等测试)
+OneAPI
+:
+https://github.com/songquanpeng/one-api
+(开源 API 聚合系统)
+NewAPI
+: OneAPI 的衍生产品
+论文解读完成时间
+: 2026-03-06
+解读作者
+: HuaQloud
+适用场景
+: AI 安全研究、LLM API 选型、学术可重复性保障
