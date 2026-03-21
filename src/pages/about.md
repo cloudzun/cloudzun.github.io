@@ -93,7 +93,19 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 - 技术团队 AI 能力建设
 - 自动化机会识别与实施
 
-📧 **联系邮箱**: [info@cloudzun.com](mailto:info@cloudzun.com)
+---
+
+## 📬 联系方式
+
+**欢迎交流技术问题、培训合作或 AI 应用探讨！**
+
+- **微信**: flagzun
+- **GitHub**: [@cloudzun](https://github.com/cloudzun)
+- **网站**: [www.cloudzun.com](https://www.cloudzun.com/)
+- **博客**: [blog.huaqloud.com](https://blog.huaqloud.com/)
+- **邮件**: [info@cloudzun.com](mailto:info@cloudzun.com)
+- **LinkedIn**: [linkedin.com/in/cloudzun](https://www.linkedin.com/in/cloudzun)
+- **Telegram**: [@cloudzun](https://t.me/cloudzun)
 
 ---
 
@@ -129,20 +141,6 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 - 📊 **市场分析**: M7 股票分析、加密货币监控、HN 每日精选
 
 [📚 浏览所有文章](/posts/)
-
----
-
-## 📬 联系方式
-
-**欢迎交流技术问题、培训合作或 AI 应用探讨！**
-
-- **微信**: flagzun
-- **GitHub**: [@cloudzun](https://github.com/cloudzun)
-- **网站**: [www.cloudzun.com](https://www.cloudzun.com/)
-- **博客**: [blog.huaqloud.com](https://blog.huaqloud.com/)
-- **邮件**: [info@cloudzun.com](mailto:info@cloudzun.com)
-- **LinkedIn**: [linkedin.com/in/cloudzun](https://www.linkedin.com/in/cloudzun)
-- **Telegram**: [@cloudzun](https://t.me/cloudzun)
 
 ---
 
