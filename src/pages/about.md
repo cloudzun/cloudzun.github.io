@@ -1,10 +1,8 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主"
 description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主"
 ---
-
-# 👋 你好，我是 CloudZun
 
 ## 🎯 身份标签
 
