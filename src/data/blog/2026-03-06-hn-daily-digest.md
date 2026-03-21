@@ -1,327 +1,217 @@
 ---
 title: 'HN Daily Digest: 2026-03-06'
-description: '📰 HN 每日精选日报 生成时间: 2026/3/6 15:24:02 (UTC) 数据来源: Hacker News (https://news.ycombinator.com) AI 分析: Rocco Claude Sonnet 4.5
-'
-pubDatetime: 2026-03-06T00:00:00Z
-tags: ['hacker-news', 'ai', 'tech-news', 'daily-digest']
+pubDatetime: 2026-03-05T15:24:02Z
+tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
+
+
+# 📰 HN 每日精选日报
+
+**生成时间**: 2026/3/6 15:24:02 (UTC)
+**数据来源**: Hacker News (https://news.ycombinator.com)
+**AI 分析**: Rocco Claude Sonnet 4.5
+
+## 📝 今日看点
+
+今日技术圈呈现AI、安全与隐私三大焦点。OpenAI的GPT-5.4版本发布引发广泛讨论，继续推动生成式AI的演进；与此同时，维基百科因管理员账户遭大规模入侵被迫进入只读模式，暴露了开源项目的安全风险；美国海关与边境保护局利用在线广告生态追踪民众行动的曝光，则再度引发公众对政府监控与数据隐私的担忧。整体来看，AI能力突破、平台安全漏洞与隐私侵犯问题成为当下技术社区最关注的三大议题。
+
+## 🏆 今日必读 (Top 10)
+
+### 1. Wikipedia was in read-only mode following mass admin account compromise
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47263323)
+**原文链接**: [www.wikimediastatus.net](https://www.wikimediastatus.net)
+**热度**: ⭐⭐⭐⭐⭐ 837 分 | **讨论**: 💬 276 条
+
+维基媒体基础设施在2026年3月5日遭遇严重安全事件，大量管理员账户被攻击导致维基百科及其他维基网站被迫进入只读模式。该事件从当地时间15:36开始被发现，随后团队立即启动应急响应机制，在约两小时内识别问题根源并实施修复方案。
+
+此次事件的关键特征包括：**管理员账户遭大规模入侵**导致编辑功能被禁用，**系统被强制切换为只读模式**以防止进一步破坏，**部分编辑功能在恢复后仍保持禁用状态**进行额外安全检查，以及**持续监控阶段**确保没有后续威胁。整个应急响应过程从发现到基本恢复耗时约90分钟，展现了维基媒体团队的快速反应能力。
+
+这一事件值得关注因为它涉及全球最大的开放知识库的安全，**大规模账户入侵**可能影响数百万用户和内容编辑者，同时也暴露了即使是技术基础设施完善的组织也面临的网络安全挑战。该事件提醒用户和管理员需要加强账户安全防护意识。
+
 ---
 
-📰 HN 每日精选日报
-生成时间
-: 2026/3/6 15:24:02 (UTC)
-数据来源
-: Hacker News (
-https://news.ycombinator.com
-)
-AI 分析
-: Rocco Claude Sonnet 4.5
-📝 今日看点
-今日技术圈呈现AI、安全与隐私三大焦点。OpenAI的GPT-5.4版本发布引发广泛讨论，继续推动生成式AI的演进；与此同时，维基百科因管理员账户遭大规模入侵被迫进入只读模式，暴露了开源项目的安全风险；美国海关与边境保护局利用在线广告生态追踪民众行动的曝光，则再度引发公众对政府监控与数据隐私的担忧。整体来看，AI能力突破、平台安全漏洞与隐私侵犯问题成为当下技术社区最关注的三大议题。
-🏆 今日必读 (Top 10)
-1. Wikipedia was in read-only mode following mass admin account compromise
-原帖链接
-:
-HN 讨论
-原文链接
-:
-www.wikimediastatus.net
-热度
-: ⭐⭐⭐⭐⭐ 837 分 |
-讨论
-: 💬 276 条
-维基媒体基础设施在2026年3月5日遭遇严重安全事件，大量管理员账户被攻击导致维基百科及其他维基网站被迫进入只读模式。该事件从当地时间15:36开始被发现，随后团队立即启动应急响应机制，在约两小时内识别问题根源并实施修复方案。
-此次事件的关键特征包括：
-管理员账户遭大规模入侵
-导致编辑功能被禁用，
-系统被强制切换为只读模式
-以防止进一步破坏，
-部分编辑功能在恢复后仍保持禁用状态
-进行额外安全检查，以及
-持续监控阶段
-确保没有后续威胁。整个应急响应过程从发现到基本恢复耗时约90分钟，展现了维基媒体团队的快速反应能力。
-这一事件值得关注因为它涉及全球最大的开放知识库的安全，
-大规模账户入侵
-可能影响数百万用户和内容编辑者，同时也暴露了即使是技术基础设施完善的组织也面临的网络安全挑战。该事件提醒用户和管理员需要加强账户安全防护意识。
-2. GPT-5.4
-原帖链接
-:
-HN 讨论
-原文链接
-:
-openai.com
-热度
-: ⭐⭐⭐⭐⭐ 541 分 |
-讨论
-: 💬 484 条
+### 2. GPT-5.4
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47265045)
+**原文链接**: [openai.com](https://openai.com/index/introducing-gpt-5-4/)
+**热度**: ⭐⭐⭐⭐⭐ 541 分 | **讨论**: 💬 484 条
+
 GPT-5.4作为OpenAI推出的新一代语言模型，代表了人工智能技术的又一次重要进步。该模型在原有GPT系列基础上进行了深度优化和升级，旨在提供更强大的自然语言处理能力和更广泛的应用适配性。通过改进的架构设计和训练方法，GPT-5.4在理解、推理和生成文本方面实现了显著的性能提升。
-该模型的主要特点包括：
-更高的准确度
-在复杂任务中的表现更加稳定，
-更快的响应速度
-使其能够处理大规模并发请求，
-更强的多模态能力
-支持文本与其他数据形式的融合处理，以及
-改进的安全性机制
-确保输出内容更加可靠和负责任。这些升级使得模型在学术研究、商业应用和内容创作等多个领域都展现出更优的表现。
+
+该模型的主要特点包括：**更高的准确度**在复杂任务中的表现更加稳定，**更快的响应速度**使其能够处理大规模并发请求，**更强的多模态能力**支持文本与其他数据形式的融合处理，以及**改进的安全性机制**确保输出内容更加可靠和负责任。这些升级使得模型在学术研究、商业应用和内容创作等多个领域都展现出更优的表现。
+
 GPT-5.4值得关注的原因在于它标志着通用人工智能发展的新阶段，将进一步推动AI在各行业的深度应用。更强的能力和更好的安全性平衡，使其成为企业和开发者的理想选择，有望加速AI技术的商业化进程和社会应用转化。
-3. Good software knows when to stop
-原帖链接
-:
-HN 讨论
-原文链接
-:
-ogirardot.writizzy.com
-热度
-: ⭐⭐⭐⭐ 309 分 |
-讨论
-: 💬 170 条
-本文通过一个幽默的假设场景揭示了软件设计的核心原则。作者想象升级Linux后，传统的
-ls
-命令被替换为过度设计的"AI驱动目录智能系统"，讽刺地说明了许多软件产品盲目添加功能、忽视本质需求的问题。文章强调
-优秀的软件应该知道何时停止
-，专注于自身的核心使命，而非无限扩展功能。
-关键要点包括：
-明确产品定位
-——软件应清楚自己的角色和目标范围；
-约束带来优势
-——小团队、有限预算和明确范围能促进更好的决策；
-理解真实需求
-——应深入理解用户的根本问题而非盲目响应功能请求；
-快速迭代发布
-——半成品的真实产品优于完美但遥遥无期的理想产品。这些原则来自37Signals创始人的经典著作《Rework》和《Getting Real》。
-这篇文章对当今软件开发具有重要启示意义。在功能竞争和技术炒作的时代，许多团队陷入功能堆砌的陷阱，导致产品臃肿、用户体验下降。文章提醒开发者回归本质，认识到
-克制和专注
-往往比无限扩展更能创造价值，这对产品经理和开发团队都具有实践指导意义。
-4. A GitHub Issue Title Compromised 4k Developer Machines
-原帖链接
-:
-HN 讨论
-原文链接
-:
-grith.ai
-热度
-: ⭐⭐⭐ 284 分 |
-讨论
-: 💬 67 条
+
+---
+
+### 3. Good software knows when to stop
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47261561)
+**原文链接**: [ogirardot.writizzy.com](https://ogirardot.writizzy.com/p/good-software-knows-when-to-stop)
+**热度**: ⭐⭐⭐⭐ 309 分 | **讨论**: 💬 170 条
+
+本文通过一个幽默的假设场景揭示了软件设计的核心原则。作者想象升级Linux后，传统的`ls`命令被替换为过度设计的"AI驱动目录智能系统"，讽刺地说明了许多软件产品盲目添加功能、忽视本质需求的问题。文章强调**优秀的软件应该知道何时停止**，专注于自身的核心使命，而非无限扩展功能。
+
+关键要点包括：**明确产品定位**——软件应清楚自己的角色和目标范围；**约束带来优势**——小团队、有限预算和明确范围能促进更好的决策；**理解真实需求**——应深入理解用户的根本问题而非盲目响应功能请求；**快速迭代发布**——半成品的真实产品优于完美但遥遥无期的理想产品。这些原则来自37Signals创始人的经典著作《Rework》和《Getting Real》。
+
+这篇文章对当今软件开发具有重要启示意义。在功能竞争和技术炒作的时代，许多团队陷入功能堆砌的陷阱，导致产品臃肿、用户体验下降。文章提醒开发者回归本质，认识到**克制和专注**往往比无限扩展更能创造价值，这对产品经理和开发团队都具有实践指导意义。
+
+---
+
+### 4. A GitHub Issue Title Compromised 4k Developer Machines
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47263595)
+**原文链接**: [grith.ai](https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another)
+**热度**: ⭐⭐⭐ 284 分 | **讨论**: 💬 67 条
+
 本文报道了一起影响4000名开发者的严重供应链攻击事件。攻击者通过在GitHub Issue标题中注入提示词，被AI分类机器人误读并执行，最终导致npm包Cline被恶意篡改并发布。这是一个五步链式攻击，从简单的文本注入演变成大规模的凭证盗取和恶意软件分发。
-攻击的关键环节包括：
-提示词注入
-通过未经清理的Issue标题直接进入AI模型提示；
-AI代理执行
-导致安装了攻击者控制的恶意包；
-缓存投毒
-利用GitHub Actions缓存机制污染构建环境；
-凭证窃取
-从发布工作流中获取npm、VS Code等关键令牌；
-恶意发布
-使用被盗凭证发布包含后安装脚本的恶意版本，在用户机器上全局安装未授权软件。
+
+攻击的关键环节包括：**提示词注入**通过未经清理的Issue标题直接进入AI模型提示；**AI代理执行**导致安装了攻击者控制的恶意包；**缓存投毒**利用GitHub Actions缓存机制污染构建环境；**凭证窃取**从发布工作流中获取npm、VS Code等关键令牌；**恶意发布**使用被盗凭证发布包含后安装脚本的恶意版本，在用户机器上全局安装未授权软件。
+
 这起事件深刻揭示了AI工具集成带来的新型安全风险。它表明即使每个单独的漏洞都是已知的，组合使用也能形成致命威胁。对开发工具链、AI代理权限管理和供应链安全的重新审视已成为当今软件生态的迫切需求。
-5. Show HN: Jido 2.0, Elixir Agent Framework
-原帖链接
-:
-HN 讨论
-原文链接
-:
-jido.run
-热度
-: ⭐⭐⭐ 224 分 |
-讨论
-: 💬 49 条
+
+---
+
+### 5. Show HN: Jido 2.0, Elixir Agent Framework
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47263036)
+**原文链接**: [jido.run](https://jido.run/blog/jido-2-0-is-here)
+**热度**: ⭐⭐⭐ 224 分 | **讨论**: 💬 49 条
+
 Jido 2.0是一个基于Elixir语言的智能代理框架，经过18个月的开发和重构后正式发布。该框架的核心理念是利用BEAM运行时的并发优势来构建可靠的代理系统，相比TypeScript和Python的代理框架具有更强的性能和稳定性。作者认为BEAM虽然在单线程事件循环中难以处理并发代理，但其设计初衷正是为此类工作量身定制。
-Jido 2.0的主要改进包括：
-简化的API设计
-，减少了1.0版本中过度工程化的复杂性；
-纯函数式代理架构
-，将代理视为数据结构，所有操作通过单一的cmd/2函数处理；
-副作用管理
-，使用类型化的指令数据结构描述副作用，便于测试和调试；
-GenServer运行时
-，提供监督、信号路由和代理层级管理。每个代理决策都可以在不涉及网络、数据库或LLM的情况下进行单元测试。
+
+Jido 2.0的主要改进包括：**简化的API设计**，减少了1.0版本中过度工程化的复杂性；**纯函数式代理架构**，将代理视为数据结构，所有操作通过单一的cmd/2函数处理；**副作用管理**，使用类型化的指令数据结构描述副作用，便于测试和调试；**GenServer运行时**，提供监督、信号路由和代理层级管理。每个代理决策都可以在不涉及网络、数据库或LLM的情况下进行单元测试。
+
 这个框架值得关注，因为它代表了一个新的思路——利用成熟的并发编程平台来解决AI代理系统的复杂性问题。对于需要构建可靠、可扩展代理系统的开发者，特别是熟悉Elixir的团队，Jido 2.0提供了一个更实用、更易维护的解决方案。
-6. The Brand Age
-原帖链接
-:
-HN 讨论
-原文链接
-:
-paulgraham.com
-热度
-: ⭐⭐ 169 分 |
-讨论
-: 💬 158 条
+
+---
+
+### 6. The Brand Age
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47264756)
+**原文链接**: [paulgraham.com](https://paulgraham.com/brandage.html)
+**热度**: ⭐⭐ 169 分 | **讨论**: 💬 158 条
+
 本文通过瑞士手表产业的历史转变，揭示了品牌时代的商业本质。20世纪70年代，瑞士手表业遭遇三重打击：日本竞争对手技术追赶、布雷顿森林体系崩溃导致瑞士法郎升值、石英表技术革命使精密机械表成为过时产品。这场危机使瑞士手表销量在十年间下跌三分之二，大多数制造商濒临破产。
-然而，少数幸存企业通过
-战略转型
-实现了逆转。它们从
-精密仪器制造商
-蜕变为
-奢侈品牌
-，改变了消费价值链。曾经昂贵是因为
-制造成本高
-和
-精准度优越
-，如今则源于
-品牌营销投入
-和
-供应限制策略
-。虽然销售单位数持续低迷，但
-收入曲线
-却在80年代后期急剧上升，证明品牌溢价的强大盈利能力。
+
+然而，少数幸存企业通过**战略转型**实现了逆转。它们从**精密仪器制造商**蜕变为**奢侈品牌**，改变了消费价值链。曾经昂贵是因为**制造成本高**和**精准度优越**，如今则源于**品牌营销投入**和**供应限制策略**。虽然销售单位数持续低迷，但**收入曲线**却在80年代后期急剧上升，证明品牌溢价的强大盈利能力。
+
 这个案例具有深刻的启示意义。它表明在商品同质化时代，企业的生存之道不在于死守原有竞争优势，而在于重新定义产品价值和消费者心理。瑞士手表从工程奇迹到身份象征的蜕变，为所有面临颠覆性技术冲击的传统产业提供了宝贵的转型范本。
-7. 10% of Firefox crashes are caused by bitflips
-原帖链接
-:
-HN 讨论
-原文链接
-:
-mas.to
-热度
-: ⭐⭐ 153 分 |
-讨论
-: 💬 57 条
-根据标题和相关技术背景，Firefox浏览器约10%的崩溃问题源于
-位翻转
-（bitflip）现象。这是一个鲜为人知但影响深远的硬件级问题，其中计算机内存中的单个比特位由于宇宙射线、电磁干扰或硬件缺陷等原因意外改变，导致程序执行错误和系统崩溃。
-该研究的关键发现包括：
-位翻转检测机制
-的设计与实现，使开发者能够识别由硬件故障引起的崩溃；
-内存可靠性问题
-在大规模应用中的普遍性；
-Firefox崩溃统计数据
-揭示了这一问题的实际影响范围；以及
-硬件级诊断工具
-对改进浏览器稳定性的重要意义。
+
+---
+
+### 7. 10% of Firefox crashes are caused by bitflips
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47252971)
+**原文链接**: [mas.to](https://mas.to/@gabrielesvelto/116171750653898304)
+**热度**: ⭐⭐ 153 分 | **讨论**: 💬 57 条
+
+根据标题和相关技术背景，Firefox浏览器约10%的崩溃问题源于**位翻转**（bitflip）现象。这是一个鲜为人知但影响深远的硬件级问题，其中计算机内存中的单个比特位由于宇宙射线、电磁干扰或硬件缺陷等原因意外改变，导致程序执行错误和系统崩溃。
+
+该研究的关键发现包括：**位翻转检测机制**的设计与实现，使开发者能够识别由硬件故障引起的崩溃；**内存可靠性问题**在大规模应用中的普遍性；**Firefox崩溃统计数据**揭示了这一问题的实际影响范围；以及**硬件级诊断工具**对改进浏览器稳定性的重要意义。
+
 这项发现值得关注因为它突破了传统的软件调试思维，将目光投向了硬件层面的隐患。对于用户而言，了解崩溃的真实原因有助于区分软件缺陷与硬件问题；对于开发者而言，这提供了新的优化方向和故障排查思路，推动了整个行业对系统可靠性的重新认识。
-8. Proton Mail Helped FBI Unmask Anonymous ‘Stop Cop City’ Protester
-原帖链接
-:
-HN 讨论
-原文链接
-:
-www.404media.co
-热度
-: ⭐⭐ 112 分 |
-讨论
-: 💬 52 条
+
+---
+
+### 8. Proton Mail Helped FBI Unmask Anonymous 'Stop Cop City' Protester
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47267628)
+**原文链接**: [www.404media.co](https://www.404media.co/proton-mail-helped-fbi-unmask-anonymous-stop-cop-city-protestor/)
+**热度**: ⭐⭐ 112 分 | **讨论**: 💬 52 条
+
 根据404 Media的报道，隐私邮件服务商Proton Mail向瑞士政府提交了与"停止警察城市"(Stop Cop City)运动相关的匿名账户的支付数据，瑞士政府随后将这些信息转交给美国联邦调查局(FBI)。FBI利用这些数据成功识别了亚特兰大Defend the Atlanta Forest(DTAF)组织的相关人员身份。该组织成员因涉嫌纵火、破坏财产和人肉搜索等罪名遭到调查，但目前已有60多人的指控被撤销。
-这一事件揭示了几个重要问题：首先，
-Proton Mail虽然标榜端到端加密和隐私保护
-，但在政府请求下仍会交出
-用户支付数据
-；其次，
-瑞士隐私法并未能完全保护用户隐私
-，因为数据最终流向了美国执法机构；第三，
-支付信息成为识别匿名用户的关键
-，这表明即使使用隐私邮件服务也存在漏洞。
+
+这一事件揭示了几个重要问题：首先，**Proton Mail虽然标榜端到端加密和隐私保护**，但在政府请求下仍会交出**用户支付数据**；其次，**瑞士隐私法并未能完全保护用户隐私**，因为数据最终流向了美国执法机构；第三，**支付信息成为识别匿名用户的关键**，这表明即使使用隐私邮件服务也存在漏洞。
+
 这个案例值得关注，因为它戳破了隐私服务提供商的宣传神话，表明依赖支付方式进行的任何在线活动都可能被追踪。对于依赖匿名通讯进行政治活动或异议表达的用户而言，这提示了现实中隐私保护的局限性。
-9. Hardware hotplug events on Linux, the gory details
-原帖链接
-:
-HN 讨论
-原文链接
-:
-arcanenibble.github.io
-热度
-: ⭐ 99 分 |
-讨论
-: 💬 3 条
+
+---
+
+### 9. Hardware hotplug events on Linux, the gory details
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47215602)
+**原文链接**: [arcanenibble.github.io](https://arcanenibble.github.io/hardware-hotplug-events-on-linux-the-gory-details.html)
+**热度**: ⭐ 99 分 | **讨论**: 💬 3 条
+
 本文深入探讨了Linux系统中硬件热插拔事件的检测机制。作者通过调查libusb源代码，揭示了Linux平台支持硬件热插拔的两种后端实现方式：udev和netlink。文章系统地分析了这两种机制的工作原理、差异及其实现细节，为开发者提供了不依赖libudev库直接监听设备事件的技术方案。
-文章的核心要点包括：
-udev机制
-通过内核netlink通知udev守护进程，由其处理设备权限、固件上传等操作后，再将事件广播给其他应用程序；
-netlink协议
-是Linux特有的内核与用户空间通信方式，支持数据报传输和多播能力；libusb强烈推荐使用udev而非直接netlink的原因在于
-避免竞态条件
-，确保设备处理完成后才通知应用；文章提供了
-实现代码示例
-，展示如何直接使用netlink而无需链接libudev库。
+
+文章的核心要点包括：**udev机制**通过内核netlink通知udev守护进程，由其处理设备权限、固件上传等操作后，再将事件广播给其他应用程序；**netlink协议**是Linux特有的内核与用户空间通信方式，支持数据报传输和多播能力；libusb强烈推荐使用udev而非直接netlink的原因在于**避免竞态条件**，确保设备处理完成后才通知应用；文章提供了**实现代码示例**，展示如何直接使用netlink而无需链接libudev库。
+
 这篇文章对于需要在Linux上实现硬件监控、设备管理或系统级应用的开发者具有重要参考价值。它填补了Linux硬件热插拔事件处理文档的空白，特别是对那些不想依赖高层库的底层开发者来说，提供了深入理解系统机制的机会。
-10. Let’s Get Physical
-原帖链接
-:
-HN 讨论
-原文链接
-:
-m4iler.cloud
-热度
-: ⭐ 83 分 |
-讨论
-: 💬 14 条
+
+---
+
+### 10. Let's Get Physical
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47266030)
+**原文链接**: [m4iler.cloud](https://m4iler.cloud/posts/lets-get-physical/)
+**热度**: ⭐ 83 分 | **讨论**: 💬 14 条
+
 本文记录了一次真实的物理渗透测试经历。作者受雇为一家拥有多座建筑的公司进行全方位安全评估，包括内部渗透、外部渗透、社工和物理测试。在为期一周的现场测试中，作者和同事需要扮演攻击者角色，测试公司的防御能力，特别是安保人员对监控摄像头异常活动的反应。
-测试的关键要素包括：
-精心准备的工具包
-（包含撬锁工具、螺丝刀、压缩空气等物理渗透设备）、
-明确的目标
-（获取敏感文件、进入董事办公室、在会议室植入"窃听设备"）、
-系统的侦察计划
-（第一天勘查校园、记录摄像头位置、标记出入口和门禁读卡器）以及
-来自安全社区的支持
-（获得知名安全研究人员的鼓励和指导）。
+
+测试的关键要素包括：**精心准备的工具包**（包含撬锁工具、螺丝刀、压缩空气等物理渗透设备）、**明确的目标**（获取敏感文件、进入董事办公室、在会议室植入"窃听设备"）、**系统的侦察计划**（第一天勘查校园、记录摄像头位置、标记出入口和门禁读卡器）以及**来自安全社区的支持**（获得知名安全研究人员的鼓励和指导）。
+
 这篇文章值得关注，因为它以第一人称视角揭示了物理安全测试的实际操作流程和挑战，展现了专业渗透测试人员的工作方法和创意思维，同时也反映了企业安全防御中物理层面可能存在的薄弱环节，对安全从业者和企业安全管理者都具有参考价值。
-📑 更多热门文章 (11-20)
-11. CBP tapped into the online advertising ecosystem to track peoples’ movements
-⭐ 81 分 · 💬 63 条
-HN 讨论
-·
-原文
-美国海关边境保护局通过购买在线广告生态系统中的位置数据，实现对民众精准位置的长期追踪，这一做法引发了隐私监管的重大关切。
-12. OpenTitan Shipping in Production
-⭐ 66 分 · 💬 7 条
-HN 讨论
-·
-原文
-OpenTitan开源芯片已实现商用量产，首次搭载于Chromebook设备中，标志着开源硅基信任根技术的重大突破。
-13. Remotely unlocking an encrypted hard disk
-⭐ 62 分 · 💬 34 条
-HN 讨论
-·
-原文
-本文介绍如何在启动过程中修改配置以实现远程解锁加密硬盘，涉及系统引导阶段的技术操作和安全考量。
-14. A ternary plot of citrus geneology
-⭐ 58 分 · 💬 3 条
-HN 讨论
-·
-原文
-本文通过三角形图表展示了现代柑橘类水果如何由石榴柚、橘和香橼三个原始物种杂交演化而来，揭示了复杂的柑橘遗传谱系。
-15. GLiNER2: Unified Schema-Based Information Extraction
-⭐ 27 分 · 💬 3 条
-HN 讨论
-·
-原文
-GLiNER2是一个统一的基于模式的信息抽取框架，能够通过灵活的模式定义实现多种自然语言处理任务的端到端信息提取。
-16. Converting dash cam videos into Panoramax images
-⭐ 21 分 · 💬 1 条
-HN 讨论
-·
-原文
-本文介绍了如何将行车记录仪视频转换为Panoramax街景图像的方法，以便为OpenStreetMap贡献街景数据。
-17. A standard protocol to handle and discard low-effort, AI-Generated pull requests
-⭐ 7 分 · 💬 2 条
-HN 讨论
-·
-原文
-本文提出了一套标准协议（RFC 406i），用于识别和拒绝低质量的AI生成代码提交，保护开源项目维护者免受无用贡献的困扰。
-18. Labor Market Impacts of AI
-⭐ 5 分 · 💬 0 条
-HN 讨论
-·
-原文
-本文介绍了衡量AI替代风险的新指标，结合LLM能力与实际使用数据，发现高风险职业面临增长放缓，但暂未导致失业率系统性上升。
-19. Structured AI (YC F25) Is Hiring
-⭐ 1 分 · 💬 0 条
-HN 讨论
-·
-原文
-Structured AI是一家Y Combinator孵化的初创公司，正招聘机械设计工程师，将AI技术应用于建筑工程领域，打造AI驱动的建筑工程劳动力解决方案。
-📊 统计信息
-指标
-数值
-平均热度
-165 分
-总讨论数
-1443 条
-最热文章
-“Wikipedia was in read-only mode following mass admin account compromise” (837⭐)
-讨论最多
-“GPT-5.4” (484💬)
-本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)
+
+---
+
+## 📑 更多热门文章 (11-20)
+
+#### 11. CBP tapped into the online advertising ecosystem to track peoples’ movements
+   ⭐ 81 分 · 💬 63 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47249387) · [原文](https://www.404media.co/cbp-tapped-into-the-online-advertising-ecosystem-to-track-peoples-movements/)
+   > 美国海关边境保护局通过购买在线广告生态系统中的位置数据，实现对民众精准位置的长期追踪，这一做法引发了隐私监管的重大关切。
+
+#### 12. OpenTitan Shipping in Production
+   ⭐ 66 分 · 💬 7 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47265619) · [原文](https://opensource.googleblog.com/2026/03/opentitan-shipping-in-production.html)
+   > OpenTitan开源芯片已实现商用量产，首次搭载于Chromebook设备中，标志着开源硅基信任根技术的重大突破。
+
+#### 13. Remotely unlocking an encrypted hard disk
+   ⭐ 62 分 · 💬 34 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47265521) · [原文](https://jyn.dev/remotely-unlocking-an-encrypted-hard-disk/)
+   > 本文介绍如何在启动过程中修改配置以实现远程解锁加密硬盘，涉及系统引导阶段的技术操作和安全考量。
+
+#### 14. A ternary plot of citrus geneology
+   ⭐ 58 分 · 💬 3 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47238272) · [原文](https://www.jlauf.com/writing/citrus/)
+   > 本文通过三角形图表展示了现代柑橘类水果如何由石榴柚、橘和香橼三个原始物种杂交演化而来，揭示了复杂的柑橘遗传谱系。
+
+#### 15. GLiNER2: Unified Schema-Based Information Extraction
+   ⭐ 27 分 · 💬 3 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47266736) · [原文](https://github.com/fastino-ai/GLiNER2)
+   > GLiNER2是一个统一的基于模式的信息抽取框架，能够通过灵活的模式定义实现多种自然语言处理任务的端到端信息提取。
+
+#### 16. Converting dash cam videos into Panoramax images
+   ⭐ 21 分 · 💬 1 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47215180) · [原文](https://www.openstreetmap.org/user/FeetAndInches/diary/408268)
+   > 本文介绍了如何将行车记录仪视频转换为Panoramax街景图像的方法，以便为OpenStreetMap贡献街景数据。
+
+#### 17. A standard protocol to handle and discard low-effort, AI-Generated pull requests
+   ⭐ 7 分 · 💬 2 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47267947) · [原文](https://406.fail/)
+   > 本文提出了一套标准协议（RFC 406i），用于识别和拒绝低质量的AI生成代码提交，保护开源项目维护者免受无用贡献的困扰。
+
+#### 18. Labor Market Impacts of AI
+   ⭐ 5 分 · 💬 0 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47268391) · [原文](https://www.anthropic.com/research/labor-market-impacts)
+   > 本文介绍了衡量AI替代风险的新指标，结合LLM能力与实际使用数据，发现高风险职业面临增长放缓，但暂未导致失业率系统性上升。
+
+#### 19. Structured AI (YC F25) Is Hiring
+   ⭐ 1 分 · 💬 0 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47267236) · [原文](https://www.ycombinator.com/companies/structured-ai/jobs/3cQY6Cu-mechanical-design-engineer-founding-team-consultant)
+   > Structured AI是一家Y Combinator孵化的初创公司，正招聘机械设计工程师，将AI技术应用于建筑工程领域，打造AI驱动的建筑工程劳动力解决方案。
+
+---
+
+## 📊 统计信息
+
+| 指标 | 数值 |
+|------|------|
+| 平均热度 | 165 分 |
+| 总讨论数 | 1443 条 |
+| 最热文章 | "Wikipedia was in read-only mode following mass admin account compromise" (837⭐) |
+| 讨论最多 | "GPT-5.4" (484💬) |
+
+*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*

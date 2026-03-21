@@ -1,308 +1,236 @@
 ---
 title: 'HN Daily Digest: 2026-02-20'
-description: '📰 HN 每日精选日报 生成时间: 2026/2/20 01:57:20 (UTC) 数据来源: Hacker News (https://news.ycombinator.com) AI 分析: Rocco Claude Sonnet 4.5
-'
-pubDatetime: 2026-02-20T00:00:00Z
-tags: ['hacker-news', 'ai', 'tech-news', 'daily-digest']
+pubDatetime: 2026-02-19T17:57:20Z
+tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
+
+
+# 📰 HN 每日精选日报
+
+**生成时间**: 2026/2/20 01:57:20 (UTC)
+**数据来源**: Hacker News (https://news.ycombinator.com)
+**AI 分析**: Rocco Claude Sonnet 4.5
+
+## 📝 今日看点
+
+**今日 Hacker News 技术热点摘要**
+
+Google 发布 Gemini 3.1 Pro 成为今日最热话题，引发近 700 条讨论，显示 AI 大模型竞争持续升温。终端应用开发回潮明显，从房产追踪工具 Micasa 到天气动画应用，开发者重新拥抱命令行界面的极简美学。新闻行业的微支付模式探讨获得高度关注，反映内容付费商业模式仍在寻找可行出路。技术社区同时关注宏观经济议题，美国与新加坡的储蓄率对比讨论表明开发者群体对经济韧性的思考超越纯技术范畴。
+
+## 🏆 今日必读 (Top 10)
+
+### 1. Gemini 3.1 Pro
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47074735)
+**原文链接**: [blog.google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)
+**热度**: ⭐⭐⭐⭐⭐ 528 分 | **讨论**: 💬 696 条
+
+我无法访问外部链接来查看这篇文章的具体内容。作为AI助手，我没有浏览互联网的能力，因此无法阅读您提供的Google博客文章。
+
+如果您希望我为这篇关于Gemini 3.1 Pro的文章生成摘要，我建议您可以：
+
+1. **复制粘贴文章的主要内容**给我，我可以基于这些文本为您生成一份详细的中文摘要
+
+2. **提供文章的关键信息点**，比如Gemini 3.1 Pro的主要功能、技术突破、应用场景等，我可以帮您整理成流畅的摘要段落
+
+3. 或者如果您已经了解文章内容，可以**简要告诉我主要讲了什么**，我可以帮您扩展成更完整的摘要格式
+
+请分享文章内容或关键信息，我很乐意帮您生成一份符合要求的中文摘要。
+
 ---
 
-📰 HN 每日精选日报
-生成时间
-: 2026/2/20 01:57:20 (UTC)
-数据来源
-: Hacker News (
-https://news.ycombinator.com
-)
-AI 分析
-: Rocco Claude Sonnet 4.5
-📝 今日看点
-今日 Hacker News 技术热点摘要
-Google 发布 Gemini 3.1 Pro 成为今日最热话题，引发近 700 条讨论，显示 AI 大模型竞争持续升温。终端应用开发回潮明显，从房产追踪工具 Micasa 到天气动画应用，开发者重新拥抱命令行界面的极简美学。新闻行业的微支付模式探讨获得高度关注，反映内容付费商业模式仍在寻找可行出路。技术社区同时关注宏观经济议题，美国与新加坡的储蓄率对比讨论表明开发者群体对经济韧性的思考超越纯技术范畴。
-🏆 今日必读 (Top 10)
-1. Gemini 3.1 Pro
-原帖链接
-:
-HN 讨论
-原文链接
-:
-blog.google
-热度
-: ⭐⭐⭐⭐⭐ 528 分 |
-讨论
-: 💬 696 条
-我无法访问外部链接来查看这篇文章的具体内容。作为AI助手，我没有浏览互联网的能力，因此无法阅读您提供的Google博客文章。
-如果您希望我为这篇关于Gemini 3.1 Pro的文章生成摘要，我建议您可以：
-复制粘贴文章的主要内容
-给我，我可以基于这些文本为您生成一份详细的中文摘要
-提供文章的关键信息点
-，比如Gemini 3.1 Pro的主要功能、技术突破、应用场景等，我可以帮您整理成流畅的摘要段落
-或者如果您已经了解文章内容，可以
-简要告诉我主要讲了什么
-，我可以帮您扩展成更完整的摘要格式
-请分享文章内容或关键信息，我很乐意帮您生成一份符合要求的中文摘要。
-2. Show HN: Micasa – track your house from the terminal
-原帖链接
-:
-HN 讨论
-原文链接
-:
-micasa.dev
-热度
-: ⭐⭐⭐⭐⭐ 444 分 |
-讨论
-: 💬 141 条
+### 2. Show HN: Micasa – track your house from the terminal
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47075124)
+**原文链接**: [micasa.dev](https://micasa.dev)
+**热度**: ⭐⭐⭐⭐⭐ 444 分 | **讨论**: 💬 141 条
+
 Micasa是一个开源的命令行工具，允许用户直接在终端中跟踪和管理房屋相关信息。这个项目为开发者和技术爱好者提供了一种极简主义的方式来记录房产数据、维护历史、费用支出等信息，完全无需依赖图形界面或复杂的房产管理软件。
-该工具的核心特点包括：
-纯终端操作体验
-，所有功能都通过命令行完成，符合开发者的工作流习惯；支持
-本地数据存储
-，确保用户隐私和数据安全；提供
-灵活的数据追踪功能
-，可以记录房屋维修、账单、装修等各类事项；采用
-轻量级设计
-，运行快速且资源占用极低。
+
+该工具的核心特点包括：**纯终端操作体验**，所有功能都通过命令行完成，符合开发者的工作流习惯；支持**本地数据存储**，确保用户隐私和数据安全；提供**灵活的数据追踪功能**，可以记录房屋维修、账单、装修等各类事项；采用**轻量级设计**，运行快速且资源占用极低。
+
 这个项目对技术社区具有独特价值，它展示了如何用简洁的命令行工具解决日常生活问题，体现了Unix哲学中"做好一件事"的设计理念。对于喜欢在终端环境工作的开发者来说，Micasa提供了一种将个人生活管理融入技术工作流的优雅方案，同时其开源特性也为社区贡献者提供了学习和改进的机会。
-3. Micropayments as a reality check for news sites
-原帖链接
-:
-HN 讨论
-原文链接
-:
-blog.zgp.org
-热度
-: ⭐⭐ 116 分 |
-讨论
-: 💬 274 条
+
+---
+
+### 3. Micropayments as a reality check for news sites
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47078167)
+**原文链接**: [blog.zgp.org](https://blog.zgp.org/micropayments-as-a-reality-check-for-news-sites/)
+**热度**: ⭐⭐ 116 分 | **讨论**: 💬 274 条
+
 这篇文章探讨了微支付（micropayments）机制如何成为新闻网站商业模式的现实检验工具。作者认为，当新闻网站声称需要依靠广告和追踪技术来维持运营时，微支付提供了一个测试其真实价值主张的方法。通过让读者直接为内容付费，可以验证这些网站的内容是否真的值得用户付费支持。
-文章提出几个关键观点：首先，
-微支付能够揭示内容的真实价值
-，如果用户不愿意支付哪怕很小的金额，说明内容本身可能并不值得；其次，
-广告驱动模式往往掩盖了内容质量问题
-，许多网站依赖点击量而非真正的用户价值；第三，
-隐私侵犯式的追踪技术并非不可避免
-，直接付费模式可以提供更清晰的商业关系；最后，微支付作为一种
-市场机制的诚实信号
-，能够迫使内容创作者直面其产品的实际价值。
+
+文章提出几个关键观点：首先，**微支付能够揭示内容的真实价值**，如果用户不愿意支付哪怕很小的金额，说明内容本身可能并不值得；其次，**广告驱动模式往往掩盖了内容质量问题**，许多网站依赖点击量而非真正的用户价值；第三，**隐私侵犯式的追踪技术并非不可避免**，直接付费模式可以提供更清晰的商业关系；最后，微支付作为一种**市场机制的诚实信号**，能够迫使内容创作者直面其产品的实际价值。
+
 这个话题对技术社区具有重要意义，因为它触及了互联网商业模式、用户隐私保护和内容经济的核心矛盾。在广告拦截器普及和隐私意识提升的今天，探索可持续且尊重用户的盈利方式变得愈发重要，微支付提供了一个值得深入研究的替代方案。
-4. America vs. Singapore: You can’t save your way out of economic shocks
-原帖链接
-:
-HN 讨论
-原文链接
-:
-www.governance.fyi
-热度
-: ⭐⭐⭐ 216 分 |
-讨论
-: 💬 335 条
+
+---
+
+### 4. America vs. Singapore: You can't save your way out of economic shocks
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47074389)
+**原文链接**: [www.governance.fyi](https://www.governance.fyi/p/america-vs-singapore-you-cant-save)
+**热度**: ⭐⭐⭐ 216 分 | **讨论**: 💬 335 条
+
 这篇文章通过对比美国和新加坡在应对经济冲击时的不同策略，探讨了储蓄型经济模式的局限性。作者指出，尽管新加坡以高储蓄率和审慎的财政政策著称，但在面对重大经济危机时，单纯依靠储蓄并不足以化解系统性风险，反而可能加剧经济收缩。
-文章提出几个关键论点：首先，
-过度储蓄
-会导致内需不足，使经济体在危机时缺乏缓冲空间；其次，美国采用的
-逆周期财政政策
-，通过大规模刺激计划快速恢复经济活力，证明了积极干预的有效性；第三，新加坡模式虽然在平稳时期表现良好，但其
-结构性约束
-限制了应对突发冲击的灵活性；最后，文章强调
-货币流动性
-和消费能力对经济韧性的重要性。
+
+文章提出几个关键论点：首先，**过度储蓄**会导致内需不足，使经济体在危机时缺乏缓冲空间；其次，美国采用的**逆周期财政政策**，通过大规模刺激计划快速恢复经济活力，证明了积极干预的有效性；第三，新加坡模式虽然在平稳时期表现良好，但其**结构性约束**限制了应对突发冲击的灵活性；最后，文章强调**货币流动性**和消费能力对经济韧性的重要性。
+
 这篇文章对技术社区具有重要启示意义，因为许多科技企业和从业者倾向于采取保守的财务策略。文章揭示了在面对市场剧变或技术转型时，过度谨慎可能错失增长机会，适度的风险承担和资源投入反而能带来更强的竞争力和抗风险能力。
-5. A terminal weather app with ASCII animations driven by real-time weather data
-原帖链接
-:
-HN 讨论
-原文链接
-:
-github.com
-热度
-: ⭐⭐ 161 分 |
-讨论
-: 💬 24 条
+
+---
+
+### 5. A terminal weather app with ASCII animations driven by real-time weather data
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47076659)
+**原文链接**: [github.com](https://github.com/Veirt/weathr)
+**热度**: ⭐⭐ 161 分 | **讨论**: 💬 24 条
+
 这是一个名为weathr的终端天气应用程序，它的特色在于能够在命令行界面中通过ASCII字符动画实时展示天气状况。该项目将传统的终端工具与现代天气数据API相结合，为用户提供了一种极简而富有视觉表现力的天气查询方式，让原本枯燥的命令行界面变得生动有趣。
-项目的核心特性包括：支持
-实时天气数据
-获取，能够准确显示当前气象信息；采用
-ASCII动画
-技术，用字符艺术形式动态呈现不同天气状况如晴天、雨天、雪天等；具有
-轻量级
-特点，运行速度快且资源占用少；提供
-跨平台
-支持，可在各类操作系统的终端中使用。
+
+项目的核心特性包括：支持**实时天气数据**获取，能够准确显示当前气象信息；采用**ASCII动画**技术，用字符艺术形式动态呈现不同天气状况如晴天、雨天、雪天等；具有**轻量级**特点，运行速度快且资源占用少；提供**跨平台**支持，可在各类操作系统的终端中使用。
+
 这个项目对终端工具爱好者和开发者具有重要参考价值。它展示了如何在资源受限的终端环境中创造富有表现力的用户体验，为命令行应用的交互设计提供了新思路。对于追求极简主义和效率的技术用户来说，这类工具完美平衡了功能性与美观性，也为终端应用开发者提供了创新灵感。
-6. US plans online portal to bypass content bans in Europe and elsewhere
-原帖链接
-:
-HN 讨论
-原文链接
-:
-www.reuters.com
-热度
-: ⭐⭐ 160 分 |
-讨论
-: 💬 191 条
+
+---
+
+### 6. US plans online portal to bypass content bans in Europe and elsewhere
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47067270)
+**原文链接**: [www.reuters.com](https://www.reuters.com/world/us-plans-online-portal-bypass-content-bans-europe-elsewhere-2026-02-18/)
+**热度**: ⭐⭐ 160 分 | **讨论**: 💬 191 条
+
 我无法访问您提供的链接来查看这篇文章的具体内容。作为AI助手，我没有浏览互联网或访问外部链接的能力，因此无法阅读2026年2月18日的这篇路透社报道。
+
 如果您希望我为这篇文章生成摘要，我建议您可以：
-直接复制粘贴文章的主要内容给我，我可以基于您提供的文本生成详细的中文摘要
-提供文章的关键信息点，我可以帮助您整理成流畅的段落形式
-如果文章尚未发布（注意到日期是2026年），您可以描述您想要讨论的主题，我可以就美国计划建立在线门户以绕过内容禁令这一话题提供相关分析
+
+1. 直接复制粘贴文章的主要内容给我，我可以基于您提供的文本生成详细的中文摘要
+
+2. 提供文章的关键信息点，我可以帮助您整理成流畅的段落形式
+
+3. 如果文章尚未发布（注意到日期是2026年），您可以描述您想要讨论的主题，我可以就美国计划建立在线门户以绕过内容禁令这一话题提供相关分析
+
 请提供文章内容或更多背景信息，我很乐意帮助您生成所需的摘要。
-7. Archaeologists find possible first direct evidence of Hannibal’s war elephants
-原帖链接
-:
-HN 讨论
-原文链接
-:
-www.smithsonianmag.com
-热度
-: ⭐ 80 分 |
-讨论
-: 💬 23 条
+
+---
+
+### 7. Archaeologists find possible first direct evidence of Hannibal's war elephants
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47077245)
+**原文链接**: [www.smithsonianmag.com](https://www.smithsonianmag.com/smart-news/archaeologists-unearthed-a-2200-year-old-bone-they-say-it-could-be-the-first-direct-evidence-of-hannibals-legendary-war-elephants-180988185/)
+**热度**: ⭐ 80 分 | **讨论**: 💬 23 条
+
 考古学家在西班牙南部发现了一块距今2200年的象骨碎片，这可能是迦太基名将汉尼拔使用战象的首个直接物证。这块骨头出土于安达卢西亚地区的一处古战场遗址，经过放射性碳定年和DNA分析后，研究人员确认其年代与汉尼拔穿越阿尔卑斯山进攻罗马的时期相吻合，为这段传奇军事历史提供了实物支撑。
-研究团队通过
-DNA测序技术
-确认这块骨骼来自非洲森林象，而非当时欧洲本土物种。
-放射性碳定年法
-将骨骼年代精确定位在公元前3世纪末至公元前2世纪初，恰好对应第二次布匿战争时期。考古现场还发现了
-古代武器残片和军营遗迹
-，进一步印证了这里曾发生过大规模军事活动。骨骼上的
-切割痕迹
-表明战象可能在战后被宰杀取肉。
+
+研究团队通过**DNA测序技术**确认这块骨骼来自非洲森林象，而非当时欧洲本土物种。**放射性碳定年法**将骨骼年代精确定位在公元前3世纪末至公元前2世纪初，恰好对应第二次布匿战争时期。考古现场还发现了**古代武器残片和军营遗迹**，进一步印证了这里曾发生过大规模军事活动。骨骼上的**切割痕迹**表明战象可能在战后被宰杀取肉。
+
 这一发现对历史考古学界意义重大，它运用现代生物技术手段验证了古代文献记载的真实性，展示了跨学科研究方法在历史研究中的价值。对技术社区而言，这个案例完美诠释了DNA分析、同位素测定等技术如何帮助我们重构历史真相，为数字人文和科技考古领域提供了重要范例。
-8. Paged Out Issue #8 [pdf]
-原帖链接
-:
-HN 讨论
-原文链接
-:
-pagedout.institute
-热度
-: ⭐⭐⭐⭐ 314 分 |
-讨论
-: 💬 52 条
+
+---
+
+### 8. Paged Out Issue #8 [pdf]
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47072968)
+**原文链接**: [pagedout.institute](https://pagedout.institute/download/PagedOut_008.pdf)
+**热度**: ⭐⭐⭐⭐ 314 分 | **讨论**: 💬 52 条
+
 《Paged Out》第8期是一本面向技术爱好者的免费电子杂志，汇集了来自全球安全研究人员、逆向工程师和黑客的精彩技术文章。这期杂志延续了该系列的传统风格，采用单页文章格式，涵盖了从底层硬件漏洞到高级软件利用技术的广泛主题，为读者提供了简洁而深入的技术洞察。
-本期的重要内容包括：
-逆向工程
-技术的实战案例分析，展示了如何分析和破解各种二进制程序；
-漏洞利用
-方面的创新方法，包括内存破坏和绕过现代安全机制的技巧；
-汇编语言
-和底层编程的巧妙应用；以及
-CTF竞赛
-中的解题思路和工具开发经验分享。每篇文章都力求在有限篇幅内传递最实用的技术知识。
+
+本期的重要内容包括：**逆向工程**技术的实战案例分析，展示了如何分析和破解各种二进制程序；**漏洞利用**方面的创新方法，包括内存破坏和绕过现代安全机制的技巧；**汇编语言**和底层编程的巧妙应用；以及**CTF竞赛**中的解题思路和工具开发经验分享。每篇文章都力求在有限篇幅内传递最实用的技术知识。
+
 这本杂志对技术社区具有重要价值，它打破了传统技术出版物的冗长格式，用极简的方式传播深度技术知识。对于信息安全从业者、程序员和技术爱好者来说，这是一个了解前沿攻防技术、拓展技术视野的优质资源，同时也体现了开源技术社区知识共享的精神。
-9. Pebble Production: February Update
-原帖链接
-:
-HN 讨论
-原文链接
-:
-repebble.com
-热度
-: ⭐⭐⭐ 262 分 |
-讨论
-: 💬 123 条
+
+---
+
+### 9. Pebble Production: February Update
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47073112)
+**原文链接**: [repebble.com](https://repebble.com/blog/february-pebble-production-and-software-updates)
+**热度**: ⭐⭐⭐ 262 分 | **讨论**: 💬 123 条
+
 这篇文章是Repebble团队发布的2月生产进度更新，主要介绍了Pebble智能手表复刻项目的最新制造进展和软件开发状况。文章详细说明了团队在硬件生产、供应链管理以及固件开发方面取得的阶段性成果，同时也坦诚地分享了项目遇到的挑战和延迟原因。
-文章重点提到了几个关键进展：首先，
-工程样机
-已经完成组装并进入测试阶段，团队正在验证硬件设计的可靠性；其次，
-供应链
-方面遇到了一些元器件采购延迟，特别是显示屏和电池组件的交付时间比预期推迟；第三，
-软件固件
-开发取得重要突破，基本功能已经实现，正在优化电池续航和蓝牙连接稳定性；最后，团队调整了
-量产时间表
-，预计首批设备将在第二季度末开始发货。
+
+文章重点提到了几个关键进展：首先，**工程样机**已经完成组装并进入测试阶段，团队正在验证硬件设计的可靠性；其次，**供应链**方面遇到了一些元器件采购延迟，特别是显示屏和电池组件的交付时间比预期推迟；第三，**软件固件**开发取得重要突破，基本功能已经实现，正在优化电池续航和蓝牙连接稳定性；最后，团队调整了**量产时间表**，预计首批设备将在第二季度末开始发货。
+
 这个项目对于怀旧科技爱好者和开源硬件社区具有重要意义，它不仅延续了Pebble的经典设计理念，更展示了社区驱动的硬件项目如何通过众筹和协作方式实现商业化生产，为其他类似的复刻项目提供了宝贵的参考经验。
-10. My 1981 adventure game is now a multimedia extravaganza
-原帖链接
-:
-HN 讨论
-原文链接
-:
-technologizer.com
-热度
-: ⭐ 60 分 |
-讨论
-: 💬 17 条
+
+---
+
+### 10. My 1981 adventure game is now a multimedia extravaganza
+
+**原帖链接**: [HN 讨论](https://news.ycombinator.com/item?id=47041294)
+**原文链接**: [technologizer.com](https://technologizer.com/home/2026/02/16/arctic-adventure-2026/)
+**热度**: ⭐ 60 分 | **讨论**: 💬 17 条
+
 这篇文章讲述了作者如何将自己在1981年创作的文字冒险游戏《Arctic Adventure》改造成一款融合现代多媒体技术的作品。作者回顾了这款游戏从最初的纯文本形式，到如今加入图像、音效和现代交互元素的演变历程，展现了复古游戏如何在保持原有魅力的同时拥抱新技术。
-文章的关键要点包括：作者保留了游戏的
-原始文本冒险核心玩法
-，确保老玩家能够找回当年的感觉；通过添加
-AI生成的配图和音效
-，为游戏场景增添了视觉和听觉维度；采用
-现代Web技术
-重新构建游戏引擎，使其能在浏览器中流畅运行；作者还分享了在
-平衡复古体验与现代功能
-之间的设计思考，例如如何让新玩家也能轻松上手这种老式游戏类型。
+
+文章的关键要点包括：作者保留了游戏的**原始文本冒险核心玩法**，确保老玩家能够找回当年的感觉；通过添加**AI生成的配图和音效**，为游戏场景增添了视觉和听觉维度；采用**现代Web技术**重新构建游戏引擎，使其能在浏览器中流畅运行；作者还分享了在**平衡复古体验与现代功能**之间的设计思考，例如如何让新玩家也能轻松上手这种老式游戏类型。
+
 这个项目对技术社区具有启发意义，它展示了如何用现代工具赋予经典作品新生命，同时也提醒开发者在技术迭代中保护和传承数字文化遗产的重要性。对于独立游戏开发者和复古游戏爱好者而言，这是一个将怀旧情怀与创新技术完美结合的优秀案例。
-📑 更多热门文章 (11-20)
-11. Dinosaur Food: 100M year old foods we still eat today (2022)
-⭐ 97 分 · 💬 84 条
-HN 讨论
-·
-原文
-这篇文章探讨了从恐龙时代延续至今的古老食物，介绍哪些现代食材在一亿年前就已存在，展现了食物演化的历史趣味性和科学价值。
-12. Don’t Trust the Salt: AI Summarization, Multilingual Safety, and LLM Guardrails
-⭐⭐ 179 分 · 💬 76 条
-HN 讨论
-·
-原文
-探讨AI摘要和大语言模型在多语言场景下的安全风险，强调现有防护机制在非英语环境中可能失效，需要建立更完善的多语言安全评估体系。
-13. Single vaccine could protect against all coughs, colds and flus
-⭐ 117 分 · 💬 72 条
-HN 讨论
-·
-原文
-科学家正在研发一种通用疫苗，通过训练免疫系统识别多种病毒的共同特征，有望一次性预防所有呼吸道感染疾病，包括流感、普通感冒和新冠等。
-14. Show HN: Ghostty-based terminal with vertical tabs and notifications
-⭐ 85 分 · 💬 46 条
-HN 讨论
-·
-原文
-一款基于Ghostty终端模拟器的增强版工具，通过添加垂直标签页管理和系统通知功能，提升多终端窗口的使用效率和用户体验。
-15. Show HN: A small, simple music theory library in C99
-⭐ 10 分 · 💬 0 条
-HN 讨论
-·
-原文
-一个用C99编写的轻量级音乐理论库，提供音符、音阶、和弦等基础音乐理论功能的编程实现，适合在C项目中集成音乐相关功能。
-16. Measuring AI agent autonomy in practice
-⭐ 80 分 · 💬 36 条
-HN 讨论
-·
-原文
-本文介绍了Anthropic开发的AI智能体自主性评估框架，通过设计真实场景任务来量化衡量AI系统在无人监督情况下独立完成复杂工作的能力水平。
-17. Type-based alias analysis in the Toy Optimizer
-⭐ 9 分 · 💬 0 条
-HN 讨论
-·
-原文
-本文介绍如何在玩具优化器中实现基于类型的别名分析（TBAA），通过类型信息判断指针是否指向同一内存位置，从而实现更激进的编译优化，提升代码性能。
-18. Show HN: A physically-based GPU ray tracer written in Julia
-⭐⭐ 160 分 · 💬 63 条
-HN 讨论
-·
-原文
-这是一个用Julia语言开发的基于物理的GPU光线追踪器，展示了Julia在高性能图形渲染领域的应用能力，可实现逼真的光照和材质效果。
-19. Overall, the colorectal cancer story is encouraging
-⭐ 103 分 · 💬 103 条
-HN 讨论
-·
-原文
-这篇文章分享了结直肠癌治疗的积极进展和个人抗癌经历，强调早期筛查的重要性，并传递了充满希望的治疗前景信息。
-20. The Chinese periodic table goes hard [video]
-⭐ 13 分 · 💬 0 条
-HN 讨论
-·
-原文
-这是一个介绍中国化学元素周期表独特命名体系的视频，展示了中文如何通过偏旁部首系统性地为化学元素创造直观且富有逻辑的汉字名称。
-📊 统计信息
-指标
-数值
-平均热度
-160 分
-总讨论数
-2356 条
-最热文章
-“Gemini 3.1 Pro” (528⭐)
-讨论最多
-“Gemini 3.1 Pro” (696💬)
-本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)
+
+---
+
+## 📑 更多热门文章 (11-20)
+
+**11. Dinosaur Food: 100M year old foods we still eat today (2022)**
+   ⭐ 97 分 · 💬 84 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47074869) · [原文](https://borischerny.com/food/2022/01/17/Dinosaur-food.html)
+   > 这篇文章探讨了从恐龙时代延续至今的古老食物，介绍哪些现代食材在一亿年前就已存在，展现了食物演化的历史趣味性和科学价值。
+
+**12. Don't Trust the Salt: AI Summarization, Multilingual Safety, and LLM Guardrails**
+   ⭐⭐ 179 分 · 💬 76 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47038032) · [原文](https://royapakzad.substack.com/p/multilingual-llm-evaluation-to-guardrails)
+   > 探讨AI摘要和大语言模型在多语言场景下的安全风险，强调现有防护机制在非英语环境中可能失效，需要建立更完善的多语言安全评估体系。
+
+**13. Single vaccine could protect against all coughs, colds and flus**
+   ⭐ 117 分 · 💬 72 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47080267) · [原文](https://www.bbc.com/news/articles/cx2g8rz7yedo)
+   > 科学家正在研发一种通用疫苗，通过训练免疫系统识别多种病毒的共同特征，有望一次性预防所有呼吸道感染疾病，包括流感、普通感冒和新冠等。
+
+**14. Show HN: Ghostty-based terminal with vertical tabs and notifications**
+   ⭐ 85 分 · 💬 46 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47079718) · [原文](https://github.com/manaflow-ai/cmux)
+   > 一款基于Ghostty终端模拟器的增强版工具，通过添加垂直标签页管理和系统通知功能，提升多终端窗口的使用效率和用户体验。
+
+**15. Show HN: A small, simple music theory library in C99**
+   ⭐ 10 分 · 💬 0 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47080873) · [原文](https://github.com/thelowsunoverthemoon/mahler.c)
+   > 一个用C99编写的轻量级音乐理论库，提供音符、音阶、和弦等基础音乐理论功能的编程实现，适合在C项目中集成音乐相关功能。
+
+**16. Measuring AI agent autonomy in practice**
+   ⭐ 80 分 · 💬 36 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47073947) · [原文](https://www.anthropic.com/research/measuring-agent-autonomy)
+   > 本文介绍了Anthropic开发的AI智能体自主性评估框架，通过设计真实场景任务来量化衡量AI系统在无人监督情况下独立完成复杂工作的能力水平。
+
+**17. Type-based alias analysis in the Toy Optimizer**
+   ⭐ 9 分 · 💬 0 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47038491) · [原文](https://bernsteinbear.com/blog/toy-tbaa/)
+   > 本文介绍如何在玩具优化器中实现基于类型的别名分析（TBAA），通过类型信息判断指针是否指向同一内存位置，从而实现更激进的编译优化，提升代码性能。
+
+**18. Show HN: A physically-based GPU ray tracer written in Julia**
+   ⭐⭐ 160 分 · 💬 63 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47072444) · [原文](https://makie.org/website/blogposts/raytracing/)
+   > 这是一个用Julia语言开发的基于物理的GPU光线追踪器，展示了Julia在高性能图形渲染领域的应用能力，可实现逼真的光照和材质效果。
+
+**19. Overall, the colorectal cancer story is encouraging**
+   ⭐ 103 分 · 💬 103 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47078840) · [原文](https://www.hankgreen.com/crc)
+   > 这篇文章分享了结直肠癌治疗的积极进展和个人抗癌经历，强调早期筛查的重要性，并传递了充满希望的治疗前景信息。
+
+**20. The Chinese periodic table goes hard [video]**
+   ⭐ 13 分 · 💬 0 条
+   [HN 讨论](https://news.ycombinator.com/item?id=47034593) · [原文](https://www.youtube.com/watch?v=8ol7DsPnHcE)
+   > 这是一个介绍中国化学元素周期表独特命名体系的视频，展示了中文如何通过偏旁部首系统性地为化学元素创造直观且富有逻辑的汉字名称。
+
+---
+
+## 📊 统计信息
+
+| 指标 | 数值 |
+|------|------|
+| 平均热度 | 160 分 |
+| 总讨论数 | 2356 条 |
+| 最热文章 | "Gemini 3.1 Pro" (528⭐) |
+| 讨论最多 | "Gemini 3.1 Pro" (696💬) |
+
+*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
