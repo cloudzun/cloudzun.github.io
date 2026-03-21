@@ -8,120 +8,181 @@ import { SITE } from "@/config";
 
 const posts = await getCollection("blog");
 
-// 按年月分组
-const postsByMonth = new Map<string, any[]>();
+// 按年月日分组
+const postsByDate = new Map<string, any[]>();
 
 posts
   .sort((a, b) => new Date(b.data.pubDatetime).getTime() - new Date(a.data.pubDatetime).getTime())
   .forEach(post => {
     const date = new Date(post.data.pubDatetime);
-    const key = `${date.getFullYear()}年${(date.getMonth() + 1).toString().padStart(2, '0')}月`;
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    const key = `${year}-${month}`;
     
-    if (!postsByMonth.has(key)) {
-      postsByMonth.set(key, []);
+    if (!postsByDate.has(key)) {
+      postsByDate.set(key, []);
     }
-    postsByMonth.get(key)!.push(post);
+    postsByDate.get(key)!.push(post);
   });
 
-// 按年份分组显示
-const postsByYear = new Map<number, Array<{ month: string; posts: any[] }>>();
+// 转换为数组并排序
+const months = Array.from(postsByDate.entries())
+  .map(([key, posts]) => {
+    const [year, month] = key.split('-');
+    return {
+      year: parseInt(year),
+      month: parseInt(month),
+      key,
+      posts,
+      count: posts.length
+    };
+  })
+  .sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    return b.month - a.month;
+  });
 
-postsByMonth.forEach((posts, month) => {
-  const year = parseInt(month.split('年')[0]);
-  if (!postsByYear.has(year)) {
-    postsByYear.set(year, []);
-  }
-  postsByYear.get(year)!.push({ month, posts });
-});
-
-// 按年份降序排序
-const sortedYears = Array.from(postsByYear.keys()).sort((a, b) => b - a);
+// 按年份分组用于侧边栏
+const years = [...new Set(months.map(m => m.year))].sort((a, b) => b - a);
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth() + 1;
 ---
 
 <Layout title={`Archives | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="文章归档" pageDesc="按时间浏览博客文章">
-    <!-- 快速导航 -->
-    <div class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-muted/50 to-muted/30 border border-foreground/10">
-      <h3 class="text-xl font-bold mb-4 text-center">📅 快速导航</h3>
-      <div class="flex flex-wrap justify-center gap-3">
-        {sortedYears.map(year => (
-          <a
-            href={`#${year}年`}
-            class="px-6 py-3 rounded-xl bg-accent text-white font-bold hover:opacity-90 transition-opacity"
-          >
-            {year}年
-          </a>
-        ))}
-      </div>
-      <div class="mt-4 text-center text-foreground/70">
-        共 <span class="font-bold text-accent">{posts.length}</span> 篇文章
-      </div>
-    </div>
-
-    <!-- 按年份归档 -->
-    <div class="space-y-12">
-      {sortedYears.map(year => {
-        const months = postsByYear.get(year)!;
-        return (
-          <div id={`${year}年`}>
-            <h3 class="text-3xl font-bold mb-6 flex items-center gap-3">
-              <span class="text-4xl">📆</span>
-              <span>{year}年</span>
-              <span class="text-lg font-normal text-foreground/60">
-                ({months.reduce((sum, m) => sum + m.posts.length, 0)} 篇)
-              </span>
+  <Main pageTitle="文章归档" pageDesc="按日历浏览博客文章">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <!-- 左侧：年份导航 -->
+      <aside class="lg:col-span-1">
+        <div class="sticky top-4 space-y-6">
+          <!-- 年份筛选 -->
+          <div class="p-6 rounded-2xl bg-gradient-to-br from-muted/80 to-muted/40 border-2 border-foreground/10">
+            <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+              <span class="text-2xl">📅</span>
+              <span>年份</span>
             </h3>
-            
-            <div class="space-y-8">
-              {months.map(({ month, posts: monthPosts }) => (
-                <div>
-                  <h4 class="text-xl font-bold mb-4 text-foreground/70 flex items-center gap-2">
-                    <span class="text-2xl">📌</span>
-                    {month}
-                    <span class="text-sm font-normal text-foreground/50">
-                      ({monthPosts.length} 篇)
-                    </span>
-                  </h4>
-                  <div class="space-y-3">
-                    {monthPosts.map(post => (
-                      <a
-                        href={`/posts/${post.id}/`}
-                        class="block p-4 rounded-lg bg-muted/50 hover:bg-accent/10 transition-colors group"
-                      >
-                        <div class="flex items-start justify-between gap-4">
-                          <div class="flex-1">
-                            <div class="font-medium group-hover:text-accent transition-colors">
-                              {post.data.title}
-                            </div>
-                            <div class="flex items-center gap-3 mt-2 text-sm text-foreground/60">
-                              <span>
-                                {new Date(post.data.pubDatetime).toLocaleDateString('zh-CN', {
-                                  month: 'short',
-                                  day: 'numeric'
-                                })}
-                              </span>
-                              {post.data.tags?.length > 0 && (
-                                <>
-                                  <span>•</span>
-                                  <span>{post.data.tags.slice(0, 3).join(', ')}</span>
-                                </>
-                              )}
-                            </div>
-                          </div>
-                          <span class="text-accent text-sm font-medium whitespace-nowrap">
-                            阅读 →
-                          </span>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </div>
+            <div class="space-y-2">
+              {years.map(year => (
+                <a
+                  href={`#${year}年`}
+                  class="block px-4 py-3 rounded-xl bg-accent text-white font-bold hover:opacity-90 transition-opacity text-center"
+                >
+                  {year}年
+                  <span class="text-sm font-normal opacity-80 ml-2">
+                    ({months.filter(m => m.year === year).reduce((sum, m) => sum + m.count, 0)} 篇)
+                  </span>
+                </a>
               ))}
             </div>
           </div>
-        );
-      })}
+
+          <!-- 统计信息 -->
+          <div class="p-6 rounded-2xl bg-muted/50 border border-foreground/10">
+            <h3 class="text-lg font-bold mb-4">📊 统计</h3>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between">
+                <span class="text-foreground/70">总文章数</span>
+                <span class="font-bold text-accent">{posts.length}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-foreground/70">月份数</span>
+                <span class="font-bold text-accent">{months.length}</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-foreground/70">最早文章</span>
+                <span class="font-bold text-accent">
+                  {new Date(Math.min(...posts.map(p => new Date(p.data.pubDatetime).getTime()))).toLocaleDateString('zh-CN', {
+                    year: 'numeric',
+                    month: 'short'
+                  })}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 右侧：月份和文章 -->
+      <div class="lg:col-span-3 space-y-8">
+        {months.map(({ year, month, posts: monthPosts }) => {
+          const isCurrentMonth = year === currentYear && month === currentMonth;
+          return (
+            <div id={`${year}年`} class="scroll-mt-20">
+              <div class="flex items-center gap-3 mb-6">
+                <span class="text-3xl">📌</span>
+                <h3 class="text-2xl font-bold">
+                  {year}年{month.toString().padStart(2, '0')}月
+                </h3>
+                {isCurrentMonth && (
+                  <span class="px-3 py-1 rounded-full bg-accent text-white text-xs font-bold">
+                    本月
+                  </span>
+                )}
+                <span class="text-sm text-foreground/60">
+                  ({monthPosts.length} 篇)
+                </span>
+              </div>
+              
+              <div class="space-y-3">
+                {monthPosts.map(post => {
+                  const pubDate = new Date(post.data.pubDatetime);
+                  const day = pubDate.getDate();
+                  const dayOfWeek = pubDate.getDay();
+                  const dayNames = ['日', '一', '二', '三', '四', '五', '六'];
+                  
+                  return (
+                    <a
+                      href={`/posts/${post.id}/`}
+                      class="block p-4 rounded-xl bg-muted/50 hover:bg-accent/10 transition-all group border border-foreground/5 hover:border-accent/30"
+                    >
+                      <div class="flex items-start gap-4">
+                        <!-- 日期卡片 -->
+                        <div class="flex-shrink-0 w-16 h-16 rounded-lg bg-accent text-white flex flex-col items-center justify-center">
+                          <span class="text-xs font-medium opacity-90">
+                            {dayOfWeek === 0 ? '周日' : `周${dayNames[dayOfWeek]}`}
+                          </span>
+                          <span class="text-2xl font-bold">{day}</span>
+                        </div>
+                        
+                        <!-- 文章信息 -->
+                        <div class="flex-1 min-w-0">
+                          <div class="font-medium group-hover:text-accent transition-colors line-clamp-2">
+                            {post.data.title}
+                          </div>
+                          <div class="flex items-center gap-3 mt-2 text-sm text-foreground/60">
+                            <span>
+                              {pubDate.toLocaleDateString('zh-CN', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                              })}
+                            </span>
+                            {post.data.tags?.length > 0 && (
+                              <>
+                                <span>•</span>
+                                <span class="line-clamp-1">{post.data.tags.slice(0, 3).join(', ')}</span>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                        
+                        <!-- 阅读箭头 -->
+                        <span class="text-accent text-sm font-medium whitespace-nowrap flex items-center">
+                          阅读
+                          <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   </Main>
   <Footer />

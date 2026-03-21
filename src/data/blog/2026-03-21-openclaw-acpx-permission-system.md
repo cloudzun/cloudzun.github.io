@@ -1,5 +1,6 @@
 ---
 title: "OpenClaw ACPX 权限系统详解：从一次权限拒绝错误说起"
+featured: true
 pubDatetime: 2026-03-21T13:30:00Z
 tags: ['openclaw', 'security', 'acpx', 'agent', '权限管理']
 description: '记录一次 OpenCode 子代理权限问题的排查过程，深入解析 ACPX 安全沙箱的工作原理和配置实践'

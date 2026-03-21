@@ -1,5 +1,6 @@
 ---
 title: "CloudZun.com 网站重构实录：从 Hugo 到 Astro Paper 的完整迁移"
+featured: true
 pubDatetime: 2026-03-21T13:45:00Z
 tags: ['网站重构', 'Astro Paper', '博客迁移', '技术实践']
 description: '完整记录 CloudZun.com 从 Hugo 迁移到 Astro Paper 的全过程，包括主题选择、内容迁移、格式转换和部署实践'
@@ -107,6 +108,7 @@ categories: ["分类"]
 # Astro Paper 格式（目标）
 ---
 title: '文章标题'
+featured: true
 pubDatetime: 2026-02-04T12:01:00Z
 tags: ['tag1', 'tag2']
 description: '文章描述'

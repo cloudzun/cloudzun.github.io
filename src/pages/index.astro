@@ -68,6 +68,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     </section>
 
     {
+      // 精选文章（手动指定代表作）
       featuredPosts.length > 0 && (
         <section
           id="featured"
@@ -76,7 +77,15 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             { "border-b border-border": recentPosts.length > 0 },
           ]}
         >
-          <h2 class="text-2xl font-semibold tracking-wide">精选文章</h2>
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-semibold tracking-wide">精选文章</h2>
+            <a
+              href="/categories/"
+              class="text-accent hover:underline text-sm font-medium"
+            >
+              按分类浏览 →
+            </a>
+          </div>
           <ul>
             {featuredPosts.map(data => (
               <Card variant="h3" {...data} />
@@ -89,7 +98,25 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">最新文章</h2>
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-semibold tracking-wide">最新文章</h2>
+            <div class="flex items-center gap-3">
+              <a
+                href="/rss.xml"
+                class="flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-white hover:opacity-90 transition-opacity text-sm font-medium"
+                title="RSS 订阅"
+              >
+                <IconRss class="w-4 h-4" />
+                <span>RSS 订阅</span>
+              </a>
+              <a
+                href="/archives/"
+                class="text-accent hover:underline text-sm font-medium"
+              >
+                归档 →
+              </a>
+            </div>
+          </div>
           <ul>
             {recentPosts.map(
               (data, index) =>
