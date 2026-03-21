@@ -70,8 +70,8 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 | 项目 | 描述 | 链接 |
 |------|------|------|
 | **Vibe Ecommerce** | 从 Vibe Coding 原型到生产级全栈应用的完整演进记录（6 阶段） | [GitHub](https://github.com/cloudzun/vibe-ecommerce) |
-| **HN Daily Digest** | Hacker News 每日精选，AI 生成深度分析摘要，自动发布 | [博客文章](/posts/2026-03-21-hn-daily-digest/) |
-| **M7 Stock Analysis** | 科技巨头投资分析系统，自动采集数据 + 新闻，生成报告 | [博客文章](/posts/2026-03-07-m7-analysis-cn/) |
+| **AI 技术外骨骼反思** | 两个实验项目带来的深层思考：AI 时代的开发流程应该如何重构 | [阅读文章](/posts/2026-03-12-ai-exoskeleton-reflection/) |
+| **从 Copilot 到 OpenCode** | 密集实验后的深度复盘：重新思考办公自动化的本质与边界 | [阅读文章](/posts/2026-03-07-from-copilot-to-opencode-rethinking-office-automation/) |
 
 ---
 
@@ -136,9 +136,9 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 - 🤖 **AI 协同编程**: OpenCode 教程、多 Agent 工作流、SDD 规格驱动开发
 - 💡 **Vibe Coding**: 迭代系列、7-Gate 质量门控、从原型到生产
-- 🏢 **办公自动化**: Microsoft 365 Copilot、Excel/Word/PPT 自动化
-- 🛠️ **工程实践**: 架构决策记录、技术债管理、Docker 部署
-- 📊 **市场分析**: M7 股票分析、加密货币监控、HN 每日精选
+- 🏢 **办公自动化**: Microsoft 365 Copilot、Excel/Word/PPT 自动化、Vibe Working
+- 🛠️ **工程实践**: 架构决策记录、技术债管理、Docker 部署、AI 技术外骨骼反思
+- 💭 **技术思考**: 从 Copilot 到 OpenCode 复盘、AI 时代的开发流程重构
 
 [📚 浏览所有文章](/posts/)
 
