@@ -1,0 +1,94 @@
+/* CloudZun 自定义样式 */
+
+:root {
+	--sl-color-accent: #667eea;
+	--sl-color-accent-high: #764ba2;
+	--sl-color-accent-low: #4c1d95;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: var(--sl-color-gray-6, #f1f5f9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--sl-color-gray-5, #e2e8f0);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--sl-color-accent);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--sl-color-accent);
+}
+
+.card p {
+  margin-bottom: 0;
+  color: var(--sl-color-gray-3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: var(--sl-color-gray-2, #1e293b);
+    border-color: var(--sl-color-gray-1, #334155);
+  }
+}
+
+/* Hero 区域渐变背景 */
+.sl-markdown-content .hero {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 链接颜色 */
+a {
+	color: var(--sl-color-accent);
+}
+
+a:hover {
+	color: var(--sl-color-accent-high);
+}
+
+/* 代码块样式 */
+pre {
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 表格样式 */
+table {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+/* 首页 Hero 优化 */
+.hero > .sl-container {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--sl-color-accent: #8b5cf6;
+		--sl-color-accent-high: #a78bfa;
+		--sl-color-accent-low: #6d28d9;
+	}
+}
