@@ -1,7 +1,8 @@
 ---
 title: 'My First Post'
-date: "2026-02-06"---
-
+pubDatetime: 2026-02-06T00:00:00Z
+description: 'Welcome to my new blog hosted on Vercel'
+---
 
 # Welcome to My New Blog
 
@@ -13,7 +14,3 @@ In this blog, I'll be sharing:
 
 - Technology insights
 - Development tutorials
-- Personal experiences
-- Tips and tricks
-
-Thank you for joining me on this journey!

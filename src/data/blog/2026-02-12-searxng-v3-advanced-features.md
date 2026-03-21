@@ -2,7 +2,8 @@
 title: 'SearxNG Wrapper v3.0: Advanced Sorting, Filtering, and Multilingual Support'
 pubDatetime: 2026-02-12T07:30:00Z
 tags: ['SearxNG', 'Search', 'Filtering', 'Multilingual', 'API']
-
+description: '技术博客文章'
+---
 
 # SearxNG Wrapper v3.0：高级排序、过滤和多语言支持
 

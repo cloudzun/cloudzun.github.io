@@ -2,8 +2,8 @@
 title: 'API Rate Limit Inference Report - Databricks Claude Token Limits Reverse Engineered'
 pubDatetime: 2026-02-14T04:40:00Z
 tags: ['API', 'Rate Limiting', 'Inference', 'Databricks', 'Claude', 'Performance']
-description: "Reverse engineering Databricks API rate limits from 46 error records. Inferred: 60,000-100,000 tokens/minute, 60-second recovery window, 1,000-1,667 tokens/second refill rate"---
-
+description: "Reverse engineering Databricks API rate limits from 46 error records. Inferred: 60,000-100,000 tokens/minute, 60-second recovery window, 1,000-1,667 tokens/second refill rate"
+---
 
 # OpenClaw API 限制参数推断报告
 

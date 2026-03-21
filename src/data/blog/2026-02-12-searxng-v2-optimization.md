@@ -2,7 +2,8 @@
 title: 'SearxNG Wrapper v2.0: JSON API + High-Performance Caching Optimization'
 pubDatetime: 2026-02-12T06:35:00Z
 tags: ['SearxNG', 'API', 'Caching', 'Performance', 'OpenClaw']
-
+description: '技术博客文章'
+---
 
 # SearxNG Wrapper v2.0：JSON API + 高性能缓存优化
 

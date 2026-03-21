@@ -2,7 +2,8 @@
 title: 'Agentic AI 重塑 DevOps 与 Kubernetes 基础设施：技术变革与未来展望'
 pubDatetime: 2026-02-26T17:00:00Z
 tags: ['Agentic AI', 'DevOps', 'Kubernetes', 'Cloud Native', 'AI Infrastructure', 'Automation']
-
+description: '技术博客文章'
+---
 
 **作者**：HuaQloud AI Research  
 **关键词**：Agentic AI, DevOps, Kubernetes, 自主化运维, CI/CD 自动化

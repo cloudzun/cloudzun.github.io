@@ -2,7 +2,8 @@
 title: 'From Vibe Coding to SDD: The Engineering Evolution of AI Collaboration'
 pubDatetime: 2026-02-26T22:00:00Z
 tags: ['AI', 'SDD', 'OpenCode', 'Engineering', 'Spec-Driven-Development']
-
+description: '技术博客文章'
+---
 
 # 从 Vibe Coding 到 SDD：AI 协作开发的工程化演进
 

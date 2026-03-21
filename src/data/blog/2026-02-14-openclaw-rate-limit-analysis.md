@@ -2,8 +2,8 @@
 title: 'OpenClaw API Rate Limiting Analysis Report - 197 Errors in 12 Hours'
 pubDatetime: 2026-02-14T04:35:00Z
 tags: ['OpenClaw', 'API', 'Rate Limiting', 'Performance', 'Analysis']
-description: "Comprehensive analysis of 197 429 rate limit errors in OpenClaw system over 12 hours, root cause analysis, and improvement recommendations"---
-
+description: "Comprehensive analysis of 197 429 rate limit errors in OpenClaw system over 12 hours, root cause analysis, and improvement recommendations"
+---
 
 # OpenClaw API 速率限制分析报告
 

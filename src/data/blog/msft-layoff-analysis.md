@@ -2,8 +2,9 @@
 title: 'Microsoft Layoff Trend Analysis and 2026 Forecast'
 pubDatetime: 2026-02-27T07:17:00Z
 tags: ['Microsoft', 'MSFT', 'Layoff', 'AI', 'Azure', 'Stock Analysis']
-mermaid: true---
-
+description: '技术博客文章'
+mermaid: true
+---
 
 # 微软 (MSFT) 未来裁员趋势分析
 

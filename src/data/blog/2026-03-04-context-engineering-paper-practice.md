@@ -1,10 +1,10 @@
 ---
 title: '从论文到实践：基于文件系统的上下文工程架构设计'
-date: 2026-03-04
+pubDatetime: 2026-03-04T00:00:00Z
 tags: ['AI', 'Context Engineering', 'System Design', 'Paper Review', 'Architecture']
 author: "HuaQloud"
-description: "解读 arXiv:2512.05470《Agentic File System Abstraction for Context Engineering》，并展示如何将其理念应用到 Deep Research 工作流中"---
-
+description: "解读 arXiv:2512.05470《Agentic File System Abstraction for Context Engineering》，并展示如何将其理念应用到 Deep Research 工作流中"
+---
 
 ## 引言
 

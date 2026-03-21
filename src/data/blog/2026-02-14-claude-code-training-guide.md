@@ -2,7 +2,8 @@
 title: 'Claude Code Training Guide: System Architecture, Use Cases, and Best Practices'
 pubDatetime: 2026-02-14T02:20:00Z
 tags: ['claude-code', 'agentic-coding', 'ai-agents', 'code-generation', 'software-engineering', 'training']
-
+description: '技术博客文章'
+---
 
 # Claude Code 培训教材
 ## Claude Code Training Guide: System Architecture, Use Cases, and Best Practices

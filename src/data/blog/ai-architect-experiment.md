@@ -2,7 +2,8 @@
 title: 'AI 架构师协调模式实验：使用 OpenCode 构建电商原型'
 pubDatetime: 2026-02-26T02:30:00Z
 tags: ['AI', 'OpenCode', '架构师模式', '电商', '协作开发', 'Qwen', '实验复盘']
-
+description: '技术博客文章'
+---
 
 # AI 架构师协调模式实验手册
 ## E-commerce Prototype 项目复盘

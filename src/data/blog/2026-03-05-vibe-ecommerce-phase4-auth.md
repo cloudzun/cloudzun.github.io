@@ -1,8 +1,9 @@
 ---
 title: '从原型到产品：vibe-ecommerce 迭代系列（三）— 用户认证、流程失控与架构师的边界'
-date: 2026-03-05T06:00:00+00:00
+pubDatetime: 2026-03-05T06:00:00+00:00
 tags: ['OpenCode', 'Vibe Coding', 'JWT', '认证', '架构设计', 'Superpowers', 'LAB-14', '复盘']
-
+description: '技术博客文章'
+---
 
 # 从原型到产品：vibe-ecommerce 迭代系列（三）
 

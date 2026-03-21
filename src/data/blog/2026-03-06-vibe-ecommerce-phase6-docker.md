@@ -2,7 +2,8 @@
 title: '从原型到产品：vibe-ecommerce 迭代系列（五）— Docker 三容器本地开发环境'
 pubDatetime: 2026-03-06T00:00:00Z
 tags: ['vibe-coding', 'opencode', 'docker', 'nginx', 'postgresql', 'makefile']
-
+description: '技术博客文章'
+---
 
 这是 vibe-ecommerce 迭代系列的第五篇。
 

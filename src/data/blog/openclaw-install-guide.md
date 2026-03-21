@@ -2,8 +2,9 @@
 title: 'OpenClaw AI Assistant 完整安装指南（2026 版）'
 pubDatetime: 2026-03-10T15:55:00Z
 tags: ['OpenClaw', 'AI Assistant', 'Installation', 'Tutorial', 'Claude Code', 'Setup Guide']
-mermaid: true---
-
+description: '技术博客文章'
+mermaid: true
+---
 
 # OpenClaw AI Assistant 完整安装指南（2026 版）
 

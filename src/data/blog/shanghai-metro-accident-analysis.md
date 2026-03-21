@@ -2,7 +2,8 @@
 title: 'Shanghai Metro Jiamin Line Accident Analysis: Shield Tunnel Seepage Failure in Soft Soil'
 pubDatetime: 2026-02-14T03:00:00Z
 tags: ['accident-analysis', 'geotechnical-engineering', 'shield-tunnel', 'soft-soil', 'emergency-response', 'infrastructure-safety']
-
+description: '技术博客文章'
+---
 
 # 上海地铁嘉闵线七莘路站事故分析
 ## Shanghai Metro Jiamin Line Accident: Seepage-Induced Collapse in Soft Soil - Technical Analysis

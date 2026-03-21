@@ -2,7 +2,8 @@
 title: 'Multi-Agent Orchestration: A Comprehensive Survey of Recent Advances'
 pubDatetime: 2026-02-12T19:35:00Z
 tags: ['agent-orchestration', 'multi-agent-systems', 'AI-architecture', 'LLM-agents']
-
+description: '技术博客文章'
+---
 
 # 多智能体编排系统研究综述
 ## Agent Orchestration: A Comprehensive Survey of Recent Advances (2025-2026)

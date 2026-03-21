@@ -2,7 +2,8 @@
 title: '硅基社会学研究综述：Moltbook智能体社区初步研究'
 pubDatetime: 2026-02-05T03:23:00Z
 tags: ['AI', '多智能体系统', '硅社会学', 'arXiv']
-
+description: '技术博客文章'
+---
 
 # 硅基社会学研究综述：Moltbook智能体社区初步研究
 

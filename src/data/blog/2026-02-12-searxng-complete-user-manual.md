@@ -2,7 +2,8 @@
 title: 'SearxNG Complete User Manual - Your Local Search Engine'
 pubDatetime: 2026-02-12T07:30:00Z
 tags: ['searxng', 'search', 'guide', 'tutorial', 'local-tools']
-
+description: '技术博客文章'
+---
 
 # SearxNG 完整使用手册
 

@@ -2,7 +2,8 @@
 title: 'MCP Working Principles: A Deep Dive into Model Context Protocol'
 pubDatetime: 2026-02-22T04:00:00Z
 tags: ['MCP', 'AI', 'Protocol', 'Claude', 'Architecture']
-
+description: '技术博客文章'
+---
 
 # MCP 工作原理：深入浅出的技术解析
 

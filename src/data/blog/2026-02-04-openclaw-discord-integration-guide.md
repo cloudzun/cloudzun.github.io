@@ -2,7 +2,8 @@
 title: 'OpenClaw与Discord集成完整指南'
 pubDatetime: 2026-02-04T12:01:00Z
 tags: ['openclaw', 'discord', 'integration', 'tutorial']
-
+description: '技术博客文章'
+---
 
 # OpenClaw与Discord集成完整指南
 

@@ -2,7 +2,8 @@
 title: 'M7 Weekly Stock Performance Analysis: AI ROI Realization Drives Divergence'
 pubDatetime: 2026-02-13T00:00:00Z
 tags: ['M7', 'stock-analysis', 'AI', 'tech-stocks', 'investment', 'GOOG', 'MSFT', 'NVDA', 'AAPL', 'AMZN', 'META', 'TSLA']
-
+description: '技术博客文章'
+---
 
 # M7 Weekly Stock Performance Analysis Report
 ## February 7-13, 2026

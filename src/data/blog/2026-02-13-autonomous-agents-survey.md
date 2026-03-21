@@ -2,7 +2,8 @@
 title: 'Autonomous AI Agents: A Comprehensive Survey of Architecture, Design, and Implementation'
 pubDatetime: 2026-02-12T20:45:00Z
 tags: ['autonomous-agents', 'LLM-agents', 'agent-architecture', 'AI-systems', 'agent-design']
-
+description: '技术博客文章'
+---
 
 # 自主智能体研究综述
 ## Autonomous AI Agents: A Comprehensive Survey of Architecture, Design, and Implementation

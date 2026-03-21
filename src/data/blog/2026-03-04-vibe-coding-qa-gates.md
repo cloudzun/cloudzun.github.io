@@ -1,8 +1,9 @@
 ---
 title: 'Vibe Coding 的质量陷阱：为什么你需要 7 个 Gate'
-date: 2026-03-04T09:00:00+00:00
+pubDatetime: 2026-03-04T09:00:00+00:00
 tags: ['OpenCode', 'Superpowers', 'Vibe Coding', 'AI Engineering', '质量管理', '工作流']
-
+description: '技术博客文章'
+---
 
 # Vibe Coding 的质量陷阱：为什么你需要 7 个 Gate
 

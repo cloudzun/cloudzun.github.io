@@ -2,7 +2,8 @@
 title: 'Vibe Coding: Current Development Stage and Future Trends - Comprehensive Survey'
 pubDatetime: 2026-02-14T02:15:00Z
 tags: ['vibe-coding', 'AI-programming', 'LLM-code-generation', 'software-development', 'human-AI-collaboration']
-
+description: '技术博客文章'
+---
 
 # Vibe Coding 发展现状与趋势综述
 ## Vibe Coding: Current Development Stage and Future Trends - Comprehensive Survey

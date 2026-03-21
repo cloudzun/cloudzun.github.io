@@ -2,7 +2,8 @@
 title: 'M7 Stock Analysis - Cron Job Setup Guide'
 pubDatetime: 2026-02-13T01:00:00Z
 tags: ['M7', 'cron', 'automation', 'scheduling', 'linux', 'setup-guide']
-
+description: '技术博客文章'
+---
 
 # M7 Stock Analysis - Cron Job Setup Guide
 

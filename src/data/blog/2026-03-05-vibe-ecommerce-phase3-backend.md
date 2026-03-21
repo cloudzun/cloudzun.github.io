@@ -1,8 +1,9 @@
 ---
 title: '从原型到产品：vibe-ecommerce 迭代系列（二）— 引入后端，第一跳'
-date: 2026-03-05T01:24:00+00:00
+pubDatetime: 2026-03-05T01:24:00+00:00
 tags: ['OpenCode', 'Vibe Coding', '后端', 'Node.js', 'SQLite', '架构设计', 'LAB-14']
-
+description: '技术博客文章'
+---
 
 # 从原型到产品：vibe-ecommerce 迭代系列（二）
 

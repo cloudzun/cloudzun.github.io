@@ -2,7 +2,8 @@
 title: 'From Zero to Hero: Building a Production-Ready OpenClaw Skill'
 pubDatetime: 2026-02-23T04:00:00Z
 tags: ['OpenClaw', 'Skill', 'AI', 'Tutorial', 'Python']
-
+description: '技术博客文章'
+---
 
 # 从零开始：打造一个生产级 OpenClaw Skill
 

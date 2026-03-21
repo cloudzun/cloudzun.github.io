@@ -1,8 +1,9 @@
 ---
 title: '从原型到产品：vibe-ecommerce 迭代系列（一）— 规划框架与 Phase 2 实施'
-date: 2026-03-04T11:55:00+00:00
+pubDatetime: 2026-03-04T11:55:00+00:00
 tags: ['OpenCode', 'Vibe Coding', '迭代', '工程规范', '电商', 'LAB-14']
-
+description: '技术博客文章'
+---
 
 # 从原型到产品：vibe-ecommerce 迭代系列（一）
 

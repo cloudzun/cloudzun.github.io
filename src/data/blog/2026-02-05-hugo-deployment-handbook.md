@@ -2,7 +2,8 @@
 title: 'Hugo博客标准部署手册'
 pubDatetime: 2026-02-05T02:20:00Z
 tags: ['hugo', 'deployment', 'nginx', 'tutorial', 'guide']
-
+description: '本文档详细介绍如何部署和维护一个使用Hugo构建的博客系统，包括本地安装、配置、通过Nginx Proxy Manager发布以及常见问题的解决方法。'
+---
 
 # Hugo博客标准部署手册
 

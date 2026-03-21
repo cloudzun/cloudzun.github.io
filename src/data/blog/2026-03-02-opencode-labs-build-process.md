@@ -2,7 +2,8 @@
 title: 'Building OpenCode Labs: How Human + OpenClaw + OpenCode Collaborated to Create a 15-Lab AI Programming Curriculum'
 pubDatetime: 2026-03-02T06:00:00Z
 tags: ['OpenCode', 'AI协同编程', '课程开发', 'OpenClaw', '百炼', 'Qwen']
-
+description: '技术博客文章'
+---
 
 # 三方协同创作：用 AI 协同编程的方式，做一套 AI 协同编程课程
 

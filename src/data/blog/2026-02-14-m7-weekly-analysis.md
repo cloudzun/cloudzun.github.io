@@ -2,7 +2,8 @@
 title: 'M7周报：AI ROI实现进度驱动分化'
 pubDatetime: 2026-02-14T00:30:00Z
 tags: ['M7', '股票分析', 'AI', '投资', 'GOOG', 'MSFT', 'NVDA', 'AAPL', 'AMZN', 'META', 'TSLA']
-
+description: '技术博客文章'
+---
 
 # M7周报：AI ROI实现进度驱动分化
 **2026年2月14日**

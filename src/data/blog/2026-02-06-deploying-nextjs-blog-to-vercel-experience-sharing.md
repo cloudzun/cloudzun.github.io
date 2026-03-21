@@ -2,7 +2,8 @@
 title: '从零开始部署Next.js博客到Vercel：一次完整的技术实践'
 pubDatetime: 2026-02-05T18:50:00Z
 tags: ['Next.js', 'Vercel', '部署', '技术分享', '博客']
-
+description: '技术博客文章'
+---
 
 # 从零开始部署Next.js博客到Vercel：一次完整的技术实践
 

@@ -2,7 +2,8 @@
 title: 'OpenDev 论文综述：构建高效的终端 AI 编码代理'
 pubDatetime: 2026-03-17T02:32:00Z
 tags: ['AI', 'coding-agent', 'terminal', 'open-source', 'paper-review', 'opendev']
-
+description: '技术博客文章'
+---
 
 # OpenDev 论文综述：构建高效的终端 AI 编码代理
 

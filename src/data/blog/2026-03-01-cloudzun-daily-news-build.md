@@ -1,8 +1,9 @@
 ---
 title: 'CloudZun 每日速递：从原型到上线的构建实录'
-date: 2026-03-01T06:08:00+00:00
+pubDatetime: 2026-03-01T06:08:00+00:00
 tags: ['AI', 'GitHub Pages', 'Jekyll', '自动化', '新闻聚合', 'Horizon']
-
+description: '技术博客文章'
+---
 
 ## 一、项目起点
 

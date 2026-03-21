@@ -2,7 +2,8 @@
 title: 'SearxNG Deployment and Using the Local Wrapper'
 pubDatetime: 2026-02-09T02:38:00Z
 tags: [searxng,search,privacy,devops]
-
+description: '技术博客文章'
+---
 
 本文记录了在本地部署 SearxNG 并通过 Python wrapper 提供 HTML→JSON API 的完整过程、配置要点与运维建议。 
 

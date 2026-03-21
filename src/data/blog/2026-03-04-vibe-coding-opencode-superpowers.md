@@ -1,8 +1,9 @@
 ---
 title: 'Vibe Coding with OpenCode + Superpowers: 一次完整的 AI 驱动电商原型开发实录'
-date: 2026-03-04T08:00:00+00:00
+pubDatetime: 2026-03-04T08:00:00+00:00
 tags: ['OpenCode', 'Superpowers', 'Vibe Coding', 'AI', '电商', '开发实录']
-
+description: '技术博客文章'
+---
 
 # Vibe Coding with OpenCode + Superpowers：一次完整的 AI 驱动电商原型开发实录
 

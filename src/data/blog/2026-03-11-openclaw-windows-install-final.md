@@ -2,8 +2,8 @@
 title: 'OpenClaw Windows 安装终极指南：避坑实录与最佳实践'
 pubDatetime: 2026-03-11T01:00:00Z
 tags: ['OpenClaw', 'Windows', '安装指南', '避坑']
-description: "在两台 Windows 机器上实测踩坑后总结的 OpenClaw 安装完整指南，包含国内网络优化、Git HTTPS 配置、npm 编译跳过等关键技巧。"---
-
+description: "在两台 Windows 机器上实测踩坑后总结的 OpenClaw 安装完整指南，包含国内网络优化、Git HTTPS 配置、npm 编译跳过等关键技巧。"
+---
 
 ## 前言
 

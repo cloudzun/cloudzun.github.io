@@ -2,7 +2,8 @@
 title: 'OpenClaw Discord权限配置详解'
 pubDatetime: 2026-02-05T03:48:00Z
 tags: ['openclaw', 'discord', 'permissions', 'configuration', 'troubleshooting']
-
+description: '技术博客文章'
+---
 
 # OpenClaw Discord权限配置详解
 

@@ -2,7 +2,8 @@
 title: 'Building a Self-Hosted SearxNG Search Engine with JSON API Wrapper'
 pubDatetime: 2026-02-09T02:48:00Z
 tags: [searxng,search,docker,privacy,devops,api]
-
+description: '技术博客文章'
+---
 
 # SearxNG 生产部署指南：从 Docker 容器到 systemd service + JSON API
 

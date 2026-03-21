@@ -2,7 +2,8 @@
 title: 'Discord频道配置故障排除标准操作流程'
 pubDatetime: 2026-02-05T02:00:00Z
 tags: ['openclaw', 'discord', 'troubleshooting', 'sop', 'configuration']
-
+description: '技术博客文章'
+---
 
 # Discord频道配置故障排除标准操作流程
 

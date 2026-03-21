@@ -1,10 +1,10 @@
 ---
 title: '真钱买假模型：Shadow API 中的欺骗行为系统性审计'
-date: 2026-03-06
+pubDatetime: 2026-03-06T00:00:00Z
 tags: ['AI Security', 'LLM', 'API', 'Research Integrity', 'Shadow API']
 author: "HuaQloud"
-description: "解读 CISPA 最新论文 arXiv:2603.01919，揭示 Shadow API 市场中的模型替换、性能降级和安全隐患"---
-
+description: "解读 CISPA 最新论文 arXiv:2603.01919，揭示 Shadow API 市场中的模型替换、性能降级和安全隐患"
+---
 
 ## 引言
 

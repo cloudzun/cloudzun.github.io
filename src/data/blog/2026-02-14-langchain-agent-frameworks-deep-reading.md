@@ -2,7 +2,8 @@
 title: 'On Agent Frameworks and Agent Observability - Deep Reading Guide'
 pubDatetime: 2026-02-13T23:00:00Z
 tags: ['agent-frameworks', 'langchain', 'langgraph', 'agent-observability', 'langsmith', 'ai-systems']
-
+description: '技术博客文章'
+---
 
 # LangChain 官方文章深入导读
 ## On Agent Frameworks and Agent Observability - 智能体框架与可观测性的演进

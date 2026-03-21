@@ -1,15 +1,9 @@
 ---
 title: 'OpenClaw Memory Embedding 系统修复实录：从 Ollama 到 Gemini 的完整踩坑指南'
-date: 2026-03-03
-tags:
-  - openclaw
-  - ai
-  - embedding
-  - memory
-  - gemini
-  - technical
-  - tutorial---
-
+pubDatetime: 2026-03-03T00:00:00Z
+tags: [openclaw, ai, embedding, memory, gemini, technical, tutorial]
+description: 'OpenClaw Memory Embedding 系统修复实录，记录从 Ollama 到 Gemini 的完整踩坑过程'
+---
 
 # OpenClaw Memory Embedding 系统修复实录：从 Ollama 到 Gemini 的完整踩坑指南
 

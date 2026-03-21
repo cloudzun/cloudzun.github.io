@@ -2,7 +2,8 @@
 title: 'HN Daily Digest - Technical Deep Dive & Architecture Guide'
 pubDatetime: 2026-02-14T23:30:00Z
 tags: ['hacker-news', 'technical-guide', 'system-architecture', 'AI', 'automation', 'nodejs']
-
+description: '技术博客文章'
+---
 
 # HN Daily Digest - 技术深度分享
 

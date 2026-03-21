@@ -1,9 +1,9 @@
 ---
 title: 'From Enlightenment to AI: A Dialogue on Cultural Identity and Human Value'
-date: 2026-02-23
+pubDatetime: 2026-02-23T00:00:00Z
 tags: ['philosophy', 'culture', 'AI', 'enlightenment', 'education']
-description: "一场关于启蒙运动中的中国形象、文化认同的两极分化、以及AI时代人类价值重塑的深度对话"---
-
+description: "一场关于启蒙运动中的中国形象、文化认同的两极分化、以及AI时代人类价值重塑的深度对话"
+---
 
 ## 引言
 

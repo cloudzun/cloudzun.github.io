@@ -2,7 +2,8 @@
 title: 'HN Daily Digest: 2026-02-15'
 pubDatetime: 2026-02-15T08:17:51Z
 tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-
+description: '技术博客文章'
+---
 
 # 📰 HN 每日精选日报
 

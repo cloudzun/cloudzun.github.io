@@ -2,7 +2,8 @@
 title: 'M7 Stock Analysis Skill - Installation and Usage Guide'
 pubDatetime: 2026-02-13T00:30:00Z
 tags: ['M7', 'skill', 'automation', 'stock-analysis', 'installation-guide', 'tutorial', 'how-to']
-
+description: '技术博客文章'
+---
 
 # M7 Stock Analysis Skill - 安装和使用指南
 

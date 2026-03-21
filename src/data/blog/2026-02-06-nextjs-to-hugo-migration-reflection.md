@@ -2,7 +2,8 @@
 title: '从 Next.js 到 Hugo：一次技术选型的反思与教训'
 pubDatetime: 2026-02-06T00:00:00Z
 tags: ['Hugo', 'Next.js', '技术选型', '重构', '反思']
-
+description: '技术博客文章'
+---
 
 ## 前言
 

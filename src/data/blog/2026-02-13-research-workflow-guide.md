@@ -2,7 +2,8 @@
 title: 'Research Paper Workflow: From Search to Publication - Complete Guide'
 pubDatetime: 2026-02-12T21:00:00Z
 tags: ['workflow', 'research-methodology', 'academic-writing', 'blog-publishing', 'automation']
-
+description: '技术博客文章'
+---
 
 # 研究论文工作流完整指南
 ## Research Paper Workflow: From Search to Publication - Complete Guide
@@ -231,6 +232,8 @@ title: "English Title for Display"
 date: 2026-02-13T05:00:00+08:00
 draft: false
 tags: ["tag1", "tag2", "tag3", "tag4", "tag5"]
+description: '技术博客文章'
+categories: ["Research", "Category1", "Category2"]
 ---
 ```
 

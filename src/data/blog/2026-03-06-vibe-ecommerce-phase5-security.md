@@ -2,7 +2,8 @@
 title: '从原型到产品：vibe-ecommerce 迭代系列（四）— 安全加固、性能优化与图片修复'
 pubDatetime: 2026-03-05T18:38:08Z
 tags: ['vibe-coding', 'opencode', 'security', 'performance', 'express-validator', 'lazy-loading']
-
+description: '技术博客文章'
+---
 
 这是 vibe-ecommerce 迭代系列的第四篇。
 

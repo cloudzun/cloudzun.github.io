@@ -2,7 +2,8 @@
 title: 'OpenClaw 2026.2.3 Upgrade Complete Operation Log'
 pubDatetime: 2026-02-05T00:36:00Z
 tags: ['openclaw', 'upgrade', 'qmd', 'discord', 'hugo', 'maintenance']
-
+description: '技术博客文章'
+---
 
 # OpenClaw 2026.2.3 升级完整操作记录
 

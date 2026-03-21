@@ -2,7 +2,8 @@
 title: 'OpenClaw 快速上手指南（国内用户版）'
 pubDatetime: 2026-03-11T02:27:00Z
 tags: ['OpenClaw', 'Quick Start', 'AI Assistant', 'Tutorial', '国内安装']
-
+description: '技术博客文章'
+---
 
 # OpenClaw 快速上手指南（国内用户版）
 

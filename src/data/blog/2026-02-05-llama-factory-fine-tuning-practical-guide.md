@@ -2,8 +2,9 @@
 title: 'LLaMA Factory微调实战 - 理论讲义'
 pubDatetime: 2026-02-05T04:20:00Z
 tags: ['llama', 'fine-tuning', 'machine-learning', 'practical-guide', 'alpaca-format']
-toc: true---
-
+description: '技术博客文章'
+toc: true
+---
 
 # LLaMA Factory微调实战 - 理论讲义
 

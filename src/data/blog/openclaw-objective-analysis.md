@@ -2,8 +2,9 @@
 title: 'OpenClaw AI Assistant: 客观分析优势、限制与适用场景'
 pubDatetime: 2026-03-10T11:32:00Z
 tags: ['OpenClaw', 'AI Assistant', 'Productivity', 'Claude Code', 'AI Coding', 'Enterprise']
-mermaid: true---
-
+description: '技术博客文章'
+mermaid: true
+---
 
 # OpenClaw AI Assistant: 客观分析优势、限制与适用场景
 

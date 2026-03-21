@@ -2,7 +2,8 @@
 title: 'Hugo博客运维最佳实践'
 pubDatetime: 2026-02-05T03:58:00Z
 tags: ['hugo', '运维', 'systemd', '自动化', '博客']
-
+description: '技术博客文章'
+---
 
 # Hugo博客运维最佳实践
 

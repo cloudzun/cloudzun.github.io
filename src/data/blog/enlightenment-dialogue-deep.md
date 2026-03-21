@@ -1,9 +1,9 @@
 ---
 title: '启蒙、文明与AI:一场关于人类价值的对谈'
-date: 2026-02-23
+pubDatetime: 2026-02-23T00:00:00Z
 tags: ['philosophy', 'culture', 'AI', 'enlightenment', 'education', 'dialogue']
-description: "从伏尔泰的中国神话到AI时代的'活人感',两个思想者的共同探索"---
-
+description: "从伏尔泰的中国神话到AI时代的'活人感',两个思想者的共同探索"
+---
 
 ## 写在前面
 

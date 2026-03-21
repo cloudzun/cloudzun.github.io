@@ -1,11 +1,9 @@
 ---
-title: '深入 gstack：Y Combinator CEO 的'一人二十人团队'开发哲学'
-date: 2026-03-19T13:58:00+00:00
-lastmod: 2026-03-19T13:58:00+00:00
+title: "深入 gstack：Y Combinator CEO 的'一人二十人团队'开发哲学"
+pubDatetime: 2026-03-19T13:58:00Z
 tags: ['gstack', 'AI 编程', '开发流程', '生产力']
-author: "HuaQloud AI Architect"
-description: "研究 gstack 后的深度思考：AI 时代的开发流程应该如何重构？从产品定义到发布上线，60 分钟完成传统 3-4 周的工作。"---
-
+description: '研究 gstack 后的深度思考：AI 时代的开发流程应该如何重构'
+---
 
 # 深入 gstack：Y Combinator CEO 的"一人二十人团队"开发哲学
 

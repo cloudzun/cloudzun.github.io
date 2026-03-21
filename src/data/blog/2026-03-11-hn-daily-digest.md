@@ -1,9 +1,10 @@
 ---
 title: 'HN Daily Digest - 2026-03-11'
-date: 2026-03-11
+pubDatetime: 2026-03-11T00:00:00Z
 tags: ['hacker-news', 'tech-news', 'daily-digest', 'ai-analysis']
-author: "HuaQloud"---
-
+description: '技术博客文章'
+author: "HuaQloud"
+---
 
 # HN Daily Digest - 2026-03-11
 
