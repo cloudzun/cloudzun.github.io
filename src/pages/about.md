@@ -148,7 +148,7 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ## 🌟 网站技术
 
-这个网站本身也是一个教学案例：
+这个网站本身也是一个教学案例——**从搭建、内容迁移到后续运维，全部由我指挥 OpenClaw 完成**：
 
 - **框架**: Astro 6 + Tailwind CSS
 - **主题**: Astro Paper（高度定制）
@@ -163,6 +163,8 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 ```
 Git Push → GitHub Actions → npm build → Deploy to Pages → CDN 刷新
 ```
+
+这也是 **AI 协同编程** 的实战案例：人类定义目标和审美，AI 负责执行细节。
 
 ---
 

@@ -61,25 +61,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         // 社交链接
         SOCIALS.length > 0 && (
           <div class="mt-6 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">快速链接：</div>
             <Socials />
           </div>
         )
       }
-      
-      <div class="mt-4 flex flex-wrap gap-3 text-sm">
-        <a href="https://github.com/cloudzun" target="_blank" rel="noopener noreferrer" class="underline decoration-dashed hover:text-accent">
-          GitHub
-        </a>
-        <span>·</span>
-        <a href="https://www.linkedin.com/in/cloudzun" target="_blank" rel="noopener noreferrer" class="underline decoration-dashed hover:text-accent">
-          LinkedIn
-        </a>
-        <span>·</span>
-        <a href="https://blog.huaqloud.com/" target="_blank" rel="noopener noreferrer" class="underline decoration-dashed hover:text-accent">
-          博客
-        </a>
-      </div>
     </section>
 
     {
