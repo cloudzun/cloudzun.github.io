@@ -1,0 +1,134 @@
+---
+import { getCollection } from "astro:content";
+import Main from "@/layouts/Main.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import getUniqueTags from "@/utils/getUniqueTags";
+import { SITE } from "@/config";
+
+const posts = await getCollection("blog");
+const tagsData = getUniqueTags(posts);
+
+// 计算每个标签的使用次数
+const tagsWithCount = tagsData.map(({ tag, tagName }) => {
+  const count = posts.filter(post => 
+    post.data.tags?.map(t => t.toLowerCase()).includes(tag)
+  ).length;
+  return { tag, tagName, count };
+});
+
+// 按使用次数排序
+tagsWithCount.sort((a, b) => b.count - a.count);
+
+// 计算字体大小（基于使用次数）
+const maxCount = Math.max(...tagsWithCount.map(t => t.count));
+const minCount = Math.min(...tagsWithCount.map(t => t.count));
+
+const getFontSize = (count: number) => {
+  if (maxCount === minCount) return "text-xl";
+  
+  const ratio = (count - minCount) / (maxCount - minCount);
+  
+  if (ratio >= 0.8) return "text-3xl font-bold";
+  if (ratio >= 0.6) return "text-2xl font-semibold";
+  if (ratio >= 0.4) return "text-xl font-medium";
+  if (ratio >= 0.2) return "text-lg";
+  return "text-base";
+};
+
+const getColor = (count: number) => {
+  const ratio = (count - minCount) / (maxCount - minCount);
+  
+  if (ratio >= 0.8) return "text-accent";
+  if (ratio >= 0.6) return "text-foreground/90";
+  if (ratio >= 0.4) return "text-foreground/80";
+  if (ratio >= 0.2) return "text-foreground/70";
+  return "text-foreground/60";
+};
+---
+
+<Layout title={`Tags | ${SITE.title}`}>
+  <Header />
+  <Main pageTitle="Tags" pageDesc="所有文章标签的词云展示">
+    <!-- 切换按钮 -->
+    <div class="mb-6 flex gap-4">
+      <a
+        href="/tags/"
+        class="px-4 py-2 rounded border border-foreground/30 hover:bg-accent hover:text-white transition-colors"
+      >
+        列表视图
+      </a>
+      <button
+        disabled
+        class="px-4 py-2 rounded bg-accent text-white cursor-not-allowed"
+      >
+        词云视图
+      </button>
+    </div>
+
+    <!-- 词云 -->
+    <div class="flex flex-wrap gap-4 py-8">
+      {tagsWithCount.map(({ tag, tagName, count }) => (
+        <a
+          href={`/tags/${tag}/`}
+          transition:name={tag}
+          class:list={[
+            "inline-block transition-all duration-200",
+            "hover:-translate-y-1 hover:opacity-80",
+            getFontSize(count),
+            getColor(count),
+          ]}
+          style={`display: inline-block; margin: 4px;`}
+        >
+          {tagName}
+          <span class="text-sm opacity-60 ml-1">({count})</span>
+        </a>
+      ))}
+    </div>
+
+    <!-- 统计信息 -->
+    <div class="mt-12 p-6 rounded-lg bg-muted/50">
+      <h3 class="text-lg font-semibold mb-4">📊 标签统计</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent">{tagsWithCount.length}</div>
+          <div class="text-sm text-foreground/70">总标签数</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent">{posts.length}</div>
+          <div class="text-sm text-foreground/70">总文章数</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent">
+            {tagsWithCount.find(t => t.count === maxCount)?.count || 0}
+          </div>
+          <div class="text-sm text-foreground/70">最多使用的标签</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-accent">
+            {(tagsWithCount.reduce((sum, t) => sum + t.count, 0) / tagsWithCount.length).toFixed(1)}
+          </div>
+          <div class="text-sm text-foreground/70">平均每标签使用次数</div>
+        </div>
+      </div>
+
+      <!-- Top 10 标签 -->
+      <div class="mt-6">
+        <h4 class="font-medium mb-3">🏆 Top 10 热门标签</h4>
+        <ol class="space-y-2">
+          {tagsWithCount.slice(0, 10).map(({ tagName, count }, index) => (
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold text-foreground/50 w-6">#{index + 1}</span>
+                <span>{tagName}</span>
+              </div>
+              <span class="text-sm text-accent">{count} 次</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </Main>
+  <Footer />
+</Layout>
