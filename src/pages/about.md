@@ -134,15 +134,15 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ## 📬 联系方式
 
+**欢迎交流技术问题、培训合作或 AI 应用探讨！**
+
+- **微信**: flagzun
 - **GitHub**: [@cloudzun](https://github.com/cloudzun)
-- **博客**: [www.cloudzun.com](https://www.cloudzun.com/)
-- **旧博客**: [blog.huaqloud.com](https://blog.huaqloud.com/)
+- **网站**: [www.cloudzun.com](https://www.cloudzun.com/)
+- **博客**: [blog.huaqloud.com](https://blog.huaqloud.com/)
 - **邮件**: [info@cloudzun.com](mailto:info@cloudzun.com)
 - **LinkedIn**: [linkedin.com/in/cloudzun](https://www.linkedin.com/in/cloudzun)
 - **Telegram**: [@cloudzun](https://t.me/cloudzun)
-- **微信**: flagzun
-
-欢迎交流技术问题、培训合作或 AI 应用探讨！
 
 ---
 

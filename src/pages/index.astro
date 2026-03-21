@@ -24,7 +24,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        你好，我是 CloudZun
+        Hi, I'm CloudZun
       </h1>
       
       <p class="text-lg">
@@ -48,14 +48,14 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </p>
       
       <p class="mt-2">
-        提供 <strong>技术培训</strong> 与 <strong>咨询顾问</strong> 服务，欢迎联系：
+        提供 <strong>技术培训</strong> 与 <strong>咨询顾问</strong> 服务，
+        <LinkButton
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+          href="/about/"
+        >
+          查看详情 →
+        </LinkButton>
       </p>
-      
-      <div class="mt-3 text-sm">
-        <p>📧 Email: <a href="mailto:info@cloudzun.com" class="underline decoration-dashed hover:text-accent">info@cloudzun.com</a></p>
-        <p>✈️ Telegram: <a href="https://t.me/cloudzun" target="_blank" rel="noopener noreferrer" class="underline decoration-dashed hover:text-accent">@cloudzun</a></p>
-        <p>💬 微信：flagzun</p>
-      </div>
 
       {
         // 社交链接
@@ -77,7 +77,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         </a>
         <span>·</span>
         <a href="https://blog.huaqloud.com/" target="_blank" rel="noopener noreferrer" class="underline decoration-dashed hover:text-accent">
-          博客（旧站）
+          博客
         </a>
       </div>
     </section>
