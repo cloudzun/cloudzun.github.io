@@ -1,0 +1,12 @@
+# Dependabot 配置
+# 禁用自动依赖更新（避免报错）
+# 参考：https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+
+version: 2
+updates:
+  # 禁用 npm 依赖自动更新
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"  # 改为每月检查，减少更新频率
+    open-pull-requests-limit: 0  # 不自动创建 PR
