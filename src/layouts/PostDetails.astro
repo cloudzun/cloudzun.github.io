@@ -9,6 +9,7 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
@@ -114,6 +115,9 @@ const nextPost =
       <Content />
     </article>
 
+    <!-- 目录导航 -->
+    <TableOfContents />
+
     <hr class="my-8 border-dashed" />
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
@@ -125,6 +129,60 @@ const nextPost =
     <BackToTopButton />
 
     <ShareLinks />
+
+    <!-- 相关文章推荐 -->
+    {
+      posts.filter(p => 
+        p.data.tags?.some(tag => post.data.tags?.includes(tag)) && p.id !== post.id
+      ).length > 0 && (
+        <div class="my-12 p-6 rounded-2xl bg-gradient-to-br from-muted/80 to-muted/40 border-2 border-foreground/10">
+          <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+            <span class="text-2xl">📚</span>
+            <span>相关文章推荐</span>
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {posts
+              .filter(p => 
+                p.data.tags?.some(tag => post.data.tags?.includes(tag)) && p.id !== post.id
+              )
+              .sort((a, b) => {
+                // 按共同标签数排序
+                const aCount = a.data.tags?.filter(t => post.data.tags?.includes(t)).length || 0;
+                const bCount = b.data.tags?.filter(t => post.data.tags?.includes(t)).length || 0;
+                return bCount - aCount;
+              })
+              .slice(0, 6)
+              .map(relatedPost => {
+                const commonTags = relatedPost.data.tags?.filter(t => post.data.tags?.includes(t)) || [];
+                return (
+                  <a
+                    href={`/posts/${relatedPost.id}/`}
+                    class="p-4 rounded-xl bg-white/50 hover:bg-accent/10 transition-all group border border-foreground/5 hover:border-accent/30"
+                  >
+                    <div class="font-medium group-hover:text-accent transition-colors line-clamp-2 mb-2">
+                      {relatedPost.data.title}
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-foreground/60">
+                      <span>
+                        {new Date(relatedPost.data.pubDatetime).toLocaleDateString('zh-CN', {
+                          month: 'short',
+                          day: 'numeric'
+                        })}
+                      </span>
+                      {commonTags.length > 0 && (
+                        <>
+                          <span>•</span>
+                          <span class="text-accent">{commonTags.length} 个共同标签</span>
+                        </>
+                      )}
+                    </div>
+                  </a>
+                );
+              })}
+          </div>
+        </div>
+      )
+    }
 
     <hr class="my-6 border-dashed" />
 
