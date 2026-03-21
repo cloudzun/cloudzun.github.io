@@ -51,7 +51,7 @@ const getColor = (count: number) => {
 <Layout title={`Tags | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Tags" pageDesc="通过标签词云探索博客内容">
-    <!-- 统计面板 - 移到顶部 -->
+    <!-- 统计面板 -->
     <div class="mb-10 p-6 rounded-lg bg-gradient-to-r from-muted/50 to-muted/30 border border-foreground/10">
       <h3 class="text-xl font-semibold mb-6 text-center">📊 博客内容概览</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -113,7 +113,7 @@ const getColor = (count: number) => {
     <!-- 词云 -->
     <div class="mb-12">
       <h4 class="text-lg font-semibold mb-6 text-center text-foreground/80">🌩️ 标签词云</h4>
-      <div class="flex flex-wrap gap-4 py-8 justify-center">
+      <div class="flex flex-wrap gap-3 py-4 justify-center">
         {tagsWithCount.map(({ tag, tagName, count }) => (
           <a
             href={`/tags/${tag}/`}
@@ -124,7 +124,6 @@ const getColor = (count: number) => {
               getFontSize(count),
               getColor(count),
             ]}
-            style={`display: inline-block; margin: 4px;`}
           >
             {tagName}
             <span class="text-sm opacity-60 ml-1">({count})</span>
