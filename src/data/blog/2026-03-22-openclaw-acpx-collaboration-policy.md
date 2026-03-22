@@ -1,8 +1,7 @@
 ---
 title: "OpenClaw 与 OpenCode 协同编码：ACPX 权限策略最佳实践"
 description: "记录一次从权限拒绝错误到建立系统性权限策略规范的完整过程，解决 OpenClaw 子代理延迟响应问题。"
-pubDatetime: 2026-03-22T01:30:00Z
-modDatetime: 
+pubDatetime: 2026-03-22T01:30:00+00:00
 tags:
   - OpenClaw
   - ACPX
