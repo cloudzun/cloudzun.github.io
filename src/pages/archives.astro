@@ -56,7 +56,15 @@ for (let i = 11; i >= 0; i--) {
 }
 
 // 生成日历数据（最近 365 天）
-const calendarData = [];
+interface CalendarDay {
+  date: Date;
+  dateKey: string;
+  count: number;
+  dayOfWeek: number;
+  level: number;
+}
+
+const calendarData: CalendarDay[] = [];
 const today = new Date();
 const startDate = new Date(today);
 startDate.setDate(startDate.getDate() - 364); // 包括今天是 365 天
@@ -79,8 +87,8 @@ while (currentDate <= today) {
 }
 
 // 按周组织数据
-const weeks: typeof calendarData[][] = [];
-let currentWeek: typeof calendarData = [];
+const weeks: CalendarDay[][] = [];
+let currentWeek: CalendarDay[] = [];
 calendarData.forEach((day, index) => {
   currentWeek.push(day);
   if (currentWeek.length === 7 || index === calendarData.length - 1) {
@@ -95,7 +103,7 @@ const totalDays = calendarData.filter(d => d.count > 0).length;
 const maxStreak = calculateMaxStreak(calendarData);
 const currentStreak = calculateCurrentStreak(calendarData);
 
-function calculateMaxStreak(data: typeof calendarData) {
+function calculateMaxStreak(data: CalendarDay[]) {
   let max = 0;
   let current = 0;
   for (const day of data) {
@@ -109,7 +117,7 @@ function calculateMaxStreak(data: typeof calendarData) {
   return max;
 }
 
-function calculateCurrentStreak(data: typeof calendarData) {
+function calculateCurrentStreak(data: CalendarDay[]) {
   let current = 0;
   for (let i = data.length - 1; i >= 0; i--) {
     if (data[i].count > 0) {
@@ -304,7 +312,7 @@ const postsByMonthList = Array.from(postsByMonth.entries())
 <script>
   // 点击日期方块的处理函数（预留功能）
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function showDate(dateKey: string) {
+  const showDate = (_dateKey: string) => {
     // 可以在这里添加点击日期方块后的交互
-  }
+  };
 </script>
