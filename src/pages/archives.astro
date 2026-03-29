@@ -9,8 +9,8 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog");
 
 // 按日期分组统计
-const postsByDate = new Map<string, any[]>();
-const postsByMonth = new Map<string, any[]>();
+const postsByDate = new Map<string, typeof posts>();
+const postsByMonth = new Map<string, typeof posts>();
 
 posts.forEach(post => {
   const date = new Date(post.data.pubDatetime);
@@ -79,9 +79,9 @@ while (currentDate <= today) {
 }
 
 // 按周组织数据
-const weeks: any[][] = [];
-let currentWeek: any[] = [];
-calendarData.forEach((day: any, index: number) => {
+const weeks: typeof calendarData[][] = [];
+let currentWeek: typeof calendarData = [];
+calendarData.forEach((day, index) => {
   currentWeek.push(day);
   if (currentWeek.length === 7 || index === calendarData.length - 1) {
     weeks.push(currentWeek);
@@ -95,7 +95,7 @@ const totalDays = calendarData.filter(d => d.count > 0).length;
 const maxStreak = calculateMaxStreak(calendarData);
 const currentStreak = calculateCurrentStreak(calendarData);
 
-function calculateMaxStreak(data: any[]) {
+function calculateMaxStreak(data: typeof calendarData) {
   let max = 0;
   let current = 0;
   for (const day of data) {
@@ -109,7 +109,7 @@ function calculateMaxStreak(data: any[]) {
   return max;
 }
 
-function calculateCurrentStreak(data: any[]) {
+function calculateCurrentStreak(data: typeof calendarData) {
   let current = 0;
   for (let i = data.length - 1; i >= 0; i--) {
     if (data[i].count > 0) {
@@ -183,9 +183,9 @@ const postsByMonthList = Array.from(postsByMonth.entries())
       
       <!-- 日历网格 -->
       <div class="flex gap-1">
-        {weeks.map((week: any[], weekIndex: number) => (
+        {weeks.map((week) => (
           <div class="flex flex-col gap-1">
-            {week.map((day: any, dayIndex: number) => {
+            {week.map((day) => {
               const colorClass = day.level === 0 ? 'bg-foreground/10' :
                                 day.level === 1 ? 'bg-green-200' :
                                 day.level === 2 ? 'bg-green-400' :
@@ -196,7 +196,6 @@ const postsByMonthList = Array.from(postsByMonth.entries())
                 <div
                   class={`w-3 h-3 rounded-sm ${colorClass} hover:ring-2 hover:ring-accent transition-all cursor-pointer`}
                   title={`${day.dateKey}: ${day.count}篇文章`}
-                  onclick={`showDate('${day.dateKey}')`}
                 />
               );
             })}
@@ -303,8 +302,9 @@ const postsByMonthList = Array.from(postsByMonth.entries())
 </Layout>
 
 <script>
+  // 点击日期方块的处理函数（预留功能）
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function showDate(dateKey: string) {
     // 可以在这里添加点击日期方块后的交互
-    console.log('Clicked date:', dateKey);
   }
 </script>

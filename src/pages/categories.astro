@@ -183,8 +183,6 @@ const postsByCategory = Object.entries(categories).map(([name, { id, keywords }]
 <script is:inline>
   // 使函数在全局作用域可用
   window.showCategory = function(id) {
-    console.log('Showing category:', id);
-    
     // 隐藏所有分类
     document.querySelectorAll('.category-section').forEach(el => {
       el.classList.add('hidden');
