@@ -4,19 +4,19 @@ title: "About"
 description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主"
 ---
 
-# 👋 你好，我是 CloudZun
+# 你好，我是 CloudZun
 
-## 🎯 身份标签
+## 身份标签
 
-- **讲师** 🎓 - AI 协同编程与 Vibe Coding 方法论布道者，设计并交付多套企业培训课程
-- **工程师** 💻 - 专注于 AI Agent 工作流、LLM 应用开发和自动化实践
-- **博主** 📝 - 分享 AI、自动化和开发经验，已发布 115+ 篇技术文章
+- **讲师** - AI 协同编程与 Vibe Coding 方法论布道者，设计并交付多套企业培训课程
+- **工程师** - 专注于 AI Agent 工作流、LLM 应用开发和自动化实践
+- **博主** - 分享 AI、自动化和开发经验，已发布 115+ 篇技术文章
 
 > **核心理念**：人类保持架构决策权与质量判断，AI 负责代码执行与方案生成——在每个开发环节持续交互、相互增强。
 
 ---
 
-## 🔬 研究与应用方向
+## 研究与应用方向
 
 基于在 **AI 协同编程教育** 和 **Agentic AI 工作流** 领域的实践，专注于以下方向：
 
@@ -54,7 +54,7 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ---
 
-## 🚀 代表项目
+## 代表项目
 
 ### 教育类项目
 
@@ -75,7 +75,7 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ---
 
-## 💼 技术培训与咨询服务
+## 技术培训与咨询服务
 
 我提供以下领域的技术培训和咨询顾问服务：
 
@@ -95,7 +95,7 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ---
 
-## 📬 联系方式
+## 联系方式
 
 **欢迎交流技术问题、培训合作或 AI 应用探讨！**
 
@@ -109,7 +109,7 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ---
 
-## 📚 技术栈
+## 技术栈
 
 | 领域 | 技术/工具 |
 |------|----------|
@@ -123,7 +123,7 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ---
 
-## 📖 博客
+## 博客
 
 这个博客使用 **Astro Paper** 主题构建，托管在 GitHub Pages。
 
@@ -134,17 +134,17 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ### 热门文章分类
 
-- 🤖 **AI 协同编程**: OpenCode 教程、多 Agent 工作流、SDD 规格驱动开发
-- 💡 **Vibe Coding**: 迭代系列、7-Gate 质量门控、从原型到生产
-- 🏢 **办公自动化**: Microsoft 365 Copilot、Excel/Word/PPT 自动化、Vibe Working
-- 🛠️ **工程实践**: 架构决策记录、技术债管理、Docker 部署、AI 技术外骨骼反思
-- 💭 **技术思考**: 从 Copilot 到 OpenCode 复盘、AI 时代的开发流程重构
+- **AI 协同编程**: OpenCode 教程、多 Agent 工作流、SDD 规格驱动开发
+- **Vibe Coding**: 迭代系列、7-Gate 质量门控、从原型到生产
+- **办公自动化**: Microsoft 365 Copilot、Excel/Word/PPT 自动化、Vibe Working
+- **工程实践**: 架构决策记录、技术债管理、Docker 部署、AI 技术外骨骼反思
+- **技术思考**: 从 Copilot 到 OpenCode 复盘、AI 时代的开发流程重构
 
-[📚 浏览所有文章](/posts/)
+[浏览所有文章](/posts/)
 
 ---
 
-## 🌟 网站技术
+## 网站技术
 
 这个网站本身也是一个教学案例——**从搭建、内容迁移到后续运维，全部由我指挥 OpenClaw 完成**：
 
@@ -166,7 +166,7 @@ Git Push → GitHub Actions → npm build → Deploy to Pages → CDN 刷新
 
 ---
 
-## 💡 座右铭
+## 座右铭
 
 > **"Automate the boring stuff. Focus on what matters."**
 
