@@ -2,8 +2,8 @@
 title: "OpenClaw ACPX 权限系统详解：从一次权限拒绝错误说起"
 featured: true
 pubDatetime: 2026-03-21T13:30:00Z
-tags: ['openclaw', 'security', 'acpx', 'agent', '权限管理']
-description: '记录一次 OpenCode 子代理权限问题的排查过程，深入解析 ACPX 安全沙箱的工作原理和配置实践'
+tags: ["openclaw", "security", "acpx", "agent", "权限管理"]
+description: "记录一次 OpenCode 子代理权限问题的排查过程，深入解析 ACPX 安全沙箱的工作原理和配置实践"
 ---
 
 # OpenClaw ACPX 权限系统详解：从一次权限拒绝错误说起
@@ -30,8 +30,8 @@ sessions_spawn(
 ### 错误信息
 
 ```
-Permission denied by ACP runtime (acpx). 
-ACPX blocked a write/exec permission request in a non-interactive session. 
+Permission denied by ACP runtime (acpx).
+ACPX blocked a write/exec permission request in a non-interactive session.
 Configure plugins.entries.acpx.config.permissionMode to one of: approve-reads, approve-all, deny-all.
 ```
 
@@ -160,7 +160,7 @@ sessions_spawn:
 sessions_spawn:
   agentId: opencode
   runtime: acp
-  sandbox: inherit  # ✅ 继承父会话的权限
+  sandbox: inherit # ✅ 继承父会话的权限
   # ↓
   # 父会话能做的，子代理都能做
 ```
@@ -175,7 +175,7 @@ sessions_spawn:
     "entries": {
       "acpx": {
         "config": {
-          "permissionMode": "approve-reads"  // 读操作需批准
+          "permissionMode": "approve-reads" // 读操作需批准
           // 或 "approve-all" (所有操作需批准)
           // 或 "deny-all" (禁止所有操作)
         }
@@ -230,12 +230,12 @@ cat ~/.openclaw/agents/opencode/sessions/sessions.json | jq '.["agent:opencode:a
 
 ## 📊 权限模式对比
 
-| 模式 | 文件读取 | 文件写入 | 命令执行 | 适用场景 |
-|------|---------|---------|---------|---------|
-| `require` | ❌ 需批准 | ❌ 需批准 | ❌ 需批准 | 不信任代码 |
-| `inherit` | ✅ 继承 | ✅ 继承 | ✅ 继承 | 信任的子代理 |
-| `approve-reads` | ❌ 需批准 | ✅ 允许 | ✅ 允许 | 只读敏感 |
-| `deny-all` | ❌ 禁止 | ❌ 禁止 | ❌ 禁止 | 纯计算任务 |
+| 模式            | 文件读取  | 文件写入  | 命令执行  | 适用场景     |
+| --------------- | --------- | --------- | --------- | ------------ |
+| `require`       | ❌ 需批准 | ❌ 需批准 | ❌ 需批准 | 不信任代码   |
+| `inherit`       | ✅ 继承   | ✅ 继承   | ✅ 继承   | 信任的子代理 |
+| `approve-reads` | ❌ 需批准 | ✅ 允许   | ✅ 允许   | 只读敏感     |
+| `deny-all`      | ❌ 禁止   | ❌ 禁止   | ❌ 禁止   | 纯计算任务   |
 
 ---
 
@@ -301,11 +301,11 @@ openclaw agent list
 
 ### 权限需求分析
 
-| 操作 | 权限类型 | 需求 |
-|------|---------|------|
-| 读取源文件 | 文件读取 | ✅ 必需 |
+| 操作         | 权限类型 | 需求    |
+| ------------ | -------- | ------- |
+| 读取源文件   | 文件读取 | ✅ 必需 |
 | 写入目标文件 | 文件写入 | ✅ 必需 |
-| 运行 npm | 命令执行 | ✅ 必需 |
+| 运行 npm     | 命令执行 | ✅ 必需 |
 | 删除临时文件 | 文件删除 | ⚠️ 可选 |
 
 **结论**: 需要 `sandbox: inherit` 模式
@@ -320,14 +320,14 @@ sessions_spawn(
     sandbox="inherit",  # ✅ 关键配置
     task="""
     请帮我修复 ~/cloudzun.github.io/src/data/blog/ 目录下所有 Markdown 文章的 frontmatter 格式问题。
-    
+
     需要：
     1. 日期格式转换 (date → pubDatetime, UTC 转换)
     2. 删除不需要的字段 (draft, categories)
     3. 格式统一 (引号转换)
     4. 添加缺失的 description 字段
     5. 运行 npm run build 验证
-    
+
     源文件参考：https://github.com/cloudzun/clean-vercel-blog
     """
 )
@@ -339,12 +339,12 @@ sessions_spawn(
 
 ### ACPX 与其他沙箱对比
 
-| 沙箱系统 | 平台 | 特点 |
-|---------|------|------|
-| ACPX | OpenClaw | 基于会话的权限继承 |
-| Docker | 通用 | 容器级隔离 |
-| Firecracker | AWS Lambda | 微虚拟机隔离 |
-| gVisor | Kubernetes | 用户空间内核 |
+| 沙箱系统    | 平台       | 特点               |
+| ----------- | ---------- | ------------------ |
+| ACPX        | OpenClaw   | 基于会话的权限继承 |
+| Docker      | 通用       | 容器级隔离         |
+| Firecracker | AWS Lambda | 微虚拟机隔离       |
+| gVisor      | Kubernetes | 用户空间内核       |
 
 **ACPX 的优势**: 轻量级、与 OpenClaw 深度集成、权限模型灵活
 

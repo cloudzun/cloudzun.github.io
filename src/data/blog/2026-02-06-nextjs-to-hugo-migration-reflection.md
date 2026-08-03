@@ -1,8 +1,8 @@
 ---
-title: '从 Next.js 到 Hugo：一次技术选型的反思与教训'
+title: "从 Next.js 到 Hugo：一次技术选型的反思与教训"
 pubDatetime: 2026-02-06T00:00:00Z
-tags: ['Hugo', 'Next.js', '技术选型', '重构', '反思']
-description: '技术博客文章'
+tags: ["Hugo", "Next.js", "技术选型", "重构", "反思"]
+description: "技术博客文章"
 ---
 
 ## 前言
@@ -18,6 +18,7 @@ description: '技术博客文章'
 ### 初始方案
 
 我选择了 Next.js 14 + App Router，理由是：
+
 - 现代化的 React 框架
 - 支持静态生成（SSG）
 - Vercel 原生支持，部署方便
@@ -32,7 +33,7 @@ description: '技术博客文章'
 1. **手工复刻 CSS**: 尝试用 Tailwind 工具类重写 Hugo Paper 的样式
 2. **细节调整无穷无尽**: 间距、字号、行高、颜色...每个细节都需要反复调试
 3. **代码膨胀**: `app/globals.css` 膨胀到 370+ 行自定义样式
-4. **效果不理想**: 
+4. **效果不理想**:
    - 文章内容没有居中
    - 代码块样式简陋（只有阴影，没有语法高亮）
    - 标签显示不美观
@@ -47,6 +48,7 @@ description: '技术博客文章'
 - **Prism Night Owl 主题**: 精美的代码配色
 
 这次重构让情况好转了不少：
+
 - CSS 从 370 行减少到 130 行
 - 代码块终于有了专业的语法高亮
 - 排版更加规范
@@ -66,6 +68,7 @@ description: '技术博客文章'
 - 反复对比截图，调整像素级差异
 
 Git 提交记录里满是这样的消息：
+
 - "Tailwind: revert article sizing/spacing towards Hugo defaults"
 - "Complete Tailwind article body migration: enhanced typography..."
 - "Major refactor: Use Tailwind Typography and Prism..."
@@ -73,6 +76,7 @@ Git 提交记录里满是这样的消息：
 ### 代码仓库的膨胀
 
 项目逐渐变得臃肿：
+
 - `app/` 目录：Next.js 页面和组件
 - `components/`：自定义 React 组件
 - `lib/`：工具函数
@@ -109,21 +113,25 @@ Git 提交记录里满是这样的消息：
 令人惊讶的是，真正的迁移过程非常顺利：
 
 1. **安装 Hugo Extended** v0.147.7
+
 ```bash
 wget https://github.com/gohugoio/hugo/releases/download/v0.147.7/hugo_extended_0.147.7_linux-amd64.tar.gz
 ```
 
 2. **创建 Hugo 目录结构**
+
 ```bash
 mkdir -p themes archetypes static layouts data
 ```
 
 3. **添加 FixIt 主题**（作为 git submodule）
+
 ```bash
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
 ```
 
 4. **创建配置文件** `hugo.toml`
+
 ```toml
 title = "My Hugo Blog"
 baseURL = "http://localhost:1313/"
@@ -133,7 +141,7 @@ languageCode = "zh-cn"
 [params]
   version = "0.3.X"
   defaultTheme = "auto"
-  
+
 [params.page.toc]
   enable = true
   auto = true
@@ -142,6 +150,7 @@ languageCode = "zh-cn"
 5. **现有 Markdown 内容完全兼容**：无需修改任何文章！
 
 6. **配置 Vercel 部署** `vercel.json`
+
 ```json
 {
   "build": {
@@ -156,6 +165,7 @@ languageCode = "zh-cn"
 ```
 
 7. **启动服务器**
+
 ```bash
 hugo server -D
 ```
@@ -176,7 +186,6 @@ hugo server -D
   - React 组件: 多个文件
   - 工具脚本: 7 个调试工具
   - 配置文件: 复杂的 Tailwind/Next.js 配置
-  
 - **Hugo 方案**:
   - 自定义 CSS: 0 行
   - 配置文件: 1 个简洁的 `hugo.toml`（129 行）
@@ -184,17 +193,17 @@ hugo server -D
 
 ### 功能对比
 
-| 功能 | Next.js 自定义 | Hugo + FixIt |
-|------|---------------|--------------|
-| 语法高亮 | 需要配置 rehype-prism | ✅ 内置 |
-| 响应式设计 | 需要自己写 | ✅ 内置 |
-| 暗色模式 | 需要实现 | ✅ 内置 |
-| TOC 目录 | 需要实现 | ✅ 内置 |
-| 阅读时间 | 需要计算 | ✅ 内置 |
-| SEO | 需要配置 | ✅ 内置 |
-| RSS/Sitemap | 需要手动生成 | ✅ 自动生成 |
-| 社交分享 | 需要开发 | ✅ 内置 |
-| 评论系统 | 需要集成 | ✅ 支持多种 |
+| 功能        | Next.js 自定义        | Hugo + FixIt |
+| ----------- | --------------------- | ------------ |
+| 语法高亮    | 需要配置 rehype-prism | ✅ 内置      |
+| 响应式设计  | 需要自己写            | ✅ 内置      |
+| 暗色模式    | 需要实现              | ✅ 内置      |
+| TOC 目录    | 需要实现              | ✅ 内置      |
+| 阅读时间    | 需要计算              | ✅ 内置      |
+| SEO         | 需要配置              | ✅ 内置      |
+| RSS/Sitemap | 需要手动生成          | ✅ 自动生成  |
+| 社交分享    | 需要开发              | ✅ 内置      |
+| 评论系统    | 需要集成              | ✅ 支持多种  |
 
 ### 性能对比
 
@@ -217,13 +226,10 @@ hugo server -D
 
 1. **核心需求是什么？**
    - 我需要的是一个博客，不是一个 React 应用
-   
 2. **最简单的方案是什么？**
    - Hugo + 现成主题就能满足所有需求
-   
 3. **定制开发的价值在哪？**
    - 如果只是为了"和别人不一样"，成本太高
-   
 4. **时间和精力的最佳分配？**
    - 应该花在写内容上，而不是调样式
 
@@ -232,12 +238,14 @@ hugo server -D
 造轮子不是坏事，但要有明确的理由：
 
 ✅ **适合自己造轮子**：
+
 - 现有方案无法满足特殊需求
 - 作为学习项目，明确目标是学习
 - 有充足的时间和资源投入
 - 需要深度定制化的功能
 
 ❌ **不适合造轮子**：
+
 - 只是为了"显得专业"
 - 低估了实现的复杂度
 - 忽视了维护成本
@@ -248,12 +256,14 @@ hugo server -D
 ### 1. 明确项目目标
 
 区分"写博客"和"开发博客系统"：
+
 - 如果目标是分享内容 → 用现成方案
 - 如果目标是学习技术 → 可以自己开发，但要有心理准备
 
 ### 2. 评估真实成本
 
 定制开发的成本包括：
+
 - 初始开发时间
 - 调试和优化时间
 - 后期维护成本
@@ -262,6 +272,7 @@ hugo server -D
 ### 3. 拥抱成熟方案
 
 优秀的开源项目凝聚了社区的智慧：
+
 - **Hugo**: 10 年的发展，极致的性能优化
 - **FixIt**: 精心设计的主题，良好的文档
 - 站在巨人的肩膀上，不丢人
@@ -269,6 +280,7 @@ hugo server -D
 ### 4. 渐进式定制
 
 即使用现成方案，也可以逐步定制：
+
 1. 先用默认配置，确保能跑起来
 2. 通过配置文件调整（`hugo.toml`）
 3. 需要时再添加自定义 CSS
@@ -277,6 +289,7 @@ hugo server -D
 ### 5. 记录决策过程
 
 这篇文章本身就是一个例子：
+
 - 记录为什么做某个决定
 - 记录遇到的问题和解决方案
 - 反思可以避免的弯路
@@ -287,12 +300,14 @@ hugo server -D
 迁移到 Hugo 后，我还做了一些清理工作：
 
 ### 保留的文件
+
 - `content/posts/`: Markdown 文章（完全兼容）
 - `.gitignore`: 更新以忽略 Hugo 构建输出
 - `vercel.json`: 配置 Hugo 部署
 - `README.md`: 更新项目文档
 
 ### 可以删除的文件（未来）
+
 - `app/`, `components/`, `lib/`: Next.js 相关代码
 - `tools/`: 调试工具脚本
 - `screenshots/`: 视觉回归测试截图
@@ -300,6 +315,7 @@ hugo server -D
 - `package.json`, `package-lock.json`: Node.js 依赖
 
 为什么没立即删除？
+
 - 作为历史记录，提醒自己走过的弯路
 - 可能有些工具脚本未来还有用
 - 给其他人一个完整的对比视角

@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-25'
+title: "HN Daily Digest: 2026-02-25"
 pubDatetime: 2026-02-24T19:26:15Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -154,64 +154,74 @@ Pi的设计哲学对技术社区具有重要启示意义。它提供的是**可�
 ## 📑 更多热门文章 (11-20)
 
 **11. Corgi Labs (YC W23) Is Hiring**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47145911) · [原文](https://www.ycombinator.com/companies/corgi-labs/jobs/ZiEIf7a-founders-associate)
-   > Corgi Labs是一家YC孵化的AI支付优化公司，正在招聘创始人助理，提供月薪3-4.5千美元及0.1-0.2%股权，致力于通过AI技术提升支付成功率并降低欺诈风险。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47145911) · [原文](https://www.ycombinator.com/companies/corgi-labs/jobs/ZiEIf7a-founders-associate)
+
+> Corgi Labs是一家YC孵化的AI支付优化公司，正在招聘创始人助理，提供月薪3-4.5千美元及0.1-0.2%股权，致力于通过AI技术提升支付成功率并降低欺诈风险。
 
 **12. Hugging Face Skills**
-   ⭐ 142 分 · 💬 41 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47139902) · [原文](https://github.com/huggingface/skills)
-   > 这是Hugging Face推出的技能库项目，旨在帮助开发者学习和掌握使用Hugging Face平台进行AI模型开发和部署的各项技能。
+⭐ 142 分 · 💬 41 条
+[HN 讨论](https://news.ycombinator.com/item?id=47139902) · [原文](https://github.com/huggingface/skills)
+
+> 这是Hugging Face推出的技能库项目，旨在帮助开发者学习和掌握使用Hugging Face平台进行AI模型开发和部署的各项技能。
 
 **13. Show HN: Emdash – Open-source agentic development environment**
-   ⭐ 118 分 · 💬 49 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47140322) · [原文](https://github.com/generalaction/emdash)
-   > Emdash是一个开源的AI智能开发环境，支持并行运行多个编码代理，可集成任意AI服务提供商，帮助开发者自动化编程工作流程。
+⭐ 118 分 · 💬 49 条
+[HN 讨论](https://news.ycombinator.com/item?id=47140322) · [原文](https://github.com/generalaction/emdash)
+
+> Emdash是一个开源的AI智能开发环境，支持并行运行多个编码代理，可集成任意AI服务提供商，帮助开发者自动化编程工作流程。
 
 **14. Optophone**
-   ⭐ 48 分 · 💬 8 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47093978) · [原文](https://en.wikipedia.org/wiki/Optophone)
-   > 光音器是一种早期辅助盲人阅读的设备，通过将印刷文字的光学图案转换为不同音调的声音信号来帮助视障者识别文字。
+⭐ 48 分 · 💬 8 条
+[HN 讨论](https://news.ycombinator.com/item?id=47093978) · [原文](https://en.wikipedia.org/wiki/Optophone)
+
+> 光音器是一种早期辅助盲人阅读的设备，通过将印刷文字的光学图案转换为不同音调的声音信号来帮助视障者识别文字。
 
 **15. Mercury 2: The fastest reasoning LLM, powered by diffusion**
-   ⭐ 93 分 · 💬 60 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47144464) · [原文](https://www.inceptionlabs.ai/blog/introducing-mercury-2)
-   > Mercury 2是首个采用扩散模型而非自回归解码的推理语言模型，通过并行生成技术大幅降低延迟，专为高频循环调用的生产环境AI应用场景设计。
+⭐ 93 分 · 💬 60 条
+[HN 讨论](https://news.ycombinator.com/item?id=47144464) · [原文](https://www.inceptionlabs.ai/blog/introducing-mercury-2)
+
+> Mercury 2是首个采用扩散模型而非自回归解码的推理语言模型，通过并行生成技术大幅降低延迟，专为高频循环调用的生产环境AI应用场景设计。
 
 **16. Aesthetics of single threading**
-   ⭐ 30 分 · 💬 6 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47104227) · [原文](https://ta.fo/aesthetics-of-single-threading/)
-   > 本文通过类比计算机的上下文切换，阐述了人脑本质上是单线程处理器，揭示多任务切换会带来效率损耗，倡导专注单一任务的工作方式。
+⭐ 30 分 · 💬 6 条
+[HN 讨论](https://news.ycombinator.com/item?id=47104227) · [原文](https://ta.fo/aesthetics-of-single-threading/)
+
+> 本文通过类比计算机的上下文切换，阐述了人脑本质上是单线程处理器，揭示多任务切换会带来效率损耗，倡导专注单一任务的工作方式。
 
 **17. Anthropic Drops Flagship Safety Pledge**
-   ⭐ 62 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47145963) · [原文](https://time.com/7380854/exclusive-anthropic-drops-flagship-safety-pledge/)
-   > Anthropic放弃了其2023年承诺的核心安全政策——即在无法保证安全措施充分的情况下不训练AI系统，这标志着这家以安全著称的AI公司在市场压力下改变了立场。
+⭐ 62 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47145963) · [原文](https://time.com/7380854/exclusive-anthropic-drops-flagship-safety-pledge/)
+
+> Anthropic放弃了其2023年承诺的核心安全政策——即在无法保证安全措施充分的情况下不训练AI系统，这标志着这家以安全著称的AI公司在市场压力下改变了立场。
 
 **18. We installed a single turnstile to feel secure**
-   ⭐⭐ 283 分 · 💬 127 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47114678) · [原文](https://idiallo.com/blog/installed-single-turnstile-for-security-theater)
-   > 讲述公司被收购后实施严格门禁系统，结果导致员工频繁忘带门卡被锁在楼梯间，揭示过度安全措施带来的实际不便和低效问题。
+⭐⭐ 283 分 · 💬 127 条
+[HN 讨论](https://news.ycombinator.com/item?id=47114678) · [原文](https://idiallo.com/blog/installed-single-turnstile-for-security-theater)
+
+> 讲述公司被收购后实施严格门禁系统，结果导致员工频繁忘带门卡被锁在楼梯间，揭示过度安全措施带来的实际不便和低效问题。
 
 **19. We Are Changing Our Developer Productivity Experiment Design**
-   ⭐ 52 分 · 💬 33 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47142078) · [原文](https://metr.org/blog/2026-02-24-uplift-update/)
-   > METR研究机构调整开发者生产力实验设计，此前研究发现AI工具使经验丰富的开源开发者完成任务速度降低20%，现计划持续追踪AI对开发者生产力的长期影响。
+⭐ 52 分 · 💬 33 条
+[HN 讨论](https://news.ycombinator.com/item?id=47142078) · [原文](https://metr.org/blog/2026-02-24-uplift-update/)
+
+> METR研究机构调整开发者生产力实验设计，此前研究发现AI工具使经验丰富的开源开发者完成任务速度降低20%，现计划持续追踪AI对开发者生产力的长期影响。
 
 **20. IRS Tactics Against Meta Open a New Front in the Corporate Tax Fight**
-   ⭐⭐ 189 分 · 💬 199 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47136537) · [原文](https://www.nytimes.com/2026/02/24/business/irs-meta-corporate-taxes.html)
-   > 美国国税局对Meta采取新策略追缴企业税款，标志着政府加大力度打击科技巨头避税行为，可能重塑企业税收监管格局。
+⭐⭐ 189 分 · 💬 199 条
+[HN 讨论](https://news.ycombinator.com/item?id=47136537) · [原文](https://www.nytimes.com/2026/02/24/business/irs-meta-corporate-taxes.html)
+
+> 美国国税局对Meta采取新策略追缴企业税款，标志着政府加大力度打击科技巨头避税行为，可能重塑企业税收监管格局。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 173 分 |
-| 总讨论数 | 1566 条 |
-| 最热文章 | "I'm helping my dog vibe code games" (679⭐) |
+| 指标     | 数值                                                         |
+| -------- | ------------------------------------------------------------ |
+| 平均热度 | 173 分                                                       |
+| 总讨论数 | 1566 条                                                      |
+| 最热文章 | "I'm helping my dog vibe code games" (679⭐)                 |
 | 讨论最多 | "Mac mini will be made at a new facility in Houston" (384💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

@@ -128,47 +128,62 @@ const nextPost =
 
     <!-- 相关文章推荐 -->
     {
-      posts.filter(p => 
-        p.data.tags?.some(tag => post.data.tags?.includes(tag)) && p.id !== post.id
+      posts.filter(
+        p =>
+          p.data.tags?.some(tag => post.data.tags?.includes(tag)) &&
+          p.id !== post.id
       ).length > 0 && (
-        <div class="my-12 p-6 rounded-2xl bg-gradient-to-br from-muted/80 to-muted/40 border-2 border-foreground/10">
-          <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+        <div class="my-12 rounded-2xl border-2 border-foreground/10 bg-gradient-to-br from-muted/80 to-muted/40 p-6">
+          <h3 class="mb-6 flex items-center gap-2 text-xl font-bold">
             <span class="text-2xl">📚</span>
             <span>相关文章推荐</span>
           </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {posts
-              .filter(p => 
-                p.data.tags?.some(tag => post.data.tags?.includes(tag)) && p.id !== post.id
+              .filter(
+                p =>
+                  p.data.tags?.some(tag => post.data.tags?.includes(tag)) &&
+                  p.id !== post.id
               )
               .sort((a, b) => {
                 // 按共同标签数排序
-                const aCount = a.data.tags?.filter(t => post.data.tags?.includes(t)).length || 0;
-                const bCount = b.data.tags?.filter(t => post.data.tags?.includes(t)).length || 0;
+                const aCount =
+                  a.data.tags?.filter(t => post.data.tags?.includes(t))
+                    .length || 0;
+                const bCount =
+                  b.data.tags?.filter(t => post.data.tags?.includes(t))
+                    .length || 0;
                 return bCount - aCount;
               })
               .slice(0, 6)
               .map(relatedPost => {
-                const commonTags = relatedPost.data.tags?.filter(t => post.data.tags?.includes(t)) || [];
+                const commonTags =
+                  relatedPost.data.tags?.filter(t =>
+                    post.data.tags?.includes(t)
+                  ) || [];
                 return (
                   <a
                     href={`/posts/${relatedPost.id}/`}
-                    class="p-4 rounded-xl bg-white/50 hover:bg-accent/10 transition-all group border border-foreground/5 hover:border-accent/30"
+                    class="group rounded-xl border border-foreground/5 bg-white/50 p-4 transition-all hover:border-accent/30 hover:bg-accent/10"
                   >
-                    <div class="font-medium group-hover:text-accent transition-colors line-clamp-2 mb-2">
+                    <div class="mb-2 line-clamp-2 font-medium transition-colors group-hover:text-accent">
                       {relatedPost.data.title}
                     </div>
                     <div class="flex items-center gap-2 text-xs text-foreground/60">
                       <span>
-                        {new Date(relatedPost.data.pubDatetime).toLocaleDateString('zh-CN', {
-                          month: 'short',
-                          day: 'numeric'
+                        {new Date(
+                          relatedPost.data.pubDatetime
+                        ).toLocaleDateString("zh-CN", {
+                          month: "short",
+                          day: "numeric",
                         })}
                       </span>
                       {commonTags.length > 0 && (
                         <>
                           <span>•</span>
-                          <span class="text-accent">{commonTags.length} 个共同标签</span>
+                          <span class="text-accent">
+                            {commonTags.length} 个共同标签
+                          </span>
                         </>
                       )}
                     </div>

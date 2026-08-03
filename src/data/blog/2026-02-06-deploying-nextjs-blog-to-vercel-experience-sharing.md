@@ -1,8 +1,8 @@
 ---
-title: '从零开始部署Next.js博客到Vercel：一次完整的技术实践'
+title: "从零开始部署Next.js博客到Vercel：一次完整的技术实践"
 pubDatetime: 2026-02-05T18:50:00Z
-tags: ['Next.js', 'Vercel', '部署', '技术分享', '博客']
-description: '技术博客文章'
+tags: ["Next.js", "Vercel", "部署", "技术分享", "博客"]
+description: "技术博客文章"
 ---
 
 # 从零开始部署Next.js博客到Vercel：一次完整的技术实践
@@ -44,6 +44,7 @@ description: '技术博客文章'
 在推送代码到GitHub时，我们遇到了著名的"large file"错误。这是因为node_modules目录中的一些二进制文件超过了GitHub的100MB限制。
 
 **解决方案**：
+
 - 更新.gitignore文件，确保排除node_modules、.next、dist等目录
 - 删除已追踪的大文件：`git rm -r --cached node_modules`
 - 重新提交代码
@@ -53,6 +54,7 @@ description: '技术博客文章'
 初期部署时也遇到了类似问题，原因是某些构建产物被意外包含。
 
 **解决方案**：
+
 - 创建全新的干净仓库
 - 确保只有源代码和必要配置文件被提交
 - 使用最小化的package.json依赖

@@ -1,7 +1,7 @@
 ---
-title: 'OpenClaw Windows 安装终极指南：避坑实录与最佳实践'
+title: "OpenClaw Windows 安装终极指南：避坑实录与最佳实践"
 pubDatetime: 2026-03-11T01:00:00Z
-tags: ['OpenClaw', 'Windows', '安装指南', '避坑']
+tags: ["OpenClaw", "Windows", "安装指南", "避坑"]
 description: "在两台 Windows 机器上实测踩坑后总结的 OpenClaw 安装完整指南，包含国内网络优化、Git HTTPS 配置、npm 编译跳过等关键技巧。"
 ---
 
@@ -90,11 +90,13 @@ Write-Host "Note: If 'openclaw' command is not found, please close and reopen Po
 ### 坑 1：Git HTTPS 配置不完整 [X]
 
 **错误配置**（只配了一个）：
+
 ```powershell
 git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
 ```
 
 **正确配置**（两个都要）：
+
 ```powershell
 git config --global url."https://github.com/".insteadOf "git@github.com:"
 git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
@@ -105,12 +107,14 @@ git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
 **真实案例**：第三台机器安装失败，原因就是缺少第二条配置。通过 `opencode` 读取本手册后自动检测并修复。
 
 **验证方法**：
+
 ```powershell
 git config --global --list
 # 应该看到两行 insteadof 配置
 ```
 
 **自动验证脚本**（已集成到主脚本）：
+
 ```powershell
 $gitConfig = git config --global --list
 if ($gitConfig -like "*insteadof=git@github.com:*" -and $gitConfig -like "*insteadof=ssh://git@github.com/*") {
@@ -126,11 +130,13 @@ if ($gitConfig -like "*insteadof=git@github.com:*" -and $gitConfig -like "*inste
 ### 坑 2：没有使用 --ignore-scripts [X]
 
 **错误命令**：
+
 ```powershell
 npm install -g openclaw@latest
 ```
 
 **正确命令**：
+
 ```powershell
 npm install -g openclaw@latest --ignore-scripts
 ```
@@ -138,6 +144,7 @@ npm install -g openclaw@latest --ignore-scripts
 **原因**：OpenClaw 依赖 `node-llama-cpp`，这个包在 postinstall 阶段需要编译 C++ 代码。在国内网络环境下，下载预编译二进制文件经常失败，导致整个安装过程中断。
 
 **错误日志示例**：
+
 ```
 npm error code 3221225477
 npm error path C:\Users\...\node_modules\openclaw\node_modules\node-llama-cpp
@@ -152,6 +159,7 @@ npm error command C:\Windows\system32\cmd.exe /d /s /c node ./dist/cli/cli.js po
 **错误**：使用默认 npm registry（registry.npmjs.org）
 
 **正确**：使用淘宝镜像
+
 ```powershell
 npm config set registry https://registry.npmmirror.com
 ```
@@ -165,6 +173,7 @@ npm config set registry https://registry.npmmirror.com
 **现象**：安装完 Node.js/Git 后，命令提示符仍然提示 "command not found"
 
 **解决**：
+
 ```powershell
 # 手动设置当前会话的 PATH
 $env:PATH = 'C:\Program Files\Git\bin;C:\Program Files\nodejs;' + $env:PATH
@@ -220,6 +229,7 @@ openclaw onboard
 ```
 
 向导会帮你配置：
+
 - API 密钥（模型提供商）
 - 消息渠道（Discord/Telegram 等）
 - 工作区设置
@@ -228,14 +238,14 @@ openclaw onboard
 
 ## 两台机器对比数据
 
-| 项目 | 机器 1（成功 [OK]） | 机器 2（失败 [FAIL]） |
-|------|------------------|--------------------|
-| Node.js 安装 | npmmirror 镜像 | Chocolatey |
-| Git 安装 | npmmirror 镜像 | Chocolatey |
-| Git HTTPS 配置 | [OK] 完整（2 条） | [WARN] 不完整（1 条） |
-| npm 安装参数 | [OK] `--ignore-scripts` | [X] 无参数 |
-| 网络连接 | [OK] 稳定 | [WARN] GitHub 超时 |
-| 最终结果 | [OK] 成功 | [X] 失败 |
+| 项目           | 机器 1（成功 [OK]）     | 机器 2（失败 [FAIL]） |
+| -------------- | ----------------------- | --------------------- |
+| Node.js 安装   | npmmirror 镜像          | Chocolatey            |
+| Git 安装       | npmmirror 镜像          | Chocolatey            |
+| Git HTTPS 配置 | [OK] 完整（2 条）       | [WARN] 不完整（1 条） |
+| npm 安装参数   | [OK] `--ignore-scripts` | [X] 无参数            |
+| 网络连接       | [OK] 稳定               | [WARN] GitHub 超时    |
+| 最终结果       | [OK] 成功               | [X] 失败              |
 
 **关键差异**：Git HTTPS 配置完整性 + `--ignore-scripts` 参数
 

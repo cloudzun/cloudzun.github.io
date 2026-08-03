@@ -1,8 +1,8 @@
 ---
-title: 'Hugo博客运维最佳实践'
+title: "Hugo博客运维最佳实践"
 pubDatetime: 2026-02-05T03:58:00Z
-tags: ['hugo', '运维', 'systemd', '自动化', '博客']
-description: '技术博客文章'
+tags: ["hugo", "运维", "systemd", "自动化", "博客"]
+description: "技术博客文章"
 ---
 
 # Hugo博客运维最佳实践
@@ -36,6 +36,7 @@ WantedBy=multi-user.target
 ```
 
 这个配置确保了：
+
 - 服务在系统启动后自动运行
 - 当服务异常退出时自动重启
 - 服务运行在正确的目录下
@@ -66,24 +67,31 @@ systemctl --user start hugo-blog.service
 # Check if hugo server is running on port 1313
 if ! lsof -Pi :1313 -sTCP:LISTEN -t >/dev/null 2>&1; then
 ```
+
 echo "$(date): Hugo server is not running, attempting to restart..."
 
 # Try to start the service via systemctl
+
 systemctl --user start hugo-blog.service
 
 # Wait a moment for the service to start
+
 sleep 5
 
 # Check if it started successfully
+
 if lsof -Pi :1313 -sTCP:LISTEN -t >/dev/null 2>&1; then
-    echo "$(date): Hugo server restarted successfully"
+echo "$(date): Hugo server restarted successfully"
 else
     echo "$(date): Failed to restart Hugo server"
 fi
+
 ```
 else
 ```
+
 echo "$(date): Hugo server is running normally"
+
 ```
 fi
 ```

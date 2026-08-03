@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-23'
+title: "HN Daily Digest: 2026-02-23"
 pubDatetime: 2026-02-22T16:16:55Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,64 +162,74 @@ shuru的核心特性包括：**默认短暂性**设计，每次运行都从干�
 ## 📑 更多热门文章 (11-20)
 
 **11. Fix your tools**
-   ⭐⭐ 176 分 · 💬 66 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47112174) · [原文](https://ochagavia.nl/blog/fix-your-tools/)
-   > 讲述作者在调试开源库bug时遇到断点失效问题，提醒开发者应当优先修复开发工具本身的问题，而非绕过它们寻找替代方案。
+⭐⭐ 176 分 · 💬 66 条
+[HN 讨论](https://news.ycombinator.com/item?id=47112174) · [原文](https://ochagavia.nl/blog/fix-your-tools/)
+
+> 讲述作者在调试开源库bug时遇到断点失效问题，提醒开发者应当优先修复开发工具本身的问题，而非绕过它们寻找替代方案。
 
 **12. Linuxulator on FreeBSD Feels Like Magic**
-   ⭐ 65 分 · 💬 24 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47113527) · [原文](https://hayzam.com/blog/02-linuxulator-is-awesome/)
-   > FreeBSD的Linuxulator兼容层可以直接运行大多数Linux软件如VS Code，但作者指出目前在ARM64架构支持上仍存在局限性。
+⭐ 65 分 · 💬 24 条
+[HN 讨论](https://news.ycombinator.com/item?id=47113527) · [原文](https://hayzam.com/blog/02-linuxulator-is-awesome/)
+
+> FreeBSD的Linuxulator兼容层可以直接运行大多数Linux软件如VS Code，但作者指出目前在ARM64架构支持上仍存在局限性。
 
 **13. Hello Worg, the Org-Mode Community**
-   ⭐ 73 分 · 💬 17 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47112925) · [原文](https://orgmode.org/worg/)
-   > Worg是Org-Mode的官方社区文档站点，提供学习资源、使用指南、第三方贡献及社区参与方式，帮助用户掌握这个强大的纯文本组织系统。
+⭐ 73 分 · 💬 17 条
+[HN 讨论](https://news.ycombinator.com/item?id=47112925) · [原文](https://orgmode.org/worg/)
+
+> Worg是Org-Mode的官方社区文档站点，提供学习资源、使用指南、第三方贡献及社区参与方式，帮助用户掌握这个强大的纯文本组织系统。
 
 **14. Browse Code by Meaning**
-   ⭐ 9 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47046124) · [原文](https://haskellforall.com/2026/02/browse-code-by-meaning)
-   > 介绍一款基于语义而非目录结构浏览代码仓库的AI开发工具原型，旨在展示超越聊天界面的编程辅助工具的潜力和优势。
+⭐ 9 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47046124) · [原文](https://haskellforall.com/2026/02/browse-code-by-meaning)
+
+> 介绍一款基于语义而非目录结构浏览代码仓库的AI开发工具原型，旨在展示超越聊天界面的编程辅助工具的潜力和优势。
 
 **15. What is a database transaction?**
-   ⭐⭐ 199 分 · 💬 51 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47110473) · [原文](https://planetscale.com/blog/database-transactions)
-   > 本文深入讲解数据库事务的核心概念，包括一致性读取、隔离级别、并发写入控制等机制，以及MySQL和Postgres在实现事务时的技术差异。
+⭐⭐ 199 分 · 💬 51 条
+[HN 讨论](https://news.ycombinator.com/item?id=47110473) · [原文](https://planetscale.com/blog/database-transactions)
+
+> 本文深入讲解数据库事务的核心概念，包括一致性读取、隔离级别、并发写入控制等机制，以及MySQL和Postgres在实现事务时的技术差异。
 
 **16. Fresh File Explorer – VS Code extension for navigating recent work**
-   ⭐ 61 分 · 💬 19 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47113325) · [原文](https://github.com/FreHu/vscode-fresh-file-explorer)
-   > 这是一个VS Code扩展插件，通过结合Git历史记录和待处理更改，在文件浏览器中仅显示最近修改的文件，帮助开发者快速定位近期工作内容。
+⭐ 61 分 · 💬 19 条
+[HN 讨论](https://news.ycombinator.com/item?id=47113325) · [原文](https://github.com/FreHu/vscode-fresh-file-explorer)
+
+> 这是一个VS Code扩展插件，通过结合Git历史记录和待处理更改，在文件浏览器中仅显示最近修改的文件，帮助开发者快速定位近期工作内容。
 
 **17. Emulated Windows 3.11 in the Browser**
-   ⭐ 52 分 · 💬 22 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47112892) · [原文](https://pieter.com/)
-   > 这是一个可在浏览器中直接运行的Windows 3.11模拟器项目，让用户无需安装即可体验90年代经典操作系统，支持拨号上网等复古功能。
+⭐ 52 分 · 💬 22 条
+[HN 讨论](https://news.ycombinator.com/item?id=47112892) · [原文](https://pieter.com/)
+
+> 这是一个可在浏览器中直接运行的Windows 3.11模拟器项目，让用户无需安装即可体验90年代经典操作系统，支持拨号上网等复古功能。
 
 **18. Music Discovery**
-   ⭐ 35 分 · 💬 30 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47114672) · [原文](https://www.secondtrack.co/)
-   > 这是一个音乐发现平台，通过智能推荐算法帮助用户探索新音乐，根据个人喜好提供个性化的歌曲和艺人推荐服务。
+⭐ 35 分 · 💬 30 条
+[HN 讨论](https://news.ycombinator.com/item?id=47114672) · [原文](https://www.secondtrack.co/)
+
+> 这是一个音乐发现平台，通过智能推荐算法帮助用户探索新音乐，根据个人喜好提供个性化的歌曲和艺人推荐服务。
 
 **19. Show HN: Warn Firehose – Every US layoff notice in one searchable database**
-   ⭐ 13 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47116026) · [原文](https://warnfirehose.com)
-   > 整合美国50个州的裁员预警通知数据，提供包含10.9万条记录、涵盖1290万受影响员工的可搜索数据库，支持API调用和每日更新。
+⭐ 13 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47116026) · [原文](https://warnfirehose.com)
+
+> 整合美国50个州的裁员预警通知数据，提供包含10.9万条记录、涵盖1290万受影响员工的可搜索数据库，支持API调用和每日更新。
 
 **20. Xweather Live – Interactive global vector weather map**
-   ⭐ 126 分 · 💬 32 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47111626) · [原文](https://live.xweather.com/)
-   > Xweather Live是一个交互式全球矢量天气地图平台，提供实时气象数据可视化，支持多图层叠加显示温度、降水、风力等天气要素，适合专业气象分析和公众查询使用。
+⭐ 126 分 · 💬 32 条
+[HN 讨论](https://news.ycombinator.com/item?id=47111626) · [原文](https://live.xweather.com/)
+
+> Xweather Live是一个交互式全球矢量天气地图平台，提供实时气象数据可视化，支持多图层叠加显示温度、降水、风力等天气要素，适合专业气象分析和公众查询使用。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 118 分 |
-| 总讨论数 | 854 条 |
+| 指标     | 数值                                                      |
+| -------- | --------------------------------------------------------- |
+| 平均热度 | 118 分                                                    |
+| 总讨论数 | 854 条                                                    |
 | 最热文章 | "I built Timeframe, our family e-paper dashboard" (477⭐) |
-| 讨论最多 | "Attention Media ≠ Social Networks" (222💬) |
+| 讨论最多 | "Attention Media ≠ Social Networks" (222💬)               |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_
