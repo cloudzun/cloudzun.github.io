@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-21'
+title: "HN Daily Digest: 2026-03-21"
 pubDatetime: 2026-03-20T14:49:07Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ OpenCode采用**隐私优先**设计理念，不存储任何用户代码或上�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. The worst volume control UI in the world (2017)
-   ⭐ 38 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47423762) · [原文](https://uxdesign.cc/the-worst-volume-control-ui-in-the-world-60713dc86950)
-   > 本文通过分析一个极其糟糕的音量控制界面设计案例，揭示其违反用户体验原则的问题所在，为设计师提供反面教材和改进启示。
+
+⭐ 38 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47423762) · [原文](https://uxdesign.cc/the-worst-volume-control-ui-in-the-world-60713dc86950)
+
+> 本文通过分析一个极其糟糕的音量控制界面设计案例，揭示其违反用户体验原则的问题所在，为设计师提供反面教材和改进启示。
 
 #### 12. Show HN: I made an email app inspired by Arc browser
-   ⭐ 31 分 · 💬 16 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47458348) · [原文](https://demo.define.app)
-   > 这是一款受Arc浏览器启发的新型邮件应用，为现代工作人士设计，提供创新的电子邮件管理体验和交互方式。
+
+⭐ 31 分 · 💬 16 条
+[HN 讨论](https://news.ycombinator.com/item?id=47458348) · [原文](https://demo.define.app)
+
+> 这是一款受Arc浏览器启发的新型邮件应用，为现代工作人士设计，提供创新的电子邮件管理体验和交互方式。
 
 #### 13. We rewrote our Rust WASM Parser in TypeScript – and it got 3x Faster
-   ⭐ 22 分 · 💬 11 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47461094) · [原文](https://www.openui.com/blog/rust-wasm-parser)
-   > 通过将Rust WASM解析器改写为TypeScript，消除跨边界开销并优化算法复杂度，最终实现了3倍性能提升，揭示了WASM并非总是最优选择的实践经验。
+
+⭐ 22 分 · 💬 11 条
+[HN 讨论](https://news.ycombinator.com/item?id=47461094) · [原文](https://www.openui.com/blog/rust-wasm-parser)
+
+> 通过将Rust WASM解析器改写为TypeScript，消除跨边界开销并优化算法复杂度，最终实现了3倍性能提升，揭示了WASM并非总是最优选择的实践经验。
 
 #### 14. Heart Attack and Stroke Risk Jumps When People Stop Taking GLP-1s
-   ⭐ 20 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47461018) · [原文](https://nautil.us/whiplash-heart-attack-and-stroke-risk-jumps-when-people-stop-taking-glp-1s-1279029)
-   > 研究发现停止使用GLP-1类药物会导致心脏病和中风风险急剧上升，揭示了这类药物的停用副作用问题。
+
+⭐ 20 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47461018) · [原文](https://nautil.us/whiplash-heart-attack-and-stroke-risk-jumps-when-people-stop-taking-glp-1s-1279029)
+
+> 研究发现停止使用GLP-1类药物会导致心脏病和中风风险急剧上升，揭示了这类药物的停用副作用问题。
 
 #### 15. NumKong: 2'000 Mixed Precision Kernels for All
-   ⭐ 15 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47459447) · [原文](https://ashvardanian.com/posts/numkong/)
-   > NumKong提供了2000多个混合精度SIMD内核库，支持多种浮点格式和硬件平台，用于加速BLAS运算、距离计算等数值计算任务。
+
+⭐ 15 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47459447) · [原文](https://ashvardanian.com/posts/numkong/)
+
+> NumKong提供了2000多个混合精度SIMD内核库，支持多种浮点格式和硬件平台，用于加速BLAS运算、距离计算等数值计算任务。
 
 #### 16. Work_mem: It's a Trap
-   ⭐ 14 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47431304) · [原文](https://mydbanotebook.org/posts/work_mem-its-a-trap/)
-   > 本文揭示了PostgreSQL中work_mem参数的隐藏陷阱，通过实际案例说明即使设置较低的work_mem值，单个查询仍可能导致服务器内存溢出的原因。
+
+⭐ 14 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47431304) · [原文](https://mydbanotebook.org/posts/work_mem-its-a-trap/)
+
+> 本文揭示了PostgreSQL中work_mem参数的隐藏陷阱，通过实际案例说明即使设置较低的work_mem值，单个查询仍可能导致服务器内存溢出的原因。
 
 #### 17. Show HN: We built a terminal-only Bluesky / AT Proto client written in Fortran
-   ⭐ 13 分 · 💬 14 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47461321) · [原文](https://github.com/FormerLab/fortransky)
-   > 这是一个用Fortran编程语言开发的终端Bluesky/AT协议客户端，结合Rust实现高效的数据流解析功能。
+
+⭐ 13 分 · 💬 14 条
+[HN 讨论](https://news.ycombinator.com/item?id=47461321) · [原文](https://github.com/FormerLab/fortransky)
+
+> 这是一个用Fortran编程语言开发的终端Bluesky/AT协议客户端，结合Rust实现高效的数据流解析功能。
 
 #### 18. Show HN: Baltic shadow fleet tracker – live AIS, cable proximity alerts
-   ⭐ 11 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47460528) · [原文](https://github.com/FormerLab/shadow-fleet-tracker-light)
-   > 这是一个开源的波罗的海影子舰队追踪工具，可实时监测1200多艘船舶的AIS信号并提醒海底电缆风险，无需云服务本地运行。
+
+⭐ 11 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47460528) · [原文](https://github.com/FormerLab/shadow-fleet-tracker-light)
+
+> 这是一个开源的波罗的海影子舰队追踪工具，可实时监测1200多艘船舶的AIS信号并提醒海底电缆风险，无需云服务本地运行。
 
 #### 19. I love my dumb watches
-   ⭐ 8 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47414292) · [原文](https://gary.onl/a-post-about-watches/)
-   > 作者阐述了为什么喜欢使用简单手表而非依赖智能手机查时间，强调手表能帮助避免手机通知和社交媒体的成瘾性干扰。
+
+⭐ 8 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47414292) · [原文](https://gary.onl/a-post-about-watches/)
+
+> 作者阐述了为什么喜欢使用简单手表而非依赖智能手机查时间，强调手表能帮助避免手机通知和社交媒体的成瘾性干扰。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 123 分 |
-| 总讨论数 | 1479 条 |
+| 指标     | 数值                                           |
+| -------- | ---------------------------------------------- |
+| 平均热度 | 123 分                                         |
+| 总讨论数 | 1479 条                                        |
 | 最热文章 | "Delve – Fake Compliance as a Service" (472⭐) |
-| 讨论最多 | "Our commitment to Windows quality" (439💬) |
+| 讨论最多 | "Our commitment to Windows quality" (439💬)    |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

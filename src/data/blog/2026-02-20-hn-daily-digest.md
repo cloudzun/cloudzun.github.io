@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-20'
+title: "HN Daily Digest: 2026-02-20"
 pubDatetime: 2026-02-19T17:57:20Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -174,64 +174,74 @@ Micasa是一个开源的命令行工具，允许用户直接在终端中跟踪�
 ## 📑 更多热门文章 (11-20)
 
 **11. Dinosaur Food: 100M year old foods we still eat today (2022)**
-   ⭐ 97 分 · 💬 84 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47074869) · [原文](https://borischerny.com/food/2022/01/17/Dinosaur-food.html)
-   > 这篇文章探讨了从恐龙时代延续至今的古老食物，介绍哪些现代食材在一亿年前就已存在，展现了食物演化的历史趣味性和科学价值。
+⭐ 97 分 · 💬 84 条
+[HN 讨论](https://news.ycombinator.com/item?id=47074869) · [原文](https://borischerny.com/food/2022/01/17/Dinosaur-food.html)
+
+> 这篇文章探讨了从恐龙时代延续至今的古老食物，介绍哪些现代食材在一亿年前就已存在，展现了食物演化的历史趣味性和科学价值。
 
 **12. Don't Trust the Salt: AI Summarization, Multilingual Safety, and LLM Guardrails**
-   ⭐⭐ 179 分 · 💬 76 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47038032) · [原文](https://royapakzad.substack.com/p/multilingual-llm-evaluation-to-guardrails)
-   > 探讨AI摘要和大语言模型在多语言场景下的安全风险，强调现有防护机制在非英语环境中可能失效，需要建立更完善的多语言安全评估体系。
+⭐⭐ 179 分 · 💬 76 条
+[HN 讨论](https://news.ycombinator.com/item?id=47038032) · [原文](https://royapakzad.substack.com/p/multilingual-llm-evaluation-to-guardrails)
+
+> 探讨AI摘要和大语言模型在多语言场景下的安全风险，强调现有防护机制在非英语环境中可能失效，需要建立更完善的多语言安全评估体系。
 
 **13. Single vaccine could protect against all coughs, colds and flus**
-   ⭐ 117 分 · 💬 72 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47080267) · [原文](https://www.bbc.com/news/articles/cx2g8rz7yedo)
-   > 科学家正在研发一种通用疫苗，通过训练免疫系统识别多种病毒的共同特征，有望一次性预防所有呼吸道感染疾病，包括流感、普通感冒和新冠等。
+⭐ 117 分 · 💬 72 条
+[HN 讨论](https://news.ycombinator.com/item?id=47080267) · [原文](https://www.bbc.com/news/articles/cx2g8rz7yedo)
+
+> 科学家正在研发一种通用疫苗，通过训练免疫系统识别多种病毒的共同特征，有望一次性预防所有呼吸道感染疾病，包括流感、普通感冒和新冠等。
 
 **14. Show HN: Ghostty-based terminal with vertical tabs and notifications**
-   ⭐ 85 分 · 💬 46 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47079718) · [原文](https://github.com/manaflow-ai/cmux)
-   > 一款基于Ghostty终端模拟器的增强版工具，通过添加垂直标签页管理和系统通知功能，提升多终端窗口的使用效率和用户体验。
+⭐ 85 分 · 💬 46 条
+[HN 讨论](https://news.ycombinator.com/item?id=47079718) · [原文](https://github.com/manaflow-ai/cmux)
+
+> 一款基于Ghostty终端模拟器的增强版工具，通过添加垂直标签页管理和系统通知功能，提升多终端窗口的使用效率和用户体验。
 
 **15. Show HN: A small, simple music theory library in C99**
-   ⭐ 10 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47080873) · [原文](https://github.com/thelowsunoverthemoon/mahler.c)
-   > 一个用C99编写的轻量级音乐理论库，提供音符、音阶、和弦等基础音乐理论功能的编程实现，适合在C项目中集成音乐相关功能。
+⭐ 10 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47080873) · [原文](https://github.com/thelowsunoverthemoon/mahler.c)
+
+> 一个用C99编写的轻量级音乐理论库，提供音符、音阶、和弦等基础音乐理论功能的编程实现，适合在C项目中集成音乐相关功能。
 
 **16. Measuring AI agent autonomy in practice**
-   ⭐ 80 分 · 💬 36 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47073947) · [原文](https://www.anthropic.com/research/measuring-agent-autonomy)
-   > 本文介绍了Anthropic开发的AI智能体自主性评估框架，通过设计真实场景任务来量化衡量AI系统在无人监督情况下独立完成复杂工作的能力水平。
+⭐ 80 分 · 💬 36 条
+[HN 讨论](https://news.ycombinator.com/item?id=47073947) · [原文](https://www.anthropic.com/research/measuring-agent-autonomy)
+
+> 本文介绍了Anthropic开发的AI智能体自主性评估框架，通过设计真实场景任务来量化衡量AI系统在无人监督情况下独立完成复杂工作的能力水平。
 
 **17. Type-based alias analysis in the Toy Optimizer**
-   ⭐ 9 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47038491) · [原文](https://bernsteinbear.com/blog/toy-tbaa/)
-   > 本文介绍如何在玩具优化器中实现基于类型的别名分析（TBAA），通过类型信息判断指针是否指向同一内存位置，从而实现更激进的编译优化，提升代码性能。
+⭐ 9 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47038491) · [原文](https://bernsteinbear.com/blog/toy-tbaa/)
+
+> 本文介绍如何在玩具优化器中实现基于类型的别名分析（TBAA），通过类型信息判断指针是否指向同一内存位置，从而实现更激进的编译优化，提升代码性能。
 
 **18. Show HN: A physically-based GPU ray tracer written in Julia**
-   ⭐⭐ 160 分 · 💬 63 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47072444) · [原文](https://makie.org/website/blogposts/raytracing/)
-   > 这是一个用Julia语言开发的基于物理的GPU光线追踪器，展示了Julia在高性能图形渲染领域的应用能力，可实现逼真的光照和材质效果。
+⭐⭐ 160 分 · 💬 63 条
+[HN 讨论](https://news.ycombinator.com/item?id=47072444) · [原文](https://makie.org/website/blogposts/raytracing/)
+
+> 这是一个用Julia语言开发的基于物理的GPU光线追踪器，展示了Julia在高性能图形渲染领域的应用能力，可实现逼真的光照和材质效果。
 
 **19. Overall, the colorectal cancer story is encouraging**
-   ⭐ 103 分 · 💬 103 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47078840) · [原文](https://www.hankgreen.com/crc)
-   > 这篇文章分享了结直肠癌治疗的积极进展和个人抗癌经历，强调早期筛查的重要性，并传递了充满希望的治疗前景信息。
+⭐ 103 分 · 💬 103 条
+[HN 讨论](https://news.ycombinator.com/item?id=47078840) · [原文](https://www.hankgreen.com/crc)
+
+> 这篇文章分享了结直肠癌治疗的积极进展和个人抗癌经历，强调早期筛查的重要性，并传递了充满希望的治疗前景信息。
 
 **20. The Chinese periodic table goes hard [video]**
-   ⭐ 13 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47034593) · [原文](https://www.youtube.com/watch?v=8ol7DsPnHcE)
-   > 这是一个介绍中国化学元素周期表独特命名体系的视频，展示了中文如何通过偏旁部首系统性地为化学元素创造直观且富有逻辑的汉字名称。
+⭐ 13 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47034593) · [原文](https://www.youtube.com/watch?v=8ol7DsPnHcE)
+
+> 这是一个介绍中国化学元素周期表独特命名体系的视频，展示了中文如何通过偏旁部首系统性地为化学元素创造直观且富有逻辑的汉字名称。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 160 分 |
-| 总讨论数 | 2356 条 |
+| 指标     | 数值                     |
+| -------- | ------------------------ |
+| 平均热度 | 160 分                   |
+| 总讨论数 | 2356 条                  |
 | 最热文章 | "Gemini 3.1 Pro" (528⭐) |
 | 讨论最多 | "Gemini 3.1 Pro" (696💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

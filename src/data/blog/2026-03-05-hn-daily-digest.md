@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-05'
+title: "HN Daily Digest: 2026-03-05"
 pubDatetime: 2026-03-04T16:17:06Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,64 +162,74 @@ MOSS内置了**50多种预设画笔**，从简单的颜料和墨水到藤蔓生�
 ## 📑 更多热门文章 (11-20)
 
 **11. Data Has Weight but Only on SSDs**
-   ⭐ 60 分 · 💬 38 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47251987) · [原文](https://cubiclenate.com/2026/03/04/data-has-weight-but-only-on-ssds-blathering/)
-   > 探讨SSD固态硬盘中数据是否具有物理重量的有趣话题，从电子存储原理角度分析数据存储时电子状态变化对硬盘质量的微小影响。
+⭐ 60 分 · 💬 38 条
+[HN 讨论](https://news.ycombinator.com/item?id=47251987) · [原文](https://cubiclenate.com/2026/03/04/data-has-weight-but-only-on-ssds-blathering/)
+
+> 探讨SSD固态硬盘中数据是否具有物理重量的有趣话题，从电子存储原理角度分析数据存储时电子状态变化对硬盘质量的微小影响。
 
 **12. It is sweet and fitting to die for one's country (1921)**
-   ⭐ 57 分 · 💬 38 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47254322) · [原文](https://www.poetryfoundation.org/poems/46560/dulce-et-decorum-est)
-   > 威尔弗雷德·欧文通过描绘一战士兵遭遇毒气攻击的残酷场景，深刻揭露"为国捐躯是光荣的"这一传统观念的虚伪性。
+⭐ 57 分 · 💬 38 条
+[HN 讨论](https://news.ycombinator.com/item?id=47254322) · [原文](https://www.poetryfoundation.org/poems/46560/dulce-et-decorum-est)
+
+> 威尔弗雷德·欧文通过描绘一战士兵遭遇毒气攻击的残酷场景，深刻揭露"为国捐躯是光荣的"这一传统观念的虚伪性。
 
 **13. BMW Group to deploy humanoid robots in production in Germany for the first time**
-   ⭐ 54 分 · 💬 43 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47253892) · [原文](https://www.press.bmwgroup.com/global/article/detail/T0455864EN/bmw-group-to-deploy-humanoid-robots-in-production-in-germany-for-the-first-time?language=en)
-   > 宝马集团将在德国莱比锡工厂试点部署人形机器人，并成立"生产物理AI能力中心"以加速全球整合应用。
+⭐ 54 分 · 💬 43 条
+[HN 讨论](https://news.ycombinator.com/item?id=47253892) · [原文](https://www.press.bmwgroup.com/global/article/detail/T0455864EN/bmw-group-to-deploy-humanoid-robots-in-production-in-germany-for-the-first-time?language=en)
+
+> 宝马集团将在德国莱比锡工厂试点部署人形机器人，并成立"生产物理AI能力中心"以加速全球整合应用。
 
 **14. The View from RSS**
-   ⭐ 54 分 · 💬 13 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47253221) · [原文](https://www.carolinecrampton.com/the-view-from-rss/)
-   > 作者通过订阅2000个RSS源阅读网络内容，分享了这种绕过算法推荐、自主策展信息的独特视角，以及在AI重塑信息消费时代的幕后观察体验。
+⭐ 54 分 · 💬 13 条
+[HN 讨论](https://news.ycombinator.com/item?id=47253221) · [原文](https://www.carolinecrampton.com/the-view-from-rss/)
+
+> 作者通过订阅2000个RSS源阅读网络内容，分享了这种绕过算法推荐、自主策展信息的独特视角，以及在AI重塑信息消费时代的幕后观察体验。
 
 **15. Humans 40k yrs ago developed a system of conventional signs**
-   ⭐ 47 分 · 💬 18 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47249744) · [原文](https://www.pnas.org/doi/10.1073/pnas.2520385123)
-   > 研究发现4万年前人类已发展出一套标准化符号系统，这些符号在不同地区保持一致性，表明早期人类具备抽象思维和跨区域文化传播能力。
+⭐ 47 分 · 💬 18 条
+[HN 讨论](https://news.ycombinator.com/item?id=47249744) · [原文](https://www.pnas.org/doi/10.1073/pnas.2520385123)
+
+> 研究发现4万年前人类已发展出一套标准化符号系统，这些符号在不同地区保持一致性，表明早期人类具备抽象思维和跨区域文化传播能力。
 
 **16. Was Windows 1.0's lack of overlapping windows a legal or a technical matter?**
-   ⭐ 40 分 · 💬 24 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47253160) · [原文](https://retrocomputing.stackexchange.com/questions/32511/was-windows-1-0s-lack-of-overlapping-windows-a-legal-or-a-technical-matter)
-   > Windows 1.0不支持窗口重叠主要是技术限制而非法律原因，当时硬件性能不足以流畅处理重叠窗口的重绘，且微软希望避免与苹果Macintosh直接竞争引发法律纠纷。
+⭐ 40 分 · 💬 24 条
+[HN 讨论](https://news.ycombinator.com/item?id=47253160) · [原文](https://retrocomputing.stackexchange.com/questions/32511/was-windows-1-0s-lack-of-overlapping-windows-a-legal-or-a-technical-matter)
+
+> Windows 1.0不支持窗口重叠主要是技术限制而非法律原因，当时硬件性能不足以流畅处理重叠窗口的重绘，且微软希望避免与苹果Macintosh直接竞争引发法律纠纷。
 
 **17. Show HN: Vertex.js – A 1kloc SPA Framework**
-   ⭐ 34 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47205659) · [原文](https://lukeb42.github.io/vertex-manual.html)
-   > 一个仅1000行代码的单页应用框架，无需构建步骤和依赖，集成了React、jQuery等主流框架的核心功能，支持组件化、路由和模板引擎。
+⭐ 34 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47205659) · [原文](https://lukeb42.github.io/vertex-manual.html)
+
+> 一个仅1000行代码的单页应用框架，无需构建步骤和依赖，集成了React、jQuery等主流框架的核心功能，支持组件化、路由和模板引擎。
 
 **18. NRC Issues First Commercial Reactor Construction Approval in 10 Years [pdf]**
-   ⭐ 26 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47254516) · [原文](https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-028.pdf)
-   > 美国核管理委员会十年来首次批准商业反应堆建设许可，标志着核能产业在经历长期停滞后重新启动新项目审批，对美国核电发展具有里程碑意义。
+⭐ 26 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47254516) · [原文](https://www.nrc.gov/sites/default/files/cdn/doc-collection-news/2026/26-028.pdf)
+
+> 美国核管理委员会十年来首次批准商业反应堆建设许可，标志着核能产业在经历长期停滞后重新启动新项目审批，对美国核电发展具有里程碑意义。
 
 **19. Extending single-minus amplitudes to gravitons**
-   ⭐ 4 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47255564) · [原文](https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/)
-   > 本文探讨了如何将单负螺旋度振幅的计算方法从规范理论推广到引力理论，为简化引力子散射振幅的计算提供了新的理论框架和技术手段。
+⭐ 4 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47255564) · [原文](https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/)
+
+> 本文探讨了如何将单负螺旋度振幅的计算方法从规范理论推广到引力理论，为简化引力子散射振幅的计算提供了新的理论框架和技术手段。
 
 **20. Roboflow (YC S20) Is Hiring a Security Engineer for AI Infra**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47251163) · [原文](https://roboflow.com/careers)
-   > Roboflow是一家YC孵化的计算机视觉AI平台公司，正在招聘安全工程师负责AI基础设施的安全保障工作。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47251163) · [原文](https://roboflow.com/careers)
+
+> Roboflow是一家YC孵化的计算机视觉AI平台公司，正在招聘安全工程师负责AI基础设施的安全保障工作。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 204 分 |
-| 总讨论数 | 2881 条 |
+| 指标     | 数值                   |
+| -------- | ---------------------- |
+| 平均热度 | 204 分                 |
+| 总讨论数 | 2881 条                |
 | 最热文章 | "MacBook Neo" (1446⭐) |
 | 讨论最多 | "MacBook Neo" (1803💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

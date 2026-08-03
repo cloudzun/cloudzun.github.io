@@ -2,8 +2,8 @@
 title: "当 AI 成为你的'技术外骨骼'：两个实验项目带来的启发"
 featured: true
 pubDatetime: 2026-03-12T00:00:00Z
-tags: ['AI', 'Vibe Coding', 'Skill 开发', '技术民主化']
-description: '记录两个实验项目带来的技术启发和思考'
+tags: ["AI", "Vibe Coding", "Skill 开发", "技术民主化"]
+description: "记录两个实验项目带来的技术启发和思考"
 ---
 
 # 当 AI 成为你的"技术外骨骼"：两个实验项目带来的启发
@@ -25,6 +25,7 @@ description: '记录两个实验项目带来的技术启发和思考'
 **仓库**：https://github.com/cloudzun/vibe-coding-camp
 
 让零代码基础的人，用 Agentic AI 工具做出三款真实可用的个人应用：
+
 - 💰 记账本（MoneyTracker）
 - 📔 日记本（DailyJournal）
 - ✅ 待办清单（TodoFlow）
@@ -38,6 +39,7 @@ description: '记录两个实验项目带来的技术启发和思考'
 教人给自己的 AI 助手写"岗前培训手册"（Skill），让它变成懂你工作流的专属助理。
 
 以天气查询为例，6 个阶段循序渐进：
+
 1. 最小 Skill（能被识别）
 2. 精准触发（描述怎么写）
 3. 结构化工作流（步骤怎么排）
@@ -72,6 +74,7 @@ Skill 课程里有个核心比喻：
 > **Skill 是 AI 的岗前培训手册。**
 
 你每次打开新对话，AI 都像刚入职的新员工——没有记忆，不知道你的工作流程。Skill 就是放在它案头的手册，告诉它：
+
 - 我是做什么的（description）
 - 碰到某类问题应该怎么处理（Body 工作流）
 - 需要用到什么资料和工具（references/、scripts/）
@@ -105,6 +108,7 @@ Iter 5: 产品完善     → 可以交付
 它是**让每个人都能用技术解决问题**——就像开车不需要懂发动机原理。
 
 在 Skill 课程的零代码路径里，学员不手写脚本，但他们需要：
+
 - 用清晰的语言告诉 AI 想要什么脚本
 - 用检查清单验证生成结果是否正确
 - 用标准流程排查问题
@@ -134,17 +138,20 @@ Iter 5: 产品完善     → 可以交付
 这两个项目只是开始。接下来陆续就绪的课程包括：
 
 ### 🛠️ AI 应用定制开发实操
+
 - 从 0 到 1 开发企业级 AI 应用
 - 需求分析 → 原型设计 → 开发部署 → 运维监控
 - 适合：想接外包/做副业的开发者
 
 ### 🤖 Agent 开发进阶
+
 - 多 Agent 协作系统设计
 - 工具调用与函数注册
 - 长期记忆与知识库管理
 - 适合：想深入 Agentic 架构的技术人员
 
 ### 📚 行业场景工作坊
+
 - HR 政策问答 Agent（已完成）
 - 财务报销审核 Agent
 - 客服工单自动分类 Agent
@@ -168,8 +175,9 @@ Iter 5: 产品完善     → 可以交付
 
 ---
 
-*本文同步发布于内部博客与公开技术社区。*
+_本文同步发布于内部博客与公开技术社区。_
 
-*项目仓库：*
-- *Vibe Coding Camp: https://github.com/cloudzun/vibe-coding-camp*
-- *Skill Course: https://github.com/cloudzun/skill-course*
+_项目仓库：_
+
+- _Vibe Coding Camp: https://github.com/cloudzun/vibe-coding-camp_
+- _Skill Course: https://github.com/cloudzun/skill-course_

@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-18'
+title: "HN Daily Digest: 2026-03-18"
 pubDatetime: 2026-03-17T14:53:37Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ Meta的一名工程师透露，高管指示他允许更多**"边界模糊"的有
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Get Shit Done: A Meta-Prompting, Context Engineering and Spec-Driven Dev System
-   ⭐ 113 分 · 💬 62 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47417804) · [原文](https://github.com/gsd-build/get-shit-done)
-   > 这是一个为Claude Code设计的轻量级开发系统，通过元提示、上下文工程和规范驱动开发方法，帮助开发者更高效地完成编码任务。
+
+⭐ 113 分 · 💬 62 条
+[HN 讨论](https://news.ycombinator.com/item?id=47417804) · [原文](https://github.com/gsd-build/get-shit-done)
+
+> 这是一个为Claude Code设计的轻量级开发系统，通过元提示、上下文工程和规范驱动开发方法，帮助开发者更高效地完成编码任务。
 
 #### 12. 'The Secret Agent': Exploring a Vibrant, yet Violent Brazil (2025)
-   ⭐ 107 分 · 💬 48 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47414440) · [原文](https://theasc.com/articles/the-secret-agent-cinematography)
-   > 本文探讨了电影《秘密特工》如何通过摄影技术捕捉巴西充满活力却暴力冲突的社会现实，展现了视觉叙事在呈现复杂社会议题中的艺术价值。
+
+⭐ 107 分 · 💬 48 条
+[HN 讨论](https://news.ycombinator.com/item?id=47414440) · [原文](https://theasc.com/articles/the-secret-agent-cinematography)
+
+> 本文探讨了电影《秘密特工》如何通过摄影技术捕捉巴西充满活力却暴力冲突的社会现实，展现了视觉叙事在呈现复杂社会议题中的艺术价值。
 
 #### 13. Unsloth Studio
-   ⭐ 97 分 · 💬 27 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47414032) · [原文](https://unsloth.ai/docs/new/studio)
-   > Unsloth Studio是一个集成化平台，提供大语言模型微调、推理部署和数据处理等完整功能，支持多种主流模型快速优化训练。
+
+⭐ 97 分 · 💬 27 条
+[HN 讨论](https://news.ycombinator.com/item?id=47414032) · [原文](https://unsloth.ai/docs/new/studio)
+
+> Unsloth Studio是一个集成化平台，提供大语言模型微调、推理部署和数据处理等完整功能，支持多种主流模型快速优化训练。
 
 #### 14. Edge.js: Run Node apps inside a WebAssembly sandbox
-   ⭐ 69 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47416081) · [原文](https://wasmer.io/posts/edgejs-safe-nodejs-using-wasm-sandbox)
-   > Edge.js是一个基于WebAssembly沙箱的JavaScript运行时，能够安全运行Node.js应用，同时保持完全兼容性并提供更优的密度和启动性能。
+
+⭐ 69 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47416081) · [原文](https://wasmer.io/posts/edgejs-safe-nodejs-using-wasm-sandbox)
+
+> Edge.js是一个基于WebAssembly沙箱的JavaScript运行时，能够安全运行Node.js应用，同时保持完全兼容性并提供更优的密度和启动性能。
 
 #### 15. Chrome extension adjusts video speed based on how fast the speaker is talking
-   ⭐ 57 分 · 💬 15 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47361251) · [原文](https://github.com/ywong137/speech-speed)
-   > 这是一个Chrome浏览器扩展程序，能够通过实时分析说话人的语速，自动调整视频播放速度，提高观看效率。
+
+⭐ 57 分 · 💬 15 条
+[HN 讨论](https://news.ycombinator.com/item?id=47361251) · [原文](https://github.com/ywong137/speech-speed)
+
+> 这是一个Chrome浏览器扩展程序，能够通过实时分析说话人的语速，自动调整视频播放速度，提高观看效率。
 
 #### 16. Warranty Void If Regenerated
-   ⭐ 50 分 · 💬 6 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47417983) · [原文](https://nearzero.software/p/warranty-void-if-regenerated)
-   > 本文通过讲述"软件机修工"这一新兴职业的出现，探讨了技术进步如何创造全新工作机会，以及人们如何在职业转变中适应新时代的需求。
+
+⭐ 50 分 · 💬 6 条
+[HN 讨论](https://news.ycombinator.com/item?id=47417983) · [原文](https://nearzero.software/p/warranty-void-if-regenerated)
+
+> 本文通过讲述"软件机修工"这一新兴职业的出现，探讨了技术进步如何创造全新工作机会，以及人们如何在职业转变中适应新时代的需求。
 
 #### 17. Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust
-   ⭐ 37 分 · 💬 15 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47416227) · [原文](https://github.com/peters/horizon)
-   > 一个用Rust开发的GPU加速无限画布终端，支持在空间化界面上管理多个终端、AI代理和开发工具。
+
+⭐ 37 分 · 💬 15 条
+[HN 讨论](https://news.ycombinator.com/item?id=47416227) · [原文](https://github.com/peters/horizon)
+
+> 一个用Rust开发的GPU加速无限画布终端，支持在空间化界面上管理多个终端、AI代理和开发工具。
 
 #### 18. Torturing Rustc by Emulating HKTs
-   ⭐ 29 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47374197) · [原文](https://www.harudagondi.space/blog/torturing-rustc-by-emulating-hkts/)
-   > 本文探讨了在Rust中模拟高阶类型（HKTs）的技术方法，分析了由此引发的归纳循环如何导致编译器故障的原理。
+
+⭐ 29 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47374197) · [原文](https://www.harudagondi.space/blog/torturing-rustc-by-emulating-hkts/)
+
+> 本文探讨了在Rust中模拟高阶类型（HKTs）的技术方法，分析了由此引发的归纳循环如何导致编译器故障的原理。
 
 #### 19. Spice Data (YC S19) Is Hiring a Product Specialist
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47415350) · [原文](https://www.ycombinator.com/companies/spice-data/jobs/P0e9MKz-product-specialist-new-grad)
-   > Spice Data正招聘产品专员（应届毕业生），负责数据清洗、质量把控和第三方承包商管理，年薪8-10万美元，位于旧金山。
+
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47415350) · [原文](https://www.ycombinator.com/companies/spice-data/jobs/P0e9MKz-product-specialist-new-grad)
+
+> Spice Data正招聘产品专员（应届毕业生），负责数据清洗、质量把控和第三方承包商管理，年薪8-10万美元，位于旧金山。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 161 分 |
-| 总讨论数 | 1241 条 |
+| 指标     | 数值                     |
+| -------- | ------------------------ |
+| 平均热度 | 161 分                   |
+| 总讨论数 | 1241 条                  |
 | 最热文章 | "Kagi Small Web" (663⭐) |
 | 讨论最多 | "Kagi Small Web" (187💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

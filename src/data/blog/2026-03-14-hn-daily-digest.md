@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-14'
+title: "HN Daily Digest: 2026-03-14"
 pubDatetime: 2026-03-13T14:46:15Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,64 +160,84 @@ Hammerspoon的核心特性包括：**Lua脚本引擎**提供灵活的编程接�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Parallels confirms MacBook Neo can run Windows in a virtual machine
-   ⭐ 144 分 · 💬 181 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47364729) · [原文](https://www.macrumors.com/2026/03/13/macbook-neo-runs-windows-11-vm/)
-   > Parallels虚拟机软件确认苹果新款MacBook Neo能够成功运行Windows 11虚拟机，为用户提供了在Mac设备上使用Windows应用的解决方案。
+
+⭐ 144 分 · 💬 181 条
+[HN 讨论](https://news.ycombinator.com/item?id=47364729) · [原文](https://www.macrumors.com/2026/03/13/macbook-neo-runs-windows-11-vm/)
+
+> Parallels虚拟机软件确认苹果新款MacBook Neo能够成功运行Windows 11虚拟机，为用户提供了在Mac设备上使用Windows应用的解决方案。
 
 #### 12. Mouser: An open source alternative to Logi-Plus mouse software
-   ⭐ 107 分 · 💬 42 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47368033) · [原文](https://github.com/TomBadash/MouseControl)
-   > Mouser是一个轻量级开源项目，为罗技MX Master 3S鼠标提供按键重映射功能，可作为官方Logitech Options+软件的替代方案。
+
+⭐ 107 分 · 💬 42 条
+[HN 讨论](https://news.ycombinator.com/item?id=47368033) · [原文](https://github.com/TomBadash/MouseControl)
+
+> Mouser是一个轻量级开源项目，为罗技MX Master 3S鼠标提供按键重映射功能，可作为官方Logitech Options+软件的替代方案。
 
 #### 13. Launch HN: Spine Swarm (YC S23) – AI agents that collaborate on a visual canvas
-   ⭐ 77 分 · 💬 62 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47364116) · [原文](https://www.getspine.ai/)
-   > Spine Swarm是一个AI代理协作平台，允许多个AI智能体在可视化画布上协同工作，提高复杂任务的自动化和执行效率。
+
+⭐ 77 分 · 💬 62 条
+[HN 讨论](https://news.ycombinator.com/item?id=47364116) · [原文](https://www.getspine.ai/)
+
+> Spine Swarm是一个AI代理协作平台，允许多个AI智能体在可视化画布上协同工作，提高复杂任务的自动化和执行效率。
 
 #### 14. Show HN: Context Gateway – Compress agent context before it hits the LLM
-   ⭐ 50 分 · 💬 30 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47367526) · [原文](https://github.com/Compresr-ai/Context-Gateway)
-   > Context Gateway是一个代理工具，通过即时压缩历史记录和优化上下文，在信息到达大语言模型前进行处理，以增强AI代理工作流的效率。
+
+⭐ 50 分 · 💬 30 条
+[HN 讨论](https://news.ycombinator.com/item?id=47367526) · [原文](https://github.com/Compresr-ai/Context-Gateway)
+
+> Context Gateway是一个代理工具，通过即时压缩历史记录和优化上下文，在信息到达大语言模型前进行处理，以增强AI代理工作流的效率。
 
 #### 15. Using Thunderbird for RSS
-   ⭐ 44 分 · 💬 6 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47320158) · [原文](https://rubenerd.com/using-thunderbird-for-rss/)
-   > 本文介绍了作者使用Thunderbird邮件客户端阅读RSS源的体验，阐述了其相比自托管网页RSS客户端的优势，以及如何将RSS功能整合到现有的邮件、日历等工具中。
+
+⭐ 44 分 · 💬 6 条
+[HN 讨论](https://news.ycombinator.com/item?id=47320158) · [原文](https://rubenerd.com/using-thunderbird-for-rss/)
+
+> 本文介绍了作者使用Thunderbird邮件客户端阅读RSS源的体验，阐述了其相比自托管网页RSS客户端的优势，以及如何将RSS功能整合到现有的邮件、日历等工具中。
 
 #### 16. Launch HN: Captain (YC W26) – Automated RAG for Files
-   ⭐ 41 分 · 💬 19 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47366011) · [原文](https://www.runcaptain.com/)
-   > Captain是一个自动化RAG平台，通过企业级知识搜索和AI代理能力，将文件搜索准确率从78%提升至95%，支持快速集成多种数据源。
+
+⭐ 41 分 · 💬 19 条
+[HN 讨论](https://news.ycombinator.com/item?id=47366011) · [原文](https://www.runcaptain.com/)
+
+> Captain是一个自动化RAG平台，通过企业级知识搜索和AI代理能力，将文件搜索准确率从78%提升至95%，支持快速集成多种数据源。
 
 #### 17. New 'negative light' technology hides data transfers in plain sight
-   ⭐ 37 分 · 💬 15 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47341432) · [原文](https://www.unsw.edu.au/newsroom/news/2026/03/New-negative-light-technology-hides-data-transfers-in-plain-sight)
-   > 研究人员开发了"负光"技术，能够在不被察觉的情况下隐藏数据传输，提高通信的隐蔽性和安全性。
+
+⭐ 37 分 · 💬 15 条
+[HN 讨论](https://news.ycombinator.com/item?id=47341432) · [原文](https://www.unsw.edu.au/newsroom/news/2026/03/New-negative-light-technology-hides-data-transfers-in-plain-sight)
+
+> 研究人员开发了"负光"技术，能够在不被察觉的情况下隐藏数据传输，提高通信的隐蔽性和安全性。
 
 #### 18. Wired headphone sales are exploding. What's with the Bluetooth backlash?
-   ⭐ 36 分 · 💬 35 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47340203) · [原文](https://www.bbc.com/future/article/20260310-wired-headphones-are-better-than-bluetooth)
-   > 有线耳机销售激增，反映出消费者对蓝牙无线耳机的质疑，转向更稳定、续航更长的有线产品。
+
+⭐ 36 分 · 💬 35 条
+[HN 讨论](https://news.ycombinator.com/item?id=47340203) · [原文](https://www.bbc.com/future/article/20260310-wired-headphones-are-better-than-bluetooth)
+
+> 有线耳机销售激增，反映出消费者对蓝牙无线耳机的质疑，转向更稳定、续航更长的有线产品。
 
 #### 19. Stanford researchers report first recording of a blue whale's heart rate (2019)
-   ⭐ 33 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47368430) · [原文](https://news.stanford.edu/stories/2019/11/first-ever-recording-blue-whales-heart-rate)
-   > 斯坦福研究人员首次成功记录了蓝鲸的心率数据，通过这一突破性研究深化了人类对世界最大动物生理特征的认识。
+
+⭐ 33 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47368430) · [原文](https://news.stanford.edu/stories/2019/11/first-ever-recording-blue-whales-heart-rate)
+
+> 斯坦福研究人员首次成功记录了蓝鲸的心率数据，通过这一突破性研究深化了人类对世界最大动物生理特征的认识。
 
 #### 20. Exploring JEPA for real-time speech translation
-   ⭐ 10 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47332883) · [原文](https://www.startpinch.com/research/en/jepa-encoder-translation/)
-   > 本文介绍JEPA-v0自监督音频编码器在实时语音翻译中的应用，旨在保留语音的声音、情感和时序信息，超越传统文本级翻译的局限。
+
+⭐ 10 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47332883) · [原文](https://www.startpinch.com/research/en/jepa-encoder-translation/)
+
+> 本文介绍JEPA-v0自监督音频编码器在实时语音翻译中的应用，旨在保留语音的声音、情感和时序信息，超越传统文本级翻译的局限。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 186 分 |
-| 总讨论数 | 2315 条 |
-| 最热文章 | "Can I run AI locally?" (740⭐) |
+| 指标     | 数值                                                                       |
+| -------- | -------------------------------------------------------------------------- |
+| 平均热度 | 186 分                                                                     |
+| 总讨论数 | 2315 条                                                                    |
+| 最热文章 | "Can I run AI locally?" (740⭐)                                            |
 | 讨论最多 | "Qatar helium shutdown puts chip supply chain on a two-week clock" (303💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

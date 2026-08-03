@@ -1,7 +1,7 @@
 ---
-title: '启蒙、文明与AI:一场关于人类价值的对谈'
+title: "启蒙、文明与AI:一场关于人类价值的对谈"
 pubDatetime: 2026-02-23T00:00:00Z
-tags: ['philosophy', 'culture', 'AI', 'enlightenment', 'education', 'dialogue']
+tags: ["philosophy", "culture", "AI", "enlightenment", "education", "dialogue"]
 description: "从伏尔泰的中国神话到AI时代的'活人感',两个思想者的共同探索"
 ---
 
@@ -235,4 +235,4 @@ AI追求的是概率上的最优解,而人类交流追求的是灵魂上的共�
 
 ---
 
-*本文整理自一场关于文化认同与AI时代的深度对话。对话双方在思辨中共同推进,在顿悟中相互启发,展现了人类思想交流中最珍贵的"活人感"。*
+_本文整理自一场关于文化认同与AI时代的深度对话。对话双方在思辨中共同推进,在顿悟中相互启发,展现了人类思想交流中最珍贵的"活人感"。_

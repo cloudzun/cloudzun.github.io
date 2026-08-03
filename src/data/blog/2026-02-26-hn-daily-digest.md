@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-26'
+title: "HN Daily Digest: 2026-02-26"
 pubDatetime: 2026-02-25T16:17:04Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,64 +162,74 @@ FDM-1的技术突破主要体现在几个方面：其**视频编码器**能将�
 ## 📑 更多热门文章 (11-20)
 
 **11. Dissecting the CPU-memory relationship in garbage collection (OpenJDK 26)**
-   ⭐ 34 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47137140) · [原文](https://norlinder.nu/posts/GC-Cost-CPU-vs-Memory/)
-   > 本文探讨了现代Java垃圾回收器中CPU与内存的权衡关系，指出当堆内存不足时，GC会在不增加停顿时间的情况下悄然消耗更多CPU资源，需要新工具来监测这种隐藏的效率问题。
+⭐ 34 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47137140) · [原文](https://norlinder.nu/posts/GC-Cost-CPU-vs-Memory/)
+
+> 本文探讨了现代Java垃圾回收器中CPU与内存的权衡关系，指出当堆内存不足时，GC会在不增加停顿时间的情况下悄然消耗更多CPU资源，需要新工具来监测这种隐藏的效率问题。
 
 **12. Learnings from 4 months of Image-Video VAE experiments**
-   ⭐ 53 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47141107) · [原文](https://www.linum.ai/field-notes/vae-reconstruction-vs-generation)
-   > 本文分享了4个月图像-视频VAE实验的核心发现：重建质量更好的VAE模型并不一定能生成更高质量的视频内容，揭示了VAE在视频生成中的关键技术挑战与解决方案。
+⭐ 53 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47141107) · [原文](https://www.linum.ai/field-notes/vae-reconstruction-vs-generation)
+
+> 本文分享了4个月图像-视频VAE实验的核心发现：重建质量更好的VAE模型并不一定能生成更高质量的视频内容，揭示了VAE在视频生成中的关键技术挑战与解决方案。
 
 **13. Origin of the rule that swap size should be 2x of the physical memory**
-   ⭐ 11 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47159364) · [原文](https://retrocomputing.stackexchange.com/questions/32492/origin-of-the-rule-that-swap-size-should-be-2x-of-the-physical-memory)
-   > 探讨Linux系统中"交换分区应为物理内存两倍"这一经验法则的历史由来，解释该规则在早期内存昂贵时代的合理性及其在现代大内存环境下已不再适用的原因。
+⭐ 11 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47159364) · [原文](https://retrocomputing.stackexchange.com/questions/32492/origin-of-the-rule-that-swap-size-should-be-2x-of-the-physical-memory)
+
+> 探讨Linux系统中"交换分区应为物理内存两倍"这一经验法则的历史由来，解释该规则在早期内存昂贵时代的合理性及其在现代大内存环境下已不再适用的原因。
 
 **14. Show HN: I ported Tree-sitter to Go**
-   ⭐⭐ 169 分 · 💬 71 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47155597) · [原文](https://github.com/odvcencio/gotreesitter)
-   > 这是一个纯Go语言实现的Tree-sitter运行时库，让开发者无需依赖C语言即可在Go项目中使用Tree-sitter进行代码解析和语法分析。
+⭐⭐ 169 分 · 💬 71 条
+[HN 讨论](https://news.ycombinator.com/item?id=47155597) · [原文](https://github.com/odvcencio/gotreesitter)
+
+> 这是一个纯Go语言实现的Tree-sitter运行时库，让开发者无需依赖C语言即可在Go项目中使用Tree-sitter进行代码解析和语法分析。
 
 **15. Following 35% growth, solar has passed hydro on US grid**
-   ⭐⭐⭐ 375 分 · 💬 298 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47154009) · [原文](https://arstechnica.com/science/2026/02/final-2025-data-is-in-us-energy-use-is-up-as-solar-passes-hydro/)
-   > 2025年美国太阳能发电量增长35%，首次超越水电成为第二大可再生能源，标志着美国能源结构转型取得重要里程碑。
+⭐⭐⭐ 375 分 · 💬 298 条
+[HN 讨论](https://news.ycombinator.com/item?id=47154009) · [原文](https://arstechnica.com/science/2026/02/final-2025-data-is-in-us-energy-use-is-up-as-solar-passes-hydro/)
+
+> 2025年美国太阳能发电量增长35%，首次超越水电成为第二大可再生能源，标志着美国能源结构转型取得重要里程碑。
 
 **16. The Hydrogen Truck Problem Isn't the Truck**
-   ⭐ 8 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47135542) · [原文](https://www.mikeayles.com/blog/hydrogen-refuelling-road-freight/)
-   > 氢能卡车技术本身已成熟，但真正的挑战在于氢气生产效率低、基础设施成本高，且难以与已普及的电网竞争。
+⭐ 8 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47135542) · [原文](https://www.mikeayles.com/blog/hydrogen-refuelling-road-freight/)
+
+> 氢能卡车技术本身已成熟，但真正的挑战在于氢气生产效率低、基础设施成本高，且难以与已普及的电网竞争。
 
 **17. How to fold the Blade Runner origami unicorn (1996)**
-   ⭐⭐ 247 分 · 💬 35 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47115574) · [原文](https://web.archive.org/web/20011104015933/www.linkclub.or.jp/~null/index_br.html)
-   > 这是一份1996年的教程，详细介绍如何折叠电影《银翼杀手》中标志性的折纸独角兽，是影迷收藏的经典折纸指南。
+⭐⭐ 247 分 · 💬 35 条
+[HN 讨论](https://news.ycombinator.com/item?id=47115574) · [原文](https://web.archive.org/web/20011104015933/www.linkclub.or.jp/~null/index_br.html)
+
+> 这是一份1996年的教程，详细介绍如何折叠电影《银翼杀手》中标志性的折纸独角兽，是影迷收藏的经典折纸指南。
 
 **18. Access to a Shared Unix Computer**
-   ⭐ 34 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47110066) · [原文](http://tilde.club/)
-   > 这是一个复古风格的共享Unix服务器社区平台，用户可以申请账号登录使用公共Unix系统，体验早期互联网的协作文化和极客精神。
+⭐ 34 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47110066) · [原文](http://tilde.club/)
+
+> 这是一个复古风格的共享Unix服务器社区平台，用户可以申请账号登录使用公共Unix系统，体验早期互联网的协作文化和极客精神。
 
 **19. Devirtualization and Static Polymorphism**
-   ⭐ 34 分 · 💬 13 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47155811) · [原文](https://david.alvarezrosa.com/posts/devirtualization-and-static-polymorphism/)
-   > 本文解释了虚函数调用的性能开销，并介绍如何通过编译期静态多态替代运行时动态派发，从而在延迟敏感场景中实现零成本抽象。
+⭐ 34 分 · 💬 13 条
+[HN 讨论](https://news.ycombinator.com/item?id=47155811) · [原文](https://david.alvarezrosa.com/posts/devirtualization-and-static-polymorphism/)
+
+> 本文解释了虚函数调用的性能开销，并介绍如何通过编译期静态多态替代运行时动态派发，从而在延迟敏感场景中实现零成本抽象。
 
 **20. Trellis AI (YC W24) is hiring deployment lead to accelerate medication access**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47154246) · [原文](https://www.ycombinator.com/companies/trellis-ai/jobs/7ZlvQkN-lead-deployment-strategist)
-   > Trellis AI是一家Y Combinator孵化的医疗科技公司，正在招聘部署负责人，通过AI自动化处理prior authorization等医疗文书工作，帮助患者更快获得救命药物。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47154246) · [原文](https://www.ycombinator.com/companies/trellis-ai/jobs/7ZlvQkN-lead-deployment-strategist)
+
+> Trellis AI是一家Y Combinator孵化的医疗科技公司，正在招聘部署负责人，通过AI自动化处理prior authorization等医疗文书工作，帮助患者更快获得救命药物。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 119 分 |
-| 总讨论数 | 1699 条 |
-| 最热文章 | "Jimi Hendrix was a systems engineer" (247⭐) |
+| 指标     | 数值                                                       |
+| -------- | ---------------------------------------------------------- |
+| 平均热度 | 119 分                                                     |
+| 总讨论数 | 1699 条                                                    |
+| 最热文章 | "Jimi Hendrix was a systems engineer" (247⭐)              |
 | 讨论最多 | "Bus stop balancing is fast, cheap, and effective" (436💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

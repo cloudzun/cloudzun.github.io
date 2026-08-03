@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-16'
+title: "HN Daily Digest: 2026-03-16"
 pubDatetime: 2026-03-15T14:48:56Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ Signet是一个自主野火追踪系统，利用卫星数据、热成像和气�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. C++26: The Oxford Variadic Comma
-   ⭐ 90 分 · 💬 44 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47332593) · [原文](https://www.sandordargo.com/blog/2026/03/11/cpp26-oxford-variadic-comma)
-   > C++26将强制要求在函数参数的省略号前添加逗号，以改进C兼容性、减少混淆并为未来语言特性铺路。
+
+⭐ 90 分 · 💬 44 条
+[HN 讨论](https://news.ycombinator.com/item?id=47332593) · [原文](https://www.sandordargo.com/blog/2026/03/11/cpp26-oxford-variadic-comma)
+
+> C++26将强制要求在函数参数的省略号前添加逗号，以改进C兼容性、减少混淆并为未来语言特性铺路。
 
 #### 12. //go:fix inline and the source-level inliner
-   ⭐ 79 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47339463) · [原文](https://go.dev/blog/inliner)
-   > 介绍Go语言中的`//go:inline`指令和源代码级内联优化器的工作原理，帮助开发者理解和利用内联机制提升程序性能。
+
+⭐ 79 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47339463) · [原文](https://go.dev/blog/inliner)
+
+> 介绍Go语言中的`//go:inline`指令和源代码级内联优化器的工作原理，帮助开发者理解和利用内联机制提升程序性能。
 
 #### 13. In Memoriam: John W. Addison, my PhD advisor
-   ⭐ 77 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47388531) · [原文](https://billwadge.com/2026/03/15/in-memoriam-john-w-addison-jr-my-phd-advisor/)
-   > 作者追忆其博士导师约翰·艾迪森的学术影响力和教学风格，表达对这位杰出逻辑学家的敬意和感谢。
+
+⭐ 77 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47388531) · [原文](https://billwadge.com/2026/03/15/in-memoriam-john-w-addison-jr-my-phd-advisor/)
+
+> 作者追忆其博士导师约翰·艾迪森的学术影响力和教学风格，表达对这位杰出逻辑学家的敬意和感谢。
 
 #### 14. Show HN: GDSL – 800 line kernel: Lisp subset in 500, C subset in 1300
-   ⭐ 50 分 · 💬 13 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47388479) · [原文](https://firthemouse.github.io/)
-   > 本文展示了一个仅800行的极简内核，用500行实现Lisp编译器、1300行实现C子集编译器，探讨为何现代编译器代码膨胀的根本原因。
+
+⭐ 50 分 · 💬 13 条
+[HN 讨论](https://news.ycombinator.com/item?id=47388479) · [原文](https://firthemouse.github.io/)
+
+> 本文展示了一个仅800行的极简内核，用500行实现Lisp编译器、1300行实现C子集编译器，探讨为何现代编译器代码膨胀的根本原因。
 
 #### 15. Stop Sloppypasta
-   ⭐ 35 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47389570) · [原文](https://stopsloppypasta.ai/)
-   > 本文倡导停止直接粘贴未经审核的原始LLM输出给他人，强调应对AI生成内容进行筛选、优化和验证后再分享，以尊重接收者的时间和精力。
+
+⭐ 35 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47389570) · [原文](https://stopsloppypasta.ai/)
+
+> 本文倡导停止直接粘贴未经审核的原始LLM输出给他人，强调应对AI生成内容进行筛选、优化和验证后再分享，以尊重接收者的时间和精力。
 
 #### 16. Autoresearch Hub
-   ⭐ 29 分 · 💬 13 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47374572) · [原文](http://autoresearchhub.com/)
-   > Autoresearch Hub是一个分布式AI研究平台，通过众包方式利用多个H100 GPU资源进行自动化机器学习实验，实时追踪研究进度和最优成果。
+
+⭐ 29 分 · 💬 13 条
+[HN 讨论](https://news.ycombinator.com/item?id=47374572) · [原文](http://autoresearchhub.com/)
+
+> Autoresearch Hub是一个分布式AI研究平台，通过众包方式利用多个H100 GPU资源进行自动化机器学习实验，实时追踪研究进度和最优成果。
 
 #### 17. Canada's Bill C-22 Mandates Mass Metadata Surveillance of Canadians
-   ⭐ 27 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47392084) · [原文](https://www.parl.ca/DocumentViewer/en/45-1/bill/C-22/first-reading)
-   > 加拿大C-22法案授权政府对全国居民进行大规模元数据监控，涉及刑法修订和合法访问权限扩展。
+
+⭐ 27 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47392084) · [原文](https://www.parl.ca/DocumentViewer/en/45-1/bill/C-22/first-reading)
+
+> 加拿大C-22法案授权政府对全国居民进行大规模元数据监控，涉及刑法修订和合法访问权限扩展。
 
 #### 18. Show HN: Lux – Drop-in Redis replacement in Rust. 5.6x faster, ~1MB Docker image
-   ⭐ 25 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47391982) · [原文](https://github.com/lux-db/lux)
-   > Lux是用Rust开发的Redis替代品，性能提升5.6倍，Docker镜像仅1MB，提供更高效的内存数据库解决方案。
+
+⭐ 25 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47391982) · [原文](https://github.com/lux-db/lux)
+
+> Lux是用Rust开发的Redis替代品，性能提升5.6倍，Docker镜像仅1MB，提供更高效的内存数据库解决方案。
 
 #### 19. A new Bigfoot documentary helps explain our conspiracy-minded era
-   ⭐ 4 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47392547) · [原文](https://www.msn.com/en-us/news/us/a-new-bigfoot-documentary-helps-explain-our-conspiracy-minded-era/ar-AA1Yv6px)
-   > 这篇文章通过分析一部新的大脚怪纪录片，探讨了现代社会中阴谋论盛行的深层原因，揭示了人们对神秘事物的执着与信任危机之间的关联。
+
+⭐ 4 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47392547) · [原文](https://www.msn.com/en-us/news/us/a-new-bigfoot-documentary-helps-explain-our-conspiracy-minded-era/ar-AA1Yv6px)
+
+> 这篇文章通过分析一部新的大脚怪纪录片，探讨了现代社会中阴谋论盛行的深层原因，揭示了人们对神秘事物的执着与信任危机之间的关联。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 111 分 |
-| 总讨论数 | 732 条 |
+| 指标     | 数值                                                       |
+| -------- | ---------------------------------------------------------- |
+| 平均热度 | 111 分                                                     |
+| 总讨论数 | 732 条                                                     |
 | 最热文章 | "A Visual Introduction to Machine Learning (2015)" (301⭐) |
-| 讨论最多 | "The 49MB Web Page" (114💬) |
+| 讨论最多 | "The 49MB Web Page" (114💬)                                |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

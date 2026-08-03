@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-12'
+title: "HN Daily Digest: 2026-03-12"
 pubDatetime: 2026-03-11T14:43:13Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,64 +160,84 @@ Klaus值得关注的原因在于，它降低了开源大语言模型的使用门
 ## 📑 更多热门文章 (11-20)
 
 #### 11. I'm glad the Anthropic fight is happening now
-   ⭐ 100 分 · 💬 108 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47340071) · [原文](https://www.dwarkesh.com/p/dow-anthropic)
-   > 本文讨论了美国国防部与Anthropic因AI模型监管政策的冲突，认为这场争议预示着未来AI在军事、政府等关键领域的深度融合将面临的高风险治理问题。
+
+⭐ 100 分 · 💬 108 条
+[HN 讨论](https://news.ycombinator.com/item?id=47340071) · [原文](https://www.dwarkesh.com/p/dow-anthropic)
+
+> 本文讨论了美国国防部与Anthropic因AI模型监管政策的冲突，认为这场争议预示着未来AI在军事、政府等关键领域的深度融合将面临的高风险治理问题。
 
 #### 12. Physicist Astrid Eichhorn is a leader in the field of asymptotic safety
-   ⭐ 100 分 · 💬 14 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47337177) · [原文](https://www.quantamagazine.org/where-some-see-strings-she-sees-a-space-time-made-of-fractals-20260311/)
-   > 物理学家艾希霍恩通过渐近安全理论提出时空具有分形结构的新观点，为量子引力研究提供了不同于弦论的创新思路。
+
+⭐ 100 分 · 💬 14 条
+[HN 讨论](https://news.ycombinator.com/item?id=47337177) · [原文](https://www.quantamagazine.org/where-some-see-strings-she-sees-a-space-time-made-of-fractals-20260311/)
+
+> 物理学家艾希霍恩通过渐近安全理论提出时空具有分形结构的新观点，为量子引力研究提供了不同于弦论的创新思路。
 
 #### 13. 5,200 holes carved into a Peruvian mountain left by an ancient economy
-   ⭐ 74 分 · 💬 42 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47319520) · [原文](https://newatlas.com/environment/5-200-holes-peruvian-mountain/)
-   > 秘鲁山峰上发现的5200个洞穴是古代印第安人贸易经济体系的遗迹，为研究前哥伦布时期的商业活动提供了重要考古证据。
+
+⭐ 74 分 · 💬 42 条
+[HN 讨论](https://news.ycombinator.com/item?id=47319520) · [原文](https://newatlas.com/environment/5-200-holes-peruvian-mountain/)
+
+> 秘鲁山峰上发现的5200个洞穴是古代印第安人贸易经济体系的遗迹，为研究前哥伦布时期的商业活动提供了重要考古证据。
 
 #### 14. I was interviewed by an AI bot for a job
-   ⭐ 69 分 · 💬 63 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47339164) · [原文](https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job)
-   > 本文记录了作者亲身体验AI招聘机器人面试的过程，探讨了人工智能在招聘领域的应用现状及其带来的影响。
+
+⭐ 69 分 · 💬 63 条
+[HN 讨论](https://news.ycombinator.com/item?id=47339164) · [原文](https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job)
+
+> 本文记录了作者亲身体验AI招聘机器人面试的过程，探讨了人工智能在招聘领域的应用现状及其带来的影响。
 
 #### 15. Britain is ejecting hereditary nobles from Parliament after 700 years
-   ⭐ 61 分 · 💬 40 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47341845) · [原文](https://apnews.com/article/uk-house-of-lords-hereditary-peers-expelled-535df8781dd01e8970acda1dca99d3d4)
-   > 英国议会决定终止延续700年的世袭贵族制度，将世袭贵族从上议院驱逐出去，标志着英国政治体制的重大改革。
+
+⭐ 61 分 · 💬 40 条
+[HN 讨论](https://news.ycombinator.com/item?id=47341845) · [原文](https://apnews.com/article/uk-house-of-lords-hereditary-peers-expelled-535df8781dd01e8970acda1dca99d3d4)
+
+> 英国议会决定终止延续700年的世袭贵族制度，将世袭贵族从上议院驱逐出去，标志着英国政治体制的重大改革。
 
 #### 16. Personal Computer by Perplexity
-   ⭐ 58 分 · 💬 39 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47339223) · [原文](https://www.perplexity.ai/personal-computer-waitlist)
-   > Perplexity推出个人计算机产品，旨在通过AI技术提供更智能的个人助手体验，用户可通过等待列表申请抢先体验这一创新计算平台。
+
+⭐ 58 分 · 💬 39 条
+[HN 讨论](https://news.ycombinator.com/item?id=47339223) · [原文](https://www.perplexity.ai/personal-computer-waitlist)
+
+> Perplexity推出个人计算机产品，旨在通过AI技术提供更智能的个人助手体验，用户可通过等待列表申请抢先体验这一创新计算平台。
 
 #### 17. Many SWE-bench-Passing PRs would not be merged
-   ⭐ 40 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47341645) · [原文](https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/)
-   > 研究发现约半数通过SWE-bench测试的AI生成代码PR实际上不会被项目维护者合并，揭示了基准测试与真实代码审核标准之间的显著差距。
+
+⭐ 40 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47341645) · [原文](https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/)
+
+> 研究发现约半数通过SWE-bench测试的AI生成代码PR实际上不会被项目维护者合并，揭示了基准测试与真实代码审核标准之间的显著差距。
 
 #### 18. Preliminary data from a longitudinal AI impact study
-   ⭐ 10 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47342139) · [原文](https://newsletter.getdx.com/p/ai-productivity-gains-are-10-not)
-   > 本研究通过对40家公司的纵向数据分析发现，AI实际生产力提升约为10%，远低于市场宣传的2-3倍预期。
+
+⭐ 10 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47342139) · [原文](https://newsletter.getdx.com/p/ai-productivity-gains-are-10-not)
+
+> 本研究通过对40家公司的纵向数据分析发现，AI实际生产力提升约为10%，远低于市场宣传的2-3倍预期。
 
 #### 19. Can the Dictionary Keep Up?
-   ⭐ 5 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47320040) · [原文](https://www.thenation.com/article/culture/stefan-fatsis-dictionary-history/)
-   > 本文通过Stefan Fatsis的字典历史著作，探讨现代词典如何记录和反映当代语言的演变，揭示字典在数字时代仍具有的文化意义。
+
+⭐ 5 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47320040) · [原文](https://www.thenation.com/article/culture/stefan-fatsis-dictionary-history/)
+
+> 本文通过Stefan Fatsis的字典历史著作，探讨现代词典如何记录和反映当代语言的演变，揭示字典在数字时代仍具有的文化意义。
 
 #### 20. Meticulous (YC S21) is hiring to redefine software dev
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47341760) · [原文](https://jobs.ashbyhq.com/meticulous/3197ae3d-bb26-4750-9ed7-b830f640515e)
-   > Meticulous是YC孵化的初创公司，致力于通过创新技术重新定义软件开发流程，现正招聘优秀人才加入团队推进这一使命。
+
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47341760) · [原文](https://jobs.ashbyhq.com/meticulous/3197ae3d-bb26-4750-9ed7-b830f640515e)
+
+> Meticulous是YC孵化的初创公司，致力于通过创新技术重新定义软件开发流程，现正招聘优秀人才加入团队推进这一使命。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 245 分 |
-| 总讨论数 | 2578 条 |
+| 指标     | 数值                                                                                       |
+| -------- | ------------------------------------------------------------------------------------------ |
+| 平均热度 | 245 分                                                                                     |
+| 总讨论数 | 2578 条                                                                                    |
 | 最热文章 | "Don't post generated/AI-edited comments. HN is for conversation between humans." (2025⭐) |
-| 讨论最多 | "Don't post generated/AI-edited comments. HN is for conversation between humans." (777💬) |
+| 讨论最多 | "Don't post generated/AI-edited comments. HN is for conversation between humans." (777💬)  |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

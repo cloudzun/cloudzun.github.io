@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-24'
+title: "HN Daily Digest: 2026-02-24"
 pubDatetime: 2026-02-23T16:17:32Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,64 +162,74 @@ Babyshark是一个开源的网络数据包分析工具，旨在简化传统Wires
 ## 📑 更多热门文章 (11-20)
 
 **11. 'Viking' was a job description, not a matter of heredity: Ancient DNA study**
-   ⭐ 138 分 · 💬 110 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47100612) · [原文](https://www.science.org/content/article/viking-was-job-description-not-matter-heredity-massive-ancient-dna-study-shows)
-   > 大规模古DNA研究揭示，维京人并非单一种族群体，而是一种职业身份，来自不同遗传背景的人都可能成为维京人，颠覆了传统认知。
+⭐ 138 分 · 💬 110 条
+[HN 讨论](https://news.ycombinator.com/item?id=47100612) · [原文](https://www.science.org/content/article/viking-was-job-description-not-matter-heredity-massive-ancient-dna-study-shows)
+
+> 大规模古DNA研究揭示，维京人并非单一种族群体，而是一种职业身份，来自不同遗传背景的人都可能成为维京人，颠覆了传统认知。
 
 **12. SIM (YC X25) Is Hiring the Best Engineers in San Francisco**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47128740) · [原文](https://www.ycombinator.com/companies/sim/jobs/Rj8TVRM-software-engineer-platform)
-   > SIM是一个开源AI智能体工作流平台，已被超过7万名开发者使用，现正在旧金山招聘全栈平台工程师，提供14-22万美元年薪及股权激励。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47128740) · [原文](https://www.ycombinator.com/companies/sim/jobs/Rj8TVRM-software-engineer-platform)
+
+> SIM是一个开源AI智能体工作流平台，已被超过7万名开发者使用，现正在旧金山招聘全栈平台工程师，提供14-22万美元年薪及股权激励。
 
 **13. Magical Mushroom – Europe's first industrial-scale mycelium packaging producer**
-   ⭐⭐⭐ 342 分 · 💬 111 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47119274) · [原文](https://magicalmushroom.com/index)
-   > 欧洲首家工业规模菌丝体包装生产商，利用蘑菇菌丝和农业副产品培育出可替代塑料泡沫的高性能环保包装材料，性能相当但可完全生物降解。
+⭐⭐⭐ 342 分 · 💬 111 条
+[HN 讨论](https://news.ycombinator.com/item?id=47119274) · [原文](https://magicalmushroom.com/index)
+
+> 欧洲首家工业规模菌丝体包装生产商，利用蘑菇菌丝和农业副产品培育出可替代塑料泡沫的高性能环保包装材料，性能相当但可完全生物降解。
 
 **14. Show HN: Sowbot – open-hardware agricultural robot (ROS2, RTK GPS)**
-   ⭐ 104 分 · 💬 36 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47123894) · [原文](https://sowbot.co.uk/)
-   > 面向农业研究人员、农场主和初创企业的开源轻量级农业机器人平台，提供参考硬件设计和生产级软件栈，可节省约18个月研发时间并降低环境影响。
+⭐ 104 分 · 💬 36 条
+[HN 讨论](https://news.ycombinator.com/item?id=47123894) · [原文](https://sowbot.co.uk/)
+
+> 面向农业研究人员、农场主和初创企业的开源轻量级农业机器人平台，提供参考硬件设计和生产级软件栈，可节省约18个月研发时间并降低环境影响。
 
 **15. A simple web we own**
-   ⭐⭐ 169 分 · 💬 114 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47124149) · [原文](https://rsdoiel.github.io/blog/2026/02/21/a_simple_web_we_own.html)
-   > 探讨个人和合作社拥有硬件软件所有权如何改变当前由大公司控制的互联网格局，摆脱用户作为"租户和产品"的困境。
+⭐⭐ 169 分 · 💬 114 条
+[HN 讨论](https://news.ycombinator.com/item?id=47124149) · [原文](https://rsdoiel.github.io/blog/2026/02/21/a_simple_web_we_own.html)
+
+> 探讨个人和合作社拥有硬件软件所有权如何改变当前由大公司控制的互联网格局，摆脱用户作为"租户和产品"的困境。
 
 **16. ASML unveils EUV light source advance that could yield 50% more chips by 2030**
-   ⭐⭐ 235 分 · 💬 60 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47125349) · [原文](https://www.reuters.com/world/china/asml-unveils-euv-light-source-advance-that-could-yield-50-more-chips-by-2030-2026-02-23/)
-   > ASML宣布极紫外光（EUV）光源技术取得突破性进展，通过提升光源功率和稳定性，有望在2030年前将芯片产能提升50%，为半导体制造业带来重大效率提升。
+⭐⭐ 235 分 · 💬 60 条
+[HN 讨论](https://news.ycombinator.com/item?id=47125349) · [原文](https://www.reuters.com/world/china/asml-unveils-euv-light-source-advance-that-could-yield-50-more-chips-by-2030-2026-02-23/)
+
+> ASML宣布极紫外光（EUV）光源技术取得突破性进展，通过提升光源功率和稳定性，有望在2030年前将芯片产能提升50%，为半导体制造业带来重大效率提升。
 
 **17. Binance fired employees who found $1.7B in crypto was sent to Iran**
-   ⭐⭐⭐ 355 分 · 💬 154 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47127396) · [原文](https://www.nytimes.com/2026/02/23/technology/binance-employees-iran-firings.html)
-   > 币安解雇了发现公司向伊朗转移17亿美元加密货币的员工,此事凸显加密货币交易所在合规监管与内部举报机制方面存在的严重问题。
+⭐⭐⭐ 355 分 · 💬 154 条
+[HN 讨论](https://news.ycombinator.com/item?id=47127396) · [原文](https://www.nytimes.com/2026/02/23/technology/binance-employees-iran-firings.html)
+
+> 币安解雇了发现公司向伊朗转移17亿美元加密货币的员工,此事凸显加密货币交易所在合规监管与内部举报机制方面存在的严重问题。
 
 **18. Making Wolfram Tech Available as a Foundation Tool for LLM Systems**
-   ⭐ 16 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47129727) · [原文](https://writings.stephenwolfram.com/2026/02/making-wolfram-tech-available-as-a-foundation-tool-for-llm-systems/)
-   > Wolfram推出面向大语言模型的基础工具集，通过计算知识引擎弥补LLM在精确计算、符号推理等方面的能力短板，为AI系统提供可靠的底层技术支撑。
+⭐ 16 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47129727) · [原文](https://writings.stephenwolfram.com/2026/02/making-wolfram-tech-available-as-a-foundation-tool-for-llm-systems/)
+
+> Wolfram推出面向大语言模型的基础工具集，通过计算知识引擎弥补LLM在精确计算、符号推理等方面的能力短板，为AI系统提供可靠的底层技术支撑。
 
 **19. Scent, in Silico**
-   ⭐ 17 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47075295) · [原文](https://www.asimov.press/p/scent)
-   > 探讨嗅觉这一最原始感官如何通过现代科技被数字化映射、测量和建模，揭示气味分子的复杂性及其对记忆、味觉和行为的深刻影响。
+⭐ 17 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47075295) · [原文](https://www.asimov.press/p/scent)
+
+> 探讨嗅觉这一最原始感官如何通过现代科技被数字化映射、测量和建模，揭示气味分子的复杂性及其对记忆、味觉和行为的深刻影响。
 
 **20. Benchmarks for concurrent hash map implementations in Go**
-   ⭐ 79 分 · 💬 7 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47113401) · [原文](https://github.com/puzpuzpuz/go-concurrent-map-bench)
-   > 对比测试了Go语言中多种并发哈希表实现的性能表现，为开发者选择合适的并发数据结构提供基准测试参考数据。
+⭐ 79 分 · 💬 7 条
+[HN 讨论](https://news.ycombinator.com/item?id=47113401) · [原文](https://github.com/puzpuzpuz/go-concurrent-map-bench)
+
+> 对比测试了Go语言中多种并发哈希表实现的性能表现，为开发者选择合适的并发数据结构提供基准测试参考数据。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 238 分 |
-| 总讨论数 | 2429 条 |
-| 最热文章 | "UNIX99, a UNIX-like OS for the TI-99/4A" (129⭐) |
+| 指标     | 数值                                                                                     |
+| -------- | ---------------------------------------------------------------------------------------- |
+| 平均热度 | 238 分                                                                                   |
+| 总讨论数 | 2429 条                                                                                  |
+| 最热文章 | "UNIX99, a UNIX-like OS for the TI-99/4A" (129⭐)                                        |
 | 讨论最多 | "The Age Verification Trap: Verifying age undermines everyone's data protection" (919💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

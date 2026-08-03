@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-13'
+title: "HN Daily Digest: 2026-03-13"
 pubDatetime: 2026-03-12T14:46:35Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,64 +160,84 @@ Dolphin模拟器在2603版本中实现了重大突破，首次在18年后支持�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. An old photo of a large BBS (2022)
-   ⭐ 138 分 · 💬 96 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47356017) · [原文](https://rachelbythebay.com/w/2022/01/26/swcbbs/)
-   > 这篇文章回顾了上世纪BBS系统的历史，通过一张老照片展现了早期计算机通信时代的技术特点和文化特征，具有怀旧和历史记录价值。
+
+⭐ 138 分 · 💬 96 条
+[HN 讨论](https://news.ycombinator.com/item?id=47356017) · [原文](https://rachelbythebay.com/w/2022/01/26/swcbbs/)
+
+> 这篇文章回顾了上世纪BBS系统的历史，通过一张老照片展现了早期计算机通信时代的技术特点和文化特征，具有怀旧和历史记录价值。
 
 #### 12. Show HN: OneCLI – Vault for AI Agents in Rust
-   ⭐ 107 分 · 💬 37 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47353558) · [原文](https://github.com/onecli/onecli)
-   > OneCLI是一个开源凭证保管库，使用Rust开发，为AI代理提供安全的服务访问能力，无需暴露密钥信息。
+
+⭐ 107 分 · 💬 37 条
+[HN 讨论](https://news.ycombinator.com/item?id=47353558) · [原文](https://github.com/onecli/onecli)
+
+> OneCLI是一个开源凭证保管库，使用Rust开发，为AI代理提供安全的服务访问能力，无需暴露密钥信息。
 
 #### 13. WolfIP: Lightweight TCP/IP stack with no dynamic memory allocations
-   ⭐ 75 分 · 💬 7 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47352385) · [原文](https://github.com/wolfssl/wolfip)
-   > WolfIP是一个轻量级TCP/IP协议栈实现，特点是不使用动态内存分配，适合资源受限的嵌入式系统和物联网设备。
+
+⭐ 75 分 · 💬 7 条
+[HN 讨论](https://news.ycombinator.com/item?id=47352385) · [原文](https://github.com/wolfssl/wolfip)
+
+> WolfIP是一个轻量级TCP/IP协议栈实现，特点是不使用动态内存分配，适合资源受限的嵌入式系统和物联网设备。
 
 #### 14. Runners who churn butter on their runs
-   ⭐ 59 分 · 💬 24 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47355781) · [原文](https://www.runnersworld.com/news/a70683169/how-to-make-butter-while-running/)
-   > 本文介绍了跑步者在跑步过程中利用运动产生的震动和摇晃来制作黄油的创意方法，并从科学角度解释了这一现象的可行性。
+
+⭐ 59 分 · 💬 24 条
+[HN 讨论](https://news.ycombinator.com/item?id=47355781) · [原文](https://www.runnersworld.com/news/a70683169/how-to-make-butter-while-running/)
+
+> 本文介绍了跑步者在跑步过程中利用运动产生的震动和摇晃来制作黄油的创意方法，并从科学角度解释了这一现象的可行性。
 
 #### 15. Bringing Chrome to ARM64 Linux Devices
-   ⭐ 33 分 · 💬 31 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47356392) · [原文](https://blog.chromium.org/2026/03/bringing-chrome-to-arm64-linux-devices.html)
-   > Google将在2026年第二季度为ARM64 Linux设备推出Chrome浏览器，为更多用户提供安全稳定的浏览体验和完整的Google生态集成。
+
+⭐ 33 分 · 💬 31 条
+[HN 讨论](https://news.ycombinator.com/item?id=47356392) · [原文](https://blog.chromium.org/2026/03/bringing-chrome-to-arm64-linux-devices.html)
+
+> Google将在2026年第二季度为ARM64 Linux设备推出Chrome浏览器，为更多用户提供安全稳定的浏览体验和完整的Google生态集成。
 
 #### 16. Launch HN: IonRouter (YC W26) – High-throughput, low-cost inference
-   ⭐ 32 分 · 💬 14 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47355410) · [原文](https://ionrouter.io)
-   > IonRouter是一个基于IonAttention引擎的高吞吐量、低成本推理平台，通过GPU多模型复用和毫秒级切换实现实时流量适配和成本优化。
+
+⭐ 32 分 · 💬 14 条
+[HN 讨论](https://news.ycombinator.com/item?id=47355410) · [原文](https://ionrouter.io)
+
+> IonRouter是一个基于IonAttention引擎的高吞吐量、低成本推理平台，通过GPU多模型复用和毫秒级切换实现实时流量适配和成本优化。
 
 #### 17. Document poisoning in RAG systems: How attackers corrupt AI's sources
-   ⭐ 28 分 · 💬 8 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47350407) · [原文](https://aminrj.com/posts/rag-document-poisoning/)
-   > 本文通过在ChromaDB知识库中注入虚假文档的实验，揭示了RAG系统中文档投毒攻击的原理和危害，为AI安全防护提供了重要启示。
+
+⭐ 28 分 · 💬 8 条
+[HN 讨论](https://news.ycombinator.com/item?id=47350407) · [原文](https://aminrj.com/posts/rag-document-poisoning/)
+
+> 本文通过在ChromaDB知识库中注入虚假文档的实验，揭示了RAG系统中文档投毒攻击的原理和危害，为AI安全防护提供了重要启示。
 
 #### 18. Forcing Flash Attention onto a TPU and Learning the Hard Way
-   ⭐ 25 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47294271) · [原文](https://archerzhang.me/forcing-flash-attention-onto-a-tpu)
-   > 本文详细记录了将Flash Attention算法从GPU（Triton实现）移植到TPU的过程，分享了遇到的技术挑战和宝贵的学习经验。
+
+⭐ 25 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47294271) · [原文](https://archerzhang.me/forcing-flash-attention-onto-a-tpu)
+
+> 本文详细记录了将Flash Attention算法从GPU（Triton实现）移植到TPU的过程，分享了遇到的技术挑战和宝贵的学习经验。
 
 #### 19. Show HN: Detect any object in satellite imagery using a text prompt
-   ⭐ 7 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47297308) · [原文](https://www.useful-ai-tools.com/tools/satellite-analysis-demo/)
-   > 这是一个免费的卫星影像分析工具演示，用户可通过文本提示实时检测卫星图像中的车辆、储罐、桥梁等任意物体，展示地理空间计算机视觉模型的能力。
+
+⭐ 7 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47297308) · [原文](https://www.useful-ai-tools.com/tools/satellite-analysis-demo/)
+
+> 这是一个免费的卫星影像分析工具演示，用户可通过文本提示实时检测卫星图像中的车辆、储罐、桥梁等任意物体，展示地理空间计算机视觉模型的能力。
 
 #### 20. Converge (YC S23) Is Hiring a Founding Platform Engineer (NYC, Onsite)
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47353904) · [原文](https://www.runconverge.com/careers/founding-platform-engineer)
-   > Converge公司招聘创始平台工程师，负责构建数据平台以帮助消费品牌优化营销预算决策，已获Y Combinator等投资方570万美元融资。
+
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47353904) · [原文](https://www.runconverge.com/careers/founding-platform-engineer)
+
+> Converge公司招聘创始平台工程师，负责构建数据平台以帮助消费品牌优化营销预算决策，已获Y Combinator等投资方570万美元融资。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 182 分 |
-| 总讨论数 | 1939 条 |
+| 指标     | 数值                                      |
+| -------- | ----------------------------------------- |
+| 平均热度 | 182 分                                    |
+| 总讨论数 | 1939 条                                   |
 | 最热文章 | "Malus – Clean Room as a Service" (931⭐) |
 | 讨论最多 | "Malus – Clean Room as a Service" (365💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_
