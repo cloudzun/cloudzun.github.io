@@ -2,85 +2,29 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
+import LinkButton from "@/components/LinkButton.astro";
 import { SITE } from "@/config";
 ---
 
-<Layout title={`404 - ${SITE.title}`}>
+<Layout title={`404 Not Found | ${SITE.title}`}>
   <Header />
-  <main id="main-content" class="app-layout py-20">
-    <div class="mx-auto max-w-2xl text-center">
-      <!-- 404 图标 -->
-      <div class="mb-8 text-9xl">🔍</div>
 
-      <h1 class="mb-4 text-6xl font-bold text-accent">404</h1>
-
-      <h2 class="mb-6 text-2xl font-semibold">页面未找到</h2>
-
-      <p class="mb-8 text-lg text-foreground/70">
-        抱歉，您访问的页面不存在或已被移动。
-        <br />
-        可能是链接已过期，或者您输入了错误的地址。
-      </p>
-
-      <!-- 快捷操作 -->
-      <div class="mb-12 flex flex-wrap justify-center gap-4">
-        <a
-          href="/"
-          class="rounded-xl bg-accent px-6 py-3 font-medium text-white transition-opacity hover:opacity-90"
-        >
-          🏠 返回首页
-        </a>
-        <a
-          href="/posts/"
-          class="rounded-xl border-2 border-foreground/30 px-6 py-3 font-medium transition-all hover:border-accent hover:bg-accent hover:text-white"
-        >
-          📚 浏览文章
-        </a>
-        <a
-          href="/categories/"
-          class="rounded-xl border-2 border-foreground/30 px-6 py-3 font-medium transition-all hover:border-accent hover:bg-accent hover:text-white"
-        >
-          📂 查看分类
-        </a>
-        <a
-          href="/search/"
-          class="rounded-xl border-2 border-foreground/30 px-6 py-3 font-medium transition-all hover:border-accent hover:bg-accent hover:text-white"
-        >
-          🔎 搜索内容
-        </a>
-      </div>
-
-      <!-- 统计信息 -->
-      <div class="rounded-2xl border border-foreground/10 bg-muted/50 p-6">
-        <h3 class="mb-4 text-lg font-bold">💡 小提示</h3>
-        <div class="grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
-          <div class="text-center">
-            <div class="text-2xl font-bold text-accent">115+</div>
-            <div class="text-foreground/70">篇文章</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl font-bold text-accent">5</div>
-            <div class="text-foreground/70">个分类</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl font-bold text-accent">241</div>
-            <div class="text-foreground/70">个标签</div>
-          </div>
-          <div class="text-center">
-            <div class="text-2xl font-bold text-accent">∞</div>
-            <div class="text-foreground/70">种可能</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 名言 -->
-      <blockquote
-        class="mt-12 rounded-xl border-l-4 border-accent bg-gradient-to-r from-muted/50 to-muted/30 p-6 italic"
+  <main
+    id="main-content"
+    class="app-layout flex flex-1 items-center justify-center"
+  >
+    <div class="mb-14 flex flex-col items-center justify-center">
+      <h1 class="text-9xl font-bold text-accent">404</h1>
+      <span aria-hidden="true">¯\_(ツ)_/¯</span>
+      <p class="mt-4 text-2xl sm:text-3xl">Page Not Found</p>
+      <LinkButton
+        href="/"
+        class="my-6 text-lg underline decoration-dashed underline-offset-8"
       >
-        <p class="text-foreground/80">"有时候，迷路是为了发现新的风景。"</p>
-        <footer class="mt-2 text-sm text-foreground/60">— CloudZun</footer>
-      </blockquote>
+        Go back home
+      </LinkButton>
     </div>
   </main>
+
   <Footer />
 </Layout>
