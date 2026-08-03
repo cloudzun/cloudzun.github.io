@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-15'
+title: "HN Daily Digest: 2026-03-15"
 pubDatetime: 2026-03-14T14:46:34Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ OpenTTD在Steam平台的发行方式发生了重大调整。自2026年3月14日�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Fedora 44 on the Raspberry Pi 5
-   ⭐ 34 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47380512) · [原文](https://nullr0ute.com/2026/03/fedora-44-on-the-raspberry-pi-5/)
-   > 本文介绍了Fedora 44在树莓派5上的适配进展，涵盖多个硬件变体的支持情况及功能测试结果。
+
+⭐ 34 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47380512) · [原文](https://nullr0ute.com/2026/03/fedora-44-on-the-raspberry-pi-5/)
+
+> 本文介绍了Fedora 44在树莓派5上的适配进展，涵盖多个硬件变体的支持情况及功能测试结果。
 
 #### 12. CSMWrap: Legacy BIOS booting on UEFI-only systems via SeaBIOS
-   ⭐ 24 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47320667) · [原文](https://github.com/CSMWrap/CSMWrap)
-   > CSMWrap是一个开源工具，通过SeaBIOS技术在仅支持UEFI的系统上实现传统BIOS启动兼容性，解决旧系统与现代固件的适配问题。
+
+⭐ 24 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47320667) · [原文](https://github.com/CSMWrap/CSMWrap)
+
+> CSMWrap是一个开源工具，通过SeaBIOS技术在仅支持UEFI的系统上实现传统BIOS启动兼容性，解决旧系统与现代固件的适配问题。
 
 #### 13. A Recursive Algorithm to Render Signed Distance Fields
-   ⭐ 22 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47335796) · [原文](https://pointersgonewild.com/2026-03-06-a-recursive-algorithm-to-render-signed-distance-fields/)
-   > 本文介绍了一种递归算法用于渲染有符号距离场（SDF），阐述了SDF作为函数式图形编程范式的优势，以及其在形状组合、变形等操作中的便利性。
+
+⭐ 22 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47335796) · [原文](https://pointersgonewild.com/2026-03-06-a-recursive-algorithm-to-render-signed-distance-fields/)
+
+> 本文介绍了一种递归算法用于渲染有符号距离场（SDF），阐述了SDF作为函数式图形编程范式的优势，以及其在形状组合、变形等操作中的便利性。
 
 #### 14. Anthropic invests $100M into the Claude Partner Network
-   ⭐ 20 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47381340) · [原文](https://www.anthropic.com/news/claude-partner-network)
-   > Anthropic投入1亿美元建立Claude合作伙伴网络，为帮助企业采用Claude的合作伙伴提供培训、技术支持和投资机会。
+
+⭐ 20 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47381340) · [原文](https://www.anthropic.com/news/claude-partner-network)
+
+> Anthropic投入1亿美元建立Claude合作伙伴网络，为帮助企业采用Claude的合作伙伴提供培训、技术支持和投资机会。
 
 #### 15. Offloading FFmpeg with Cloudflare
-   ⭐ 11 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47320571) · [原文](https://kentcdodds.com/blog/offloading-ffmpeg-with-cloudflare)
-   > 本文介绍了如何利用Cloudflare服务将FFmpeg音频处理任务从主服务器卸载，以解决直接在服务器上运行导致的性能问题。
+
+⭐ 11 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47320571) · [原文](https://kentcdodds.com/blog/offloading-ffmpeg-with-cloudflare)
+
+> 本文介绍了如何利用Cloudflare服务将FFmpeg音频处理任务从主服务器卸载，以解决直接在服务器上运行导致的性能问题。
 
 #### 16. Library of Short Stories
-   ⭐ 10 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47380726) · [原文](https://www.libraryofshortstories.com/)
-   > 这是一个汇集各类短篇故事的在线文库，为读者提供丰富多样的文学作品，涵盖不同题材和风格，是发现和阅读优质短篇文学的理想平台。
+
+⭐ 10 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47380726) · [原文](https://www.libraryofshortstories.com/)
+
+> 这是一个汇集各类短篇故事的在线文库，为读者提供丰富多样的文学作品，涵盖不同题材和风格，是发现和阅读优质短篇文学的理想平台。
 
 #### 17. Bumblebee queens breathe underwater to survive drowning
-   ⭐ 8 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47381011) · [原文](https://www.smithsonianmag.com/science-nature/bumblebee-queens-breathe-underwater-to-survive-drowning-revealing-how-they-can-live-submerged-for-a-week-180988330/)
-   > 研究发现大黄蜂蜂后能够在水下呼吸并利用无氧代谢存活，可在淹水条件下连续潜水一周而不溺水。
+
+⭐ 8 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47381011) · [原文](https://www.smithsonianmag.com/science-nature/bumblebee-queens-breathe-underwater-to-survive-drowning-revealing-how-they-can-live-submerged-for-a-week-180988330/)
+
+> 研究发现大黄蜂蜂后能够在水下呼吸并利用无氧代谢存活，可在淹水条件下连续潜水一周而不溺水。
 
 #### 18. Learning Creative Coding
-   ⭐ 7 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47381731) · [原文](https://stigmollerhansen.dk/resume/learning-creative-coding/)
-   > 本书针对创意编程学习者常遇的45个困境提供实用指导，帮助初学者克服挫折、保持好奇心，顺利推进学习进程。
+
+⭐ 7 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47381731) · [原文](https://stigmollerhansen.dk/resume/learning-creative-coding/)
+
+> 本书针对创意编程学习者常遇的45个困境提供实用指导，帮助初学者克服挫折、保持好奇心，顺利推进学习进程。
 
 #### 19. An interactive presentation about the Grammar of Graphic
-   ⭐ 3 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47338935) · [原文](https://timeplus-io.github.io/gg-vistral-introduction/)
-   > 这篇文章介绍了图形语法的基础概念和应用方法，通过交互式演示帮助用户理解如何系统地构建和组织数据可视化，提升图表设计的规范性和有效性。
+
+⭐ 3 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47338935) · [原文](https://timeplus-io.github.io/gg-vistral-introduction/)
+
+> 这篇文章介绍了图形语法的基础概念和应用方法，通过交互式演示帮助用户理解如何系统地构建和组织数据可视化，提升图表设计的规范性和有效性。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 73 分 |
-| 总讨论数 | 590 条 |
+| 指标     | 数值                                                                         |
+| -------- | ---------------------------------------------------------------------------- |
+| 平均热度 | 73 分                                                                        |
+| 总讨论数 | 590 条                                                                       |
 | 最热文章 | "Baochip-1x: What it is, why I'm doing it now and how it came about" (255⭐) |
-| 讨论最多 | "Montana passes Right to Compute act (2025)" (195💬) |
+| 讨论最多 | "Montana passes Right to Compute act (2025)" (195💬)                         |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

@@ -1,8 +1,8 @@
 ---
-title: 'M7 Stock Analysis - Cron Job Setup Guide'
+title: "M7 Stock Analysis - Cron Job Setup Guide"
 pubDatetime: 2026-02-13T01:00:00Z
-tags: ['M7', 'cron', 'automation', 'scheduling', 'linux', 'setup-guide']
-description: '技术博客文章'
+tags: ["M7", "cron", "automation", "scheduling", "linux", "setup-guide"]
+description: "技术博客文章"
 ---
 
 # M7 Stock Analysis - Cron Job Setup Guide
@@ -45,6 +45,7 @@ crontab -l
 ```
 
 **输出示例**:
+
 ```
 # M7 Stock Analysis - Every Saturday 6 AM Beijing Time
 # 每周六北京时间早上 6 点运行 M7 分析
@@ -100,14 +101,14 @@ echo "失败次数: $(grep '❌' /tmp/m7_analysis.log | wc -l)"
 
 **北京时间 (UTC+8)**:
 
-| 时间 | 事件 |
-|------|------|
-| 06:00 | M7 分析开始 |
+| 时间        | 事件                   |
+| ----------- | ---------------------- |
+| 06:00       | M7 分析开始            |
 | 06:00-06:10 | Yahoo Finance 数据采集 |
-| 06:10-06:15 | SearxNG 新闻采集 |
-| 06:15-06:17 | 报告生成 |
-| 06:17-06:20 | 发布到博客 |
-| 06:20 | 完成，报告已发布 |
+| 06:10-06:15 | SearxNG 新闻采集       |
+| 06:15-06:17 | 报告生成               |
+| 06:17-06:20 | 发布到博客             |
+| 06:20       | 完成，报告已发布       |
 
 **预期总耗时**: 10-20 分钟
 
@@ -116,11 +117,13 @@ echo "失败次数: $(grep '❌' /tmp/m7_analysis.log | wc -l)"
 每周六早上 6 点运行后，报告会自动发布到:
 
 **内网博客**:
+
 ```
 http://localhost:1313/posts/m7_weekly_analysis_YYYY-MM-DD/
 ```
 
 **外网博客** (Vercel):
+
 ```
 https://blog.huaqloud.com/posts/m7_weekly_analysis_YYYY-MM-DD/
 ```
@@ -208,6 +211,7 @@ tail -50 /tmp/m7_analysis.log
 ```
 
 常见问题:
+
 - SearxNG Wrapper 未运行
 - Hugo 博客目录不存在
 - 网络连接问题
@@ -221,6 +225,7 @@ ls -l /home/chengzh/clawd/skills/m7-stock-analysis/m7_analysis.sh
 ```
 
 输出应该显示 `x` 权限:
+
 ```
 -rwxrwxr-x 1 chengzh chengzh 3.0K Feb 13 08:15 m7_analysis.sh
 ```
@@ -294,6 +299,7 @@ crontab -e
 ### 问题 1: 任务没有执行
 
 **检查清单**:
+
 1. 确认 crontab 任务已设置: `crontab -l`
 2. 检查系统时间是否正确: `date`
 3. 检查 cron 守护进程是否运行: `ps aux | grep cron`
@@ -302,6 +308,7 @@ crontab -e
 ### 问题 2: 脚本执行失败
 
 **检查步骤**:
+
 1. 查看日志: `tail -50 /tmp/m7_analysis.log`
 2. 手动运行脚本: `./m7_analysis.sh`
 3. 检查依赖服务: SearxNG, Hugo, Git
@@ -310,6 +317,7 @@ crontab -e
 ### 问题 3: 日志文件过大
 
 **解决方案**:
+
 ```bash
 # 清空日志
 > /tmp/m7_analysis.log
@@ -359,7 +367,7 @@ fi
 ✅ **已设置**: 每周六北京时间早上 6 点自动运行 M7 分析  
 ✅ **日志**: 所有执行日志保存到 `/tmp/m7_analysis.log`  
 ✅ **发布**: 报告自动发布到内外网博客  
-✅ **完全自动**: 无需任何手动干预  
+✅ **完全自动**: 无需任何手动干预
 
 ---
 
@@ -367,4 +375,4 @@ fi
 **最后更新**: 2026-02-13  
 **作者**: HuaQloud AI Assistant
 
-*如有任何问题，请查看日志文件或参考本指南的故障排除部分。*
+_如有任何问题，请查看日志文件或参考本指南的故障排除部分。_

@@ -1,11 +1,12 @@
 ---
-title: 'AI 架构师协调模式实验：使用 OpenCode 构建电商原型'
+title: "AI 架构师协调模式实验：使用 OpenCode 构建电商原型"
 pubDatetime: 2026-02-26T02:30:00Z
-tags: ['AI', 'OpenCode', '架构师模式', '电商', '协作开发', 'Qwen', '实验复盘']
-description: '技术博客文章'
+tags: ["AI", "OpenCode", "架构师模式", "电商", "协作开发", "Qwen", "实验复盘"]
+description: "技术博客文章"
 ---
 
 # AI 架构师协调模式实验手册
+
 ## E-commerce Prototype 项目复盘
 
 **项目地址**: https://github.com/cloudzun/ecommerce-prototype  
@@ -27,6 +28,7 @@ description: '技术博客文章'
 ## 2. 角色定位与分工
 
 ### 2.1 用户（cyberlover）
+
 - **职责**: 产品需求方，提出需求和反馈
 - **关键输入**:
   - 初始需求："构建电商原型，参考 MS Learn Vibe Coding 实验"
@@ -35,6 +37,7 @@ description: '技术博客文章'
   - 关键反馈："部署后没有商品数据"
 
 ### 2.2 AI 架构师（HuaQloud）
+
 - **职责**:
   - 理解和澄清用户需求
   - 设计整体架构和技术方案
@@ -42,7 +45,6 @@ description: '技术博客文章'
   - 编写清晰的开发指令给 OpenCode
   - 监控开发进度和质量
   - 诊断问题并指导修复
-  
 - **工作方式**:
   - 不直接写代码（除非紧急修复）
   - 通过 `opencode run "指令"` 下达任务
@@ -50,12 +52,12 @@ description: '技术博客文章'
   - 检查交付物并验收
 
 ### 2.3 AI 开发者（OpenCode/Qwen3.5 Plus）
+
 - **职责**:
   - 根据架构师指令实现功能
   - 编写符合规范的代码
   - 生成配套文档
   - 自我修复 TypeScript 错误
-  
 - **工作方式**:
   - 接收结构化的任务指令
   - 自主选择实现方案
@@ -78,6 +80,7 @@ description: '技术博客文章'
 ### 3.2 环境配置
 
 #### OpenCode 安装
+
 ```bash
 # 安装 OpenCode
 curl -fsSL https://raw.githubusercontent.com/opencode-ai/opencode/refs/heads/main/install | bash
@@ -90,6 +93,7 @@ opencode --version  # v1.2.14
 ```
 
 #### 百炼配置
+
 配置文件位置: `~/.config/opencode/opencode.json`
 
 ```json
@@ -126,6 +130,7 @@ opencode --version  # v1.2.14
 ### 阶段 1: 需求分析
 
 **架构师指令**:
+
 ```bash
 opencode run "Read the Microsoft Learn Vibe Coding lab and create a comprehensive PRD (Product Requirements Document) for an e-commerce prototype.
 
@@ -142,6 +147,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师提供明确的文档结构要求
 - ✅ OpenCode 自主填充内容细节
 - ✅ 输出标准化文档（20KB）
@@ -153,6 +159,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ### 阶段 2: 设计阶段
 
 **架构师指令**:
+
 ```bash
 opencode run "Based on the PRD, create detailed wireframes for all pages:
 - Home page
@@ -169,6 +176,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师指定输出格式（ASCII art）
 - ✅ OpenCode 创建详细的 UI 设计
 - ✅ 为后续开发提供视觉参考
@@ -180,6 +188,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ### 阶段 3: 技术架构
 
 **架构师指令**:
+
 ```bash
 opencode run "Design the technical architecture and create project skeleton:
 
@@ -196,11 +205,13 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师确定技术栈
 - ✅ OpenCode 设计具体架构
 - ✅ 自动创建项目骨架和配置文件
 
-**交付物**: 
+**交付物**:
+
 - `docs/architecture.md` (29KB)
 - 项目结构 + 配置文件
 
@@ -211,6 +222,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 #### 4.1 产品展示模块
 
 **架构师指令**:
+
 ```bash
 opencode run "Implement the Product Display Module:
 
@@ -237,6 +249,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师明确组件清单和文件路径
 - ✅ OpenCode 实现完整功能
 - ✅ 自动创建 Mock 数据
@@ -249,6 +262,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 #### 4.2 购物车功能
 
 **架构师指令**:
+
 ```bash
 opencode run "Implement Shopping Cart functionality:
 
@@ -274,6 +288,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师指定状态管理方案（Zustand）
 - ✅ OpenCode 实现状态逻辑和持久化
 - ✅ 自动集成到现有页面
@@ -285,6 +300,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 #### 4.3 用户界面优化
 
 **架构师指令**:
+
 ```bash
 opencode run "Enhance the user interface:
 
@@ -305,6 +321,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师提出 UX 改进需求
 - ✅ OpenCode 实现交互细节
 - ✅ 响应式设计自动适配
@@ -316,6 +333,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 #### 4.4 结账流程
 
 **架构师指令**:
+
 ```bash
 opencode run "Implement the Checkout Flow:
 
@@ -341,6 +359,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师设计多步骤流程
 - ✅ OpenCode 实现表单验证和状态管理
 - ⚠️ 遇到 TypeScript 错误需要修复
@@ -352,6 +371,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ### 阶段 5: 集成与测试
 
 **架构师指令**:
+
 ```bash
 opencode run "Review the codebase and create testing report:
 
@@ -365,11 +385,13 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师要求代码审查
 - ✅ OpenCode 自动运行 typecheck
 - ✅ 生成测试报告和代码审查总结
 
-**交付物**: 
+**交付物**:
+
 - `docs/testing-report.md`
 - `docs/CODE_REVIEW_SUMMARY.md`
 
@@ -378,6 +400,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ### 阶段 6: 文档与部署
 
 **架构师指令**:
+
 ```bash
 opencode run "Create final documentation:
 
@@ -392,6 +415,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **协作要点**:
+
 - ✅ 架构师指定文档清单
 - ✅ OpenCode 生成完整文档
 - ✅ 文档质量高，可直接使用
@@ -405,6 +429,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ### 5.1 初次部署
 
 **架构师操作**:
+
 ```bash
 # 创建 GitHub 仓库
 cd ~/projects/ecommerce-prototype
@@ -421,13 +446,14 @@ vercel --prod --token <VERCEL_TOKEN> --yes
 ### 5.2 用户反馈与问题诊断
 
 **用户反馈**:
+
 > "关键是我自己登录上去之后发现这里没有商品让我测试完整的购物流程"
 
 **架构师诊断过程**:
 
 1. **访问线上站点**: https://ecommerce-prototype-rho.vercel.app
 2. **查看部署日志**: 发现 JSON Server 无法在 Vercel 运行
-3. **分析原因**: 
+3. **分析原因**:
    - 本地开发使用 JSON Server 提供 Mock API
    - Vercel 是静态部署，无法运行 Node.js 服务
    - 前端 API 调用失败 → 页面空白
@@ -442,6 +468,7 @@ vercel --prod --token <VERCEL_TOKEN> --yes
 ### 5.3 问题修复（架构师指导 + OpenCode 执行）
 
 **架构师指令**:
+
 ```bash
 opencode run "Fix all TypeScript errors to make the build pass:
 
@@ -464,6 +491,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ```
 
 **OpenCode 执行过程**:
+
 1. ✅ 读取类型定义文件
 2. ✅ 修复 Category 类型（添加缺失字段）
 3. ✅ 更新所有页面的 API 调用
@@ -471,6 +499,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 5. ✅ 运行 `npm run build` → 成功
 
 **协作亮点**:
+
 - ✅ 架构师明确指出错误和修复目标
 - ✅ OpenCode 自主诊断和修复
 - ✅ 自动验证修复结果
@@ -480,6 +509,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 ### 5.4 重新部署
 
 **架构师操作**:
+
 ```bash
 # 提交修复
 git add -A
@@ -575,6 +605,7 @@ vercel --prod --token <VERCEL_TOKEN> --yes
 #### 1. 前置检查清单
 
 在项目开始前，架构师应该验证：
+
 - [ ] OpenCode 安装和配置正确
 - [ ] 模型 API 可用
 - [ ] 开发环境就绪
@@ -585,6 +616,7 @@ vercel --prod --token <VERCEL_TOKEN> --yes
 为常见任务创建指令模板：
 
 **组件开发模板**:
+
 ```bash
 opencode run "Implement <ComponentName>:
 
@@ -615,6 +647,7 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 #### 3. 增量验证
 
 每个阶段完成后立即验证：
+
 ```bash
 # 架构师执行
 cd ~/projects/ecommerce-prototype
@@ -633,6 +666,7 @@ npm run dev        # 本地运行测试
 4. **验证结果**: 确认问题解决
 
 示例：
+
 ```bash
 opencode run "Fix the following TypeScript errors:
 
@@ -653,10 +687,12 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 当前项目采用串行模式，但架构师可以考虑并行开发：
 
 **可以并行的任务**:
+
 - 产品展示模块 + 购物车功能（不同 OpenCode 实例）
 - 前端开发 + 文档编写（不同 OpenCode 实例）
 
 **需要串行的任务**:
+
 - 架构设计 → 功能开发
 - 核心功能 → UI 优化
 - 开发 → 测试 → 部署
@@ -667,13 +703,13 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 
 ### 7.1 交付物清单
 
-| 类型 | 数量 | 说明 |
-|------|------|------|
-| 源代码文件 | 51 | TypeScript + React 组件 |
-| 文档文件 | 9 | PRD, 架构, 测试, 部署等 |
-| 总代码行数 | 19,015 | 包含注释和空行 |
-| 项目大小 | 237 MB | 包含 node_modules |
-| 构建产物 | ~300 KB | Gzip 压缩后 |
+| 类型       | 数量    | 说明                    |
+| ---------- | ------- | ----------------------- |
+| 源代码文件 | 51      | TypeScript + React 组件 |
+| 文档文件   | 9       | PRD, 架构, 测试, 部署等 |
+| 总代码行数 | 19,015  | 包含注释和空行          |
+| 项目大小   | 237 MB  | 包含 node_modules       |
+| 构建产物   | ~300 KB | Gzip 压缩后             |
 
 ### 7.2 功能完成度
 
@@ -684,12 +720,12 @@ Use model: bailian-coding-plan/qwen3.5-plus"
 
 ### 7.3 性能指标
 
-| 指标 | 目标 | 实际 | 状态 |
-|------|------|------|------|
-| 首次内容绘制 (FCP) | < 1.5s | ~1.2s | ✅ |
-| 最大内容绘制 (LCP) | < 2.5s | ~2.0s | ✅ |
-| 首次输入延迟 (FID) | < 100ms | ~50ms | ✅ |
-| 构建时间 | < 10s | ~4s | ✅ |
+| 指标               | 目标    | 实际  | 状态 |
+| ------------------ | ------- | ----- | ---- |
+| 首次内容绘制 (FCP) | < 1.5s  | ~1.2s | ✅   |
+| 最大内容绘制 (LCP) | < 2.5s  | ~2.0s | ✅   |
+| 首次输入延迟 (FID) | < 100ms | ~50ms | ✅   |
+| 构建时间           | < 10s   | ~4s   | ✅   |
 
 ---
 
@@ -723,18 +759,21 @@ open http://localhost:5173
 ### 8.3 使用架构师模式开发新功能
 
 **步骤 1: 需求分析**
+
 ```bash
 # 架构师编写需求文档
 echo "## 新功能需求" > docs/new-feature.md
 ```
 
 **步骤 2: 设计方案**
+
 ```bash
 # 架构师设计技术方案
 opencode run "Design the architecture for [new feature]..."
 ```
 
 **步骤 3: 任务分解**
+
 ```bash
 # 架构师分解为可执行任务
 opencode run "Implement [task 1]..."
@@ -742,6 +781,7 @@ opencode run "Implement [task 2]..."
 ```
 
 **步骤 4: 集成测试**
+
 ```bash
 # 架构师验证功能
 npm run typecheck
@@ -750,6 +790,7 @@ npm run dev
 ```
 
 **步骤 5: 部署上线**
+
 ```bash
 # 架构师执行部署
 git add -A

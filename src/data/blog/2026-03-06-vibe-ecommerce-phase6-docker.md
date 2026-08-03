@@ -1,8 +1,8 @@
 ---
-title: '从原型到产品：vibe-ecommerce 迭代系列（五）— Docker 三容器本地开发环境'
+title: "从原型到产品：vibe-ecommerce 迭代系列（五）— Docker 三容器本地开发环境"
 pubDatetime: 2026-03-06T00:00:00Z
-tags: ['vibe-coding', 'opencode', 'docker', 'nginx', 'postgresql', 'makefile']
-description: '技术博客文章'
+tags: ["vibe-coding", "opencode", "docker", "nginx", "postgresql", "makefile"]
+description: "技术博客文章"
 ---
 
 这是 vibe-ecommerce 迭代系列的第五篇。
@@ -63,7 +63,7 @@ make up
 这个约束带来了一个有趣的问题：前端 JS 里硬编码了生产 API 地址：
 
 ```javascript
-const API_BASE = 'https://shop-api.huaqloud.com';
+const API_BASE = "https://shop-api.huaqloud.com";
 ```
 
 Docker 环境里，API 请求应该走 nginx 代理（`/api/*`），而不是直接打生产服务器。怎么在不修改源码的情况下解决这个问题？
@@ -84,7 +84,7 @@ location ~* \.js$ {
 浏览器收到的 JS 变成了：
 
 ```javascript
-const API_BASE = '';  // 原来是 'https://shop-api.huaqloud.com'
+const API_BASE = ""; // 原来是 'https://shop-api.huaqloud.com'
 ```
 
 `API_BASE` 变成空字符串，`fetch(API_BASE + '/api/products')` 就变成了 `fetch('/api/products')`——相对路径，由 nginx 代理到 backend 容器。
@@ -129,14 +129,18 @@ server {
 ```javascript
 const isPg = !!process.env.DATABASE_URL;
 
-const knex = require('knex')(isPg ? {
-  client: 'pg',
-  connection: process.env.DATABASE_URL,
-} : {
-  client: 'better-sqlite3',
-  connection: { filename: './data/shop.db' },
-  useNullAsDefault: true
-});
+const knex = require("knex")(
+  isPg
+    ? {
+        client: "pg",
+        connection: process.env.DATABASE_URL,
+      }
+    : {
+        client: "better-sqlite3",
+        connection: { filename: "./data/shop.db" },
+        useNullAsDefault: true,
+      }
+);
 ```
 
 一行判断，两种行为。`DATABASE_URL` 由 Docker Compose 注入，生产环境没有这个变量，永远走 SQLite。
@@ -236,17 +240,17 @@ ps:
 
 所有 7 个任务，OpenCode 一次性完成：
 
-| 测试 | 预期 | 结果 |
-|------|------|------|
-| `make up` 启动三容器 | 全部 Up | ✅ |
-| 前端页面 | HTTP 200 | ✅ |
-| nginx sub_filter 生效 | `API_BASE = ''` | ✅ |
-| 商品列表（nginx → backend → PostgreSQL）| 10 products | ✅ |
-| 注册 → 登录 → 下单 → 订单历史 | 完整流程 | ✅ |
-| `make reset` 清空重建 | 数据重新 seed | ✅ |
-| 生产 API 回归 | status: ok | ✅ |
-| 无 Docker 模式（SQLite）| 正常运行 | ✅ |
-| npm audit | 0 vulnerabilities | ✅ |
+| 测试                                     | 预期              | 结果 |
+| ---------------------------------------- | ----------------- | ---- |
+| `make up` 启动三容器                     | 全部 Up           | ✅   |
+| 前端页面                                 | HTTP 200          | ✅   |
+| nginx sub_filter 生效                    | `API_BASE = ''`   | ✅   |
+| 商品列表（nginx → backend → PostgreSQL） | 10 products       | ✅   |
+| 注册 → 登录 → 下单 → 订单历史            | 完整流程          | ✅   |
+| `make reset` 清空重建                    | 数据重新 seed     | ✅   |
+| 生产 API 回归                            | status: ok        | ✅   |
+| 无 Docker 模式（SQLite）                 | 正常运行          | ✅   |
+| npm audit                                | 0 vulnerabilities | ✅   |
 
 验证 sub_filter 是否生效：
 
@@ -260,14 +264,14 @@ curl http://localhost:8081/js/data.js | grep API_BASE
 
 六个阶段，每个阶段回答一个核心问题：
 
-| Phase | 核心问题 | 答案 |
-|-------|----------|------|
-| 1 | AI 能多快生成可用原型？ | 40 分钟，927 行，能跑 |
-| 2 | 如何在 AI 代码上做有质量的迭代？ | 7-Gate 流程 |
-| 3 | 如何引入后端而不破坏前端？ | 向后兼容设计 + Knex 抽象层 |
-| 4 | 如何在 AI 协作中保持架构师控制权？ | 清晰的角色边界 + 约束头部 |
-| 5 | 如何硬化安全而不降低性能？ | express-validator + 缓存 + lazy load |
-| 6 | 如何让任何人都能一键复现？ | Docker 三容器 + nginx sub_filter + 双模式 |
+| Phase | 核心问题                           | 答案                                      |
+| ----- | ---------------------------------- | ----------------------------------------- |
+| 1     | AI 能多快生成可用原型？            | 40 分钟，927 行，能跑                     |
+| 2     | 如何在 AI 代码上做有质量的迭代？   | 7-Gate 流程                               |
+| 3     | 如何引入后端而不破坏前端？         | 向后兼容设计 + Knex 抽象层                |
+| 4     | 如何在 AI 协作中保持架构师控制权？ | 清晰的角色边界 + 约束头部                 |
+| 5     | 如何硬化安全而不降低性能？         | express-validator + 缓存 + lazy load      |
+| 6     | 如何让任何人都能一键复现？         | Docker 三容器 + nginx sub_filter + 双模式 |
 
 最终交付的是一个从 Vibe Coding 原型演进到完整工程实践的全栈应用：完整购物流程、用户认证、后端安全、前端性能、双运行环境、完整文档。
 

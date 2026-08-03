@@ -1,8 +1,16 @@
 ---
-title: 'HN Daily Digest - Technical Deep Dive & Architecture Guide'
+title: "HN Daily Digest - Technical Deep Dive & Architecture Guide"
 pubDatetime: 2026-02-14T23:30:00Z
-tags: ['hacker-news', 'technical-guide', 'system-architecture', 'AI', 'automation', 'nodejs']
-description: '技术博客文章'
+tags:
+  [
+    "hacker-news",
+    "technical-guide",
+    "system-architecture",
+    "AI",
+    "automation",
+    "nodejs",
+  ]
+description: "技术博客文章"
 ---
 
 # HN Daily Digest - 技术深度分享
@@ -10,7 +18,7 @@ description: '技术博客文章'
 **文档版本**: 1.0  
 **最后更新**: 2026-02-15  
 **作者**: HuaQloud  
-**状态**: 生产就绪  
+**状态**: 生产就绪
 
 ---
 
@@ -79,15 +87,15 @@ hn_digest_final.js
 
 ### 核心技术
 
-| 组件 | 技术 | 版本 | 说明 |
-|------|------|------|------|
-| 运行时 | Node.js | v22.22.0 | 轻量级脚本执行 |
-| 数据源 | Hacker News API | v0 | 官方 JSON API |
-| AI 模型 | Claude Sonnet 4.5 | - | 成本优化模型 |
-| API 网关 | Bill API Gateway | - | Claude API 代理 |
-| 博客平台 | Hugo | - | 静态网站生成器 |
-| 版本控制 | Git | - | 代码和文章管理 |
-| 定时任务 | OpenClaw Cron | - | 自动化调度 |
+| 组件     | 技术              | 版本     | 说明            |
+| -------- | ----------------- | -------- | --------------- |
+| 运行时   | Node.js           | v22.22.0 | 轻量级脚本执行  |
+| 数据源   | Hacker News API   | v0       | 官方 JSON API   |
+| AI 模型  | Claude Sonnet 4.5 | -        | 成本优化模型    |
+| API 网关 | Bill API Gateway  | -        | Claude API 代理 |
+| 博客平台 | Hugo              | -        | 静态网站生成器  |
+| 版本控制 | Git               | -        | 代码和文章管理  |
+| 定时任务 | OpenClaw Cron     | -        | 自动化调度      |
 
 ### 依赖关系
 
@@ -111,8 +119,8 @@ Node.js (原生库)
 
 ```javascript
 function fetchHNStories() {
-  return new Promise((resolve) => {
-    https.get("https://hacker-news.firebaseio.com/v0/topstories.json", (res) => {
+  return new Promise(resolve => {
+    https.get("https://hacker-news.firebaseio.com/v0/topstories.json", res => {
       // 获取 JSON 响应
       // 解析 ID 数组
       // 返回前 30 个 ID
@@ -122,6 +130,7 @@ function fetchHNStories() {
 ```
 
 **关键点**:
+
 - 使用 Promise 处理异步操作
 - 获取 30 个 ID（采集 20 篇，预留冗余）
 - 超时设置: 15 秒
@@ -130,8 +139,8 @@ function fetchHNStories() {
 
 ```javascript
 function fetchStory(id) {
-  return new Promise((resolve) => {
-    https.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`, (res) => {
+  return new Promise(resolve => {
+    https.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`, res => {
       // 获取单个故事的完整信息
       // 提取: title, url, score, comments, time
     });
@@ -140,11 +149,13 @@ function fetchStory(id) {
 ```
 
 **并发策略**:
+
 - 顺序获取 20 篇故事
 - 每篇间隔: 无延迟（HN API 允许）
 - 总耗时: 2-3 分钟
 
 **数据结构**:
+
 ```javascript
 {
   id: 47016443,
@@ -165,20 +176,20 @@ function callBillAPI(prompt) {
   const data = JSON.stringify({
     model: "claude-sonnet-4.5",
     max_tokens: 1200,
-    messages: [{ role: "user", content: prompt }]
+    messages: [{ role: "user", content: prompt }],
   });
 
   const options = {
-    hostname: "api.example.com",  // 使用占位符
+    hostname: "api.example.com", // 使用占位符
     port: 443,
     path: "/v1/messages",
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": "sk-xxx...xxx",  // 使用占位符
-      "Content-Length": Buffer.byteLength(data)
+      "x-api-key": "sk-xxx...xxx", // 使用占位符
+      "Content-Length": Buffer.byteLength(data),
     },
-    timeout: 30000
+    timeout: 30000,
   };
 
   // 发送请求并处理响应
@@ -186,6 +197,7 @@ function callBillAPI(prompt) {
 ```
 
 **API 配置**:
+
 - **端点**: API Gateway 端点（环境变量配置）
 - **模型**: `claude-sonnet-4.5`
 - **认证**: x-api-key 头（环境变量配置）
@@ -195,6 +207,7 @@ function callBillAPI(prompt) {
 #### 2.2 提示词设计
 
 **宏观趋势摘要提示词**:
+
 ```
 你是一个资深的技术新闻分析师。请基于以下 Hacker News 当前热门文章，
 用中文生成一份简短精悍的日报摘要（3-5 句话），总结当今技术圈的关键趋势和热点：
@@ -207,6 +220,7 @@ function callBillAPI(prompt) {
 ```
 
 **详细摘要提示词**:
+
 ```
 请用中文为以下技术文章生成一份详细的内容摘要（150-200字），包括：
 1. 核心内容（这篇文章讲了什么）
@@ -280,13 +294,13 @@ function callBillAPI(prompt) {
 
 ### 时间分解
 
-| 阶段 | 耗时 | 占比 | 关键路径 |
-|------|------|------|---------|
-| 数据采集 | 2-3 分钟 | 15% | HN API 响应 |
-| AI 分析 | 8-10 分钟 | 60% | ⭐ Bill API 延迟 |
-| 报告生成 | 1-2 分钟 | 10% | 本地处理 |
-| 博客发布 | 1-2 分钟 | 15% | Git 操作 |
-| **总计** | **12-18 分钟** | **100%** | - |
+| 阶段     | 耗时           | 占比     | 关键路径         |
+| -------- | -------------- | -------- | ---------------- |
+| 数据采集 | 2-3 分钟       | 15%      | HN API 响应      |
+| AI 分析  | 8-10 分钟      | 60%      | ⭐ Bill API 延迟 |
+| 报告生成 | 1-2 分钟       | 10%      | 本地处理         |
+| 博客发布 | 1-2 分钟       | 15%      | Git 操作         |
+| **总计** | **12-18 分钟** | **100%** | -                |
 
 **关键瓶颈**: AI 分析 (Bill API 响应时间)
 
@@ -306,11 +320,13 @@ GET https://hacker-news.firebaseio.com/v0/item/{id}.json
 #### 响应格式
 
 **topstories.json**:
+
 ```json
 [47016443, 47017138, 47020191, ...]
 ```
 
 **item/{id}.json**:
+
 ```json
 {
   "id": 47016443,
@@ -464,7 +480,7 @@ for (let i = 0; i < 20; i += batchSize) {
 ```javascript
 for (let i = 0; i < 10; i++) {
   const summary = await callBillAPI(prompt);
-  
+
   // 避免限流
   await new Promise(resolve => setTimeout(resolve, 500));
 }
@@ -494,12 +510,14 @@ for (const story of topStories) {
 ### 1. 网络错误
 
 ```javascript
-https.get(url, (res) => {
-  // 处理响应
-}).on("error", (err) => {
-  console.error(`网络错误: ${err.message}`);
-  resolve(null); // 返回 null，继续处理
-});
+https
+  .get(url, res => {
+    // 处理响应
+  })
+  .on("error", err => {
+    console.error(`网络错误: ${err.message}`);
+    resolve(null); // 返回 null，继续处理
+  });
 ```
 
 **策略**: 静默失败，继续处理其他数据
@@ -508,7 +526,7 @@ https.get(url, (res) => {
 
 ```javascript
 const options = {
-  timeout: 30000 // 30 秒超时
+  timeout: 30000, // 30 秒超时
 };
 
 req.on("timeout", () => {
@@ -543,6 +561,7 @@ if (story && story.title && story.url) {
 ```
 
 **验证条件**:
+
 - story 对象存在
 - title 字段存在
 - url 字段存在
@@ -579,11 +598,12 @@ node hn_digest_final.js
 **Cron 表达式**: `14 0 * * *`
 
 **含义**:
+
 - 分: 14
 - 小时: 0 (凌晨)
-- 日期: * (每天)
-- 月份: * (每月)
-- 周几: * (每周)
+- 日期: \* (每天)
+- 月份: \* (每月)
+- 周几: \* (每周)
 
 **时间**: 每天凌晨 00:14 (Asia/Shanghai)
 
@@ -623,6 +643,7 @@ console.log(`✅ 获取到 ${storyIds.length} 个故事 ID\n`);
 ```
 
 **日志级别**:
+
 - 🚀 启动
 - 📡 数据采集
 - 🤖 AI 分析
@@ -651,6 +672,7 @@ console.log(`💰 预估成本: $${cost.toFixed(4)}`);
 ### 4. 健康检查
 
 **检查项**:
+
 - ✅ HN API 可用性
 - ✅ Bill API 可用性
 - ✅ 文件系统可写性
@@ -665,6 +687,7 @@ console.log(`💰 预估成本: $${cost.toFixed(4)}`);
 **原因**: Bill API 限制
 
 **解决方案**:
+
 1. 增加延迟: `setTimeout(resolve, 1000)` (1 秒)
 2. 减少 Top N: 从 10 改为 5
 3. 使用更小的模型: Haiku 代替 Sonnet
@@ -674,6 +697,7 @@ console.log(`💰 预估成本: $${cost.toFixed(4)}`);
 **原因**: 网络延迟或服务响应慢
 
 **解决方案**:
+
 1. 增加超时时间: `timeout: 60000` (60 秒)
 2. 检查网络连接
 3. 检查 API 服务状态
@@ -683,6 +707,7 @@ console.log(`💰 预估成本: $${cost.toFixed(4)}`);
 **原因**: 权限不足或磁盘满
 
 **解决方案**:
+
 1. 检查文件权限: `ls -l /home/chengzh/clawd/`
 2. 检查磁盘空间: `df -h`
 3. 检查目录是否存在: `mkdir -p /home/chengzh/clawd`
@@ -694,15 +719,18 @@ console.log(`💰 预估成本: $${cost.toFixed(4)}`);
 ### 每份日报的成本
 
 **API 调用**: 11 次
+
 - 1 次宏观趋势摘要
 - 10 次详细摘要
 
 **Token 消耗** (估算):
+
 - 输入: ~3,500 tokens
 - 输出: ~2,500 tokens
 - 总计: ~6,000 tokens
 
 **成本计算**:
+
 ```
 输入成本 = 3,500 × $3 / 1,000,000 = $0.0105
 输出成本 = 2,500 × $15 / 1,000,000 = $0.0375
@@ -741,7 +769,7 @@ console.log(`💰 预估成本: $${cost.toFixed(4)}`);
 ✅ **成本优化**: 年度成本 < $6  
 ✅ **规范化输出**: 文件名、Front Matter、Markdown 全部规范  
 ✅ **多平台发布**: 本地 + 公网 + Discord  
-✅ **易于维护**: 零依赖，纯 Node.js  
+✅ **易于维护**: 零依赖，纯 Node.js
 
 ### 技术亮点
 
@@ -749,14 +777,14 @@ console.log(`💰 预估成本: $${cost.toFixed(4)}`);
 ✅ **并发控制**: 避免 API 限流  
 ✅ **错误恢复**: 静默失败，继续处理  
 ✅ **性能优化**: 12-18 分钟完成  
-✅ **可观测性**: 详细的日志输出  
+✅ **可观测性**: 详细的日志输出
 
 ### 安全最佳实践
 
 ✅ **凭证管理**: 使用环境变量存储敏感信息  
 ✅ **占位符使用**: 文档中使用占位符代替真实凭证  
 ✅ **安全审查**: 发布前进行安全检查  
-✅ **日志脱敏**: 不记录敏感信息  
+✅ **日志脱敏**: 不记录敏感信息
 
 ---
 

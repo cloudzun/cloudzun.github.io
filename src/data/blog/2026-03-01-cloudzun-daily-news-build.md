@@ -1,8 +1,8 @@
 ---
-title: 'CloudZun 每日速递：从原型到上线的构建实录'
+title: "CloudZun 每日速递：从原型到上线的构建实录"
 pubDatetime: 2026-03-01T06:08:00+00:00
-tags: ['AI', 'GitHub Pages', 'Jekyll', '自动化', '新闻聚合', 'Horizon']
-description: '技术博客文章'
+tags: ["AI", "GitHub Pages", "Jekyll", "自动化", "新闻聚合", "Horizon"]
+description: "技术博客文章"
 ---
 
 ## 一、项目起点
@@ -55,14 +55,15 @@ results = await asyncio.gather(*[analyze(item) for item in items])
 
 **问题**：配置的数据源中，多个在 GitHub Actions 环境下完全不可用：
 
-| 数据源 | 问题 |
-|--------|------|
-| Reddit (多个子版块) | 403 — CI 环境 IP 被封 |
-| OpenAI Blog | 403 — 主动屏蔽爬虫 |
-| The Batch (deeplearning.ai) | 404 — URL 已变更 |
-| Anthropic News | 无 RSS — 纯 Next.js 渲染，数据走 Sanity CMS JSON API |
+| 数据源                      | 问题                                                 |
+| --------------------------- | ---------------------------------------------------- |
+| Reddit (多个子版块)         | 403 — CI 环境 IP 被封                                |
+| OpenAI Blog                 | 403 — 主动屏蔽爬虫                                   |
+| The Batch (deeplearning.ai) | 404 — URL 已变更                                     |
+| Anthropic News              | 无 RSS — 纯 Next.js 渲染，数据走 Sanity CMS JSON API |
 
 **解决**：移除全部失效源，替换为稳定可用的 RSS：
+
 - ✅ Ars Technica AI
 - ✅ VentureBeat AI
 - ✅ The Verge AI
@@ -102,6 +103,7 @@ Jekyll 对 `_posts` 目录下的文件名有严格要求，必须以 `YYYY-MM-DD
 原始设计生成中英双语报告，每次运行需要两轮完整的 AI 摘要生成。
 
 考虑到目标读者和实际需求，去掉英文版：
+
 - `config.json`：`languages: ["zh"]`
 - `orchestrator.py`：移除多语言循环，固定生成中文版
 - **效果**：每次运行 AI 调用量减少约 50%
@@ -112,15 +114,15 @@ Jekyll 对 `_posts` 目录下的文件名有严格要求，必须以 `YYYY-MM-DD
 
 GitHub Pages 使用 Jekyll Cayman 主题，经过几轮调整：
 
-| 迭代 | 改动 |
-|------|------|
-| v1 | 默认主题，有大量项目介绍文档 |
-| v2 | 去掉文档链接，首页只保留文章列表 |
-| v3 | 首页直接内嵌当日完整报告，历史归档显示最近 6 天链接 |
-| v4 | 压缩 banner 高度到原来 1/4，标题字号缩小 |
-| v5 | banner 改为水平布局：标题+副标题左对齐，GitHub 链接右对齐 |
-| v6 | 品牌名从 "Horizon" 改为 "CloudZun 每日速递" |
-| v7 | 报告摘要行加入日期戳 `📅 2026-03-01 · 从 N 条资讯中精选出 M 条` |
+| 迭代 | 改动                                                            |
+| ---- | --------------------------------------------------------------- |
+| v1   | 默认主题，有大量项目介绍文档                                    |
+| v2   | 去掉文档链接，首页只保留文章列表                                |
+| v3   | 首页直接内嵌当日完整报告，历史归档显示最近 6 天链接             |
+| v4   | 压缩 banner 高度到原来 1/4，标题字号缩小                        |
+| v5   | banner 改为水平布局：标题+副标题左对齐，GitHub 链接右对齐       |
+| v6   | 品牌名从 "Horizon" 改为 "CloudZun 每日速递"                     |
+| v7   | 报告摘要行加入日期戳 `📅 2026-03-01 · 从 N 条资讯中精选出 M 条` |
 
 ---
 

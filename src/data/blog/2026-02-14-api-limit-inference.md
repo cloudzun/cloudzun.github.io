@@ -1,7 +1,8 @@
 ---
-title: 'API Rate Limit Inference Report - Databricks Claude Token Limits Reverse Engineered'
+title: "API Rate Limit Inference Report - Databricks Claude Token Limits Reverse Engineered"
 pubDatetime: 2026-02-14T04:40:00Z
-tags: ['API', 'Rate Limiting', 'Inference', 'Databricks', 'Claude', 'Performance']
+tags:
+  ["API", "Rate Limiting", "Inference", "Databricks", "Claude", "Performance"]
 description: "Reverse engineering Databricks API rate limits from 46 error records. Inferred: 60,000-100,000 tokens/minute, 60-second recovery window, 1,000-1,667 tokens/second refill rate"
 ---
 
@@ -15,14 +16,14 @@ description: "Reverse engineering Databricks API rate limits from 46 error recor
 
 ## 📊 执行摘要
 
-| 参数 | 推断值 | 置信度 |
-|------|--------|--------|
-| **每分钟 Token 限制** | 60,000 - 100,000 tokens/min | 🟢 高 |
-| **时间窗口** | 60 秒（滑动窗口） | 🟢 高 |
-| **Token 补充速率** | 1,000 - 1,667 tokens/秒 | 🟡 中 |
-| **恢复时间** | ~60 秒 | 🟢 高 |
-| **最大并发请求** | 5-10 个 | 🟡 中 |
-| **请求队列大小** | 100-500 个 | 🟡 中 |
+| 参数                  | 推断值                      | 置信度 |
+| --------------------- | --------------------------- | ------ |
+| **每分钟 Token 限制** | 60,000 - 100,000 tokens/min | 🟢 高  |
+| **时间窗口**          | 60 秒（滑动窗口）           | 🟢 高  |
+| **Token 补充速率**    | 1,000 - 1,667 tokens/秒     | 🟡 中  |
+| **恢复时间**          | ~60 秒                      | 🟢 高  |
+| **最大并发请求**      | 5-10 个                     | 🟡 中  |
+| **请求队列大小**      | 100-500 个                  | 🟡 中  |
 
 ---
 
@@ -31,6 +32,7 @@ description: "Reverse engineering Databricks API rate limits from 46 error recor
 ### 1. 错误时间分布
 
 #### 错误间隔统计
+
 ```
 总错误数: 46 条
 时间跨度: 96.1 小时
@@ -41,6 +43,7 @@ description: "Reverse engineering Databricks API rate limits from 46 error recor
 ```
 
 **解读**:
+
 - 中位数间隔 109.3 秒 > 60 秒，表明错误后需要等待至少 60 秒恢复
 - 最小间隔 4.2 秒表明有自动重试机制
 - 这与"每分钟 token 限制"的假设一致
@@ -61,6 +64,7 @@ description: "Reverse engineering Databricks API rate limits from 46 error recor
 ```
 
 **关键发现**:
+
 - 最长连续错误: 5 次（147.7 秒）
 - 典型连续错误: 2-4 次（20-80 秒）
 - 这表明限制是基于**时间窗口**的（滑动窗口）
@@ -86,6 +90,7 @@ description: "Reverse engineering Databricks API rate limits from 46 error recor
 ```
 
 **解读**:
+
 - 63% 的分钟只有 1 次错误（正常情况）
 - 37% 的分钟有 2+ 次错误（限流触发）
 - 这表明限制是**每分钟**计算的
@@ -113,6 +118,7 @@ description: "Reverse engineering Databricks API rate limits from 46 error recor
 ```
 
 **验证**:
+
 - ✅ 符合"错误后 60+ 秒重试成功"的观察
 - ✅ 符合"连续错误 20-80 秒"的模式
 - ✅ 符合"中位数间隔 109.3 秒"的数据
@@ -163,6 +169,7 @@ description: "Reverse engineering Databricks API rate limits from 46 error recor
 ```
 
 **理由**:
+
 1. 错误模式完全符合"每分钟"计算
 2. 恢复时间 ~60 秒与"60 秒窗口"一致
 3. 连续错误 20-80 秒符合"配额恢复"的时间
@@ -213,6 +220,7 @@ Token 补充速率: 1,000 - 1,667 tokens/秒
 ```
 
 **问题**:
+
 - ❌ 重试间隔固定（24-31 秒）
 - ❌ 间隔 < 60 秒，配额未恢复
 - ❌ 导致多次连续失败
@@ -245,24 +253,26 @@ Token 补充速率: 1,000 - 1,667 tokens/秒
 ### 方法 1: 监控单分钟的 Token 消耗
 
 **步骤**:
+
 ```python
 # 伪代码
 for each minute in history:
-    total_tokens = sum(api_call.input_tokens 
+    total_tokens = sum(api_call.input_tokens
                       for api_call in minute)
-    
+
     if total_tokens > 80000:
         expected_error = True
     else:
         expected_error = False
-    
+
     actual_error = check_if_429_occurred(minute)
-    
+
     if expected_error == actual_error:
         confidence += 1
 ```
 
 **预期结果**:
+
 - 看到 token 消耗峰值与 429 错误的强相关性
 - 相关系数应该 > 0.9
 - 确定确切的配额数字
@@ -270,6 +280,7 @@ for each minute in history:
 ### 方法 2: 测试恢复时间
 
 **步骤**:
+
 ```python
 # 1. 发送大请求触发 429
 request = create_large_request(tokens=150000)
@@ -282,7 +293,7 @@ error_time = time.time()
 for i in range(20):  # 最多 200 秒
     time.sleep(10)
     response = api_call(request)
-    
+
     if response.status != 429:
         success_time = time.time()
         break
@@ -293,20 +304,22 @@ print(f"Recovery time: {recovery_time} seconds")
 ```
 
 **预期结果**:
+
 - 恢复时间应该接近 60 秒
 - 可以推断补充速率 = 超额 / 恢复时间
 
 ### 方法 3: 测试并发限制
 
 **步骤**:
+
 ```python
 # 1. 同时发送 N 个小请求
 for N in range(1, 20):
     requests = [create_small_request() for _ in range(N)]
-    
+
     # 并发发送
     responses = concurrent_api_calls(requests)
-    
+
     # 检查是否有 429
     if any(r.status == 429 for r in responses):
         print(f"Concurrency limit: {N}")
@@ -314,6 +327,7 @@ for N in range(1, 20):
 ```
 
 **预期结果**:
+
 - 并发限制应该在 5-10 之间
 - 超过此值会触发 429
 
@@ -324,11 +338,12 @@ for N in range(1, 20):
 ### 立即行动（今天）
 
 1. **实施监控**
+
    ```python
    # 添加每分钟 token 消耗监控
-   metrics.track("api_tokens_per_minute", 
+   metrics.track("api_tokens_per_minute",
                  sum_tokens_this_minute)
-   
+
    # 告警规则
    if sum_tokens_this_minute > 80000:
        alert("approaching_limit")
@@ -337,6 +352,7 @@ for N in range(1, 20):
    ```
 
 2. **改进重试策略**
+
    ```python
    # 实施指数退避
    retry_delays = [1, 2, 4, 8, 16, 60, 120, 240]
@@ -348,6 +364,7 @@ for N in range(1, 20):
    ```
 
 3. **请求节流**
+
    ```python
    # Token Bucket 算法
    class TokenBucket:
@@ -355,7 +372,7 @@ for N in range(1, 20):
            self.capacity = capacity
            self.tokens = capacity
            self.refill_rate = refill_rate  # tokens/sec
-       
+
        def consume(self, tokens):
            self.refill()
            if self.tokens >= tokens:
@@ -367,6 +384,7 @@ for N in range(1, 20):
 ### 短期优化（本周）
 
 1. **模型自适应选择**
+
    ```python
    def select_model(estimated_tokens):
        if estimated_tokens < 50000:
@@ -378,10 +396,11 @@ for N in range(1, 20):
    ```
 
 2. **请求队列**
+
    ```python
    # 使用消息队列平滑流量
    queue = PriorityQueue()
-   
+
    def process_batch():
        batch = queue.pop_batch(max_tokens=75000)
        for req in batch:
@@ -398,29 +417,32 @@ for N in range(1, 20):
 
 ## 📊 预期改进效果
 
-| 指标 | 当前 | 实施后 | 改进 |
-|------|------|--------|------|
-| 每小时 429 错误 | ~4 次 | ~0.5 次 | 87% ↓ |
-| 平均响应延迟 | ~90s | ~10s | 89% ↓ |
-| 无效重试 | 60% | 5% | 92% ↓ |
-| API 成本 | 100% | 70% | 30% ↓ |
-| 用户体验 | 差 | 优秀 | ⭐⭐⭐⭐⭐ |
+| 指标            | 当前  | 实施后  | 改进       |
+| --------------- | ----- | ------- | ---------- |
+| 每小时 429 错误 | ~4 次 | ~0.5 次 | 87% ↓      |
+| 平均响应延迟    | ~90s  | ~10s    | 89% ↓      |
+| 无效重试        | 60%   | 5%      | 92% ↓      |
+| API 成本        | 100%  | 70%     | 30% ↓      |
+| 用户体验        | 差    | 优秀    | ⭐⭐⭐⭐⭐ |
 
 ---
 
 ## 🎯 结论
 
 ### 确定的参数
+
 - ✅ **每分钟 Token 限制**: 60,000 - 100,000 tokens/min
 - ✅ **时间窗口**: 60 秒（滑动窗口）
 - ✅ **恢复时间**: ~60 秒
 - ✅ **补充速率**: 1,000 - 1,667 tokens/秒
 
 ### 推断的参数
+
 - 🟡 **最大并发**: 5-10 个请求
 - 🟡 **队列大小**: 100-500 个请求
 
 ### 下一步
+
 1. 实施监控验证推断
 2. 联系 Databricks 确认配额
 3. 部署改进的重试策略
