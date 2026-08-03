@@ -2,132 +2,23 @@
 import { getCollection } from "astro:content";
 import Main from "@/layouts/Main.astro";
 import Layout from "@/layouts/Layout.astro";
+import Tag from "@/components/Tag.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
 import { SITE } from "@/config";
 
 const posts = await getCollection("blog");
-const tagsData = getUniqueTags(posts);
 
-// 计算每个标签的使用次数
-const tagsWithCount = tagsData.map(({ tag, tagName }) => {
-  const count = posts.filter(post =>
-    post.data.tags?.map(t => t.toLowerCase()).includes(tag)
-  ).length;
-  return { tag, tagName, count };
-});
-
-// 按使用次数排序
-tagsWithCount.sort((a, b) => b.count - a.count);
-
-const maxCount = Math.max(...tagsWithCount.map(t => t.count));
-const avgCount = (
-  tagsWithCount.reduce((sum, t) => sum + t.count, 0) / tagsWithCount.length
-).toFixed(1);
+let tags = getUniqueTags(posts);
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Tags" pageDesc="通过标签探索博客内容">
-    <!-- 统计面板 -->
-    <div
-      class="mb-10 rounded-2xl border-2 border-foreground/10 bg-gradient-to-br from-muted/80 to-muted/40 p-8 shadow-lg"
-    >
-      <h3
-        class="mb-8 flex items-center justify-center gap-3 text-center text-2xl font-bold"
-      >
-        <span class="text-3xl">📊</span>
-        <span>标签统计</span>
-      </h3>
-
-      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-        <div class="text-center">
-          <div class="mb-3 text-5xl font-bold text-accent">
-            {tagsWithCount.length}
-          </div>
-          <div class="text-sm font-medium text-foreground/70">总标签数</div>
-        </div>
-        <div class="text-center">
-          <div class="mb-3 text-5xl font-bold text-accent">{posts.length}</div>
-          <div class="text-sm font-medium text-foreground/70">总文章数</div>
-        </div>
-        <div class="text-center">
-          <div class="mb-3 text-5xl font-bold text-accent">{maxCount}</div>
-          <div class="text-sm font-medium text-foreground/70">
-            最多使用的标签
-          </div>
-        </div>
-        <div class="text-center">
-          <div class="mb-3 text-5xl font-bold text-accent">{avgCount}</div>
-          <div class="text-sm font-medium text-foreground/70">
-            平均每标签使用次数
-          </div>
-        </div>
-      </div>
-
-      <!-- Top 10 热门标签 -->
-      <div class="mt-10 border-t-2 border-foreground/10 pt-8">
-        <h4 class="mb-6 flex items-center gap-2 text-xl font-bold">
-          <span class="text-2xl">🏆</span>
-          <span>Top 10 热门标签</span>
-        </h4>
-        <div class="space-y-3">
-          {
-            tagsWithCount.slice(0, 10).map(({ tag, tagName, count }, index) => {
-              const rankColors = [
-                "text-yellow-500", // #1
-                "text-gray-400", // #2
-                "text-amber-600", // #3
-                "text-foreground/70",
-                "text-foreground/70",
-                "text-foreground/70",
-                "text-foreground/70",
-                "text-foreground/70",
-                "text-foreground/70",
-                "text-foreground/70",
-              ];
-              return (
-                <div class="group flex items-center justify-between rounded-lg px-4 py-3 transition-colors hover:bg-accent/10">
-                  <div class="flex items-center gap-4">
-                    <span class={`w-8 text-lg font-bold ${rankColors[index]}`}>
-                      #{index + 1}
-                    </span>
-                    <a
-                      href={`/tags/${tag}/`}
-                      class="text-lg font-medium transition-colors group-hover:text-accent"
-                    >
-                      {tagName}
-                    </a>
-                  </div>
-                  <span class="font-semibold text-accent">{count} 次</span>
-                </div>
-              );
-            })
-          }
-        </div>
-      </div>
-    </div>
-
-    <!-- 完整标签列表 -->
-    <div class="mb-12">
-      <h4 class="mb-6 text-center text-xl font-bold">📑 全部标签</h4>
-      <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {
-          tagsWithCount.map(({ tag, tagName, count }) => (
-            <a
-              href={`/tags/${tag}/`}
-              class="group flex items-center justify-between rounded-lg bg-muted/50 px-4 py-3 transition-all hover:bg-accent/10"
-            >
-              <span class="font-medium transition-colors group-hover:text-accent">
-                {tagName}
-              </span>
-              <span class="text-sm font-semibold text-accent">{count}</span>
-            </a>
-          ))
-        }
-      </div>
-    </div>
+  <Main pageTitle="Tags" pageDesc="All the tags used in posts.">
+    <ul class="flex flex-wrap gap-6">
+      {tags.map(({ tag, tagName }) => <Tag {tag} {tagName} />)}
+    </ul>
   </Main>
   <Footer />
 </Layout>

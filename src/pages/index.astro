@@ -26,42 +26,36 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
         Hi, I'm CloudZun
       </h1>
+      <a
+        target="_blank"
+        href="/rss.xml"
+        class="inline-block"
+        aria-label="rss feed"
+        title="RSS Feed"
+      >
+        <IconRss
+          width={20}
+          height={20}
+          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+        />
+        <span class="sr-only">RSS Feed</span>
+      </a>
 
-      <p class="text-lg">
-        <strong>讲师</strong> · <strong>工程师</strong> · <strong>博主</strong>
-      </p>
-
-      <p class="mt-4">
-        专注于 <strong>AI 协同编程教育</strong> 与 <strong
-          >Agentic AI 工作流</strong
-        > 实践。 设计并交付 OpenCode Labs、Vibe Coding Camp 等课程体系， 探索人类与
-        AI 协作开发的新范式——人类保持架构决策权与质量判断，AI 负责代码执行与方案生成。
-      </p>
-
+      <p>AI 协同编程与 Agentic AI 工作流实践者，分享 AI、自动化和开发经验。</p>
       <p class="mt-2">
-        这里是我的个人网站，分享 AI、自动化和开发经验。已发布
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="/posts/"
-        >
-          115+ 篇技术文章
-        </LinkButton>。
-      </p>
-
-      <p class="mt-2">
-        提供 <strong>技术培训</strong> 与 <strong>咨询顾问</strong> 服务，
+        阅读博客文章或
         <LinkButton
           class="underline decoration-dashed underline-offset-4 hover:text-accent"
           href="/about/"
         >
-          查看详情 →
+          了解更多
         </LinkButton>
       </p>
-
       {
-        // 社交链接
+        // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
-          <div class="mt-6 flex max-sm:flex-col sm:items-center">
+          <div class="mt-4 flex max-sm:flex-col sm:items-center">
+            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
             <Socials />
           </div>
         )
@@ -69,7 +63,6 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     </section>
 
     {
-      // 精选文章（手动指定代表作）
       featuredPosts.length > 0 && (
         <section
           id="featured"
@@ -78,15 +71,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             { "border-b border-border": recentPosts.length > 0 },
           ]}
         >
-          <div class="mb-6 flex items-center justify-between">
-            <h2 class="text-2xl font-semibold tracking-wide">精选文章</h2>
-            <a
-              href="/categories/"
-              class="text-sm font-medium text-accent hover:underline"
-            >
-              按分类浏览 →
-            </a>
-          </div>
+          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
           <ul>
             {featuredPosts.map(data => (
               <Card variant="h3" {...data} />
@@ -99,25 +84,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     {
       recentPosts.length > 0 && (
         <section id="recent-posts" class="pt-12 pb-6">
-          <div class="mb-6 flex items-center justify-between">
-            <h2 class="text-2xl font-semibold tracking-wide">最新文章</h2>
-            <div class="flex items-center gap-3">
-              <a
-                href="/rss.xml"
-                class="flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
-                title="RSS 订阅"
-              >
-                <IconRss class="h-4 w-4" />
-                <span>RSS 订阅</span>
-              </a>
-              <a
-                href="/archives/"
-                class="text-sm font-medium text-accent hover:underline"
-              >
-                归档 →
-              </a>
-            </div>
-          </div>
+          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
           <ul>
             {recentPosts.map(
               (data, index) =>
@@ -130,7 +97,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
     <div class="my-8 text-center">
       <LinkButton href="/posts/">
-        浏览所有文章
+        All Posts
         <IconArrowRight class="inline-block rtl:-rotate-180" />
       </LinkButton>
     </div>
