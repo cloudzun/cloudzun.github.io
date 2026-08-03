@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-06'
+title: "HN Daily Digest: 2026-03-06"
 pubDatetime: 2026-03-05T15:24:02Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ Jido 2.0的主要改进包括：**简化的API设计**，减少了1.0版本中�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. CBP tapped into the online advertising ecosystem to track peoples’ movements
-   ⭐ 81 分 · 💬 63 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47249387) · [原文](https://www.404media.co/cbp-tapped-into-the-online-advertising-ecosystem-to-track-peoples-movements/)
-   > 美国海关边境保护局通过购买在线广告生态系统中的位置数据，实现对民众精准位置的长期追踪，这一做法引发了隐私监管的重大关切。
+
+⭐ 81 分 · 💬 63 条
+[HN 讨论](https://news.ycombinator.com/item?id=47249387) · [原文](https://www.404media.co/cbp-tapped-into-the-online-advertising-ecosystem-to-track-peoples-movements/)
+
+> 美国海关边境保护局通过购买在线广告生态系统中的位置数据，实现对民众精准位置的长期追踪，这一做法引发了隐私监管的重大关切。
 
 #### 12. OpenTitan Shipping in Production
-   ⭐ 66 分 · 💬 7 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47265619) · [原文](https://opensource.googleblog.com/2026/03/opentitan-shipping-in-production.html)
-   > OpenTitan开源芯片已实现商用量产，首次搭载于Chromebook设备中，标志着开源硅基信任根技术的重大突破。
+
+⭐ 66 分 · 💬 7 条
+[HN 讨论](https://news.ycombinator.com/item?id=47265619) · [原文](https://opensource.googleblog.com/2026/03/opentitan-shipping-in-production.html)
+
+> OpenTitan开源芯片已实现商用量产，首次搭载于Chromebook设备中，标志着开源硅基信任根技术的重大突破。
 
 #### 13. Remotely unlocking an encrypted hard disk
-   ⭐ 62 分 · 💬 34 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47265521) · [原文](https://jyn.dev/remotely-unlocking-an-encrypted-hard-disk/)
-   > 本文介绍如何在启动过程中修改配置以实现远程解锁加密硬盘，涉及系统引导阶段的技术操作和安全考量。
+
+⭐ 62 分 · 💬 34 条
+[HN 讨论](https://news.ycombinator.com/item?id=47265521) · [原文](https://jyn.dev/remotely-unlocking-an-encrypted-hard-disk/)
+
+> 本文介绍如何在启动过程中修改配置以实现远程解锁加密硬盘，涉及系统引导阶段的技术操作和安全考量。
 
 #### 14. A ternary plot of citrus geneology
-   ⭐ 58 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47238272) · [原文](https://www.jlauf.com/writing/citrus/)
-   > 本文通过三角形图表展示了现代柑橘类水果如何由石榴柚、橘和香橼三个原始物种杂交演化而来，揭示了复杂的柑橘遗传谱系。
+
+⭐ 58 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47238272) · [原文](https://www.jlauf.com/writing/citrus/)
+
+> 本文通过三角形图表展示了现代柑橘类水果如何由石榴柚、橘和香橼三个原始物种杂交演化而来，揭示了复杂的柑橘遗传谱系。
 
 #### 15. GLiNER2: Unified Schema-Based Information Extraction
-   ⭐ 27 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47266736) · [原文](https://github.com/fastino-ai/GLiNER2)
-   > GLiNER2是一个统一的基于模式的信息抽取框架，能够通过灵活的模式定义实现多种自然语言处理任务的端到端信息提取。
+
+⭐ 27 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47266736) · [原文](https://github.com/fastino-ai/GLiNER2)
+
+> GLiNER2是一个统一的基于模式的信息抽取框架，能够通过灵活的模式定义实现多种自然语言处理任务的端到端信息提取。
 
 #### 16. Converting dash cam videos into Panoramax images
-   ⭐ 21 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47215180) · [原文](https://www.openstreetmap.org/user/FeetAndInches/diary/408268)
-   > 本文介绍了如何将行车记录仪视频转换为Panoramax街景图像的方法，以便为OpenStreetMap贡献街景数据。
+
+⭐ 21 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47215180) · [原文](https://www.openstreetmap.org/user/FeetAndInches/diary/408268)
+
+> 本文介绍了如何将行车记录仪视频转换为Panoramax街景图像的方法，以便为OpenStreetMap贡献街景数据。
 
 #### 17. A standard protocol to handle and discard low-effort, AI-Generated pull requests
-   ⭐ 7 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47267947) · [原文](https://406.fail/)
-   > 本文提出了一套标准协议（RFC 406i），用于识别和拒绝低质量的AI生成代码提交，保护开源项目维护者免受无用贡献的困扰。
+
+⭐ 7 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47267947) · [原文](https://406.fail/)
+
+> 本文提出了一套标准协议（RFC 406i），用于识别和拒绝低质量的AI生成代码提交，保护开源项目维护者免受无用贡献的困扰。
 
 #### 18. Labor Market Impacts of AI
-   ⭐ 5 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47268391) · [原文](https://www.anthropic.com/research/labor-market-impacts)
-   > 本文介绍了衡量AI替代风险的新指标，结合LLM能力与实际使用数据，发现高风险职业面临增长放缓，但暂未导致失业率系统性上升。
+
+⭐ 5 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47268391) · [原文](https://www.anthropic.com/research/labor-market-impacts)
+
+> 本文介绍了衡量AI替代风险的新指标，结合LLM能力与实际使用数据，发现高风险职业面临增长放缓，但暂未导致失业率系统性上升。
 
 #### 19. Structured AI (YC F25) Is Hiring
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47267236) · [原文](https://www.ycombinator.com/companies/structured-ai/jobs/3cQY6Cu-mechanical-design-engineer-founding-team-consultant)
-   > Structured AI是一家Y Combinator孵化的初创公司，正招聘机械设计工程师，将AI技术应用于建筑工程领域，打造AI驱动的建筑工程劳动力解决方案。
+
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47267236) · [原文](https://www.ycombinator.com/companies/structured-ai/jobs/3cQY6Cu-mechanical-design-engineer-founding-team-consultant)
+
+> Structured AI是一家Y Combinator孵化的初创公司，正招聘机械设计工程师，将AI技术应用于建筑工程领域，打造AI驱动的建筑工程劳动力解决方案。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 165 分 |
-| 总讨论数 | 1443 条 |
+| 指标     | 数值                                                                              |
+| -------- | --------------------------------------------------------------------------------- |
+| 平均热度 | 165 分                                                                            |
+| 总讨论数 | 1443 条                                                                           |
 | 最热文章 | "Wikipedia was in read-only mode following mass admin account compromise" (837⭐) |
-| 讨论最多 | "GPT-5.4" (484💬) |
+| 讨论最多 | "GPT-5.4" (484💬)                                                                 |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

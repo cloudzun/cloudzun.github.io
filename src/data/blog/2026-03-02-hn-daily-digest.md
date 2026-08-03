@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-02'
+title: "HN Daily Digest: 2026-03-02"
 pubDatetime: 2026-03-01T14:43:06Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,64 +160,84 @@ XML标签的核心优势体现在几个方面：首先，它提供了**结构化
 ## 📑 更多热门文章 (11-20)
 
 #### 11. How the Government Deceived Congress in the Debate over Surveillance Powers (2013)
-   ⭐ 48 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47210572) · [原文](https://www.eff.org/deeplinks/2013/06/director-national-intelligences-word-games-explained-how-government-deceived)
-   > 本文揭露了美国国家安全局在监控权力辩论中通过措辞欺骗国会的手段，暴露政府在情报监管问题上的不透明和误导行为。
+
+⭐ 48 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47210572) · [原文](https://www.eff.org/deeplinks/2013/06/director-national-intelligences-word-games-explained-how-government-deceived)
+
+> 本文揭露了美国国家安全局在监控权力辩论中通过措辞欺骗国会的手段，暴露政府在情报监管问题上的不透明和误导行为。
 
 #### 12. Why does C have the best file API
-   ⭐ 46 分 · 💬 29 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47209788) · [原文](https://maurycyz.com/misc/c_files/)
-   > 本文阐述了C语言通过内存映射等机制实现文件与内存统一访问的优势，相比其他语言的文件API更加灵活高效。
+
+⭐ 46 分 · 💬 29 条
+[HN 讨论](https://news.ycombinator.com/item?id=47209788) · [原文](https://maurycyz.com/misc/c_files/)
+
+> 本文阐述了C语言通过内存映射等机制实现文件与内存统一访问的优势，相比其他语言的文件API更加灵活高效。
 
 #### 13. Python Type Checker Comparison: Empty Container Inference
-   ⭐ 44 分 · 💬 25 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47151367) · [原文](https://pyrefly.org/blog/container-inference-comparison/)
-   > 本文比较了不同Python类型检查器对空容器类型推断的处理方式，分析了它们在推断空列表和空字典等常见代码模式中的差异和优劣。
+
+⭐ 44 分 · 💬 25 条
+[HN 讨论](https://news.ycombinator.com/item?id=47151367) · [原文](https://pyrefly.org/blog/container-inference-comparison/)
+
+> 本文比较了不同Python类型检查器对空容器类型推断的处理方式，分析了它们在推断空列表和空字典等常见代码模式中的差异和优劣。
 
 #### 14. Gzpeek: Tool to Parse Gzip Metadata
-   ⭐ 26 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47177700) · [原文](https://evanhahn.com/introducing-gzpeek/)
-   > Gzpeek是一个解析gzip文件元数据的工具，能够读取gzip压缩流中隐藏的信息，如压缩时使用的操作系统等元数据。
+
+⭐ 26 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47177700) · [原文](https://evanhahn.com/introducing-gzpeek/)
+
+> Gzpeek是一个解析gzip文件元数据的工具，能够读取gzip压缩流中隐藏的信息，如压缩时使用的操作系统等元数据。
 
 #### 15. Waymo blocking ambulance during deadly Austin shooting
-   ⭐ 22 分 · 💬 11 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47211145) · [原文](https://www.mysanantonio.com/news/austin/article/waymo-austin-shooting-21948947.php)
-   > Waymo自动驾驶车辆在奥斯汀枪击事件后被指阻挡救护车通行，引发对自动驾驶安全和应急响应的质疑。
+
+⭐ 22 分 · 💬 11 条
+[HN 讨论](https://news.ycombinator.com/item?id=47211145) · [原文](https://www.mysanantonio.com/news/austin/article/waymo-austin-shooting-21948947.php)
+
+> Waymo自动驾驶车辆在奥斯汀枪击事件后被指阻挡救护车通行，引发对自动驾驶安全和应急响应的质疑。
 
 #### 16. Chorba: A novel CRC32 implementation (2024)
-   ⭐ 20 分 · 💬 8 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47180140) · [原文](https://arxiv.org/abs/2412.16398)
-   > 本文提出了一种无需查找表和硬件支持的新型CRC32计算方法，相比传统实现吞吐量提升100%。
+
+⭐ 20 分 · 💬 8 条
+[HN 讨论](https://news.ycombinator.com/item?id=47180140) · [原文](https://arxiv.org/abs/2412.16398)
+
+> 本文提出了一种无需查找表和硬件支持的新型CRC32计算方法，相比传统实现吞吐量提升100%。
 
 #### 17. Big Breakfast Alters Appetite, Gut Health
-   ⭐ 18 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47211112) · [原文](https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/big-breakfast-diet-composition-impacts-on-appetite-control-and-gut-health-a-randomized-weight-loss-trial-in-adults-with-overweight-or-obesity/69D4E150EAE7D9632D33904D7A4AE5FA)
-   > 研究表明丰盛早餐的成分构成能显著影响超重肥胖人群的食欲控制和肠道健康，为科学减重提供了新的饮食策略依据。
+
+⭐ 18 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47211112) · [原文](https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/big-breakfast-diet-composition-impacts-on-appetite-control-and-gut-health-a-randomized-weight-loss-trial-in-adults-with-overweight-or-obesity/69D4E150EAE7D9632D33904D7A4AE5FA)
+
+> 研究表明丰盛早餐的成分构成能显著影响超重肥胖人群的食欲控制和肠道健康，为科学减重提供了新的饮食策略依据。
 
 #### 18. Programming in K
-   ⭐ 16 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47164608) · [原文](https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Programming.md)
-   > 本文介绍K编程语言的基础知识和编程技巧，帮助开发者快速掌握K语言的核心概念和实践应用方法。
+
+⭐ 16 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47164608) · [原文](https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Programming.md)
+
+> 本文介绍K编程语言的基础知识和编程技巧，帮助开发者快速掌握K语言的核心概念和实践应用方法。
 
 #### 19. Are the Mysteries of Quantum Mechanics Beginning to Dissolve?
-   ⭐ 15 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47210903) · [原文](https://www.quantamagazine.org/are-the-mysteries-of-quantum-mechanics-beginning-to-dissolve-20260213/)
-   > 本文探讨量子力学中长期存在的神秘现象是否正在通过新的理论进展和研究方法逐步得到解释和澄清。
+
+⭐ 15 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47210903) · [原文](https://www.quantamagazine.org/are-the-mysteries-of-quantum-mechanics-beginning-to-dissolve-20260213/)
+
+> 本文探讨量子力学中长期存在的神秘现象是否正在通过新的理论进展和研究方法逐步得到解释和澄清。
 
 #### 20. Psychology: Who dont maintain many close friends, learned independence too early
-   ⭐ 13 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47211313) · [原文](https://www.bolde.com/psychology-says-people-who-dont-maintain-many-close-friends-often-learned-independence-too-early/)
-   > 心理学研究表明，那些没有维持很多亲密友谊的人往往在早期就学会了过度独立，这种过早的独立可能源于童年经历，影响了他们成年后的社交关系建立。
+
+⭐ 13 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47211313) · [原文](https://www.bolde.com/psychology-says-people-who-dont-maintain-many-close-friends-often-learned-independence-too-early/)
+
+> 心理学研究表明，那些没有维持很多亲密友谊的人往往在早期就学会了过度独立，这种过早的独立可能源于童年经历，影响了他们成年后的社交关系建立。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 118 分 |
-| 总讨论数 | 1035 条 |
+| 指标     | 数值                                  |
+| -------- | ------------------------------------- |
+| 平均热度 | 118 分                                |
+| 总讨论数 | 1035 条                               |
 | 最热文章 | "Ghostty – Terminal Emulator" (545⭐) |
 | 讨论最多 | "Ghostty – Terminal Emulator" (235💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

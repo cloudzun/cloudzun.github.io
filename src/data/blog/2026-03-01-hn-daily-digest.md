@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-01'
+title: "HN Daily Digest: 2026-03-01"
 pubDatetime: 2026-03-01T06:25:41Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,64 +160,84 @@ Claude推出了一项新功能，允许用户从其他AI助手平台无缝迁移
 ## 📑 更多热门文章 (11-20)
 
 #### 11. An ode to houseplant programming (2025)
-   ⭐ 78 分 · 💬 13 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47181542) · [原文](https://hannahilea.com/blog/houseplant-programming/)
-   > 本文介绍"盆栽编程"理念，倡导开发者为自己编写小型、个性化软件工具，无需考虑通用性，强调编程的个人化和实用性。
+
+⭐ 78 分 · 💬 13 条
+[HN 讨论](https://news.ycombinator.com/item?id=47181542) · [原文](https://hannahilea.com/blog/houseplant-programming/)
+
+> 本文介绍"盆栽编程"理念，倡导开发者为自己编写小型、个性化软件工具，无需考虑通用性，强调编程的个人化和实用性。
 
 #### 12. Why is the first C++ (m)allocation always 72 KB?
-   ⭐ 69 分 · 💬 7 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47205129) · [原文](https://joelsiks.com/posts/cpp-emergency-pool-72kb-allocation/)
-   > 本文解释了C++标准库在初始化时为异常处理基础设施分配72KB"应急池"的原因，用于在内存耗尽时仍能分配异常对象。
+
+⭐ 69 分 · 💬 7 条
+[HN 讨论](https://news.ycombinator.com/item?id=47205129) · [原文](https://joelsiks.com/posts/cpp-emergency-pool-72kb-allocation/)
+
+> 本文解释了C++标准库在初始化时为异常处理基础设施分配72KB"应急池"的原因，用于在内存耗尽时仍能分配异常对象。
 
 #### 13. Robust and efficient quantum-safe HTTPS
-   ⭐ 52 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47183396) · [原文](https://security.googleblog.com/2026/02/cultivating-robust-and-efficient.html)
-   > Google Chrome推出新计划，通过采用量子安全加密技术和PLANTS工作组的优化方案，使HTTPS证书能够抵御量子计算机威胁，同时解决量子密码学带来的性能和带宽挑战。
+
+⭐ 52 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47183396) · [原文](https://security.googleblog.com/2026/02/cultivating-robust-and-efficient.html)
+
+> Google Chrome推出新计划，通过采用量子安全加密技术和PLANTS工作组的优化方案，使HTTPS证书能够抵御量子计算机威胁，同时解决量子密码学带来的性能和带宽挑战。
 
 #### 14. Ghostty – Terminal Emulator
-   ⭐ 35 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47206009) · [原文](https://ghostty.org/docs)
-   > Ghostty是一款跨平台终端模拟器，具有GPU加速、原生UI、丰富功能和灵活配置，开箱即用无需复杂设置。
+
+⭐ 35 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47206009) · [原文](https://ghostty.org/docs)
+
+> Ghostty是一款跨平台终端模拟器，具有GPU加速、原生UI、丰富功能和灵活配置，开箱即用无需复杂设置。
 
 #### 15. The real cost of random I/O
-   ⭐ 33 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47165230) · [原文](https://vondra.me/posts/the-real-cost-of-random-io/)
-   > 本文通过实验测量随机I/O相对于顺序I/O的实际成本，探讨PostgreSQL中random_page_cost参数的合理设置值，特别是在现代闪存存储下的适用性。
+
+⭐ 33 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47165230) · [原文](https://vondra.me/posts/the-real-cost-of-random-io/)
+
+> 本文通过实验测量随机I/O相对于顺序I/O的实际成本，探讨PostgreSQL中random_page_cost参数的合理设置值，特别是在现代闪存存储下的适用性。
 
 #### 16. Interview with Øyvind Kolås, GIMP developer
-   ⭐ 27 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47168405) · [原文](https://www.gimp.org/news/2026/02/22/%C3%B8yvind-kol%C3%A5s-interview-ww2017/)
-   > 本文采访了GIMP开发者Øyvind Kolås，介绍其在GEGL和babl色彩引擎开发中的重要贡献及其在GIMP项目中的关键角色。
+
+⭐ 27 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47168405) · [原文](https://www.gimp.org/news/2026/02/22/%C3%B8yvind-kol%C3%A5s-interview-ww2017/)
+
+> 本文采访了GIMP开发者Øyvind Kolås，介绍其在GEGL和babl色彩引擎开发中的重要贡献及其在GIMP项目中的关键角色。
 
 #### 17. Rydberg atoms detect clear signals from a handheld radio
-   ⭐ 25 分 · 💬 11 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47182907) · [原文](https://phys.org/news/2026-02-rydberg-atoms-handheld-radio.html)
-   > 研究人员利用里德伯原子的高度敏感性，成功检测到手持无线电设备的信号，展示了这种量子传感技术在无线通信探测中的实际应用潜力。
+
+⭐ 25 分 · 💬 11 条
+[HN 讨论](https://news.ycombinator.com/item?id=47182907) · [原文](https://phys.org/news/2026-02-rydberg-atoms-handheld-radio.html)
+
+> 研究人员利用里德伯原子的高度敏感性，成功检测到手持无线电设备的信号，展示了这种量子传感技术在无线通信探测中的实际应用潜力。
 
 #### 18. AI Made Writing Code Easier. It Made Being an Engineer Harder
-   ⭐ 18 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47206824) · [原文](https://www.ivanturkovic.com/2026/02/25/ai-made-writing-code-easier-engineering-harder/)
-   > 本文探讨了AI工具虽然降低了代码编写门槛，但却增加了软件工程师的工作复杂度和压力，分析了新技术采用中被忽视的负面影响。
+
+⭐ 18 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47206824) · [原文](https://www.ivanturkovic.com/2026/02/25/ai-made-writing-code-easier-engineering-harder/)
+
+> 本文探讨了AI工具虽然降低了代码编写门槛，但却增加了软件工程师的工作复杂度和压力，分析了新技术采用中被忽视的负面影响。
 
 #### 19. Flightradar24 for Ships
-   ⭐ 18 分 · 💬 6 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47205637) · [原文](https://atlas.flexport.com/)
-   > 这是一个船舶实时追踪平台，提供全球海上运输数据可视化，帮助用户监控船舶位置、航线和物流信息，类似于航班追踪系统在海运领域的应用。
+
+⭐ 18 分 · 💬 6 条
+[HN 讨论](https://news.ycombinator.com/item?id=47205637) · [原文](https://atlas.flexport.com/)
+
+> 这是一个船舶实时追踪平台，提供全球海上运输数据可视化，帮助用户监控船舶位置、航线和物流信息，类似于航班追踪系统在海运领域的应用。
 
 #### 20. Show HN: Vertex.js – A 1kloc SPA Framework
-   ⭐ 10 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47205659) · [原文](https://lukeb42.github.io/vertex-manual.html)
-   > Vertex.js是一个仅1000行代码的轻量级单页应用框架，整合了React、jQuery等功能，无依赖无构建步骤，开箱即用。
+
+⭐ 10 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47205659) · [原文](https://lukeb42.github.io/vertex-manual.html)
+
+> Vertex.js是一个仅1000行代码的轻量级单页应用框架，整合了React、jQuery等功能，无依赖无构建步骤，开箱即用。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 230 分 |
-| 总讨论数 | 1729 条 |
-| 最热文章 | "Microgpt" (1186⭐) |
+| 指标     | 数值                                                                            |
+| -------- | ------------------------------------------------------------------------------- |
+| 平均热度 | 230 分                                                                          |
+| 总讨论数 | 1729 条                                                                         |
+| 最热文章 | "Microgpt" (1186⭐)                                                             |
 | 讨论最多 | "We do not think Anthropic should be designated as a supply chain risk" (339💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

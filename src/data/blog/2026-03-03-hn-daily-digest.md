@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-03'
+title: "HN Daily Digest: 2026-03-03"
 pubDatetime: 2026-03-02T16:17:16Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,54 +162,62 @@ Govbase是一个追踪和分析政府法案的综合性平台，旨在帮助用�
 ## 📑 更多热门文章 (11-20)
 
 **11. LFortran compiles fpm**
-   ⭐ 44 分 · 💬 19 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47188014) · [原文](https://lfortran.org/blog/2026/02/lfortran-compiles-fpm/)
-   > LFortran编译器成功编译了Fortran包管理器fpm，标志着该编译器在实际应用场景中取得重要里程碑，展现了其对复杂Fortran项目的支持能力。
+⭐ 44 分 · 💬 19 条
+[HN 讨论](https://news.ycombinator.com/item?id=47188014) · [原文](https://lfortran.org/blog/2026/02/lfortran-compiles-fpm/)
+
+> LFortran编译器成功编译了Fortran包管理器fpm，标志着该编译器在实际应用场景中取得重要里程碑，展现了其对复杂Fortran项目的支持能力。
 
 **12. Show HN: Pianoterm – Run shell commands from your Piano. A Linux CLI tool**
-   ⭐ 33 分 · 💬 14 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47223863) · [原文](https://github.com/vustagc/pianoterm)
-   > 一款Linux命令行工具，可将USB MIDI键盘的琴键映射为shell命令快捷键，实现用钢琴控制执行系统命令的创意交互方式。
+⭐ 33 分 · 💬 14 条
+[HN 讨论](https://news.ycombinator.com/item?id=47223863) · [原文](https://github.com/vustagc/pianoterm)
+
+> 一款Linux命令行工具，可将USB MIDI键盘的琴键映射为shell命令快捷键，实现用钢琴控制执行系统命令的创意交互方式。
 
 **13. Programmable Cryptography**
-   ⭐ 31 分 · 💬 11 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47201158) · [原文](https://0xparc.org/writings/programmable-cryptography-1)
-   > 探讨如何利用零知识证明、全同态加密等密码学原语构建可编程的信任系统，使开发者能像编写普通程序一样灵活地设计具有隐私保护和去中心化特性的应用。
+⭐ 31 分 · 💬 11 条
+[HN 讨论](https://news.ycombinator.com/item?id=47201158) · [原文](https://0xparc.org/writings/programmable-cryptography-1)
+
+> 探讨如何利用零知识证明、全同态加密等密码学原语构建可编程的信任系统，使开发者能像编写普通程序一样灵活地设计具有隐私保护和去中心化特性的应用。
 
 **14. Closure of the Weatherradio Service in Canada**
-   ⭐ 28 分 · 💬 13 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47225505) · [原文](https://www.rac.ca/rac-responds-to-the-closure-of-the-weatherradio-service-in-canada/)
-   > 加拿大业余无线电协会就政府关闭天气广播服务发表回应，探讨该决定对公共安全和应急通信的影响及替代方案。
+⭐ 28 分 · 💬 13 条
+[HN 讨论](https://news.ycombinator.com/item?id=47225505) · [原文](https://www.rac.ca/rac-responds-to-the-closure-of-the-weatherradio-service-in-canada/)
+
+> 加拿大业余无线电协会就政府关闭天气广播服务发表回应，探讨该决定对公共安全和应急通信的影响及替代方案。
 
 **15. RCade: Building a Community Arcade Cabinet**
-   ⭐ 28 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47170599) · [原文](https://www.frankchiarulli.com/blog/building-the-rcade/)
-   > 介绍了在Recurse Center社区打造的街机游戏柜RCade，配备CRT显示屏和自定义控制器，支持通过GitHub部署社区成员开发的游戏，已收录44款以上作品。
+⭐ 28 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47170599) · [原文](https://www.frankchiarulli.com/blog/building-the-rcade/)
+
+> 介绍了在Recurse Center社区打造的街机游戏柜RCade，配备CRT显示屏和自定义控制器，支持通过GitHub部署社区成员开发的游戏，已收录44款以上作品。
 
 **16. The 185-Microsecond Type Hint**
-   ⭐ 23 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47224832) · [原文](https://blog.sturdystatistics.com/posts/type_hint/)
-   > 通过在Clojure代码中添加类型提示优化，将Roughtime时间同步协议服务器的吞吐量提升了13倍，响应时间缩短至185微秒。
+⭐ 23 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47224832) · [原文](https://blog.sturdystatistics.com/posts/type_hint/)
+
+> 通过在Clojure代码中添加类型提示优化，将Roughtime时间同步协议服务器的吞吐量提升了13倍，响应时间缩短至185微秒。
 
 **17. Show HN: Visual Lambda Calculus – a thesis project (2008) revived for the web**
-   ⭐ 9 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47191052) · [原文](https://github.com/bntre/visual-lambda)
-   > 这是一个2008年的论文项目，将Lambda演算可视化，现已复活并移植到Web平台，提供图形化环境来操作和理解函数式编程的核心概念。
+⭐ 9 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47191052) · [原文](https://github.com/bntre/visual-lambda)
+
+> 这是一个2008年的论文项目，将Lambda演算可视化，现已复活并移植到Web平台，提供图形化环境来操作和理解函数式编程的核心概念。
 
 **18. Reflex (YC W23) Is Hiring Software Engineers – Python**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47220666) · [原文](https://www.ycombinator.com/companies/reflex/jobs)
-   > Reflex是一个面向企业级关键应用的操作系统平台，正在招聘Python软件工程师，提供12-20万美元年薪及股权激励，欢迎应届生申请。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47220666) · [原文](https://www.ycombinator.com/companies/reflex/jobs)
+
+> Reflex是一个面向企业级关键应用的操作系统平台，正在招聘Python软件工程师，提供12-20万美元年薪及股权激励，欢迎应届生申请。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 220 分 |
-| 总讨论数 | 1908 条 |
+| 指标     | 数值                                                        |
+| -------- | ----------------------------------------------------------- |
+| 平均热度 | 220 分                                                      |
+| 总讨论数 | 1908 条                                                     |
 | 最热文章 | "Motorola announces a partnership with GrapheneOS" (2024⭐) |
-| 讨论最多 | "Motorola announces a partnership with GrapheneOS" (725💬) |
+| 讨论最多 | "Motorola announces a partnership with GrapheneOS" (725💬)  |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

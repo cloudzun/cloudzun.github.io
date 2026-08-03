@@ -1,8 +1,16 @@
 ---
-title: 'Vibe Coding 的质量陷阱：为什么你需要 7 个 Gate'
+title: "Vibe Coding 的质量陷阱：为什么你需要 7 个 Gate"
 pubDatetime: 2026-03-04T09:00:00+00:00
-tags: ['OpenCode', 'Superpowers', 'Vibe Coding', 'AI Engineering', '质量管理', '工作流']
-description: '技术博客文章'
+tags:
+  [
+    "OpenCode",
+    "Superpowers",
+    "Vibe Coding",
+    "AI Engineering",
+    "质量管理",
+    "工作流",
+  ]
+description: "技术博客文章"
 ---
 
 # Vibe Coding 的质量陷阱：为什么你需要 7 个 Gate
@@ -23,14 +31,14 @@ Vibe Coding 有一个危险的特性：**AI 生成的代码看起来总是很完
 
 **AI 生成的 927 行代码，经过系统性 review 后发现了 8 个真实问题：**
 
-| 级别 | 问题 | 影响 |
-|------|------|------|
-| 🔴 Critical | XSS 漏洞：用户输入未转义直接 innerHTML | 安全漏洞，可被利用 |
-| 🔴 Critical | localStorage 无异常处理 | 私密/无痕模式直接崩溃 |
-| 🔴 Critical | 无效 productId 未验证 | URL 直接访问导致白屏 |
-| 🟡 Important | 空购物车可直接访问 checkout | 逻辑错误 |
-| 🟡 Important | 数量按钮可快速点击至负数 | 数据异常 |
-| 🟡 Important | 未知路由静默失败，无 404 | 用户体验差 |
+| 级别         | 问题                                   | 影响                  |
+| ------------ | -------------------------------------- | --------------------- |
+| 🔴 Critical  | XSS 漏洞：用户输入未转义直接 innerHTML | 安全漏洞，可被利用    |
+| 🔴 Critical  | localStorage 无异常处理                | 私密/无痕模式直接崩溃 |
+| 🔴 Critical  | 无效 productId 未验证                  | URL 直接访问导致白屏  |
+| 🟡 Important | 空购物车可直接访问 checkout            | 逻辑错误              |
+| 🟡 Important | 数量按钮可快速点击至负数               | 数据异常              |
+| 🟡 Important | 未知路由静默失败，无 404               | 用户体验差            |
 
 这些问题不是 AI 偷懒，是**结构性的**：AI 在生成代码时优先保证功能路径，边界条件和安全处理是次要的。如果你不主动检查，它不会主动告诉你。
 
@@ -45,6 +53,7 @@ Vibe Coding 有一个危险的特性：**AI 生成的代码看起来总是很完
 [Superpowers](https://github.com/obra/superpowers) 是专为 OpenCode/Claude Code 设计的工作流框架，提供 14 个强制性 skill，核心理念是：**用 HARD-GATE 强制 AI 遵守工作流纪律**。
 
 关键 skill：
+
 - `writing-plans`：生成 2-5 分钟粒度的实现计划
 - `subagent-driven-development`：每个任务派发独立 subagent，两阶段 review
 - `spec-reviewer`：对比 PRD 逐条验证，要求代码证据
@@ -119,19 +128,26 @@ brainstorming 的目的是帮你探索需求。但如果你是架构师，需求
 
 ```markdown
 ## 目标
+
 [一句话描述]
 
 ## 功能范围
+
 ### 在范围内
+
 - [ ] 功能 A
+
 ### 明确排除
+
 - 不做 X（原因）
 
 ## 技术约束
+
 - 语言/框架限制
 - 不能动的文件/接口
 
 ## 验收标准
+
 - [ ] 标准 1（可测量）
 - [ ] 标准 2（可测量）
 ```
@@ -147,8 +163,10 @@ opencode run "Read docs/briefs/BRIEF.md and use writing-plans skill. Output to d
 ```
 
 每个 task 格式：
+
 ```markdown
 ## Task N: <动词 + 名词>
+
 - 输入：依赖哪些文件/接口
 - 输出：创建/修改哪些文件
 - 验证：如何确认这个 task 完成了
@@ -184,6 +202,7 @@ opencode run "Use spec-reviewer skill. Read BRIEF.md. For each requirement, find
 ```
 
 输出格式：
+
 ```
 ### REQ-1: [需求描述]
 - Status: ✅ VERIFIED
@@ -207,15 +226,15 @@ opencode run "Use code-quality-reviewer skill. Focus on: security vulnerabilitie
 
 **必查清单**：
 
-| 类别 | 检查点 |
-|------|--------|
-| 安全 | innerHTML 是否转义用户输入 |
-| 安全 | 外部数据是否验证 |
+| 类别 | 检查点                        |
+| ---- | ----------------------------- |
+| 安全 | innerHTML 是否转义用户输入    |
+| 安全 | 外部数据是否验证              |
 | 崩溃 | localStorage 是否有 try/catch |
 | 崩溃 | 数组/对象访问前是否检查存在性 |
-| 崩溃 | 路由是否有 404 fallback |
-| 边界 | 空状态是否处理 |
-| 边界 | 数值输入是否有范围限制 |
+| 崩溃 | 路由是否有 404 fallback       |
+| 边界 | 空状态是否处理                |
+| 边界 | 数值输入是否有范围限制        |
 
 **Gate 通过条件**：无 CRITICAL 问题。
 
@@ -254,11 +273,13 @@ vercel --prod
 ## 什么时候可以跳过 Gate？
 
 **可以跳过 Gate 0-1 的情况**：
+
 - 单文件改动
 - 需求明确，无歧义
 - 无安全影响
 
 **永远不能跳过的 Gate**：
+
 - Gate 5（Code Quality Review）：任何涉及用户输入或外部数据的改动
 - Gate 6（修复验证）：有 CRITICAL 问题时
 

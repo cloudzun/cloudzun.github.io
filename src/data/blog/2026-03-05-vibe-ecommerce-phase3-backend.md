@@ -1,8 +1,9 @@
 ---
-title: '从原型到产品：vibe-ecommerce 迭代系列（二）— 引入后端，第一跳'
+title: "从原型到产品：vibe-ecommerce 迭代系列（二）— 引入后端，第一跳"
 pubDatetime: 2026-03-05T01:24:00+00:00
-tags: ['OpenCode', 'Vibe Coding', '后端', 'Node.js', 'SQLite', '架构设计', 'LAB-14']
-description: '技术博客文章'
+tags:
+  ["OpenCode", "Vibe Coding", "后端", "Node.js", "SQLite", "架构设计", "LAB-14"]
+description: "技术博客文章"
 ---
 
 # 从原型到产品：vibe-ecommerce 迭代系列（二）
@@ -37,6 +38,7 @@ Phase 1-2                    Phase 3
 ```
 
 这意味着：
+
 - **部署变复杂**：前端在 Vercel，后端在 Azure Linux 服务器，需要反向代理、SSL、CORS
 - **调试变困难**：问题可能出在前端、网络、代理、后端、数据库任何一层
 - **架构决策变多**：用什么数据库？用什么 ORM？怎么管理进程？怎么处理跨域？
@@ -51,11 +53,11 @@ Phase 1-2                    Phase 3
 
 我们有三个现成的选项：
 
-| 选项 | 可用性 | 容器化友好 | 迁移成本 |
-|------|--------|-----------|---------|
-| SQLite（本地文件） | 零配置 | ⚠️ 需挂载 volume | 低 |
-| Vercel Postgres（Neon） | 免费额度 | ❌ 锁定 Vercel | 高 |
-| Azure SQL DB（已有实例） | 现成 | ✅ 优秀 | 中 |
+| 选项                     | 可用性   | 容器化友好       | 迁移成本 |
+| ------------------------ | -------- | ---------------- | -------- |
+| SQLite（本地文件）       | 零配置   | ⚠️ 需挂载 volume | 低       |
+| Vercel Postgres（Neon）  | 免费额度 | ❌ 锁定 Vercel   | 高       |
+| Azure SQL DB（已有实例） | 现成     | ✅ 优秀          | 中       |
 
 最终选择 **SQLite**，但这个决策背后有一个关键原则：
 
@@ -71,20 +73,20 @@ Knex 支持多种数据库方言：SQLite、PostgreSQL、MSSQL（Azure SQL DB）
 
 ```javascript
 // Phase 3：SQLite
-const knex = require('knex')({
-  client: 'better-sqlite3',
-  connection: { filename: './data/shop.db' }
+const knex = require("knex")({
+  client: "better-sqlite3",
+  connection: { filename: "./data/shop.db" },
 });
 
 // Phase 5/6 迁移到 Azure SQL DB：只改这里
-const knex = require('knex')({
-  client: 'mssql',
+const knex = require("knex")({
+  client: "mssql",
   connection: {
-    server: 'xxx.database.windows.net',
-    database: 'vibe-ecommerce',
+    server: "xxx.database.windows.net",
+    database: "vibe-ecommerce",
     user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD
-  }
+    password: process.env.DB_PASSWORD,
+  },
 });
 ```
 
@@ -172,6 +174,7 @@ sudo iptables -I INPUT -p tcp --dport 3001 -s 172.17.0.0/16 -j ACCEPT
 ```
 
 **经验**：当服务运行在 Docker 反代后面时，调试顺序应该是：
+
 1. 先从容器内部 curl 宿主机端口
 2. 再检查 iptables INPUT 规则
 3. 最后才看代理配置
@@ -185,6 +188,7 @@ sudo iptables -I INPUT -p tcp --dport 3001 -s 172.17.0.0/16 -j ACCEPT
 前端改造遵循一个原则：**只改必须改的，不动其他的**。
 
 改动范围：
+
 - `js/data.js`：完全重写为 `ProductAPI` + `OrderAPI`
 - `js/components/products.js`：同步渲染 → 异步 fetch + loading 状态
 - `js/components/product-detail.js`：同步查找 → 异步 fetch by ID
@@ -201,12 +205,12 @@ sudo iptables -I INPUT -p tcp --dport 3001 -s 172.17.0.0/16 -j ACCEPT
 
 ```javascript
 let searchTimer;
-searchInput.addEventListener('input', (e) => {
-    clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => {
-        this.searchQuery = e.target.value;
-        this.fetchAndRender();  // 300ms 后才发请求
-    }, 300);
+searchInput.addEventListener("input", e => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    this.searchQuery = e.target.value;
+    this.fetchAndRender(); // 300ms 后才发请求
+  }, 300);
 });
 ```
 
@@ -232,13 +236,13 @@ Phase 3 的上下文文档（BRIEF）里有一条：
 
 Phase 3 创造了一些技术债，全部记录在案：
 
-| 债务 | 位置 | 计划 |
-|------|------|------|
-| `node_modules` 被 commit 进 git | git 历史 | 加 .gitignore，接受历史债务 |
-| 购物车仍在 localStorage | `js/store.js` | Phase 4：登录用户迁移到服务端 |
-| API 无认证 | `server/app.js` | Phase 4：JWT 中间件 |
-| 无限流 | `server/app.js` | Phase 5：express-rate-limit |
-| iptables 规则持久化方式不规范 | `/etc/network/if-up.d/` | Phase 5/6：迁移到 ufw |
+| 债务                            | 位置                    | 计划                          |
+| ------------------------------- | ----------------------- | ----------------------------- |
+| `node_modules` 被 commit 进 git | git 历史                | 加 .gitignore，接受历史债务   |
+| 购物车仍在 localStorage         | `js/store.js`           | Phase 4：登录用户迁移到服务端 |
+| API 无认证                      | `server/app.js`         | Phase 4：JWT 中间件           |
+| 无限流                          | `server/app.js`         | Phase 5：express-rate-limit   |
+| iptables 规则持久化方式不规范   | `/etc/network/if-up.d/` | Phase 5/6：迁移到 ufw         |
 
 记录技术债不是为了让自己难受，是为了让未来的自己（或者接手的人）知道：**这里是有意为之的妥协，不是遗漏**。
 

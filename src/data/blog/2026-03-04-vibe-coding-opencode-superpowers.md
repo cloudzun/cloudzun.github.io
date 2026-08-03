@@ -1,8 +1,8 @@
 ---
-title: 'Vibe Coding with OpenCode + Superpowers: 一次完整的 AI 驱动电商原型开发实录'
+title: "Vibe Coding with OpenCode + Superpowers: 一次完整的 AI 驱动电商原型开发实录"
 pubDatetime: 2026-03-04T08:00:00+00:00
-tags: ['OpenCode', 'Superpowers', 'Vibe Coding', 'AI', '电商', '开发实录']
-description: '技术博客文章'
+tags: ["OpenCode", "Superpowers", "Vibe Coding", "AI", "电商", "开发实录"]
+description: "技术博客文章"
 ---
 
 # Vibe Coding with OpenCode + Superpowers：一次完整的 AI 驱动电商原型开发实录
@@ -16,6 +16,7 @@ description: '技术博客文章'
 **Vibe Coding** 是一种 AI 辅助编程范式——你描述你想要什么，AI 生成代码，你的角色从"写代码"变成"引导、审查、迭代"。
 
 我们的工具链：
+
 - **OpenCode**：本地运行的 AI 编码 agent，支持多模型（我们用的是阿里百炼的 qwen3.5-plus）
 - **Superpowers**：一套专为 OpenCode/Claude Code 设计的工作流框架，提供 14 个强制性 skill（brainstorming、writing-plans、subagent-driven-development 等）
 - **oh-my-opencode（OmO）**：另一个 OpenCode 增强框架，我们从中移植了若干最佳实践到 AGENTS.md
@@ -58,6 +59,7 @@ ln -s ~/.config/opencode/superpowers/skills \
 ```
 
 安装后 OpenCode 获得 14 个 skill，包括：
+
 - `brainstorming`：需求探索，HARD-GATE 禁止在设计确认前写代码
 - `writing-plans`：生成 2-5 分钟粒度的实现计划
 - `subagent-driven-development`：每个任务派发独立 subagent，两阶段 review
@@ -71,6 +73,7 @@ ln -s ~/.config/opencode/superpowers/skills \
 ### Phase 1：需求确认（brainstorming）
 
 项目基础规格：
+
 - 纯前端：HTML + CSS + JavaScript，无框架，无构建工具
 - 4 个页面：Products、ProductDetails、ShoppingCart、Checkout
 - 页面间导航、示例数据集、基础样式
@@ -109,6 +112,7 @@ Task 12: Verify All Pages and Navigation
 ```
 
 文件结构设计：
+
 ```
 vibe-ecommerce/
 ├── index.html
@@ -152,18 +156,19 @@ OpenCode 按计划逐任务执行，每个任务派发独立 subagent，12 次 c
 
 这轮发现了真实问题：
 
-| 级别 | 问题 | 位置 |
-|------|------|------|
-| 🔴 Critical | XSS 漏洞（用户输入未转义直接 innerHTML） | checkout.js:88-97, products.js:28 |
-| 🔴 Critical | localStorage 无异常处理，私密模式崩溃 | store.js:5-6 |
-| 🔴 Critical | 无效 productId 导致页面崩溃 | product-detail.js:39 |
-| 🟡 Important | 空购物车可直接访问 checkout | - |
-| 🟡 Important | 数量按钮可快速点击至负数 | cart.js |
-| 🟡 Important | 未知路由静默失败，无 404 页面 | router.js |
+| 级别         | 问题                                     | 位置                              |
+| ------------ | ---------------------------------------- | --------------------------------- |
+| 🔴 Critical  | XSS 漏洞（用户输入未转义直接 innerHTML） | checkout.js:88-97, products.js:28 |
+| 🔴 Critical  | localStorage 无异常处理，私密模式崩溃    | store.js:5-6                      |
+| 🔴 Critical  | 无效 productId 导致页面崩溃              | product-detail.js:39              |
+| 🟡 Important | 空购物车可直接访问 checkout              | -                                 |
+| 🟡 Important | 数量按钮可快速点击至负数                 | cart.js                           |
+| 🟡 Important | 未知路由静默失败，无 404 页面            | router.js                         |
 
 **第四轮：修复（systematic-debugging）**
 
 OpenCode 按 systematic-debugging skill 的流程修复了全部 8 个问题：
+
 - 新建 `js/utils.js`，实现 `escapeHtml()` 工具函数
 - 所有 innerHTML 渲染点统一使用 `escapeHtml()`
 - localStorage 操作加 try/catch + 内存 fallback

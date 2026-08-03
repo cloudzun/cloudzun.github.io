@@ -1,8 +1,8 @@
 ---
-title: 'OpenClaw Memory Embedding 系统修复实录：从 Ollama 到 Gemini 的完整踩坑指南'
+title: "OpenClaw Memory Embedding 系统修复实录：从 Ollama 到 Gemini 的完整踩坑指南"
 pubDatetime: 2026-03-03T00:00:00Z
 tags: [openclaw, ai, embedding, memory, gemini, technical, tutorial]
-description: 'OpenClaw Memory Embedding 系统修复实录，记录从 Ollama 到 Gemini 的完整踩坑过程'
+description: "OpenClaw Memory Embedding 系统修复实录，记录从 Ollama 到 Gemini 的完整踩坑过程"
 ---
 
 # OpenClaw Memory Embedding 系统修复实录：从 Ollama 到 Gemini 的完整踩坑指南
@@ -28,6 +28,7 @@ Vector dims: 1536  # ⚠️ 问题：维度不匹配
 ```
 
 **核心问题**：
+
 - SQLite Vector 索引维度：1536 维（旧配置 `text-embedding-3-large`）
 - Ollama bge-m3 输出维度：1024 维
 - **维度不匹配导致搜索失败**
@@ -38,11 +39,11 @@ Vector dims: 1536  # ⚠️ 问题：维度不匹配
 
 ### 方案评估矩阵
 
-| 方案 | 维度 | 速度 | 成本 | 中文支持 | 风险 |
-|------|------|------|------|----------|------|
-| Ollama bge-m3 | 1024 | ❌ 慢（CPU 240ms/次，批量超时） | 免费 | ✅ 优秀 | 🔴 高（超时） |
-| Azure OpenAI text-embedding-3-large | 3072 | ✅ 快 | $ | ✅ 好 | 🟡 中（需改源码） |
-| Google Gemini embedding-001 | 768 | ✅ 快 | 免费额度 | ✅ 好 | 🟢 低（官方支持） |
+| 方案                                | 维度 | 速度                            | 成本     | 中文支持 | 风险              |
+| ----------------------------------- | ---- | ------------------------------- | -------- | -------- | ----------------- |
+| Ollama bge-m3                       | 1024 | ❌ 慢（CPU 240ms/次，批量超时） | 免费     | ✅ 优秀  | 🔴 高（超时）     |
+| Azure OpenAI text-embedding-3-large | 3072 | ✅ 快                           | $        | ✅ 好    | 🟡 中（需改源码） |
+| Google Gemini embedding-001         | 768  | ✅ 快                           | 免费额度 | ✅ 好    | 🟢 低（官方支持） |
 
 ### 决策过程
 
@@ -71,7 +72,7 @@ Vector dims: 1536  # ⚠️ 问题：维度不匹配
             "id": "gemini-embedding-001",
             "name": "gemini-embedding-001",
             "input": ["text"],
-            "cost": {"input": 0, "output": 0},
+            "cost": { "input": 0, "output": 0 },
             "contextWindow": 2048
           }
         ]
@@ -131,6 +132,7 @@ Memory index updated (main).
 ```
 
 **索引统计**：
+
 - 文件数：99/99
 - 向量块：438 chunks
 - 耗时：~2 分钟
@@ -179,15 +181,15 @@ $ memory_search(query="M7 股票分析", maxResults=3)
 
 ## 📊 性能对比
 
-| 指标 | Ollama bge-m3 | Gemini embedding-001 |
-|------|---------------|---------------------|
-| 单次延迟 | 240ms (CPU) | ~100ms (云端) |
-| 批量索引 | ❌ 超时 (120s) | ✅ 2 分钟完成 |
-| 维度 | 1024 | 768 |
-| 免费额度 | 无限 | 1500 RPM, 1M/天 |
-| 中文支持 | ✅ 优秀 | ✅ 好 |
-| 配置复杂度 | 🟢 低 | 🟢 低 |
-| 维护成本 | 🟡 中（本地模型） | 🟢 低（云端 API） |
+| 指标       | Ollama bge-m3     | Gemini embedding-001 |
+| ---------- | ----------------- | -------------------- |
+| 单次延迟   | 240ms (CPU)       | ~100ms (云端)        |
+| 批量索引   | ❌ 超时 (120s)    | ✅ 2 分钟完成        |
+| 维度       | 1024              | 768                  |
+| 免费额度   | 无限              | 1500 RPM, 1M/天      |
+| 中文支持   | ✅ 优秀           | ✅ 好                |
+| 配置复杂度 | 🟢 低             | 🟢 低                |
+| 维护成本   | 🟡 中（本地模型） | 🟢 低（云端 API）    |
 
 ---
 
@@ -221,7 +223,7 @@ OpenClaw 的 Memory 配置必须在 `agents.defaults.memorySearch`，而不是�
     "provider": "gemini",
     "model": "gemini-embedding-001",
     "remote": {
-      "apiKey": "..."  // ⚠️ 必须配置
+      "apiKey": "..." // ⚠️ 必须配置
     }
   }
 }
@@ -266,6 +268,7 @@ memory_search(query="test")
 ### 免费额度监控
 
 Gemini 免费额度：
+
 - 1500 次/分钟（RPM）
 - 100 万次/天
 
@@ -316,12 +319,14 @@ openclaw memory clean --older-than 90d
 4. ✅ 测试功能
 
 **最终效果**：
+
 - Memory 搜索完全恢复
 - 索引速度提升 10 倍（Ollama CPU → Gemini 云端）
 - 零成本（Gemini 免费额度）
 - 中文搜索效果优秀
 
 **核心经验**：
+
 - 配置位置决定功能是否生效
 - `remote.apiKey` 是常见遗漏点
 - 云端 API 比本地模型更稳定（批量场景）

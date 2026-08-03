@@ -1,7 +1,7 @@
 ---
-title: '真钱买假模型：Shadow API 中的欺骗行为系统性审计'
+title: "真钱买假模型：Shadow API 中的欺骗行为系统性审计"
 pubDatetime: 2026-03-06T00:00:00Z
-tags: ['AI Security', 'LLM', 'API', 'Research Integrity', 'Shadow API']
+tags: ["AI Security", "LLM", "API", "Research Integrity", "Shadow API"]
 author: "HuaQloud"
 description: "解读 CISPA 最新论文 arXiv:2603.01919，揭示 Shadow API 市场中的模型替换、性能降级和安全隐患"
 ---
@@ -23,6 +23,7 @@ description: "解读 CISPA 最新论文 arXiv:2603.01919，揭示 Shadow API 市
 ### 定义
 
 **Shadow API** 指的是第三方 LLM API 服务，具有以下特征：
+
 1. **间接访问**：不直接连接官方基础设施
 2. **绕过区域限制**：在官方 API 受限地区（如中国、俄罗斯、伊朗）提供服务
 
@@ -30,15 +31,16 @@ description: "解读 CISPA 最新论文 arXiv:2603.01919，揭示 Shadow API 市
 
 Shadow API 市场的繁荣源于三大痛点：
 
-| 痛点 | 官方 API 限制 | Shadow API 承诺 |
-|------|--------------|----------------|
-| **地理限制** | OpenAI API 在中国、俄罗斯、伊朗等地区无法直接访问 | 无区域限制 |
-| **支付门槛** | 需要国际信用卡、企业账户 | 支持本地支付（支付宝、微信等） |
-| **价格压力** | GPT-5 定价：$1.25/$10.00 per 1M tokens | 官方价格的 0.5-1.5 倍 |
+| 痛点         | 官方 API 限制                                     | Shadow API 承诺                |
+| ------------ | ------------------------------------------------- | ------------------------------ |
+| **地理限制** | OpenAI API 在中国、俄罗斯、伊朗等地区无法直接访问 | 无区域限制                     |
+| **支付门槛** | 需要国际信用卡、企业账户                          | 支持本地支付（支付宝、微信等） |
+| **价格压力** | GPT-5 定价：$1.25/$10.00 per 1M tokens            | 官方价格的 0.5-1.5 倍          |
 
 ### 市场规模
 
 截至 2025 年 12 月 6 日：
+
 - **17 个主流 Shadow API** 被识别
 - **187 篇学术论文** 使用这些服务
 - **5,966 次引用**（最流行的单个服务）
@@ -60,11 +62,11 @@ Shadow API 市场的繁荣源于三大痛点：
 
 研究人员选择了 3 个最具代表性的 Shadow API（匿名化为 A、E、H），覆盖 3 大模型家族：
 
-| 模型家族 | 具体模型 |
-|---------|---------|
-| **F-A (OpenAI)** | GPT-4o-mini, GPT-5, GPT-5-mini |
-| **F-B (Google)** | Gemini-2.0-flash, Gemini-2.5-flash, Gemini-2.5-pro |
-| **F-C (DeepSeek)** | DeepSeek-Chat, DeepSeek-Reasoner |
+| 模型家族           | 具体模型                                           |
+| ------------------ | -------------------------------------------------- |
+| **F-A (OpenAI)**   | GPT-4o-mini, GPT-5, GPT-5-mini                     |
+| **F-B (Google)**   | Gemini-2.0-flash, Gemini-2.5-flash, Gemini-2.5-pro |
+| **F-C (DeepSeek)** | DeepSeek-Chat, DeepSeek-Reasoner                   |
 
 ### 评估维度
 
@@ -108,11 +110,11 @@ Shadow API 市场的繁荣源于三大痛点：
 
 在 **医学** 和 **法律** 领域，情况更加严峻：
 
-| 模型 | 官方 API 准确率 | Shadow API 平均准确率 | 性能损失 |
-|------|----------------|---------------------|---------|
-| **Gemini-2.5-flash (MedQA)** | 83.82% | 36.95% | **46.87%** |
-| **Gemini-2.5-flash (LegalBench)** | ~85% | ~43% | **40-42%** |
-| **DeepSeek-Chat (LegalBench)** | ~80% | ~70% | **9.98%** (API A) |
+| 模型                              | 官方 API 准确率 | Shadow API 平均准确率 | 性能损失          |
+| --------------------------------- | --------------- | --------------------- | ----------------- |
+| **Gemini-2.5-flash (MedQA)**      | 83.82%          | 36.95%                | **46.87%**        |
+| **Gemini-2.5-flash (LegalBench)** | ~85%            | ~43%                  | **40-42%**        |
+| **DeepSeek-Chat (LegalBench)**    | ~80%            | ~70%                  | **9.98%** (API A) |
 
 **关键失败案例**：
 
@@ -129,14 +131,17 @@ Shadow API 误解陪审团诚实先例，提供错误的法律推理
 在 **JailbreakBench** 和 **AdvBench** 安全基准测试中，Shadow API 表现出不可预测的偏差：
 
 #### GPT-5-mini
+
 - **Base64 攻击**：Shadow API A 的有害性得分 **0.04**，是官方 API **0.02** 的 **2 倍**
 - **FlipAttack**：Shadow API A 和 E 显著低估风险
 
 #### Gemini-2.5-flash
+
 - **FlipAttack**：官方 API 有害性得分 **0.90**，所有 Shadow API 约 **0.67-0.68**
 - 风险被 **低估约 0.23**
 
 #### DeepSeek-Chat
+
 - 差异相对较小，但仍存在
 - **Combination 攻击**：Shadow API A 和 H 生成更多有害内容
 - **FlipAttack**：生成更少有害内容
@@ -151,15 +156,16 @@ Shadow API 误解陪审团诚实先例，提供错误的法律推理
 
 在评估的 **24 个端点** 中：
 
-| 验证结果 | 数量 | 占比 |
-|---------|------|------|
-| **通过指纹验证** | 10 | 41.67% |
-| **指纹验证失败** | 11 | **45.83%** |
-| **余弦距离显著偏离** | 3 | **12.50%** |
+| 验证结果             | 数量 | 占比       |
+| -------------------- | ---- | ---------- |
+| **通过指纹验证**     | 10   | 41.67%     |
+| **指纹验证失败**     | 11   | **45.83%** |
+| **余弦距离显著偏离** | 3    | **12.50%** |
 
 #### 典型欺诈模式
 
 **模式 1：高价卖低价模型**
+
 ```
 Shadow API A 广告：Gemini-2.0-flash
 实际指纹识别：Gemini-2.5-flash
@@ -167,6 +173,7 @@ Shadow API A 广告：Gemini-2.0-flash
 ```
 
 **模式 2：高端模型用开源替代**
+
 ```
 Shadow API A 广告：GPT-5（官方定价）
 实际指纹识别：GLM-4-9B-Chat
@@ -174,12 +181,14 @@ Shadow API A 广告：GPT-5（官方定价）
 ```
 
 **模式 3：推理模型用非推理替代**
+
 ```
 Shadow API A/H 广告：DeepSeek-Reasoner（思考模式）
 实际指纹识别：DeepSeek-Chat（非思考模式）
 ```
 
 **模式 4：旧模型用新模型替代**
+
 ```
 Shadow API 广告：Gemini-2.0-flash
 实际服务：Gemini-2.5-flash
@@ -194,6 +203,7 @@ MET 通过双样本假设检验判断 Shadow API 输出是否与官方模型来�
 - **Cohen's κ = 0.512**，表明中高度一致性
 
 **典型案例**：
+
 - GPT-4o-mini 和 GPT-5 在 Shadow API A 中被标记为统计显著不同
 - DeepSeek-Chat 在几乎所有提供商 - 基准组合中被拒绝
 - **Gemini-2.5-pro** 是例外，在所有 3 个提供商中均通过验证
@@ -202,23 +212,23 @@ MET 通过双样本假设检验判断 Shadow API 输出是否与官方模型来�
 
 论文揭示了三种经济欺骗模式：
 
-| 机制 | 描述 | 案例 |
-|------|------|------|
-| **信息溢价** | 收取高价，静默替换为更便宜的模型 | API A：Gemini-2.0→2.5-flash，7.25 倍溢价 |
-| **折扣替换** | 按官方定价收费，但用低成本开源后端替换 | API A：GPT-5→GLM-4-9B，1.00 倍定价 |
-| **转售加价** | 适度加价，同时静默降级后端 | API H：GPT-5，1.09 倍加价 |
+| 机制         | 描述                                   | 案例                                     |
+| ------------ | -------------------------------------- | ---------------------------------------- |
+| **信息溢价** | 收取高价，静默替换为更便宜的模型       | API A：Gemini-2.0→2.5-flash，7.25 倍溢价 |
+| **折扣替换** | 按官方定价收费，但用低成本开源后端替换 | API A：GPT-5→GLM-4-9B，1.00 倍定价       |
+| **转售加价** | 适度加价，同时静默降级后端             | API H：GPT-5，1.09 倍加价                |
 
 #### 用户损失量化
 
 以 **GPQA 基准测试**（GPT-5，n=1,273 次查询）为例：
 
-| 指标 | 官方 API | Shadow API A |
-|------|---------|-------------|
-| **收费** | $14.84 | $14.84（相同） |
-| **实际 Token 量** | 100% | **38%** |
-| **实际价值** | $14.84 | **$5.70-$7.77** |
-| **提供商利润** | - | **$7.07-$9.14** |
-| **每美元错误数** | 1x | **22-4x** |
+| 指标              | 官方 API | Shadow API A    |
+| ----------------- | -------- | --------------- |
+| **收费**          | $14.84   | $14.84（相同）  |
+| **实际 Token 量** | 100%     | **38%**         |
+| **实际价值**      | $14.84   | **$5.70-$7.77** |
+| **提供商利润**    | -        | **$7.07-$9.14** |
+| **每美元错误数**  | 1x       | **22-4x**       |
 
 用户按官方价格付费，却只收到 **38%** 的输出量，每 1,273 次查询被窃取 **$7-9**。
 
@@ -244,10 +254,12 @@ MET 通过双样本假设检验判断 Shadow API 输出是否与官方模型来�
 ### Shadow API 技术栈
 
 在 17 个识别的 Shadow API 中：
+
 - **11 个** 基于开源 AI 模型聚合和分发系统
 - 主要使用 **OneAPI** 和 **NewAPI**（其衍生产品）
 
 **OneAPI 功能**：
+
 - 统一接口（OpenAI 兼容格式）
 - API 密钥管理
 - 二次分发
@@ -258,15 +270,16 @@ MET 通过双样本假设检验判断 Shadow API 输出是否与官方模型来�
 
 ### 合规与透明度
 
-| 合规指标 | 符合的提供商 | 占比 |
-|---------|-------------|------|
-| **ICP 备案** | 1 (API H) | 5.9% |
-| **企业注册** | 1 (API N) | 5.9% |
-| **法律文档 (ToS/隐私政策)** | 2 | 11.8% |
-| **透明身份** | 2 | 11.8% |
-| **可验证来源** | 2 | 11.8% |
+| 合规指标                    | 符合的提供商 | 占比  |
+| --------------------------- | ------------ | ----- |
+| **ICP 备案**                | 1 (API H)    | 5.9%  |
+| **企业注册**                | 1 (API N)    | 5.9%  |
+| **法律文档 (ToS/隐私政策)** | 2            | 11.8% |
+| **透明身份**                | 2            | 11.8% |
+| **可验证来源**              | 2            | 11.8% |
 
 **关键发现**：
+
 - **15/17 (88.2%)** 由个人运营，无透明身份信息
 - **2 个** 服务已停止运营
 - 所有提供商频繁更换上游模型来源，无透明通知
@@ -368,14 +381,15 @@ MET 通过双样本假设检验判断 Shadow API 输出是否与官方模型来�
 ```yaml
 # 在 metadata.json 中增加 API 验证记录
 {
-  "api_verification": {
-    "endpoint": "https://api.example.com/v1/chat/completions",
-    "claimed_model": "gpt-5",
-    "fingerprint_cosine_distance": 14.57,
-    "met_p_value": 0.82,
-    "verification_date": "2026-03-06",
-    "passed": true
-  }
+  "api_verification":
+    {
+      "endpoint": "https://api.example.com/v1/chat/completions",
+      "claimed_model": "gpt-5",
+      "fingerprint_cosine_distance": 14.57,
+      "met_p_value": 0.82,
+      "verification_date": "2026-03-06",
+      "passed": true,
+    },
 }
 ```
 
@@ -390,17 +404,17 @@ class APIVerifier:
         cosine_distance = self.llmmap_probe(endpoint_url)
         if cosine_distance > 1.2 * self.official_baseline:
             return False, "指纹距离异常"
-        
+
         # 阶段 2: MET 统计检验
         met_result = self.met_test(endpoint_url, claimed_model)
         if met_result.reject_null:
             return False, "分布显著不同"
-        
+
         # 阶段 3: 稳定性测试
         std_dev = self.benchmark_stability(endpoint_url)
         if std_dev > 5.0:
             return False, "性能不稳定"
-        
+
         return True, "验证通过"
 ```
 
