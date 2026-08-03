@@ -1,11 +1,19 @@
 ---
-title: 'Research Paper Workflow: From Search to Publication - Complete Guide'
+title: "Research Paper Workflow: From Search to Publication - Complete Guide"
 pubDatetime: 2026-02-12T21:00:00Z
-tags: ['workflow', 'research-methodology', 'academic-writing', 'blog-publishing', 'automation']
-description: '技术博客文章'
+tags:
+  [
+    "workflow",
+    "research-methodology",
+    "academic-writing",
+    "blog-publishing",
+    "automation",
+  ]
+description: "技术博客文章"
 ---
 
 # 研究论文工作流完整指南
+
 ## Research Paper Workflow: From Search to Publication - Complete Guide
 
 **发布日期:** 2026年2月13日  
@@ -19,6 +27,7 @@ description: '技术博客文章'
 本文档完整记录了从**论文搜索 → 综述撰写 → 博客发布**的端到端工作流。这个工作流已在实际项目中验证，可以在 **2.5-3.5 小时内**完成一份高质量的学术综述发布。
 
 **关键成果：**
+
 - ✅ 自动化论文搜索（SearxNG）
 - ✅ 系统化综述撰写（模板化）
 - ✅ 一键博客发布（内外网同步）
@@ -64,6 +73,7 @@ description: '技术博客文章'
 ### 工具配置
 
 **SearxNG Wrapper**
+
 - **地址**: http://127.0.0.1:8765
 - **API Key**: `eCsZLy8b384nYvT4T4ydkO66gBg2_LCI3L0Q_ZcOV30`
 - **格式**: JSON
@@ -71,14 +81,14 @@ description: '技术博客文章'
 
 ### 搜索参数
 
-| 参数 | 类型 | 必需 | 示例 | 说明 |
-|------|------|------|------|------|
-| `q` | string | ✅ | `multi+agent+system` | 搜索词（用 `+` 替代空格） |
-| `format` | string | ✅ | `json` | 必须是 JSON |
-| `api_key` | string | ✅ | Your API key | 认证密钥 |
-| `sort` | string | ❌ | `date` | 按日期排序 |
-| `filter_domain` | string | ❌ | `arxiv.org` | 域名过滤 |
-| `lang` | string | ❌ | `en` | 语言过滤 |
+| 参数            | 类型   | 必需 | 示例                 | 说明                      |
+| --------------- | ------ | ---- | -------------------- | ------------------------- |
+| `q`             | string | ✅   | `multi+agent+system` | 搜索词（用 `+` 替代空格） |
+| `format`        | string | ✅   | `json`               | 必须是 JSON               |
+| `api_key`       | string | ✅   | Your API key         | 认证密钥                  |
+| `sort`          | string | ❌   | `date`               | 按日期排序                |
+| `filter_domain` | string | ❌   | `arxiv.org`          | 域名过滤                  |
+| `lang`          | string | ❌   | `en`                 | 语言过滤                  |
 
 ### 基础命令
 
@@ -104,21 +114,21 @@ BASE_URL = "http://127.0.0.1:8765/search"
 def search_papers(queries, max_per_query=5):
     """使用 SearxNG 搜索论文"""
     print(f"🔍 搜索论文...\n")
-    
+
     all_results = {}
-    
+
     for query in queries:
         print(f"📝 搜索: {query.replace('+', ' ')}")
-        
+
         try:
             cmd = f'curl -s "{BASE_URL}?q={query}&format=json&api_key={API_KEY}&sort=date"'
             output = subprocess.check_output(cmd, shell=True, text=True, timeout=10)
             data = json.loads(output)
-            
+
             if 'results' in data:
                 # 过滤 arXiv 论文
                 arxiv_results = [r for r in data['results'] if r.get('domain') == 'arxiv.org']
-                
+
                 for result in arxiv_results[:max_per_query]:
                     arxiv_id = result.get('arxiv_id')
                     if arxiv_id and arxiv_id not in all_results:
@@ -130,10 +140,10 @@ def search_papers(queries, max_per_query=5):
                             'query': query
                         }
                         print(f"  ✅ {result.get('title')[:60]}...")
-            
+
         except Exception as e:
             print(f"  ❌ 错误: {e}")
-    
+
     print(f"\n📊 总共找到 {len(all_results)} 个独特论文\n")
     return all_results
 
@@ -149,13 +159,13 @@ if __name__ == "__main__":
         "multi+agent+protocol",
         "agent+coordination+system",
     ]
-    
+
     papers = search_papers(queries, max_per_query=5)
-    
+
     # 保存结果
     with open('/tmp/papers.json', 'w') as f:
         json.dump(papers, f, indent=2, ensure_ascii=False)
-    
+
     print(f"✅ 结果已保存到 /tmp/papers.json")
 ```
 
@@ -166,7 +176,7 @@ if __name__ == "__main__":
 ✅ **认证**: 必须包含 `api_key`  
 ✅ **过滤**: 过滤 `domain == 'arxiv.org'` 获取学术论文  
 ✅ **去重**: 按 `arxiv_id` 去重  
-✅ **排序**: 使用 `sort=date` 获取最新论文  
+✅ **排序**: 使用 `sort=date` 获取最新论文
 
 ---
 
@@ -232,33 +242,33 @@ title: "English Title for Display"
 date: 2026-02-13T05:00:00+08:00
 draft: false
 tags: ["tag1", "tag2", "tag3", "tag4", "tag5"]
-description: '技术博客文章'
+description: "技术博客文章"
 categories: ["Research", "Category1", "Category2"]
 ---
 ```
 
 ### 内容要求
 
-| 要求 | 标准 | 说明 |
-|------|------|------|
-| **字数** | 4,000-5,000 | 学术级深度 |
-| **论文数** | 5-10 | 代表性样本 |
-| **结构** | 分层清晰 | H1/H2/H3 层级 |
-| **图表** | ASCII + 表格 | 易于理解 |
-| **实用性** | 包含启示 | 对实际系统的指导 |
-| **语言** | 英文标题 | 内容可双语 |
+| 要求       | 标准         | 说明             |
+| ---------- | ------------ | ---------------- |
+| **字数**   | 4,000-5,000  | 学术级深度       |
+| **论文数** | 5-10         | 代表性样本       |
+| **结构**   | 分层清晰     | H1/H2/H3 层级    |
+| **图表**   | ASCII + 表格 | 易于理解         |
+| **实用性** | 包含启示     | 对实际系统的指导 |
+| **语言**   | 英文标题     | 内容可双语       |
 
 ### 撰写时间分配
 
-| 部分 | 时间 | 说明 |
-|------|------|------|
-| 执行摘要 | 10 分钟 | 概览全文 |
-| 每篇论文分析 | 15-20 分钟 | 5 篇 = 75-100 分钟 |
-| 关键发现 | 15 分钟 | 提炼核心 |
-| 对比矩阵 | 10 分钟 | 表格整理 |
-| 启示和结论 | 15 分钟 | 实践指导 |
-| 校对和格式 | 10 分钟 | 质量检查 |
-| **总计** | **2-3 小时** | 5 篇论文 |
+| 部分         | 时间         | 说明               |
+| ------------ | ------------ | ------------------ |
+| 执行摘要     | 10 分钟      | 概览全文           |
+| 每篇论文分析 | 15-20 分钟   | 5 篇 = 75-100 分钟 |
+| 关键发现     | 15 分钟      | 提炼核心           |
+| 对比矩阵     | 10 分钟      | 表格整理           |
+| 启示和结论   | 15 分钟      | 实践指导           |
+| 校对和格式   | 10 分钟      | 质量检查           |
+| **总计**     | **2-3 小时** | 5 篇论文           |
 
 ---
 
@@ -269,6 +279,7 @@ categories: ["Research", "Category1", "Category2"]
 **格式**: `YYYY-MM-DD-descriptive-title.md`
 
 **示例**:
+
 - ✅ `2026-02-13-autonomous-agents-survey.md`
 - ✅ `2026-02-13-agent-orchestration-survey.md`
 - ❌ `autonomous-agents-survey.md` (缺少日期)
@@ -284,11 +295,11 @@ python3 /home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py \
 
 ### 发布位置
 
-| 位置 | 路径 | 说明 |
-|------|------|------|
-| **本地博客** | `/home/chengzh/myblog/content/posts/` | 开发环境 |
+| 位置         | 路径                                             | 说明     |
+| ------------ | ------------------------------------------------ | -------- |
+| **本地博客** | `/home/chengzh/myblog/content/posts/`            | 开发环境 |
 | **公网博客** | `/home/chengzh/clean-vercel-blog/content/posts/` | 生产环境 |
-| **Git 仓库** | GitHub cloudzun/clean-vercel-blog | 版本控制 |
+| **Git 仓库** | GitHub cloudzun/clean-vercel-blog                | 版本控制 |
 
 ### 访问地址
 
@@ -327,6 +338,7 @@ python3 /home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py \
 ## ✅ 完整工作流检查清单
 
 ### 搜索阶段
+
 - [ ] 定义搜索关键词（5-8 个多角度查询）
 - [ ] 运行搜索脚本
 - [ ] 验证结果数量（目标: 20-40 篇）
@@ -335,6 +347,7 @@ python3 /home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py \
 - [ ] 保存搜索结果到 JSON
 
 ### 撰写阶段
+
 - [ ] 获取论文摘要和详细信息
 - [ ] 组织论文信息结构
 - [ ] 撰写执行摘要
@@ -352,6 +365,7 @@ python3 /home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py \
 - [ ] 验证字数（4,000-5,000）
 
 ### 发布阶段
+
 - [ ] 确保文件名格式正确（YYYY-MM-DD-title.md）
 - [ ] 验证 Front Matter 完整
   - [ ] title
@@ -373,32 +387,32 @@ python3 /home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py \
 
 ### 搜索性能
 
-| 指标 | 数值 | 说明 |
-|------|------|------|
-| 单个查询 | 1-2 秒 | 包括网络延迟 |
-| 8 个查询 | 10-15 秒 | 总搜索时间 |
-| 平均论文数 | 32 篇 | 8 查询 × 4 篇/查询 |
-| 去重后 | 20-30 篇 | 实际独特论文 |
+| 指标       | 数值     | 说明               |
+| ---------- | -------- | ------------------ |
+| 单个查询   | 1-2 秒   | 包括网络延迟       |
+| 8 个查询   | 10-15 秒 | 总搜索时间         |
+| 平均论文数 | 32 篇    | 8 查询 × 4 篇/查询 |
+| 去重后     | 20-30 篇 | 实际独特论文       |
 
 ### 撰写性能
 
-| 阶段 | 时间 | 说明 |
-|------|------|------|
-| 执行摘要 | 10 分钟 | 概览全文 |
-| 论文分析 | 75-100 分钟 | 5 篇 × 15-20 分钟 |
-| 关键发现 | 15 分钟 | 提炼核心 |
-| 其他部分 | 35-50 分钟 | 对比、启示、结论 |
-| **总计** | **2-3 小时** | 完整综述 |
+| 阶段     | 时间         | 说明              |
+| -------- | ------------ | ----------------- |
+| 执行摘要 | 10 分钟      | 概览全文          |
+| 论文分析 | 75-100 分钟  | 5 篇 × 15-20 分钟 |
+| 关键发现 | 15 分钟      | 提炼核心          |
+| 其他部分 | 35-50 分钟   | 对比、启示、结论  |
+| **总计** | **2-3 小时** | 完整综述          |
 
 ### 发布性能
 
-| 步骤 | 时间 | 说明 |
-|------|------|------|
-| 文件准备 | 2 分钟 | 验证和格式化 |
-| 脚本执行 | 1 分钟 | 复制和处理 |
-| Git 操作 | 1-2 分钟 | 提交和推送 |
-| Vercel 部署 | 1-2 分钟 | 自动部署 |
-| **总计** | **5-7 分钟** | 完整发布 |
+| 步骤        | 时间         | 说明         |
+| ----------- | ------------ | ------------ |
+| 文件准备    | 2 分钟       | 验证和格式化 |
+| 脚本执行    | 1 分钟       | 复制和处理   |
+| Git 操作    | 1-2 分钟     | 提交和推送   |
+| Vercel 部署 | 1-2 分钟     | 自动部署     |
+| **总计**    | **5-7 分钟** | 完整发布     |
 
 ### 端到端时间
 
@@ -419,11 +433,13 @@ python3 /home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py \
 **症状**: 搜索返回 0 个结果
 
 **原因**:
+
 - API Key 错误
 - 查询词不合适
 - 网络连接问题
 
 **解决**:
+
 ```bash
 # 验证 API Key
 curl "http://127.0.0.1:8765/search?q=test&format=json&api_key=YOUR_KEY"
@@ -440,11 +456,13 @@ ping 127.0.0.1
 **症状**: `json.JSONDecodeError: Expecting value`
 
 **原因**:
+
 - 返回格式不是 JSON
 - 端口错误
 - API Key 错误
 
 **解决**:
+
 ```bash
 # 确保使用 port 8765（不是 8080）
 curl "http://127.0.0.1:8765/search?q=test&format=json&api_key=KEY"
@@ -460,6 +478,7 @@ curl "http://127.0.0.1:8765/search?q=test&format=json&api_key=KEY" | head -c 100
 **原因**: 缺少日期前缀
 
 **解决**:
+
 ```bash
 # ❌ 错误
 autonomous-agents-survey.md
@@ -473,11 +492,13 @@ autonomous-agents-survey.md
 **症状**: 链接返回 404
 
 **原因**:
+
 - Git 推送失败
 - Vercel 部署延迟
 - 链接格式错误
 
 **解决**:
+
 ```bash
 # 检查 Git 状态
 cd /home/chengzh/clean-vercel-blog
@@ -529,6 +550,7 @@ git log --oneline -3
 ### 发布优化
 
 1. **自动化文件名**
+
    ```python
    from datetime import datetime
    filename = datetime.now().strftime('%Y-%m-%d') + "-title.md"
@@ -568,39 +590,39 @@ class ResearchWorkflow:
         self.api_key = api_key
         self.base_url = "http://127.0.0.1:8765/search"
         self.papers = {}
-    
+
     def search(self, queries, max_per_query=5):
         """搜索论文"""
         print(f"🔍 搜索论文...\n")
-        
+
         for query in queries:
             cmd = f'curl -s "{self.base_url}?q={query}&format=json&api_key={self.api_key}&sort=date"'
             output = subprocess.check_output(cmd, shell=True, text=True, timeout=10)
             data = json.loads(output)
-            
+
             if 'results' in data:
                 for result in data['results']:
                     if result.get('domain') == 'arxiv.org':
                         arxiv_id = result.get('arxiv_id')
                         if arxiv_id and arxiv_id not in self.papers:
                             self.papers[arxiv_id] = result
-        
+
         print(f"✅ 找到 {len(self.papers)} 篇论文\n")
         return self.papers
-    
+
     def publish(self, file_path, title):
         """发布到博客"""
         print(f"📤 发布到博客...\n")
-        
+
         cmd = [
             'python3',
             '/home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py',
             '--file', file_path,
             '--title', title
         ]
-        
+
         subprocess.run(cmd, check=True)
-        
+
         filename = os.path.basename(file_path)
         print(f"✅ 发布成功")
         print(f"外网: https://blog.huaqloud.com/posts/{filename[:-3]}/")
@@ -610,11 +632,11 @@ class ResearchWorkflow:
 if __name__ == "__main__":
     api_key = "eCsZLy8b384nYvT4T4ydkO66gBg2_LCI3L0Q_ZcOV30"
     workflow = ResearchWorkflow(api_key)
-    
+
     # 搜索
     queries = ["query1", "query2", "query3"]
     papers = workflow.search(queries)
-    
+
     # 发布
     workflow.publish("/tmp/survey.md", "Survey Title")
 ```

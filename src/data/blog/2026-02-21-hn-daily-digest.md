@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-21'
+title: "HN Daily Digest: 2026-02-21"
 pubDatetime: 2026-02-20T16:17:09Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,64 +162,74 @@ Android开放性面临威胁引发社区强烈关注，开发者呼吁保持平�
 ## 📑 更多热门文章 (11-20)
 
 **11. Uncovering insiders and alpha on Polymarket with AI**
-   ⭐ 56 分 · 💬 29 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47091557) · [原文](https://twitter.com/peterjliu/status/2024901585806225723)
-   > 由于原文内容未能正常加载，仅从标题推测：本文介绍如何利用人工智能技术在预测市场平台Polymarket上识别内部交易者并发现潜在的投资机会。
+⭐ 56 分 · 💬 29 条
+[HN 讨论](https://news.ycombinator.com/item?id=47091557) · [原文](https://twitter.com/peterjliu/status/2024901585806225723)
+
+> 由于原文内容未能正常加载，仅从标题推测：本文介绍如何利用人工智能技术在预测市场平台Polymarket上识别内部交易者并发现潜在的投资机会。
 
 **12. Every company building your AI assistant is now an ad company**
-   ⭐ 61 分 · 💬 30 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47092203) · [原文](https://juno-labs.com/blogs/every-company-building-your-ai-assistant-is-an-ad-company)
-   > 随着OpenAI等AI助手公司纷纷转向广告盈利模式，并推出配备摄像头和麦克风的随身硬件，本地设备推理成为保护用户隐私的唯一出路。
+⭐ 61 分 · 💬 30 条
+[HN 讨论](https://news.ycombinator.com/item?id=47092203) · [原文](https://juno-labs.com/blogs/every-company-building-your-ai-assistant-is-an-ad-company)
+
+> 随着OpenAI等AI助手公司纷纷转向广告盈利模式，并推出配备摄像头和麦克风的随身硬件，本地设备推理成为保护用户隐私的唯一出路。
 
 **13. Blue light filters don't work – controlling total luminance is a better bet**
-   ⭐ 97 分 · 💬 135 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47091606) · [原文](https://www.neuroai.science/p/blue-light-filters-dont-work)
-   > 视觉神经科学家指出蓝光滤镜对改善睡眠无效，控制屏幕总亮度才是更科学有效的方法，并解释了其背后的神经科学原理。
+⭐ 97 分 · 💬 135 条
+[HN 讨论](https://news.ycombinator.com/item?id=47091606) · [原文](https://www.neuroai.science/p/blue-light-filters-dont-work)
+
+> 视觉神经科学家指出蓝光滤镜对改善睡眠无效，控制屏幕总亮度才是更科学有效的方法，并解释了其背后的神经科学原理。
 
 **14. Trump's global tariffs struck down by US Supreme Court**
-   ⭐⭐⭐ 1178 分 · 💬 962 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47089213) · [原文](https://www.bbc.com/news/live/c0l9r67drg7t)
-   > 美国最高法院以6比3裁定特朗普通过国家紧急状态法征收全球关税超越职权，需国会批准，特朗普随后宣布新的10%全球进口关税。
+⭐⭐⭐ 1178 分 · 💬 962 条
+[HN 讨论](https://news.ycombinator.com/item?id=47089213) · [原文](https://www.bbc.com/news/live/c0l9r67drg7t)
+
+> 美国最高法院以6比3裁定特朗普通过国家紧急状态法征收全球关税超越职权，需国会批准，特朗普随后宣布新的10%全球进口关税。
 
 **15. The true story behind the Toronto mystery tunnel**
-   ⭐ 10 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47055261) · [原文](https://macleans.ca/society/elton-mcdonald-and-the-incredible-true-story-behind-the-toronto-mystery-tunnel/)
-   > 揭秘2015年多伦多地下神秘隧道事件真相：两名年轻人出于探险热情挖掘隧道，最终引发全城轰动和警方大规模调查的离奇故事。
+⭐ 10 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47055261) · [原文](https://macleans.ca/society/elton-mcdonald-and-the-incredible-true-story-behind-the-toronto-mystery-tunnel/)
+
+> 揭秘2015年多伦多地下神秘隧道事件真相：两名年轻人出于探险热情挖掘隧道，最终引发全城轰动和警方大规模调查的离奇故事。
 
 **16. Lil' Fun Langs**
-   ⭐ 84 分 · 💬 11 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47091071) · [原文](https://taylor.town/scrapscript-000)
-   > 这是一份精选的小型函数式编程语言实现列表，按代码行数从70到2000行排列，对比了它们在类型系统、模式匹配、高阶函数等特性支持及编译目标方面的差异。
+⭐ 84 分 · 💬 11 条
+[HN 讨论](https://news.ycombinator.com/item?id=47091071) · [原文](https://taylor.town/scrapscript-000)
+
+> 这是一份精选的小型函数式编程语言实现列表，按代码行数从70到2000行排列，对比了它们在类型系统、模式匹配、高阶函数等特性支持及编译目标方面的差异。
 
 **17. The path to ubiquitous AI (17k tokens/sec)**
-   ⭐⭐⭐ 652 分 · 💬 375 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47086181) · [原文](https://taalas.com/the-path-to-ubiquitous-ai/)
-   > 本文探讨了如何通过每秒17000个token的推理速度实现AI的普及化应用，分析了高速AI推理技术对未来AI广泛部署的关键作用和实现路径。
+⭐⭐⭐ 652 分 · 💬 375 条
+[HN 讨论](https://news.ycombinator.com/item?id=47086181) · [原文](https://taalas.com/the-path-to-ubiquitous-ai/)
+
+> 本文探讨了如何通过每秒17000个token的推理速度实现AI的普及化应用，分析了高速AI推理技术对未来AI广泛部署的关键作用和实现路径。
 
 **18. Making frontier cybersecurity capabilities available to defenders**
-   ⭐ 89 分 · 💬 43 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47091469) · [原文](https://www.anthropic.com/news/claude-code-security)
-   > Anthropic推出Claude Code Security功能，利用AI自动扫描代码库中的安全漏洞并生成修复补丁，帮助安全团队发现传统工具难以识别的复杂安全问题。
+⭐ 89 分 · 💬 43 条
+[HN 讨论](https://news.ycombinator.com/item?id=47091469) · [原文](https://www.anthropic.com/news/claude-code-security)
+
+> Anthropic推出Claude Code Security功能，利用AI自动扫描代码库中的安全漏洞并生成修复补丁，帮助安全团队发现传统工具难以识别的复杂安全问题。
 
 **19. Across the US, people are dismantling and destroying Flock surveillance cameras**
-   ⭐ 37 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47095134) · [原文](https://www.bloodinthemachine.com/p/across-the-us-people-are-dismantling)
-   > 美国多地民众因不满Flock监控摄像头与移民执法局共享数据及侵犯隐私，正在自发拆除和破坏这些无需搜查令的车辆监控设备。
+⭐ 37 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47095134) · [原文](https://www.bloodinthemachine.com/p/across-the-us-people-are-dismantling)
+
+> 美国多地民众因不满Flock监控摄像头与移民执法局共享数据及侵犯隐私，正在自发拆除和破坏这些无需搜查令的车辆监控设备。
 
 **20. Legion Health (YC) Is Hiring Cracked SWEs for Autonomous Mental Health**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47090610) · [原文](https://jobs.ashbyhq.com/legionhealth/ffdd2b52-eb21-489e-b124-3c0804231424)
-   > YC孵化的AI心理健康平台Legion Health正在招聘创始工程师，公司年收入已达330万美元，累计融资超700万美元，致力于打造自主式心理健康服务系统。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47090610) · [原文](https://jobs.ashbyhq.com/legionhealth/ffdd2b52-eb21-489e-b124-3c0804231424)
+
+> YC孵化的AI心理健康平台Legion Health正在招聘创始工程师，公司年收入已达330万美元，累计融资超700万美元，致力于打造自主式心理健康服务系统。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 266 分 |
-| 总讨论数 | 2838 条 |
-| 最热文章 | "Keep Android Open" (928⭐) |
+| 指标     | 数值                                                             |
+| -------- | ---------------------------------------------------------------- |
+| 平均热度 | 266 分                                                           |
+| 总讨论数 | 2838 条                                                          |
+| 最热文章 | "Keep Android Open" (928⭐)                                      |
 | 讨论最多 | "Trump's global tariffs struck down by US Supreme Court" (962💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

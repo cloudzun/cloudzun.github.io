@@ -1,8 +1,8 @@
 ---
-title: 'SearxNG Wrapper v3.0: Advanced Sorting, Filtering, and Multilingual Support'
+title: "SearxNG Wrapper v3.0: Advanced Sorting, Filtering, and Multilingual Support"
 pubDatetime: 2026-02-12T07:30:00Z
-tags: ['SearxNG', 'Search', 'Filtering', 'Multilingual', 'API']
-description: '技术博客文章'
+tags: ["SearxNG", "Search", "Filtering", "Multilingual", "API"]
+description: "技术博客文章"
 ---
 
 # SearxNG Wrapper v3.0：高级排序、过滤和多语言支持
@@ -24,6 +24,7 @@ description: '技术博客文章'
 支持三种灵活的排序方式：
 
 #### 相关性排序 (Relevance Sorting)
+
 - **原理：** 根据查询词在标题和摘要中的匹配度计算相关性分数
 - **评分规则：**
   - 标题中精确匹配：100 分
@@ -33,11 +34,13 @@ description: '技术博客文章'
 - **用途：** 找到最相关的搜索结果
 
 **示例：**
+
 ```bash
 curl "http://127.0.0.1:8765/search?q=python+async&sort=relevance&api_key=KEY"
 ```
 
 #### 日期排序 (Date Sorting)
+
 - **原理：** 自动提取结果中的日期信息，按时间排序
 - **支持格式：**
   - `YYYY-MM-DD`
@@ -46,15 +49,18 @@ curl "http://127.0.0.1:8765/search?q=python+async&sort=relevance&api_key=KEY"
 - **用途：** 查找最新或最旧的内容
 
 **示例：**
+
 ```bash
 curl "http://127.0.0.1:8765/search?q=AI+news&sort=date&api_key=KEY"
 ```
 
 #### 域名排序 (Domain Sorting)
+
 - **原理：** 将相同域名的结果聚集在一起
 - **用途：** 按网站组织结果，便于浏览
 
 **示例：**
+
 ```bash
 curl "http://127.0.0.1:8765/search?q=python&sort=domain&api_key=KEY"
 ```
@@ -64,6 +70,7 @@ curl "http://127.0.0.1:8765/search?q=python&sort=domain&api_key=KEY"
 六种强大的过滤条件，可单独或组合使用：
 
 #### 域名过滤 (Domain Filtering)
+
 ```bash
 # 只显示指定域名的结果
 curl "http://127.0.0.1:8765/search?q=python&\
@@ -71,6 +78,7 @@ curl "http://127.0.0.1:8765/search?q=python&\
 ```
 
 #### 排除域名 (Exclude Domains)
+
 ```bash
 # 隐藏指定域名的结果
 curl "http://127.0.0.1:8765/search?q=python&\
@@ -78,6 +86,7 @@ curl "http://127.0.0.1:8765/search?q=python&\
 ```
 
 #### 语言过滤 (Language Filtering)
+
 ```bash
 # 只显示指定语言的结果
 curl "http://127.0.0.1:8765/search?q=machine+learning&\
@@ -85,12 +94,14 @@ curl "http://127.0.0.1:8765/search?q=machine+learning&\
 ```
 
 #### 时间范围 (Time Range)
+
 ```bash
 # 只显示最近 7 天的结果
 curl "http://127.0.0.1:8765/search?q=news&days=7&api_key=KEY"
 ```
 
 #### 去重 (Deduplication)
+
 ```bash
 # 自动移除重复的 URL
 curl "http://127.0.0.1:8765/search?q=test&\
@@ -98,6 +109,7 @@ curl "http://127.0.0.1:8765/search?q=test&\
 ```
 
 #### 去垃圾 (Spam Removal)
+
 ```bash
 # 移除垃圾和广告内容
 curl "http://127.0.0.1:8765/search?q=test&\
@@ -105,6 +117,7 @@ curl "http://127.0.0.1:8765/search?q=test&\
 ```
 
 **垃圾检测模式：**
+
 - `buy.*now` - 购买相关
 - `click.*here` - 点击诱饵
 - `free.*money` - 免费金钱
@@ -115,16 +128,16 @@ curl "http://127.0.0.1:8765/search?q=test&\
 
 支持 8 种语言的自动检测和过滤：
 
-| 语言代码 | 语言名称 | 检测特征 | 示例 |
-|---------|---------|---------|------|
-| `en` | English | 英文字母 | "The quick brown fox" |
-| `zh` | Chinese | 中文汉字 | "快速的棕色狐狸" |
-| `ja` | Japanese | 日文假名 | "速い茶色のキツネ" |
-| `ko` | Korean | 韩文字符 | "빠른 갈색 여우" |
-| `es` | Spanish | 西班牙文字符 | "El rápido zorro marrón" |
-| `fr` | French | 法文字符 | "Le rapide renard brun" |
-| `de` | German | 德文字符 | "Der schnelle braune Fuchs" |
-| `ru` | Russian | 俄文字符 | "Быстрая коричневая лиса" |
+| 语言代码 | 语言名称 | 检测特征     | 示例                        |
+| -------- | -------- | ------------ | --------------------------- |
+| `en`     | English  | 英文字母     | "The quick brown fox"       |
+| `zh`     | Chinese  | 中文汉字     | "快速的棕色狐狸"            |
+| `ja`     | Japanese | 日文假名     | "速い茶色のキツネ"          |
+| `ko`     | Korean   | 韩文字符     | "빠른 갈색 여우"            |
+| `es`     | Spanish  | 西班牙文字符 | "El rápido zorro marrón"    |
+| `fr`     | French   | 法文字符     | "Le rapide renard brun"     |
+| `de`     | German   | 德文字符     | "Der schnelle braune Fuchs" |
+| `ru`     | Russian  | 俄文字符     | "Быстрая коричневая лиса"   |
 
 #### 语言检测原理
 
@@ -181,19 +194,19 @@ GET /search?q=QUERY&FILTER_PARAMS&api_key=KEY
 过滤参数：
   - domains=domain1.com,domain2.com
     只显示指定域名的结果
-  
+
   - exclude_domains=domain1.com,domain2.com
     隐藏指定域名的结果
-  
+
   - languages=en,zh,ja
     只显示指定语言的结果
-  
+
   - days=7
     只显示最近 N 天的结果
-  
+
   - remove_duplicates=true|false (默认: true)
     是否移除重复结果
-  
+
   - remove_spam=true|false (默认: true)
     是否移除垃圾内容
 ```
@@ -255,24 +268,24 @@ curl "http://127.0.0.1:8765/search?q=python&\
 
 ### 响应字段说明
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `query` | string | 搜索查询词 |
-| `results` | array | 搜索结果数组 |
-| `number_of_results` | int | 结果总数 |
-| `timestamp` | string | 响应时间戳 |
-| `cached` | boolean | 是否来自缓存 |
-| `enhancements` | object | 应用的增强功能 |
+| 字段                | 类型    | 说明           |
+| ------------------- | ------- | -------------- |
+| `query`             | string  | 搜索查询词     |
+| `results`           | array   | 搜索结果数组   |
+| `number_of_results` | int     | 结果总数       |
+| `timestamp`         | string  | 响应时间戳     |
+| `cached`            | boolean | 是否来自缓存   |
+| `enhancements`      | object  | 应用的增强功能 |
 
 ### 结果字段说明
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `title` | string | 结果标题 |
-| `url` | string | 结果 URL |
-| `domain` | string | 域名 |
-| `snippet` | string | 结果摘要 |
-| `language` | string | 语言代码（新增） |
+| 字段            | 类型   | 说明             |
+| --------------- | ------ | ---------------- |
+| `title`         | string | 结果标题         |
+| `url`           | string | 结果 URL         |
+| `domain`        | string | 域名             |
+| `snippet`       | string | 结果摘要         |
+| `language`      | string | 语言代码（新增） |
 | `language_name` | string | 语言名称（新增） |
 
 ---
@@ -353,25 +366,25 @@ curl "http://127.0.0.1:8765/search?q=deep+learning&\
 
 ### 处理时间
 
-| 操作 | 时间 | 备注 |
-|------|------|------|
-| 排序（相关性） | <100ms | 内存操作，O(n log n) |
-| 排序（日期） | <100ms | 内存操作，O(n log n) |
-| 排序（域名） | <100ms | 内存操作，O(n) |
-| 过滤（域名） | <50ms | 字符串匹配，O(n) |
-| 过滤（语言） | <50ms | 正则表达式，O(n) |
-| 过滤（去重） | <50ms | 哈希集合，O(n) |
-| 过滤（去垃圾） | <50ms | 正则表达式，O(n) |
-| 语言检测 | <50ms | 正则表达式，O(n) |
-| **总处理时间** | **<200ms** | 所有操作合计 |
+| 操作           | 时间       | 备注                 |
+| -------------- | ---------- | -------------------- |
+| 排序（相关性） | <100ms     | 内存操作，O(n log n) |
+| 排序（日期）   | <100ms     | 内存操作，O(n log n) |
+| 排序（域名）   | <100ms     | 内存操作，O(n)       |
+| 过滤（域名）   | <50ms      | 字符串匹配，O(n)     |
+| 过滤（语言）   | <50ms      | 正则表达式，O(n)     |
+| 过滤（去重）   | <50ms      | 哈希集合，O(n)       |
+| 过滤（去垃圾） | <50ms      | 正则表达式，O(n)     |
+| 语言检测       | <50ms      | 正则表达式，O(n)     |
+| **总处理时间** | **<200ms** | 所有操作合计         |
 
 ### 缓存效果
 
-| 场景 | 响应时间 | 备注 |
-|------|---------|------|
-| 首次查询（无缓存） | 0.79s | 需要请求 SearxNG |
-| 缓存命中 | <10ms | 直接从内存返回 |
-| 加速倍数 | **531.9x** | 实测数据 |
+| 场景               | 响应时间   | 备注             |
+| ------------------ | ---------- | ---------------- |
+| 首次查询（无缓存） | 0.79s      | 需要请求 SearxNG |
+| 缓存命中           | <10ms      | 直接从内存返回   |
+| 加速倍数           | **531.9x** | 实测数据         |
 
 ---
 
@@ -388,7 +401,7 @@ class ResultSorter:
             title = result.get('title', '').lower()
             snippet = result.get('snippet', '').lower()
             query_lower = query.lower()
-            
+
             if query_lower in title:
                 return 100
             if any(word in title for word in query_lower.split()):
@@ -398,7 +411,7 @@ class ResultSorter:
             if any(word in snippet for word in query_lower.split()):
                 return 40
             return 0
-        
+
         return sorted(results, key=relevance_score, reverse=True)
 ```
 
@@ -416,14 +429,14 @@ class ResultFilter:
             r'viagra|cialis',
             r'casino|poker',
         ]
-        
+
         filtered = []
         for result in results:
             text = f"{result['title']} {result['snippet']}".lower()
             is_spam = any(re.search(p, text) for p in spam_patterns)
             if not is_spam:
                 filtered.append(result)
-        
+
         return filtered
 ```
 
@@ -440,12 +453,12 @@ class MultilingualSupport:
             'ja': r'[\u3040-\u309f\u30a0-\u30ff]',
             # ... 其他语言
         }
-        
+
         scores = {}
         for lang, pattern in patterns.items():
             matches = len(re.findall(pattern, text))
             scores[lang] = matches
-        
+
         return max(scores, key=scores.get) if max(scores.values()) > 0 else 'unknown'
 ```
 
@@ -511,14 +524,14 @@ v3.0 完全向后兼容 v2.0：
 
 ## 📈 功能对比
 
-| 功能 | v1.0 | v2.0 | v3.0 |
-|------|------|------|------|
-| JSON API | ❌ | ✅ | ✅ |
-| 高性能缓存 | ❌ | ✅ | ✅ |
-| 高级排序 | ❌ | ❌ | ✅ |
-| 高级过滤 | ❌ | ❌ | ✅ |
-| 多语言支持 | ❌ | ❌ | ✅ |
-| 语言检测 | ❌ | ❌ | ✅ |
+| 功能       | v1.0 | v2.0 | v3.0 |
+| ---------- | ---- | ---- | ---- |
+| JSON API   | ❌   | ✅   | ✅   |
+| 高性能缓存 | ❌   | ✅   | ✅   |
+| 高级排序   | ❌   | ❌   | ✅   |
+| 高级过滤   | ❌   | ❌   | ✅   |
+| 多语言支持 | ❌   | ❌   | ✅   |
+| 语言检测   | ❌   | ❌   | ✅   |
 
 ---
 

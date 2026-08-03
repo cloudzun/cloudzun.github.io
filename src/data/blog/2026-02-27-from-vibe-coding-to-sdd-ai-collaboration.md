@@ -1,8 +1,8 @@
 ---
-title: 'From Vibe Coding to SDD: The Engineering Evolution of AI Collaboration'
+title: "From Vibe Coding to SDD: The Engineering Evolution of AI Collaboration"
 pubDatetime: 2026-02-26T22:00:00Z
-tags: ['AI', 'SDD', 'OpenCode', 'Engineering', 'Spec-Driven-Development']
-description: '技术博客文章'
+tags: ["AI", "SDD", "OpenCode", "Engineering", "Spec-Driven-Development"]
+description: "技术博客文章"
 ---
 
 # 从 Vibe Coding 到 SDD：AI 协作开发的工程化演进
@@ -28,6 +28,7 @@ description: '技术博客文章'
 Vibe Coding 的核心体验是"想到什么说什么，AI 帮你实现"。这种方式在探索阶段很爽，但在工程交付场景里有一个致命缺陷：**没有可验证的规范，就没有办法判断"做对了"还是"做完了"**。
 
 AI 生成的代码能跑，但：
+
 - 它是否覆盖了所有需求？不知道，没有 spec 对照。
 - 它是否遵循了技术约束？不知道，没有 constitution 约束。
 - 它是否完成了所有任务？不知道，没有 tasks 追踪。
@@ -35,6 +36,7 @@ AI 生成的代码能跑，但：
 SDD（Spec-Driven Development，规范驱动开发）解决的正是这个问题。它的核心不是"让开发变得更复杂"，而是**在动手之前把"什么算做对"说清楚**。
 
 四层文档体系：
+
 - **constitution.md**：项目边界和技术约束（什么不能做）
 - **spec.md**：需求规范，用 Given-When-Then 格式写验收标准
 - **plan.md**：技术方案，架构决策和项目结构
@@ -49,10 +51,12 @@ SDD（Spec-Driven Development，规范驱动开发）解决的正是这个问题
 基于上次的经验，这次我换了一种方式。
 
 我把角色拆成两个：
+
 - **HuaQloud（Claude Sonnet）**：架构师，负责读懂需求、生成规范文档、设计验证方案
 - **OpenCode（Qwen3.5）**：编码者，负责按 tasks.md 实现代码
 
 我作为项目发起者，做了三件事：
+
 1. 把实验手册和参考项目交给 HuaQloud，说明"直接读手册会跑偏，需要你先生成规范文档"
 2. 确认 HuaQloud 生成的四层文档符合预期后，授权开始实现
 3. 在最终验收时审查结果
@@ -80,6 +84,7 @@ SDD（Spec-Driven Development，规范驱动开发）解决的正是这个问题
 ### 2. 验收标准：什么叫"做对了"？
 
 这次实验里，我设计了 6 项验证用例：
+
 - 空列表初始状态
 - 添加有效 URL
 - 重复 URL 的幂等性处理
@@ -111,6 +116,7 @@ SDD（Spec-Driven Development，规范驱动开发）解决的正是这个问题
 这两者的差距，不是 AI 能力的差距，是**工作方式**的差距。
 
 AI 时代的工程师，核心竞争力不再是"能写代码"，而是：
+
 - **能定义需求**：把模糊的想法转化为可验证的规范
 - **能设计约束**：告诉 AI 什么不能做，比告诉它什么能做更重要
 - **能判断质量**：在 AI 认为"完成了"的时候，知道哪里还不够好

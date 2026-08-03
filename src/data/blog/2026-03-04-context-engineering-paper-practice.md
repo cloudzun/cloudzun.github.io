@@ -1,7 +1,8 @@
 ---
-title: '从论文到实践：基于文件系统的上下文工程架构设计'
+title: "从论文到实践：基于文件系统的上下文工程架构设计"
 pubDatetime: 2026-03-04T00:00:00Z
-tags: ['AI', 'Context Engineering', 'System Design', 'Paper Review', 'Architecture']
+tags:
+  ["AI", "Context Engineering", "System Design", "Paper Review", "Architecture"]
 author: "HuaQloud"
 description: "解读 arXiv:2512.05470《Agentic File System Abstraction for Context Engineering》，并展示如何将其理念应用到 Deep Research 工作流中"
 ---
@@ -32,13 +33,13 @@ description: "解读 arXiv:2512.05470《Agentic File System Abstraction for Cont
 
 论文提出将 **Unix 文件系统哲学** 应用于上下文工程：
 
-| Unix 概念 | AI 上下文对应 |
-|-----------|--------------|
-| 文件 | 上下文元素（知识、记忆、工具） |
-| 目录层次 | 上下文组织结构 |
-| 挂载点 | 异构数据源统一接口 |
-| 元数据（inode） | 时间戳、来源、访问控制 |
-| 日志（journal） | 交互事务记录 |
+| Unix 概念       | AI 上下文对应                  |
+| --------------- | ------------------------------ |
+| 文件            | 上下文元素（知识、记忆、工具） |
+| 目录层次        | 上下文组织结构                 |
+| 挂载点          | 异构数据源统一接口             |
+| 元数据（inode） | 时间戳、来源、访问控制         |
+| 日志（journal） | 交互事务记录                   |
 
 ### 三层持久化架构
 
@@ -165,21 +166,21 @@ class ContextRepository:
         self.history_dir = self.context_dir / "history"
         self.memory_dir = self.context_dir / "memory"
         self.pad_dir = self.context_dir / "pad"
-        
+
         # 创建三层目录结构
         self._init_directories()
-    
+
     def log_search(self, search: SearchHistory):
         """记录搜索历史（不可变）"""
         path = self.history_dir / "searches" / f"{search.search_id}.json"
         # ... 写入 JSON
-    
+
     def save_memory_item(self, item: MemoryItem):
         """保存或更新记忆项（可更新）"""
         slug = item.name.lower().replace(' ', '_')
         path = self.memory_dir / "items" / f"{slug}.json"
         # ... 版本控制 + 合并 facts
-    
+
     def create_scratchpad(self, batch_id: int) -> ScratchpadNote:
         """创建批次工作区（临时）"""
         return ScratchpadNote(batch_id=batch_id, status="active")
@@ -192,15 +193,15 @@ class ContextConstructor:
     def select_context(self, outline, fields, batch_size=3) -> ContextManifest:
         # 1. 获取待调研 items
         all_items = outline.get('items', [])
-        
+
         # 2. 检查 Memory 中已有的 facts
         existing_facts = self.repo.query_memory(item_names)
-        
+
         # 3. 选择本批次 items（跳过已完成的）
-        pending_items = [item for item in all_items 
+        pending_items = [item for item in all_items
                         if item['name'] not in existing_facts]
         batch_items = pending_items[:batch_size]
-        
+
         # 4. 生成 manifest
         manifest = ContextManifest(
             selected_items=[item['name'] for item in batch_items],
@@ -209,11 +210,12 @@ class ContextConstructor:
             token_budget=128000,
             estimated_tokens=self._estimate_tokens(batch_items)
         )
-        
+
         return manifest
 ```
 
 **Manifest 示例**：
+
 ```json
 {
   "selected_items": ["Cursor", "Windsurf", "Zed"],
@@ -236,23 +238,23 @@ class ContextEvaluator:
     def evaluate(self, item_name, json_output, fields_path) -> EvaluationResult:
         # 1. 字段完整性检查
         coverage_rate = self._check_coverage(json_output, fields_path)
-        
+
         # 2. 一致性检查（与已有 Memory 对比）
         consistency_score = self._check_consistency(json_output, item_name)
-        
+
         # 3. 幻觉检测
         hallucinations = self._detect_hallucinations(json_output)
-        
+
         # 4. 计算置信度
         confidence = self._calculate_confidence(coverage_rate, consistency_score)
-        
+
         # 5. 判断是否需要人工审核
         requires_review = (
             confidence < 0.6 or
             len(hallucinations) > 2 or
             coverage_rate < 0.7
         )
-        
+
         return EvaluationResult(
             item=item_name,
             coverage_rate=coverage_rate,
@@ -264,13 +266,14 @@ class ContextEvaluator:
 ```
 
 **评估结果示例**：
+
 ```json
 {
   "item": "Cursor",
   "coverage_rate": 0.92,
   "consistency_score": 0.88,
   "hallucinations": [],
-  "confidence": 0.90,
+  "confidence": 0.9,
   "requires_human_review": false
 }
 ```
@@ -345,10 +348,12 @@ class ContextEvaluator:
 ### 1. 可追溯性（Traceability）
 
 **改造前**：
+
 - 只知道 JSON 文件存在
 - 不知道某个结论来自哪次搜索
 
 **改造后**：
+
 ```json
 // context/history/searches/20260304_114500_cursor.json
 {
@@ -370,10 +375,12 @@ class ContextEvaluator:
 ### 2. 知识复用（Knowledge Reuse）
 
 **改造前**：
+
 - 每批次从零开始
 - 无法利用已有发现
 
 **改造后**：
+
 ```python
 # Constructor 自动查询 Memory
 existing_facts = repo.query_memory(["Cursor", "Windsurf", "Zed"])
@@ -392,9 +399,11 @@ prompt = f"""
 ### 3. 质量控制（Quality Control）
 
 **改造前**：
+
 - 仅有字段完整性检查
 
 **改造后**：
+
 ```python
 # Evaluator 多维度评估
 coverage_rate = check_coverage(json_output, fields)        # 字段覆盖率
@@ -412,9 +421,11 @@ if confidence < 0.6 or len(hallucinations) > 2:
 ### 4. 人在回路（Human-in-the-Loop）
 
 **改造前**：
+
 - 仅在批次之间确认
 
 **改造后**：
+
 ```json
 // context/pad/batch_1/notes.json
 {
@@ -438,31 +449,34 @@ if confidence < 0.6 or len(hallucinations) > 2:
 
 ## 量化对比
 
-| 指标 | 改造前 | 改造后 | 改进幅度 |
-|------|--------|--------|---------|
-| **可追溯性** | 文件存在检查 | History + Lineage + 版本控制 | ⬆️⬆️⬆️ |
-| **断点续传** | 基础 | Memory 查询 + 版本验证 | ⬆️⬆️ |
-| **质量控制** | 字段完整性 | 覆盖率 + 一致性 + 幻觉检测 | ⬆️⬆️⬆️ |
-| **人机协作** | 批次确认 | 自动触发式审核 + Scratchpad | ⬆️⬆️ |
-| **可复用性** | 硬编码路径 | 统一文件系统抽象 | ⬆️⬆️ |
-| **审计能力** | 无 | 完整事务日志 + 回放支持 | ⬆️⬆️⬆️ |
+| 指标         | 改造前       | 改造后                       | 改进幅度 |
+| ------------ | ------------ | ---------------------------- | -------- |
+| **可追溯性** | 文件存在检查 | History + Lineage + 版本控制 | ⬆️⬆️⬆️   |
+| **断点续传** | 基础         | Memory 查询 + 版本验证       | ⬆️⬆️     |
+| **质量控制** | 字段完整性   | 覆盖率 + 一致性 + 幻觉检测   | ⬆️⬆️⬆️   |
+| **人机协作** | 批次确认     | 自动触发式审核 + Scratchpad  | ⬆️⬆️     |
+| **可复用性** | 硬编码路径   | 统一文件系统抽象             | ⬆️⬆️     |
+| **审计能力** | 无           | 完整事务日志 + 回放支持      | ⬆️⬆️⬆️   |
 
 ---
 
 ## 实施路线图
 
 ### Phase 1: 基础结构（本周）
+
 - ✅ 创建架构设计文档
 - ✅ 实现上下文工程模块（1000+ 行 Python）
 - ✅ 更新 SKILL.md 文档
 - [ ] 集成到 `/research-deep` 执行流程
 
 ### Phase 2: 流水线集成（下周）
+
 - [ ] Constructor：manifest 生成和保存
 - [ ] Updater：上下文注入到 agent prompt
 - [ ] Evaluator：自动验证和人工审核触发
 
 ### Phase 3: 高级功能（后续）
+
 - [ ] 向量搜索（semantic search）
 - [ ] 知识图谱存储
 - [ ] Dashboard（查看 History/Memory/Metadata）

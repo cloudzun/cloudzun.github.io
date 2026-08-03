@@ -1,9 +1,9 @@
 ---
-title: 'OpenClaw与Discord集成完整指南'
+title: "OpenClaw与Discord集成完整指南"
 featured: true
 pubDatetime: 2026-02-04T12:01:00Z
-tags: ['openclaw', 'discord', 'integration', 'tutorial']
-description: '技术博客文章'
+tags: ["openclaw", "discord", "integration", "tutorial"]
+description: "技术博客文章"
 ---
 
 # OpenClaw与Discord集成完整指南
@@ -87,28 +87,31 @@ https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=27
 {
   "channels": {
 ```
+
 "discord": {
-  "enabled": true,
-  "token": "YOUR_BOT_TOKEN_HERE",
-  "groupPolicy": "allowlist",
-  "guilds": {
-    "YOUR_GUILD_ID_HERE": {
-      "requireMention": false,
-      "channels": {
-        "YOUR_CHANNEL_ID_HERE": {
-          "allow": true,
-          "requireMention": false
-        }
-      }
-    }
-  }
+"enabled": true,
+"token": "YOUR_BOT_TOKEN_HERE",
+"groupPolicy": "allowlist",
+"guilds": {
+"YOUR_GUILD_ID_HERE": {
+"requireMention": false,
+"channels": {
+"YOUR_CHANNEL_ID_HERE": {
+"allow": true,
+"requireMention": false
 }
+}
+}
+}
+}
+
 ```
   }
 }
 ```
 
 **重要说明**：
+
 - 将`YOUR_BOT_TOKEN_HERE`替换为实际的机器人令牌
 - 将`YOUR_GUILD_ID_HERE`替换为服务器ID
 - 将`YOUR_CHANNEL_ID_HERE`替换为频道ID
@@ -180,14 +183,18 @@ message action=channel-list channel=discord guildId=YOUR_GUILD_ID
 "channels": {
   "YOUR_EXISTING_CHANNEL_ID": {
 ```
+
 "allow": true,
 "requireMention": false
+
 ```
   },
   "YOUR_NEW_CHANNEL_ID": {
 ```
+
 "allow": true,
 "requireMention": false
+
 ```
   }
 }

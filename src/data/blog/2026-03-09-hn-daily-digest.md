@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-09'
+title: "HN Daily Digest: 2026-03-09"
 pubDatetime: 2026-03-08T14:43:31Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ Agent Safehouse是一个为macOS系统设计的本地AI代理沙箱工具，通�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Z80 Sans – a disassembler in a font (2024)
-   ⭐ 57 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47256810) · [原文](https://github.com/nevesnunes/z80-sans)
-   > 这是一个创意项目，将Z80汇编指令反汇编功能嵌入OpenType字体中，实现了独特的代码可视化方式。
+
+⭐ 57 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47256810) · [原文](https://github.com/nevesnunes/z80-sans)
+
+> 这是一个创意项目，将Z80汇编指令反汇编功能嵌入OpenType字体中，实现了独特的代码可视化方式。
 
 #### 12. WSL Manager
-   ⭐ 53 分 · 💬 32 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47299505) · [原文](https://github.com/bostrot/wsl2-distro-manager)
-   > WSL Manager是一个图形化管理工具，能够快速创建、配置和管理Windows Subsystem for Linux 2（WSL2）的多个Linux发行版实例。
+
+⭐ 53 分 · 💬 32 条
+[HN 讨论](https://news.ycombinator.com/item?id=47299505) · [原文](https://github.com/bostrot/wsl2-distro-manager)
+
+> WSL Manager是一个图形化管理工具，能够快速创建、配置和管理Windows Subsystem for Linux 2（WSL2）的多个Linux发行版实例。
 
 #### 13. Blacksky AppView
-   ⭐ 39 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47301808) · [原文](https://github.com/blacksky-algorithms/atproto)
-   > Blacksky AppView是Bluesky社交协议的性能优化版本分支，通过缓存和社区功能增强改进了应用视图的效率。
+
+⭐ 39 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47301808) · [原文](https://github.com/blacksky-algorithms/atproto)
+
+> Blacksky AppView是Bluesky社交协议的性能优化版本分支，通过缓存和社区功能增强改进了应用视图的效率。
 
 #### 14. Pushing and Pulling: Three reactivity algorithms
-   ⭐ 39 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47293195) · [原文](https://jonathan-frere.com/posts/reactivity-algorithms/)
-   > 本文介绍了三种响应式引擎的实现算法——推送式、拉取式和混合式，分析了各自的原理、优缺点及在Web框架中的应用。
+
+⭐ 39 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47293195) · [原文](https://jonathan-frere.com/posts/reactivity-algorithms/)
+
+> 本文介绍了三种响应式引擎的实现算法——推送式、拉取式和混合式，分析了各自的原理、优缺点及在Web框架中的应用。
 
 #### 15. Lil Finder Guy
-   ⭐ 31 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47301241) · [原文](https://basicappleguy.com/basicappleblog/lil-finder-guy)
-   > 本文介绍了一个神秘的"小Finder家伙"角色，它在苹果MacBook Neo发布当天首次出现，其真实身份和目的至今成谜。
+
+⭐ 31 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47301241) · [原文](https://basicappleguy.com/basicappleblog/lil-finder-guy)
+
+> 本文介绍了一个神秘的"小Finder家伙"角色，它在苹果MacBook Neo发布当天首次出现，其真实身份和目的至今成谜。
 
 #### 16. Artificial-life: A simple (300 lines of code) reproduction of Computational Life
-   ⭐ 30 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47301233) · [原文](https://github.com/Rabrg/artificial-life)
-   > 这是一个用300行代码实现的人工生命模拟项目，展示了如何通过简单的交互规则产生自我复制和演化的程序。
+
+⭐ 30 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47301233) · [原文](https://github.com/Rabrg/artificial-life)
+
+> 这是一个用300行代码实现的人工生命模拟项目，展示了如何通过简单的交互规则产生自我复制和演化的程序。
 
 #### 17. An Analysis of User-Space Idle State Instructions on x86 Processors
-   ⭐ 9 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47275463) · [原文](https://dl.acm.org/doi/10.1145/3676151.3719370)
-   > 本文分析了x86处理器中用户空间空闲状态指令的特性和性能影响，揭示了这些指令在系统功耗优化和性能管理中的实际作用机制。
+
+⭐ 9 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47275463) · [原文](https://dl.acm.org/doi/10.1145/3676151.3719370)
+
+> 本文分析了x86处理器中用户空间空闲状态指令的特性和性能影响，揭示了这些指令在系统功耗优化和性能管理中的实际作用机制。
 
 #### 18. SQG (SQL to Code Generator) Now with Java Streams and List Type Support
-   ⭐ 8 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47265856) · [原文](https://sqg.dev/blog/java-streams-and-list-types/)
-   > SQG v0.10.0版本新增Java Streams流式处理和列表类型支持，增强了类型安全的SQL代码生成能力。
+
+⭐ 8 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47265856) · [原文](https://sqg.dev/blog/java-streams-and-list-types/)
+
+> SQG v0.10.0版本新增Java Streams流式处理和列表类型支持，增强了类型安全的SQL代码生成能力。
 
 #### 19. Detection Is Not Protection: What WAF Detection Mode Does (and Doesn't)
-   ⭐ 4 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47301967) · [原文](https://blog.ebbypeter.com/2026/03/detection-is-not-protection-what-azure-waf-detection-mode-actually-does-and-doesnt/)
-   > 本文揭示Azure WAF检测模式的真相：它仅记录威胁而不阻止攻击，许多组织因默认配置而误认为已获得保护，实际上毫无防御效果。
+
+⭐ 4 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47301967) · [原文](https://blog.ebbypeter.com/2026/03/detection-is-not-protection-what-azure-waf-detection-mode-actually-does-and-doesnt/)
+
+> 本文揭示Azure WAF检测模式的真相：它仅记录威胁而不阻止攻击，许多组织因默认配置而误认为已获得保护，实际上毫无防御效果。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 88 分 |
-| 总讨论数 | 631 条 |
-| 最热文章 | "FrameBook" (322⭐) |
+| 指标     | 数值                                             |
+| -------- | ------------------------------------------------ |
+| 平均热度 | 88 分                                            |
+| 总讨论数 | 631 条                                           |
+| 最热文章 | "FrameBook" (322⭐)                              |
 | 讨论最多 | "Why can't you tune your guitar? (2019)" (115💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_
