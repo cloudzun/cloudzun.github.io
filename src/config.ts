@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://github.com/cloudzun",
   desc: "AI Engineer | Automation Expert | Tech Blogger - 分享 AI、自动化和开发经验",
   title: "CloudZun",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "cloudzun-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
