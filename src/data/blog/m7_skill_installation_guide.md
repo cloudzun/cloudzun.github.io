@@ -1,8 +1,17 @@
 ---
-title: 'M7 Stock Analysis Skill - Installation and Usage Guide'
+title: "M7 Stock Analysis Skill - Installation and Usage Guide"
 pubDatetime: 2026-02-13T00:30:00Z
-tags: ['M7', 'skill', 'automation', 'stock-analysis', 'installation-guide', 'tutorial', 'how-to']
-description: '技术博客文章'
+tags:
+  [
+    "M7",
+    "skill",
+    "automation",
+    "stock-analysis",
+    "installation-guide",
+    "tutorial",
+    "how-to",
+  ]
+description: "技术博客文章"
 ---
 
 # M7 Stock Analysis Skill - 安装和使用指南
@@ -16,7 +25,7 @@ M7 Stock Analysis Skill 已完全集成到 OpenClaw 生态系统中，可以直�
 ```
 ✅ Skill 已安装
    位置: /home/chengzh/clawd/skills/m7-stock-analysis/
-   
+
 ✅ 文件结构完整
    - SKILL.md (Skill 标准文档)
    - README.md (完整使用文档)
@@ -71,6 +80,7 @@ sessions_spawn task="Run M7 stock analysis" --agentId main
 ```
 
 **预期输出**:
+
 ```
 ╔════════════════════════════════════════════════════════════════╗
 ║          M7 Stock Analysis Skill - Starting                   ║
@@ -116,7 +126,8 @@ sessions_spawn task="Run M7 stock analysis" --agentId main
 ./m7_analysis.sh --skip-publish
 ```
 
-**用途**: 
+**用途**:
+
 - 测试报告内容
 - 手动审核后再发布
 - 调试和开发
@@ -227,13 +238,13 @@ python3 /home/chengzh/clawd/skills/blog-publish/scripts/publish_blog.py --help
 
 ## 📚 文档导航
 
-| 文档 | 用途 | 位置 |
-|------|------|------|
-| SKILL.md | Skill 标准文档 | 本目录 |
-| README.md | 完整使用文档 | 本目录 |
-| INSTALLATION_GUIDE.md | 安装和使用指南 | 本文件 |
-| INVESTMENT_FRAMEWORK.md | 投资分析框架 | references/ |
-| M7_STOCKS.json | M7 公司列表 | references/ |
+| 文档                    | 用途           | 位置        |
+| ----------------------- | -------------- | ----------- |
+| SKILL.md                | Skill 标准文档 | 本目录      |
+| README.md               | 完整使用文档   | 本目录      |
+| INSTALLATION_GUIDE.md   | 安装和使用指南 | 本文件      |
+| INVESTMENT_FRAMEWORK.md | 投资分析框架   | references/ |
+| M7_STOCKS.json          | M7 公司列表    | references/ |
 
 ## 🎓 学习路径
 
@@ -396,4 +407,4 @@ cd /home/chengzh/clawd/skills/m7-stock-analysis
 **作者**: HuaQloud AI Assistant  
 **维护**: OpenClaw Ecosystem
 
-*免责声明: 本指南仅供参考。使用本 Skill 生成的分析报告不构成投资建议。投资有风险，请谨慎决策。*
+_免责声明: 本指南仅供参考。使用本 Skill 生成的分析报告不构成投资建议。投资有风险，请谨慎决策。_

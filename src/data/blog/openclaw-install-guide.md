@@ -1,8 +1,16 @@
 ---
-title: 'OpenClaw AI Assistant 完整安装指南（2026 版）'
+title: "OpenClaw AI Assistant 完整安装指南（2026 版）"
 pubDatetime: 2026-03-10T15:55:00Z
-tags: ['OpenClaw', 'AI Assistant', 'Installation', 'Tutorial', 'Claude Code', 'Setup Guide']
-description: '技术博客文章'
+tags:
+  [
+    "OpenClaw",
+    "AI Assistant",
+    "Installation",
+    "Tutorial",
+    "Claude Code",
+    "Setup Guide",
+  ]
+description: "技术博客文章"
 mermaid: true
 ---
 
@@ -25,14 +33,14 @@ OpenClaw 是一个开源的 AI 助手框架，灵感来源于 Anthropic 的 Clau
 
 **与商业产品对比**：
 
-| 特性 | OpenClaw | Claude Code | GitHub Copilot |
-|------|---------|-------------|---------------|
-| 开源 | ✅ 完全开源 | ❌ 闭源 | ❌ 闭源 |
-| 自部署 | ✅ 本地运行 | ❌ 云端 | ❌ 云端 |
-| 多平台 | ✅ 任意平台 | ⚠️ 仅 VSCode | ⚠️ 仅 IDE |
-| 定制化 | ✅ 完全定制 | ❌ 有限 | ❌ 有限 |
-| 成本 | 💰 Token 费用 | 💰 $20/月+Token | 💰 $10/月 |
-| 上手难度 | ⭐⭐⭐ | ⭐ | ⭐⭐ |
+| 特性     | OpenClaw      | Claude Code     | GitHub Copilot |
+| -------- | ------------- | --------------- | -------------- |
+| 开源     | ✅ 完全开源   | ❌ 闭源         | ❌ 闭源        |
+| 自部署   | ✅ 本地运行   | ❌ 云端         | ❌ 云端        |
+| 多平台   | ✅ 任意平台   | ⚠️ 仅 VSCode    | ⚠️ 仅 IDE      |
+| 定制化   | ✅ 完全定制   | ❌ 有限         | ❌ 有限        |
+| 成本     | 💰 Token 费用 | 💰 $20/月+Token | 💰 $10/月      |
+| 上手难度 | ⭐⭐⭐        | ⭐              | ⭐⭐           |
 
 ---
 
@@ -40,13 +48,13 @@ OpenClaw 是一个开源的 AI 助手框架，灵感来源于 Anthropic 的 Clau
 
 ### 1.1 系统要求
 
-| 组件 | 最低要求 | 推荐配置 |
-|------|---------|---------|
+| 组件     | 最低要求         | 推荐配置                  |
+| -------- | ---------------- | ------------------------- |
 | 操作系统 | Linux/macOS/WSL2 | Ubuntu 22.04+ / macOS 13+ |
-| Node.js | v22.0+ | v22.x LTS |
-| 内存 | 2GB | 4GB+ |
-| 磁盘 | 500MB | 2GB+ |
-| 网络 | 可访问 API | 稳定的国际网络（可选） |
+| Node.js  | v22.0+           | v22.x LTS                 |
+| 内存     | 2GB              | 4GB+                      |
+| 磁盘     | 500MB            | 2GB+                      |
+| 网络     | 可访问 API       | 稳定的国际网络（可选）    |
 
 ### 1.2 检查当前环境
 
@@ -129,6 +137,7 @@ node --version
 ```
 
 **国内镜像加速**：
+
 ```bash
 # NVM 镜像
 export NVM_NODEJS_ORG_MIRROR=https://npmmirror.com/mirrors/node
@@ -195,6 +204,7 @@ OpenClaw 本身不包含 AI 模型，需要连接外部 API。以下是常见配
 ### 3.1 推荐：OpenRouter（免费模型，零成本入门）
 
 **优势**：
+
 - ✅ 注册即送免费额度
 - ✅ 支持多种免费模型
 - ✅ 无需国际信用卡
@@ -203,10 +213,12 @@ OpenClaw 本身不包含 AI 模型，需要连接外部 API。以下是常见配
 **步骤**：
 
 #### 第一步：注册账号
+
 1. 访问 [OpenRouter 官网](https://openrouter.ai)
 2. 点击 Sign In，支持 Google、GitHub、邮箱注册
 
 #### 第二步：创建 API Key
+
 1. 登录后点击右上角头像 → Settings
 2. 左侧菜单选择 API Keys
 3. 点击 Create 创建新密钥
@@ -229,7 +241,10 @@ OpenClaw 本身不包含 AI 模型，需要连接外部 API。以下是常见配
         "apiKey": "${OPENROUTER_API_KEY}",
         "api": "openai-completions",
         "models": [
-          { "id": "stepfun/step-3.5-flash:free", "name": "Step 3.5 Flash (Free)" },
+          {
+            "id": "stepfun/step-3.5-flash:free",
+            "name": "Step 3.5 Flash (Free)"
+          },
           { "id": "deepseek-ai/DeepSeek-V3", "name": "DeepSeek V3" }
         ]
       }
@@ -244,6 +259,7 @@ OpenClaw 本身不包含 AI 模型，需要连接外部 API。以下是常见配
 ```
 
 **推荐免费模型**：
+
 - `stepfun/step-3.5-flash:free` - 阶跃星辰，快速响应
 - `google/gemma-2-9b-it:free` - Google Gemma
 - `meta-llama/llama-3-8b-instruct:free` - Meta Llama 3
@@ -253,6 +269,7 @@ OpenClaw 本身不包含 AI 模型，需要连接外部 API。以下是常见配
 ### 3.2 备选：硅基流动（国内提供商）
 
 **优势**：
+
 - ✅ 国内访问速度快
 - ✅ 新注册送 16 元免费算力
 - ✅ 支持支付宝/微信充值
@@ -291,6 +308,7 @@ OpenClaw 本身不包含 AI 模型，需要连接外部 API。以下是常见配
 ```
 
 **费用参考**：
+
 - DeepSeek V3：16 元约 800-1500 次对话
 - Qwen 2.5 72B：约 0.5 元/千 tokens
 
@@ -298,16 +316,16 @@ OpenClaw 本身不包含 AI 模型，需要连接外部 API。以下是常见配
 
 ### 3.3 其他模型提供商
 
-| 提供商 | 官网 | 特点 | 免费额度 |
-|-------|------|------|---------|
-| 阶跃星辰 | https://platform.stepfun.com | 快速、便宜 | ✅ 有免费模型 |
-| 深度求索 | https://platform.deepseek.com | 中文能力强 | ⚠️ 需充值 |
-| 通义千问 | https://dashscope.console.aliyun.com | 阿里生态 | ✅ 有免费额度 |
-| 月之暗面 | https://platform.moonshot.cn | Kimi 大模型 | ⚠️ 需充值 |
-| 腾讯混元 | https://cloud.tencent.com/product/tclm | 腾讯生态 | ✅ hunyuan-lite 免费 |
-| OpenAI | https://platform.openai.com | GPT-4 | ❌ 需国际卡 |
-| Anthropic | https://console.anthropic.com | Claude | ❌ 需国际卡 |
-| Google | https://aistudio.google.com | Gemini | ✅ 有免费额度 |
+| 提供商    | 官网                                   | 特点        | 免费额度             |
+| --------- | -------------------------------------- | ----------- | -------------------- |
+| 阶跃星辰  | https://platform.stepfun.com           | 快速、便宜  | ✅ 有免费模型        |
+| 深度求索  | https://platform.deepseek.com          | 中文能力强  | ⚠️ 需充值            |
+| 通义千问  | https://dashscope.console.aliyun.com   | 阿里生态    | ✅ 有免费额度        |
+| 月之暗面  | https://platform.moonshot.cn           | Kimi 大模型 | ⚠️ 需充值            |
+| 腾讯混元  | https://cloud.tencent.com/product/tclm | 腾讯生态    | ✅ hunyuan-lite 免费 |
+| OpenAI    | https://platform.openai.com            | GPT-4       | ❌ 需国际卡          |
+| Anthropic | https://console.anthropic.com          | Claude      | ❌ 需国际卡          |
+| Google    | https://aistudio.google.com            | Gemini      | ✅ 有免费额度        |
 
 ---
 
@@ -327,6 +345,7 @@ openclaw doctor
 ```
 
 **预期输出**：
+
 ```
 ✅ Gateway: Running (pid 12345)
 ✅ Models: 1 provider configured
@@ -343,6 +362,7 @@ openclaw dashboard
 浏览器会自动打开 http://localhost:18789
 
 **面板功能**：
+
 - 📊 查看运行状态
 - 🔧 配置管理
 - 📝 查看日志
@@ -359,6 +379,7 @@ openclaw chat
 ```
 
 **预期响应**：
+
 ```
 你好！我是你的 AI 助手，基于 OpenClaw 框架运行。
 我可以帮你：
@@ -433,6 +454,7 @@ openclaw gateway restart
 ### 5.3 微信（需要额外配置）
 
 微信需要第三方桥接服务，参考：
+
 - [WeChatFerry](https://github.com/lich0821/WeChatFerry)
 - [Gewechat](https://github.com/Devo919/Gewechat)
 
@@ -485,6 +507,7 @@ openclaw uninstall           # 卸载 OpenClaw
 **原因**：配置文件中的 API Key 未正确设置
 
 **解决方案**：
+
 ```bash
 # 1. 编辑配置文件
 nano ~/.openclaw/openclaw.json
@@ -505,11 +528,13 @@ openclaw gateway restart
 ### Q2: Gateway 启动失败
 
 **可能原因**：
+
 1. 端口被占用（18789）
 2. 配置文件语法错误
 3. Node.js 版本不兼容
 
 **解决方案**：
+
 ```bash
 # 1. 检查端口占用
 lsof -i :18789
@@ -533,12 +558,15 @@ openclaw onboard --install-daemon
 ### Q3: 模型响应慢或超时
 
 **原因**：
+
 - 网络延迟（国际 API）
 - 模型负载高
 - Token 过多（上下文太长）
 
 **解决方案**：
+
 1. **切换更快的模型**：
+
    ```json
    {
      "agents": {
@@ -550,6 +578,7 @@ openclaw onboard --install-daemon
    ```
 
 2. **启用 Prompt Caching**（如果支持）：
+
    ```json
    {
      "models": {
@@ -572,6 +601,7 @@ openclaw onboard --install-daemon
 **错误信息**：`EACCES: permission denied`
 
 **解决方案**：
+
 ```bash
 # 方式 1：使用 sudo
 sudo npm install -g openclaw@latest
@@ -593,6 +623,7 @@ npm install -g openclaw@latest
 **解决方案**：
 
 1. **使用国内镜像**：
+
    ```bash
    npm config set registry https://registry.npmmirror.com
    ```
@@ -625,7 +656,7 @@ npm install -g openclaw@latest
   },
   "agents": {
     "defaults": {
-      "thinking": "off"  // 关闭深度思考（节省 Token）
+      "thinking": "off" // 关闭深度思考（节省 Token）
     }
   }
 }
@@ -656,7 +687,7 @@ sudo systemctl start openclaw-gateway
 server {
     listen 443 ssl;
     server_name your-domain.com;
-    
+
     location / {
         proxy_pass http://127.0.0.1:18789;
         proxy_set_header Host $host;
@@ -677,6 +708,7 @@ server {
 4. **[安全加固](https://docs.openclaw.ai/gateway/sandboxing)** - 生产部署
 
 **推荐资源**：
+
 - 官方文档：https://docs.openclaw.ai
 - GitHub: https://github.com/openclaw/openclaw
 - 社区：https://discord.gg/clawd
@@ -697,13 +729,13 @@ server {
 
 ### 成本估算
 
-| 项目 | 免费方案 | 付费方案 |
-|------|---------|---------|
-| OpenClaw | ✅ 免费开源 | ✅ 免费开源 |
-| 模型 API | ✅ OpenRouter 免费模型 | 💰 $5-20/月 |
-| 服务器 | ✅ 本地运行 | 💰 $5-10/月（VPS） |
-| 聊天渠道 | ✅ Discord/Telegram 免费 | - |
-| **总计** | **$0/月** | **$10-30/月** |
+| 项目     | 免费方案                 | 付费方案           |
+| -------- | ------------------------ | ------------------ |
+| OpenClaw | ✅ 免费开源              | ✅ 免费开源        |
+| 模型 API | ✅ OpenRouter 免费模型   | 💰 $5-20/月        |
+| 服务器   | ✅ 本地运行              | 💰 $5-10/月（VPS） |
+| 聊天渠道 | ✅ Discord/Telegram 免费 | -                  |
+| **总计** | **$0/月**                | **$10-30/月**      |
 
 ### 时间投入
 
@@ -779,6 +811,6 @@ server {
 
 ---
 
-*本文基于官方文档和实际部署经验编写。由于技术快速发展，部分细节可能随版本变化。建议参考 [官方文档](https://docs.openclaw.ai) 获取最新信息。*
+_本文基于官方文档和实际部署经验编写。由于技术快速发展，部分细节可能随版本变化。建议参考 [官方文档](https://docs.openclaw.ai) 获取最新信息。_
 
-*如有问题，欢迎在 GitHub 提 Issue 或加入 Discord 社区讨论。*
+_如有问题，欢迎在 GitHub 提 Issue 或加入 Discord 社区讨论。_

@@ -50,6 +50,7 @@ cat ~/.openclaw/agents/opencode/sessions/sessions.json | jq '.[] | select(.state
 ```
 
 **输出**：
+
 ```json
 {
   "state": "error",
@@ -174,7 +175,7 @@ sessions_spawn:
     "entries": {
       "acpx": {
         "config": {
-          "permissionMode": "approve-reads"  // 读操作需批准
+          "permissionMode": "approve-reads" // 读操作需批准
           // 或 "approve-all" (所有操作需批准)
           // 或 "deny-all" (禁止所有操作)
         }
@@ -210,6 +211,7 @@ sessions_spawn:
 ```
 
 **配置说明**：
+
 - `permissionMode: "approve-reads"` - 写操作和命令执行自动允许，读操作需批准
 - `timeoutSeconds: 300` - 每个权限请求超时 5 分钟
 - `queueOwnerTtlSeconds: 30` - 队列所有者 TTL，避免延迟
@@ -238,26 +240,26 @@ sessions_spawn(
 
 ## 📊 权限模式对比
 
-| 模式 | 文件读取 | 文件写入 | 命令执行 | 适用场景 |
-|------|---------|---------|---------|---------|
-| `require` | ❌ 需批准 | ❌ 需批准 | ❌ 需批准 | 不信任代码 |
-| `inherit` | ✅ 继承 | ✅ 继承 | ✅ 继承 | 信任的子代理 |
-| `approve-reads` | ❌ 需批准 | ✅ 允许 | ✅ 允许 | 只读敏感 |
-| `deny-all` | ❌ 禁止 | ❌ 禁止 | ❌ 禁止 | 纯计算任务 |
+| 模式            | 文件读取  | 文件写入  | 命令执行  | 适用场景     |
+| --------------- | --------- | --------- | --------- | ------------ |
+| `require`       | ❌ 需批准 | ❌ 需批准 | ❌ 需批准 | 不信任代码   |
+| `inherit`       | ✅ 继承   | ✅ 继承   | ✅ 继承   | 信任的子代理 |
+| `approve-reads` | ❌ 需批准 | ✅ 允许   | ✅ 允许   | 只读敏感     |
+| `deny-all`      | ❌ 禁止   | ❌ 禁止   | ❌ 禁止   | 纯计算任务   |
 
 ---
 
 ## 📋 任务类型与权限映射
 
-| 任务类型 | 推荐 sandbox | 说明 |
-|---------|-------------|------|
-| **代码修改** | `inherit` | 需要读写文件、运行命令 |
-| **文件创建** | `inherit` | 需要写入新文件 |
-| **代码分析** | `require` | 只读操作，无需写权限 |
-| **文档生成** | `inherit` | 需要写入 Markdown 文件 |
-| **测试运行** | `inherit` | 需要执行 npm test 等命令 |
-| **数据查询** | `require` | 只读数据库/API |
-| **技能开发** | `inherit` | 完整开发流程需要全部权限 |
+| 任务类型     | 推荐 sandbox | 说明                     |
+| ------------ | ------------ | ------------------------ |
+| **代码修改** | `inherit`    | 需要读写文件、运行命令   |
+| **文件创建** | `inherit`    | 需要写入新文件           |
+| **代码分析** | `require`    | 只读操作，无需写权限     |
+| **文档生成** | `inherit`    | 需要写入 Markdown 文件   |
+| **测试运行** | `inherit`    | 需要执行 npm test 等命令 |
+| **数据查询** | `require`    | 只读数据库/API           |
+| **技能开发** | `inherit`    | 完整开发流程需要全部权限 |
 
 ---
 
@@ -329,10 +331,11 @@ cat ~/.openclaw/agents/opencode/sessions/sessions.json | jq '.[] | select(.state
 **原因**：`permissionMode` 设置为 `approve-all` 或 `require`
 
 **解决方案**：
+
 ```json
 {
   "config": {
-    "permissionMode": "approve-reads",  // 只批准读操作
+    "permissionMode": "approve-reads", // 只批准读操作
     "timeoutSeconds": 300
   }
 }
@@ -343,15 +346,17 @@ cat ~/.openclaw/agents/opencode/sessions/sessions.json | jq '.[] | select(.state
 ### 症状 3：子代理执行到一半被中断
 
 **可能原因**：
+
 - `timeoutSeconds` 太短
 - `queueOwnerTtlSeconds` 太短
 
 **解决方案**：
+
 ```json
 {
   "config": {
-    "timeoutSeconds": 600,        // 延长到 10 分钟
-    "queueOwnerTtlSeconds": 60    // 延长到 1 分钟
+    "timeoutSeconds": 600, // 延长到 10 分钟
+    "queueOwnerTtlSeconds": 60 // 延长到 1 分钟
   }
 }
 ```

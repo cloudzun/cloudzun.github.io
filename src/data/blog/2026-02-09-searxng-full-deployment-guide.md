@@ -1,8 +1,8 @@
 ---
-title: 'Building a Self-Hosted SearxNG Search Engine with JSON API Wrapper'
+title: "Building a Self-Hosted SearxNG Search Engine with JSON API Wrapper"
 pubDatetime: 2026-02-09T02:48:00Z
-tags: [searxng,search,docker,privacy,devops,api]
-description: '技术博客文章'
+tags: [searxng, search, docker, privacy, devops, api]
+description: "技术博客文章"
 ---
 
 # SearxNG 生产部署指南：从 Docker 容器到 systemd service + JSON API
@@ -75,6 +75,7 @@ description: '技术博客文章'
 ### 步骤 1：准备 SearxNG 配置
 
 搜索引擎清单（生产级）：
+
 - duckduckgo
 - brave
 - qwant
@@ -87,10 +88,10 @@ description: '技术博客文章'
 
 ```yaml
 server:
-  method: POST               # 减少被识别为 bot 的概率
-  limiter: false            # 在反向代理层面处理限流
-  image_proxy: true         # 启用图片代理
-  
+  method: POST # 减少被识别为 bot 的概率
+  limiter: false # 在反向代理层面处理限流
+  image_proxy: true # 启用图片代理
+
 engines:
   - name: duckduckgo
   - name: brave
@@ -106,6 +107,7 @@ docker compose up -d searxng
 ```
 
 验证：
+
 ```bash
 curl -sS http://127.0.0.1:8080/search?q=test | head -c 200
 # 应返回 HTML，包含搜索结果
@@ -114,6 +116,7 @@ curl -sS http://127.0.0.1:8080/search?q=test | head -c 200
 ### 步骤 3：部署 Wrapper
 
 wrapper.py 的核心逻辑：
+
 1. 接收查询请求（GET/POST），验证 API key
 2. 转发给 SearxNG 的 HTML 响应
 3. 根据 format 参数：
@@ -122,12 +125,14 @@ wrapper.py 的核心逻辑：
    - format=rss → 生成 RSS 2.0 feed
 
 启动 wrapper（已用 systemd 管理）：
+
 ```bash
 sudo systemctl start searxng-wrapper.service
 sudo systemctl enable searxng-wrapper.service
 ```
 
 验证：
+
 ```bash
 curl -sS http://127.0.0.1:8765/health
 # {"status": "ok"}
@@ -155,15 +160,15 @@ curl -sS "http://127.0.0.1:8765/search?q=test&language=de&format=json&api_key=$A
 
 ### 查询参数
 
-| 参数 | 例值 | 说明 |
-|------|------|------|
-| q | `python` | 搜索关键词（必填）|
-| format | `json`/`rss`/`html` | 输出格式（默认 html）|
-| categories | `general`/`images`/`videos` | 搜索分类 |
-| language | `en`/`de`/`fr`/`zh-CN` | 语言 |
-| safesearch | `0`/`1`/`2` | 安全等级 |
-| pageno | `1`, `2`, ... | 分页（从 1 开始）|
-| api_key | `<KEY>` | API 密钥（必填）|
+| 参数       | 例值                        | 说明                  |
+| ---------- | --------------------------- | --------------------- |
+| q          | `python`                    | 搜索关键词（必填）    |
+| format     | `json`/`rss`/`html`         | 输出格式（默认 html） |
+| categories | `general`/`images`/`videos` | 搜索分类              |
+| language   | `en`/`de`/`fr`/`zh-CN`      | 语言                  |
+| safesearch | `0`/`1`/`2`                 | 安全等级              |
+| pageno     | `1`, `2`, ...               | 分页（从 1 开始）     |
+| api_key    | `<KEY>`                     | API 密钥（必填）      |
 
 ### JSON 响应格式
 
@@ -210,7 +215,7 @@ curl -sS "http://127.0.0.1:8765/search?q=test&language=de&format=json&api_key=$A
 ✅ **多语言**：en, de, fr, zh-CN, auto 全部返回 200  
 ✅ **性能**：5 次顺序查询平均 1.12s（min=0.56s, max=1.62s）  
 ✅ **错误处理**：无 API key 被拒绝，空查询被拒绝  
-✅ **认证**：API key 验证有效  
+✅ **认证**：API key 验证有效
 
 详见 `/home/chengzh/searxng/reports/comprehensive_test_20260209T094244Z.txt`
 
@@ -219,10 +224,12 @@ curl -sS "http://127.0.0.1:8765/search?q=test&language=de&format=json&api_key=$A
 ### 1. Docker 容器自动重启
 
 已配置 `restart: always`（见 docker-compose.yml）：
+
 - 容器崩溃时自动重启
 - 宿主机重启时自动启动容器
 
 检查日志：
+
 ```bash
 docker logs searxng --tail 100
 ```
@@ -230,6 +237,7 @@ docker logs searxng --tail 100
 ### 2. Wrapper 进程管理
 
 已注册为 systemd service：
+
 ```bash
 # 启动/停止
 sudo systemctl start searxng-wrapper.service
@@ -249,6 +257,7 @@ sudo systemctl enable searxng-wrapper.service
 systemd unit 路径：`/etc/systemd/system/searxng-wrapper.service`
 
 关键配置：
+
 ```ini
 [Service]
 Type=simple
@@ -268,18 +277,18 @@ NoNewPrivileges=true
 server {
     listen 443 ssl http2;
     server_name search.internal.local;
-    
+
     ssl_certificate /etc/letsencrypt/live/...;
     ssl_certificate_key /etc/letsencrypt/live/...;
-    
+
     location /search {
         auth_basic "SearxNG";
         auth_basic_user_file /etc/nginx/.htpasswd;
-        
+
         proxy_pass http://127.0.0.1:8765;
         proxy_set_header Authorization $http_authorization;
         proxy_set_header X-Real-IP $remote_addr;
-        
+
         # Rate limiting
         limit_req zone=api burst=10 nodelay;
     }
@@ -293,6 +302,7 @@ server {
 #### Prometheus 监控
 
 启用 metrics 并集成告警：
+
 ```bash
 curl -sS "http://127.0.0.1:8080/metrics?token=<METRICS_TOKEN>"
 ```
@@ -312,6 +322,7 @@ sudo journalctl -u searxng-wrapper.service -n 50
 ### SearxNG 返回 403
 
 确认 settings.yml 中 `limiter: false`（已配置）。若仍失败，检查容器日志：
+
 ```bash
 docker logs searxng | grep -i "bot\|limit\|403"
 ```
@@ -319,6 +330,7 @@ docker logs searxng | grep -i "bot\|limit\|403"
 ### JSON 解析失败
 
 检查 wrapper 是否收到 HTML，且格式未变（SearxNG 可能修改 HTML 结构）：
+
 ```bash
 curl -sS "http://127.0.0.1:8080/search?q=test" | head -c 500
 ```
@@ -326,6 +338,7 @@ curl -sS "http://127.0.0.1:8080/search?q=test" | head -c 500
 ## 总结与下一步
 
 ✅ **现在可用**：
+
 - 本地隐私搜索（无 tracking）
 - 多引擎聚合结果
 - JSON/RSS API
@@ -333,6 +346,7 @@ curl -sS "http://127.0.0.1:8080/search?q=test" | head -c 500
 - Docker 容器自动恢复
 
 ⏳ **推荐强化**（后续）：
+
 - TLS + 认证（Nginx 反向代理）
 - Redis 缓存
 - Prometheus metrics + alerting

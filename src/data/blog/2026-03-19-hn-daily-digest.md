@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-19'
+title: "HN Daily Digest: 2026-03-19"
 pubDatetime: 2026-03-18T14:52:32Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ Wander的核心特性包括：**去中心化架构**，允许用户在不同网�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Show HN: I built 48 lightweight SVG backgrounds you can copy/paste
-   ⭐ 109 分 · 💬 14 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47427299) · [原文](https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/)
-   > 这是一个免费SVG背景和图案资源库，提供48个轻量级可复制粘贴的SVG背景，涵盖几何、渐变、手绘等多种风格。
+
+⭐ 109 分 · 💬 14 条
+[HN 讨论](https://news.ycombinator.com/item?id=47427299) · [原文](https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/)
+
+> 这是一个免费SVG背景和图案资源库，提供48个轻量级可复制粘贴的SVG背景，涵盖几何、渐变、手绘等多种风格。
 
 #### 12. OpenAI Has New Focus (on the IPO)
-   ⭐ 105 分 · 💬 117 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47423976) · [原文](https://om.co/2026/03/17/openai-has-new-focus-on-the-ipo/)
-   > 文章分析了OpenAI强调专注战略背后的真实目的——在美国AI企业IPO竞争中抢占先机，涉及Anthropic、OpenAI和xAI三家公司的融资规模和上市时间竞争。
+
+⭐ 105 分 · 💬 117 条
+[HN 讨论](https://news.ycombinator.com/item?id=47423976) · [原文](https://om.co/2026/03/17/openai-has-new-focus-on-the-ipo/)
+
+> 文章分析了OpenAI强调专注战略背后的真实目的——在美国AI企业IPO竞争中抢占先机，涉及Anthropic、OpenAI和xAI三家公司的融资规模和上市时间竞争。
 
 #### 13. Warranty Void If Regenerated
-   ⭐ 81 分 · 💬 43 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47431237) · [原文](https://nearzero.software/p/warranty-void-if-regenerated)
-   > 本文通过讲述软件维修师这一新兴职业的诞生故事，探讨了技术进步如何创造全新职业，以及人们如何在职业转变中适应新角色的深层思考。
+
+⭐ 81 分 · 💬 43 条
+[HN 讨论](https://news.ycombinator.com/item?id=47431237) · [原文](https://nearzero.software/p/warranty-void-if-regenerated)
+
+> 本文通过讲述软件维修师这一新兴职业的诞生故事，探讨了技术进步如何创造全新职业，以及人们如何在职业转变中适应新角色的深层思考。
 
 #### 14. 2025 Turing award given for quantum information science
-   ⭐ 79 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47423694) · [原文](https://awards.acm.org/about/2025-turing)
-   > 2025年图灵奖授予量子信息科学领域的杰出贡献者，表彰其在推动量子计算和量子通信等前沿技术发展中的重要成就。
+
+⭐ 79 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47423694) · [原文](https://awards.acm.org/about/2025-turing)
+
+> 2025年图灵奖授予量子信息科学领域的杰出贡献者，表彰其在推动量子计算和量子通信等前沿技术发展中的重要成就。
 
 #### 15. CVE-2026-3888: Important Snap Flaw Enables Local Privilege Escalation to Root
-   ⭐ 72 分 · 💬 37 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47427208) · [原文](https://blog.qualys.com/vulnerabilities-threat-research/2026/03/17/cve-2026-3888-important-snap-flaw-enables-local-privilege-escalation-to-root)
-   > 本文分析了Snap软件包管理器中的CVE-2026-3888漏洞，该漏洞允许本地用户通过特定攻击机制提升权限至Root，并提供了受影响版本、修复方案和检测方法。
+
+⭐ 72 分 · 💬 37 条
+[HN 讨论](https://news.ycombinator.com/item?id=47427208) · [原文](https://blog.qualys.com/vulnerabilities-threat-research/2026/03/17/cve-2026-3888-important-snap-flaw-enables-local-privilege-escalation-to-root)
+
+> 本文分析了Snap软件包管理器中的CVE-2026-3888漏洞，该漏洞允许本地用户通过特定攻击机制提升权限至Root，并提供了受影响版本、修复方案和检测方法。
 
 #### 16. Book: The Emerging Science of Machine Learning Benchmarks
-   ⭐ 58 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47380714) · [原文](https://mlbenchmarks.org/00-preface.html)
-   > 本书探讨机器学习基准测试的科学原理，分析其在推动模型竞争中的作用与局限，以及如何避免过度优化导致的评估偏差。
+
+⭐ 58 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47380714) · [原文](https://mlbenchmarks.org/00-preface.html)
+
+> 本书探讨机器学习基准测试的科学原理，分析其在推动模型竞争中的作用与局限，以及如何避免过度优化导致的评估偏差。
 
 #### 17. Show HN: Tmux-IDE, OSS agent-first terminal IDE
-   ⭐ 48 分 · 💬 29 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47428868) · [原文](https://tmux.thijsverreck.com)
-   > Tmux-IDE是一个开源终端IDE工具，通过预配置tmux窗格布局，使Claude AI代理能够协作完成开发任务。
+
+⭐ 48 分 · 💬 29 条
+[HN 讨论](https://news.ycombinator.com/item?id=47428868) · [原文](https://tmux.thijsverreck.com)
+
+> Tmux-IDE是一个开源终端IDE工具，通过预配置tmux窗格布局，使Claude AI代理能够协作完成开发任务。
 
 #### 18. Nvidia greenboost: transparently extend GPU VRAM using system RAM/NVMe
-   ⭐ 32 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47388658) · [原文](https://gitlab.com/IsolatedOctopi/nvidia_greenboost)
-   > 这是一个透明扩展Nvidia GPU显存的工具，通过系统RAM和NVMe存储虚拟扩展VRAM容量，突破GPU显存限制。
+
+⭐ 32 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47388658) · [原文](https://gitlab.com/IsolatedOctopi/nvidia_greenboost)
+
+> 这是一个透明扩展Nvidia GPU显存的工具，通过系统RAM和NVMe存储虚拟扩展VRAM容量，突破GPU显存限制。
 
 #### 19. Show HN: Playing LongTurn FreeCiv with Friends
-   ⭐ 32 分 · 💬 17 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47429988) · [原文](https://github.com/ndroo/freeciv.andrewmcgrath.info)
-   > 这是一个关于如何与朋友在线玩长回合制文明游戏FreeCiv的项目，提供了多人游戏的配置和部署方案。
+
+⭐ 32 分 · 💬 17 条
+[HN 讨论](https://news.ycombinator.com/item?id=47429988) · [原文](https://github.com/ndroo/freeciv.andrewmcgrath.info)
+
+> 这是一个关于如何与朋友在线玩长回合制文明游戏FreeCiv的项目，提供了多人游戏的配置和部署方案。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 199 分 |
-| 总讨论数 | 1572 条 |
+| 指标     | 数值                                             |
+| -------- | ------------------------------------------------ |
+| 平均热度 | 199 分                                           |
+| 总讨论数 | 1572 条                                          |
 | 最热文章 | "Rob Pike’s Rules of Programming (1989)" (795⭐) |
 | 讨论最多 | "Rob Pike’s Rules of Programming (1989)" (393💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

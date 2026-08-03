@@ -1,8 +1,16 @@
 ---
-title: '从原型到产品：vibe-ecommerce 迭代系列（四）— 安全加固、性能优化与图片修复'
+title: "从原型到产品：vibe-ecommerce 迭代系列（四）— 安全加固、性能优化与图片修复"
 pubDatetime: 2026-03-05T18:38:08Z
-tags: ['vibe-coding', 'opencode', 'security', 'performance', 'express-validator', 'lazy-loading']
-description: '技术博客文章'
+tags:
+  [
+    "vibe-coding",
+    "opencode",
+    "security",
+    "performance",
+    "express-validator",
+    "lazy-loading",
+  ]
+description: "技术博客文章"
 ---
 
 这是 vibe-ecommerce 迭代系列的第四篇。
@@ -17,14 +25,14 @@ Phase 5 的目标是「硬化」。不是加新功能，而是把已有的东西
 
 Phase 4 结束时，我们做了一次系统审计，列出了以下问题：
 
-| 问题 | 严重程度 | 说明 |
-|------|----------|------|
-| 无输入校验库 | 高 | orders 和 auth 路由只有手动 if 检查 |
-| helmet CSP 阻断图片 | 中 | 默认 CSP 不允许外部图片域名，Unsplash 图片被拦截 |
-| 请求体无大小限制 | 中 | Express 默认 100kb，未显式配置 |
-| 4 个商品图片错误 | 中 | USB-C Hub、Webcam HD、Portable SSD、Monitor Stand 图文不符 |
-| 无图片懒加载 | 低 | 10 张图片同时加载，首屏性能损耗 |
-| 无 API 响应缓存 | 低 | 每次请求都查数据库，即使数据不变 |
+| 问题                | 严重程度 | 说明                                                       |
+| ------------------- | -------- | ---------------------------------------------------------- |
+| 无输入校验库        | 高       | orders 和 auth 路由只有手动 if 检查                        |
+| helmet CSP 阻断图片 | 中       | 默认 CSP 不允许外部图片域名，Unsplash 图片被拦截           |
+| 请求体无大小限制    | 中       | Express 默认 100kb，未显式配置                             |
+| 4 个商品图片错误    | 中       | USB-C Hub、Webcam HD、Portable SSD、Monitor Stand 图文不符 |
+| 无图片懒加载        | 低       | 10 张图片同时加载，首屏性能损耗                            |
+| 无 API 响应缓存     | 低       | 每次请求都查数据库，即使数据不变                           |
 
 这六个问题分成两个模块处理：Module A（后端安全）和 Module B（前端性能 + 图片修复）。
 
@@ -36,13 +44,19 @@ Phase 4 的 auth 路由里有这样的代码：
 
 ```javascript
 if (!email || !password) {
-  return res.status(400).json({ success: false, error: 'Email and password are required' });
+  return res
+    .status(400)
+    .json({ success: false, error: "Email and password are required" });
 }
 if (!EMAIL_RE.test(email)) {
-  return res.status(400).json({ success: false, error: 'Invalid email format' });
+  return res
+    .status(400)
+    .json({ success: false, error: "Invalid email format" });
 }
 if (password.length < 6) {
-  return res.status(400).json({ success: false, error: 'Password must be at least 6 characters' });
+  return res
+    .status(400)
+    .json({ success: false, error: "Password must be at least 6 characters" });
 }
 ```
 
@@ -60,16 +74,26 @@ if (password.length < 6) {
 
 ```javascript
 const validateOrder = [
-  body('name').trim().isLength({ min: 1, max: 100 }).withMessage('Name is required (max 100 chars)'),
-  body('email').isEmail().normalizeEmail().withMessage('Valid email required'),
-  body('address').trim().isLength({ min: 1, max: 200 }).withMessage('Address is required (max 200 chars)'),
-  body('items').isArray({ min: 1 }).withMessage('At least one item required'),
-  body('total').isFloat({ gt: 0 }).withMessage('Total must be a positive number'),
+  body("name")
+    .trim()
+    .isLength({ min: 1, max: 100 })
+    .withMessage("Name is required (max 100 chars)"),
+  body("email").isEmail().normalizeEmail().withMessage("Valid email required"),
+  body("address")
+    .trim()
+    .isLength({ min: 1, max: 200 })
+    .withMessage("Address is required (max 200 chars)"),
+  body("items").isArray({ min: 1 }).withMessage("At least one item required"),
+  body("total")
+    .isFloat({ gt: 0 })
+    .withMessage("Total must be a positive number"),
 ];
 
 const validateRegister = [
-  body('email').isEmail().normalizeEmail().withMessage('Invalid email format'),
-  body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters'),
+  body("email").isEmail().normalizeEmail().withMessage("Invalid email format"),
+  body("password")
+    .isLength({ min: 6 })
+    .withMessage("Password must be at least 6 characters"),
 ];
 ```
 
@@ -81,7 +105,7 @@ function handleValidationErrors(req, res, next) {
   if (!errors.isEmpty()) {
     return res.status(422).json({
       success: false,
-      errors: errors.array().map(e => ({ field: e.path, message: e.msg }))
+      errors: errors.array().map(e => ({ field: e.path, message: e.msg })),
     });
   }
   next();
@@ -123,14 +147,16 @@ router.post('/register', validateRegister, handleValidationErrors, async (req, r
 修复方式：
 
 ```javascript
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-      'img-src': ["'self'", 'data:', 'https://images.unsplash.com'],
-    }
-  }
-}));
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        "img-src": ["'self'", "data:", "https://images.unsplash.com"],
+      },
+    },
+  })
+);
 ```
 
 `...getDefaultDirectives()` 保留所有默认规则，只覆盖 `img-src`。这是最小变更原则——不要为了解决一个问题而放宽整个 CSP。
@@ -138,7 +164,7 @@ app.use(helmet({
 同时把 JSON 请求体限制改为显式配置：
 
 ```javascript
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json({ limit: "10kb" }));
 ```
 
 Express 默认 100kb，对于这个项目的 API 来说太宽松。订单请求最多几个商品，10kb 绰绰有余。
@@ -160,23 +186,31 @@ Express 默认 100kb，对于这个项目的 API 来说太宽松。订单请求�
 
 最终选定：
 
-| 商品 | 原图问题 | 新 photo ID | 内容描述 |
-|------|----------|-------------|----------|
-| USB-C Hub | 图文不符 | photo-1601524909162-ae8725290836 | 多设备桌面连接场景 |
-| Webcam HD | 图文不符 | photo-1535303311164-664fc9ec6532 | 摄像头特写 |
-| Portable SSD | 图文不符 | photo-1639322537228-f710d846310a | 便携固态硬盘 |
-| Monitor Stand | 404 | photo-1616763355548-1b606f439f86 | 多显示器支架桌面 |
+| 商品          | 原图问题 | 新 photo ID                      | 内容描述           |
+| ------------- | -------- | -------------------------------- | ------------------ |
+| USB-C Hub     | 图文不符 | photo-1601524909162-ae8725290836 | 多设备桌面连接场景 |
+| Webcam HD     | 图文不符 | photo-1535303311164-664fc9ec6532 | 摄像头特写         |
+| Portable SSD  | 图文不符 | photo-1639322537228-f710d846310a | 便携固态硬盘       |
+| Monitor Stand | 404      | photo-1616763355548-1b606f439f86 | 多显示器支架桌面   |
 
 迁移脚本设计为幂等——多次运行结果相同，不会产生副作用：
 
 ```javascript
 const fixes = [
-  { id: 3, image: 'https://images.unsplash.com/photo-1601524909162-ae8725290836?w=400&h=300&fit=crop' },
-  { id: 4, image: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?w=400&h=300&fit=crop' },
+  {
+    id: 3,
+    image:
+      "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=400&h=300&fit=crop",
+  },
+  {
+    id: 4,
+    image:
+      "https://images.unsplash.com/photo-1535303311164-664fc9ec6532?w=400&h=300&fit=crop",
+  },
   // ...
 ];
 for (const fix of fixes) {
-  await knex('products').where({ id: fix.id }).update({ image: fix.image });
+  await knex("products").where({ id: fix.id }).update({ image: fix.image });
 }
 ```
 
@@ -189,7 +223,7 @@ for (const fix of fixes) {
 **第一层：HTML 原生懒加载**
 
 ```html
-<img loading="lazy" src="..." alt="...">
+<img loading="lazy" src="..." alt="..." />
 ```
 
 浏览器原生支持，零 JavaScript，覆盖所有现代浏览器。应用到三个组件：products.js、product-detail.js、cart.js。
@@ -197,20 +231,25 @@ for (const fix of fixes) {
 **第二层：IntersectionObserver 渐入动画**
 
 ```javascript
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        observer.unobserve(e.target);
-      }
-    });
-  }, { rootMargin: '50px' });
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = "1";
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { rootMargin: "50px" }
+  );
 
-  document.querySelectorAll('.product-card img').forEach(img => {
-    img.style.opacity = '0';
-    img.style.transition = 'opacity 0.3s';
-    img.addEventListener('load', () => { img.style.opacity = '1'; });
+  document.querySelectorAll(".product-card img").forEach(img => {
+    img.style.opacity = "0";
+    img.style.transition = "opacity 0.3s";
+    img.addEventListener("load", () => {
+      img.style.opacity = "1";
+    });
     observer.observe(img);
   });
 }
@@ -227,9 +266,9 @@ GET /api/products 是访问最频繁的接口，但数据几乎不变。加一�
 ```javascript
 const cache = { data: null, ts: 0, TTL: 5 * 60 * 1000 };
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   // 有过滤条件时绕过缓存
-  if (!req.query.category && cache.data && (Date.now() - cache.ts) < cache.TTL) {
+  if (!req.query.category && cache.data && Date.now() - cache.ts < cache.TTL) {
     return res.json({ success: true, data: cache.data });
   }
   // ... 查数据库 ...
@@ -255,16 +294,16 @@ Phase 5 的目标是「够用」，不是「完美」。单进程 Node.js + 内�
 
 Phase 5 全部 7 个任务，OpenCode 一次性完成，无需人工干预。
 
-| 测试 | 预期 | 结果 |
-|------|------|------|
-| 空 body 下单 | 422 + 5 字段错误 | ✅ |
-| 邮箱格式错误 + 密码过短 | 422 | ✅ |
-| 合法订单 | 200 + orderId | ✅ |
-| 图片 3,4,5,9 URL 更新 | 新 Unsplash ID | ✅ |
-| CSP header 允许 unsplash.com | img-src 包含域名 | ✅ |
-| API 缓存命中 | 第 2 次响应更快 | ✅ |
-| Phase 3/4 登录回归 | success: true | ✅ |
-| 生产环境端到端（注册→登录→下单→历史订单）| 全流程通过 | ✅ |
+| 测试                                      | 预期             | 结果 |
+| ----------------------------------------- | ---------------- | ---- |
+| 空 body 下单                              | 422 + 5 字段错误 | ✅   |
+| 邮箱格式错误 + 密码过短                   | 422              | ✅   |
+| 合法订单                                  | 200 + orderId    | ✅   |
+| 图片 3,4,5,9 URL 更新                     | 新 Unsplash ID   | ✅   |
+| CSP header 允许 unsplash.com              | img-src 包含域名 | ✅   |
+| API 缓存命中                              | 第 2 次响应更快  | ✅   |
+| Phase 3/4 登录回归                        | success: true    | ✅   |
+| 生产环境端到端（注册→登录→下单→历史订单） | 全流程通过       | ✅   |
 
 ## 六、这次 OpenCode 执行为什么顺利
 
@@ -290,13 +329,13 @@ Phase 5 清理了 Phase 4 遗留的输入校验债务，没有引入新的技术
 
 当前剩余的已知债务：
 
-| 债务 | 当前状态 | Phase 6 计划 |
-|------|----------|-------------|
+| 债务                  | 当前状态             | Phase 6 计划            |
+| --------------------- | -------------------- | ----------------------- |
 | Token 存 localStorage | 可接受（无敏感操作） | 评估 httpOnly-only 方案 |
-| 无邮箱验证流程 | 未实现 | OTP/链接验证 |
-| 无密码重置 | 未实现 | 邮件重置流程 |
-| JWT 登出后仍有效 | 无黑名单 | Redis token 黑名单 |
-| Rate limiting 仅内存 | 单进程够用 | Redis 分布式限流 |
+| 无邮箱验证流程        | 未实现               | OTP/链接验证            |
+| 无密码重置            | 未实现               | 邮件重置流程            |
+| JWT 登出后仍有效      | 无黑名单             | Redis token 黑名单      |
+| Rate limiting 仅内存  | 单进程够用           | Redis 分布式限流        |
 
 Phase 6 的候选方向：SDD 重构（代码库接近复杂度阈值）、容器化（Docker Compose 本地开发一致性）、Azure SQL DB 迁移（Knex 方言切换，零代码改动）。
 

@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-04'
+title: "HN Daily Digest: 2026-03-04"
 pubDatetime: 2026-03-03T14:48:37Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ GPT-5.3 Instant值得关注的原因在于，它标志着AI模型从追求单纯
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Possible US Government iPhone-Hacking Toolkit in foreign spy and criminal hands
-   ⭐ 129 分 · 💬 38 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47237692) · [原文](https://www.wired.com/story/coruna-iphone-hacking-toolkit-us-government/)
-   > 美国政府开发的高度复杂的iPhone黑客工具包已泄露到外国间谍和犯罪分子手中，可能已感染数万部手机。
+
+⭐ 129 分 · 💬 38 条
+[HN 讨论](https://news.ycombinator.com/item?id=47237692) · [原文](https://www.wired.com/story/coruna-iphone-hacking-toolkit-us-government/)
+
+> 美国政府开发的高度复杂的iPhone黑客工具包已泄露到外国间谍和犯罪分子手中，可能已感染数万部手机。
 
 #### 12. Claude is an Electron App because we've lost native
-   ⭐ 88 分 · 💬 98 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47235430) · [原文](https://tonsky.me/blog/fall-of-native/)
-   > 本文分析了为何Claude采用Electron框架而非原生应用开发，指出原生API体验差且平台商阻挠，导致开发者转向跨平台方案。
+
+⭐ 88 分 · 💬 98 条
+[HN 讨论](https://news.ycombinator.com/item?id=47235430) · [原文](https://tonsky.me/blog/fall-of-native/)
+
+> 本文分析了为何Claude采用Electron框架而非原生应用开发，指出原生API体验差且平台商阻挠，导致开发者转向跨平台方案。
 
 #### 13. When AI writes the software, who verifies it?
-   ⭐ 85 分 · 💬 71 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47234917) · [原文](https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html)
-   > 本文探讨了AI生成代码的快速发展现状，指出虽然AI能高效生成大规模软件，但缺乏形式化验证机制来确保代码正确性和安全性的核心问题。
+
+⭐ 85 分 · 💬 71 条
+[HN 讨论](https://news.ycombinator.com/item?id=47234917) · [原文](https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html)
+
+> 本文探讨了AI生成代码的快速发展现状，指出虽然AI能高效生成大规模软件，但缺乏形式化验证机制来确保代码正确性和安全性的核心问题。
 
 #### 14. An Interactive Intro to CRDTs (2023)
-   ⭐ 62 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47237460) · [原文](https://jakelazaroff.com/words/an-interactive-intro-to-crdts/)
-   > 本文通过交互式教学和实例代码，深入浅出地介绍CRDT（冲突自由复制数据类型）的原理，并展示如何用其构建协作应用。
+
+⭐ 62 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47237460) · [原文](https://jakelazaroff.com/words/an-interactive-intro-to-crdts/)
+
+> 本文通过交互式教学和实例代码，深入浅出地介绍CRDT（冲突自由复制数据类型）的原理，并展示如何用其构建协作应用。
 
 #### 15. TorchLean: Formalizing Neural Networks in Lean
-   ⭐ 54 分 · 💬 7 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47203219) · [原文](https://leandojo.org/torchlean.html)
-   > TorchLean是一个在Lean定理证明器中形式化神经网络的框架，通过统一的精确语义消除执行代码与验证分析间的语义差距，增强安全关键应用中的模型可信性。
+
+⭐ 54 分 · 💬 7 条
+[HN 讨论](https://news.ycombinator.com/item?id=47203219) · [原文](https://leandojo.org/torchlean.html)
+
+> TorchLean是一个在Lean定理证明器中形式化神经网络的框架，通过统一的精确语义消除执行代码与验证分析间的语义差距，增强安全关键应用中的模型可信性。
 
 #### 16. We've freed Cookie's Bustle from copyright hell
-   ⭐ 45 分 · 💬 6 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47238279) · [原文](https://gamehistory.org/cookies-bustle/)
-   > 视频游戏历史基金会成功解决了1999年日本游戏《Cookie's Bustle》的版权纠纷问题，详细介绍了与版权方的对抗过程和解决经验。
+
+⭐ 45 分 · 💬 6 条
+[HN 讨论](https://news.ycombinator.com/item?id=47238279) · [原文](https://gamehistory.org/cookies-bustle/)
+
+> 视频游戏历史基金会成功解决了1999年日本游戏《Cookie's Bustle》的版权纠纷问题，详细介绍了与版权方的对抗过程和解决经验。
 
 #### 17. Voxile: A ray-traced game made in its own engine and programming language
-   ⭐ 32 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47239042) · [原文](https://elbowgreasegames.substack.com/p/voxray-games-pushes-major-update)
-   > Voxile是一款用自主开发的游戏引擎和编程语言制作的光线追踪游戏，展示了独立开发者在引擎和语言创新方面的突破性成果。
+
+⭐ 32 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47239042) · [原文](https://elbowgreasegames.substack.com/p/voxray-games-pushes-major-update)
+
+> Voxile是一款用自主开发的游戏引擎和编程语言制作的光线追踪游戏，展示了独立开发者在引擎和语言创新方面的突破性成果。
 
 #### 18. Textadept
-   ⭐ 17 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47204027) · [原文](https://orbitalquark.github.io/textadept/)
-   > Textadept是一款快速、极简的跨平台代码编辑器，采用C/C++和Lua开发，支持100多种编程语言，具有高度可扩展性和可定制化功能。
+
+⭐ 17 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47204027) · [原文](https://orbitalquark.github.io/textadept/)
+
+> Textadept是一款快速、极简的跨平台代码编辑器，采用C/C++和Lua开发，支持100多种编程语言，具有高度可扩展性和可定制化功能。
 
 #### 19. Don't Make Me Talk to Your Chatbot
-   ⭐ 15 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47239943) · [原文](https://raymyers.org/post/dont-make-me-talk-to-your-chatbot/)
-   > 本文主张在人际交互中不应强制他人接收未经请求的AI生成内容，强调人类沟通应基于真实思想而非机器输出。
+
+⭐ 15 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47239943) · [原文](https://raymyers.org/post/dont-make-me-talk-to-your-chatbot/)
+
+> 本文主张在人际交互中不应强制他人接收未经请求的AI生成内容，强调人类沟通应基于真实思想而非机器输出。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 265 分 |
-| 总讨论数 | 2727 条 |
-| 最热文章 | "The Xkcd thing, now interactive" (1052⭐) |
+| 指标     | 数值                                             |
+| -------- | ------------------------------------------------ |
+| 平均热度 | 265 分                                           |
+| 总讨论数 | 2727 条                                          |
+| 最热文章 | "The Xkcd thing, now interactive" (1052⭐)       |
 | 讨论最多 | "MacBook Pro with new M5 Pro and M5 Max" (561💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

@@ -2,8 +2,8 @@
 title: "CloudZun.com 网站重构实录：从 Hugo 到 Astro Paper 的完整迁移"
 featured: true
 pubDatetime: 2026-03-21T13:45:00Z
-tags: ['网站重构', 'Astro Paper', '博客迁移', '技术实践']
-description: '完整记录 CloudZun.com 从 Hugo 迁移到 Astro Paper 的全过程，包括主题选择、内容迁移、格式转换和部署实践'
+tags: ["网站重构", "Astro Paper", "博客迁移", "技术实践"]
+description: "完整记录 CloudZun.com 从 Hugo 迁移到 Astro Paper 的全过程，包括主题选择、内容迁移、格式转换和部署实践"
 ---
 
 # CloudZun.com 网站重构实录：从 Hugo 到 Astro Paper 的完整迁移
@@ -37,11 +37,11 @@ description: '完整记录 CloudZun.com 从 Hugo 迁移到 Astro Paper 的全过
 
 ### 候选方案对比
 
-| 方案 | 优点 | 缺点 | 评分 |
-|------|------|------|------|
-| **Hugo + FixIt** | 成熟稳定、功能丰富 | 模板复杂、构建慢 | ⭐⭐⭐ |
-| **Next.js + Vercel** | 灵活强大、生态好 | 需要服务器渲染、配置复杂 | ⭐⭐⭐⭐ |
-| **Astro Paper** | 轻量快速、组件化、SEO 好 | 生态相对较小 | ⭐⭐⭐⭐⭐ |
+| 方案                 | 优点                     | 缺点                     | 评分       |
+| -------------------- | ------------------------ | ------------------------ | ---------- |
+| **Hugo + FixIt**     | 成熟稳定、功能丰富       | 模板复杂、构建慢         | ⭐⭐⭐     |
+| **Next.js + Vercel** | 灵活强大、生态好         | 需要服务器渲染、配置复杂 | ⭐⭐⭐⭐   |
+| **Astro Paper**      | 轻量快速、组件化、SEO 好 | 生态相对较小             | ⭐⭐⭐⭐⭐ |
 
 ### 为什么选 Astro Paper？
 
@@ -102,31 +102,29 @@ draft: false
 tags: ["tag1", "tag2"]
 categories: ["分类"]
 ---
-
 # 正文
 
 # Astro Paper 格式（目标）
 ---
-title: '文章标题'
+title: "文章标题"
 featured: true
 pubDatetime: 2026-02-04T12:01:00Z
-tags: ['tag1', 'tag2']
-description: '文章描述'
+tags: ["tag1", "tag2"]
+description: "文章描述"
 ---
-
 # 正文
 ```
 
 **转换规则**:
 
-| 字段 | Hugo | Astro Paper | 转换逻辑 |
-|------|------|-------------|---------|
-| 标题 | `title: "xxx"` | `title: 'xxx'` | 双引号→单引号 |
-| 日期 | `date: ...+08:00` | `pubDatetime: ...Z` | UTC 转换（-8 小时） |
-| 标签 | `tags: ["a", "b"]` | `tags: ['a', 'b']` | 双引号→单引号 |
-| 分类 | `categories: [...]` | 删除 | Astro Paper 不支持 |
-| 草稿 | `draft: false` | 删除 | 默认为 false |
-| 描述 | 无 | `description: 'xxx'` | 从正文提取 |
+| 字段 | Hugo                | Astro Paper          | 转换逻辑            |
+| ---- | ------------------- | -------------------- | ------------------- |
+| 标题 | `title: "xxx"`      | `title: 'xxx'`       | 双引号→单引号       |
+| 日期 | `date: ...+08:00`   | `pubDatetime: ...Z`  | UTC 转换（-8 小时） |
+| 标签 | `tags: ["a", "b"]`  | `tags: ['a', 'b']`   | 双引号→单引号       |
+| 分类 | `categories: [...]` | 删除                 | Astro Paper 不支持  |
+| 草稿 | `draft: false`      | 删除                 | 默认为 false        |
+| 描述 | 无                  | `description: 'xxx'` | 从正文提取          |
 
 **遇到的问题**:
 
@@ -274,7 +272,7 @@ title: '当 AI 成为你的'技术外骨骼''  # 单引号冲突
 **问题**: `npm run build` 报错
 
 ```
-[InvalidContentEntryDataError] blog → xxx data does not match 
+[InvalidContentEntryDataError] blog → xxx data does not match
 collection schema. pubDatetime: Required
 ```
 
@@ -289,7 +287,7 @@ collection schema. pubDatetime: Required
 **错误信息**:
 
 ```
-Permission denied by ACP runtime (acpx). 
+Permission denied by ACP runtime (acpx).
 ACPX blocked a write/exec permission request in a non-interactive session.
 ```
 
@@ -297,7 +295,8 @@ ACPX blocked a write/exec permission request in a non-interactive session.
 
 **解决**: 放弃 OpenCode，自己写 Python 脚本完成
 
-**教训**: 
+**教训**:
+
 - 子代理权限需要提前配置
 - 关键任务要有 Plan B
 - 简单任务自己写脚本可能更快
@@ -316,21 +315,21 @@ ACPX blocked a write/exec permission request in a non-interactive session.
 
 ### 性能对比
 
-| 指标 | Hugo + FixIt | Astro Paper | 提升 |
-|------|-------------|-------------|------|
-| 构建时间 | 30+ 秒 | 3.4 秒 | **88%↓** |
-| 首页大小 | 125 KB | 42 KB | **66%↓** |
-| Lighthouse | 85 | 98 | **15%↑** |
+| 指标       | Hugo + FixIt | Astro Paper | 提升     |
+| ---------- | ------------ | ----------- | -------- |
+| 构建时间   | 30+ 秒       | 3.4 秒      | **88%↓** |
+| 首页大小   | 125 KB       | 42 KB       | **66%↓** |
+| Lighthouse | 85           | 98          | **15%↑** |
 
 ### 内容统计
 
-| 类型 | 数量 |
-|------|------|
+| 类型     | 数量   |
+| -------- | ------ |
 | 博客文章 | 113 篇 |
-| 标签 | 50+ 个 |
-| 社交链接 | 6 个 |
-| 研究方向 | 4 个 |
-| 代表项目 | 7 个 |
+| 标签     | 50+ 个 |
+| 社交链接 | 6 个   |
+| 研究方向 | 4 个   |
+| 代表项目 | 7 个   |
 
 ### 页面列表
 

@@ -58,20 +58,20 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ### 教育类项目
 
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| **OpenCode Labs** | AI 协同编程实战手册，15 个实验从基础到 SDD 规格驱动开发 | [GitHub](https://github.com/cloudzun/opencode-labs) |
-| **Vibe Coding Camp** | 独立开发者实操营，3 款产品×5 轮迭代完整课程 | [GitHub](https://github.com/cloudzun/vibe-coding-camp) |
+| 项目                     | 描述                                                         | 链接                                                       |
+| ------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------- |
+| **OpenCode Labs**        | AI 协同编程实战手册，15 个实验从基础到 SDD 规格驱动开发      | [GitHub](https://github.com/cloudzun/opencode-labs)        |
+| **Vibe Coding Camp**     | 独立开发者实操营，3 款产品×5 轮迭代完整课程                  | [GitHub](https://github.com/cloudzun/vibe-coding-camp)     |
 | **LLM Chatbot Workshop** | 从零构建 AI 聊天机器人，涵盖 RAG、Function Calling、MCP 协议 | [GitHub](https://github.com/cloudzun/llm-chatbot-workshop) |
-| **Vibe Working** | 企业办公自动化培训，10 个场景 50+ 实验，零基础友好 | [GitHub](https://github.com/cloudzun/vibe-working) |
+| **Vibe Working**         | 企业办公自动化培训，10 个场景 50+ 实验，零基础友好           | [GitHub](https://github.com/cloudzun/vibe-working)         |
 
 ### 工程实践类项目
 
-| 项目 | 描述 | 链接 |
-|------|------|------|
-| **Vibe Ecommerce** | 从 Vibe Coding 原型到生产级全栈应用的完整演进记录（6 阶段） | [GitHub](https://github.com/cloudzun/vibe-ecommerce) |
-| **AI 技术外骨骼反思** | 两个实验项目带来的深层思考：AI 时代的开发流程应该如何重构 | [阅读文章](/posts/2026-03-12-ai-exoskeleton-reflection/) |
-| **从 Copilot 到 OpenCode** | 密集实验后的深度复盘：重新思考办公自动化的本质与边界 | [阅读文章](/posts/2026-03-07-from-copilot-to-opencode-rethinking-office-automation/) |
+| 项目                       | 描述                                                        | 链接                                                                                 |
+| -------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Vibe Ecommerce**         | 从 Vibe Coding 原型到生产级全栈应用的完整演进记录（6 阶段） | [GitHub](https://github.com/cloudzun/vibe-ecommerce)                                 |
+| **AI 技术外骨骼反思**      | 两个实验项目带来的深层思考：AI 时代的开发流程应该如何重构   | [阅读文章](/posts/2026-03-12-ai-exoskeleton-reflection/)                             |
+| **从 Copilot 到 OpenCode** | 密集实验后的深度复盘：重新思考办公自动化的本质与边界        | [阅读文章](/posts/2026-03-07-from-copilot-to-opencode-rethinking-office-automation/) |
 
 ---
 
@@ -111,15 +111,15 @@ description: "关于 CloudZun - AI 协同编程讲师、工程师、技术博主
 
 ## 技术栈
 
-| 领域 | 技术/工具 |
-|------|----------|
-| **AI 编程助手** | OpenCode, OpenClaw, Claude Code, Cursor, GitHub Copilot |
-| **LLM 服务** | 阿里云百炼，硅基流动，Rocco, Anthropic, OpenAI |
-| **编程语言** | Python, JavaScript, TypeScript, Node.js |
-| **前端框架** | Astro, React, Next.js, Tailwind CSS, Vanilla JS |
-| **后端技术** | Express, FastAPI, Knex, SQLite, PostgreSQL |
-| **AI 技术** | RAG, Function Calling, MCP Protocol, Embedding, Agent 编排 |
-| **部署运维** | Docker, GitHub Actions, Vercel, Azure, GitHub Pages |
+| 领域            | 技术/工具                                                  |
+| --------------- | ---------------------------------------------------------- |
+| **AI 编程助手** | OpenCode, OpenClaw, Claude Code, Cursor, GitHub Copilot    |
+| **LLM 服务**    | 阿里云百炼，硅基流动，Rocco, Anthropic, OpenAI             |
+| **编程语言**    | Python, JavaScript, TypeScript, Node.js                    |
+| **前端框架**    | Astro, React, Next.js, Tailwind CSS, Vanilla JS            |
+| **后端技术**    | Express, FastAPI, Knex, SQLite, PostgreSQL                 |
+| **AI 技术**     | RAG, Function Calling, MCP Protocol, Embedding, Agent 编排 |
+| **部署运维**    | Docker, GitHub Actions, Vercel, Azure, GitHub Pages        |
 
 ---
 
@@ -178,4 +178,4 @@ AI 协同编程的核心原则。
 
 ---
 
-*最后更新：2026-03-21*
+_最后更新：2026-03-21_

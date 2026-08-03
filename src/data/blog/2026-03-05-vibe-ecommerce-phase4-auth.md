@@ -1,8 +1,18 @@
 ---
-title: '从原型到产品：vibe-ecommerce 迭代系列（三）— 用户认证、流程失控与架构师的边界'
+title: "从原型到产品：vibe-ecommerce 迭代系列（三）— 用户认证、流程失控与架构师的边界"
 pubDatetime: 2026-03-05T06:00:00+00:00
-tags: ['OpenCode', 'Vibe Coding', 'JWT', '认证', '架构设计', 'Superpowers', 'LAB-14', '复盘']
-description: '技术博客文章'
+tags:
+  [
+    "OpenCode",
+    "Vibe Coding",
+    "JWT",
+    "认证",
+    "架构设计",
+    "Superpowers",
+    "LAB-14",
+    "复盘",
+  ]
+description: "技术博客文章"
 ---
 
 # 从原型到产品：vibe-ecommerce 迭代系列（三）
@@ -86,18 +96,18 @@ server/
 
 ```javascript
 // server/middleware/auth.js
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 function verifyToken(req, res, next) {
-  const header = req.headers['authorization'];
-  if (!header || !header.startsWith('Bearer ')) {
-    return res.status(401).json({ success: false, error: 'No token provided' });
+  const header = req.headers["authorization"];
+  if (!header || !header.startsWith("Bearer ")) {
+    return res.status(401).json({ success: false, error: "No token provided" });
   }
   try {
     req.user = jwt.verify(header.slice(7), process.env.JWT_SECRET);
     next();
   } catch {
-    return res.status(401).json({ success: false, error: 'Invalid token' });
+    return res.status(401).json({ success: false, error: "Invalid token" });
   }
 }
 ```
@@ -166,12 +176,12 @@ const match = await bcrypt.compare(password, stored_hash);
 
 这个区分很重要：
 
-| 端点 | 限流？ | 原因 |
-|------|--------|------|
-| `/login` | ✅ 10次/15分钟 | 防暴力破解 |
-| `/register` | ✅ 10次/15分钟 | 防批量注册 |
-| `/refresh` | ❌ | 正常用户频繁刷新是合理的 |
-| `/logout` | ❌ | 限制登出没有任何安全收益 |
+| 端点        | 限流？         | 原因                     |
+| ----------- | -------------- | ------------------------ |
+| `/login`    | ✅ 10次/15分钟 | 防暴力破解               |
+| `/register` | ✅ 10次/15分钟 | 防批量注册               |
+| `/refresh`  | ❌             | 正常用户频繁刷新是合理的 |
+| `/logout`   | ❌             | 限制登出没有任何安全收益 |
 
 Phase 4 测试时就踩了这个坑——测试脚本连续调用 `/refresh` 和 `/logout`，触发了限流，返回 429。发现后立即修复，把限流范围收窄。
 
@@ -191,7 +201,7 @@ Phase 4 的实现计划分 10 个子任务，我把任务交给 OpenCode 执行�
 
 OpenCode 安装了 Superpowers，其中有一个 `using-superpowers` skill，规则是：
 
-> *"If you think there is even a 1% chance a skill might apply, you ABSOLUTELY MUST invoke the skill."*
+> _"If you think there is even a 1% chance a skill might apply, you ABSOLUTELY MUST invoke the skill."_
 
 OpenCode 收到任务后，自动触发了 `writing-plans` skill。`writing-plans` 扫描项目目录，发现了早期的 Phase 1 plan 文件（`docs/plans/2026-03-04-ecommerce-prototype.md`）。然后触发了 `subagent-driven-development` skill，它把那个旧 plan 当成当前任务——完全覆盖了我给的指令。
 
@@ -206,11 +216,13 @@ Superpowers 的 skill 是工程智慧的结晶——`writing-plans` 告诉你先
 但问题是：**这些 skill 是给架构师用的，不是给执行者用的。**
 
 错误的用法：
+
 ```
 我（架构师）→ 给 OpenCode 任务 → OpenCode 自主触发 skill → Skill 接管执行方向
 ```
 
 正确的用法：
+
 ```
 我（架构师）读 skill → 把 skill 精华融入任务设计 → 给 OpenCode 精准 prompt → OpenCode 只管执行
 ```
@@ -236,6 +248,7 @@ Skill 是架构师的参考手册，不是 AI 的自动驾驶程序。
 ```
 
 **3. 角色边界文档化**：新建 `PROCESS.md`，明确定义：
+
 - **架构师**：读 skill、写 BRIEF、写计划、监控执行、验收质量
 - **OpenCode**：收 prompt、执行、汇报，不规划不决策不触发 skill
 
@@ -266,23 +279,23 @@ Skill 是架构师的参考手册，不是 AI 的自动驾驶程序。
 
 Phase 4 完成后，跑了 15 项验收测试：
 
-| 测试项 | 预期 | 结果 |
-|--------|------|------|
-| 注册新用户 | 201 Created | ✅ |
-| 重复邮箱注册 | 409 Conflict | ✅ |
-| 密码不足 6 位 | 400 + 错误提示 | ✅ |
-| 邮箱格式错误 | 400 + 错误提示 | ✅ |
-| 正常登录返回 token | 200 + accessToken | ✅ |
-| 密码错误 | 401 | ✅ |
-| 无 token 访问受保护接口 | 401 | ✅ |
-| 有 token 访问受保护接口 | 200 | ✅ |
-| 登录用户下单关联 user_id | user_id = 正确 ID | ✅ |
-| 订单历史包含刚下的单 | 订单 + 商品明细 | ✅ |
-| 游客下单向后兼容 | 200，user_id = NULL | ✅ |
-| Refresh token 换新 access token | 200 + 新 token | ✅ |
-| Logout 清除 cookie | 200 | ✅ |
-| Logout 后 refresh 失败 | 401 | ✅ |
-| Phase 3 /api/products 不受影响 | 200 + 商品列表 | ✅ |
+| 测试项                          | 预期                | 结果 |
+| ------------------------------- | ------------------- | ---- |
+| 注册新用户                      | 201 Created         | ✅   |
+| 重复邮箱注册                    | 409 Conflict        | ✅   |
+| 密码不足 6 位                   | 400 + 错误提示      | ✅   |
+| 邮箱格式错误                    | 400 + 错误提示      | ✅   |
+| 正常登录返回 token              | 200 + accessToken   | ✅   |
+| 密码错误                        | 401                 | ✅   |
+| 无 token 访问受保护接口         | 401                 | ✅   |
+| 有 token 访问受保护接口         | 200                 | ✅   |
+| 登录用户下单关联 user_id        | user_id = 正确 ID   | ✅   |
+| 订单历史包含刚下的单            | 订单 + 商品明细     | ✅   |
+| 游客下单向后兼容                | 200，user_id = NULL | ✅   |
+| Refresh token 换新 access token | 200 + 新 token      | ✅   |
+| Logout 清除 cookie              | 200                 | ✅   |
+| Logout 后 refresh 失败          | 401                 | ✅   |
+| Phase 3 /api/products 不受影响  | 200 + 商品列表      | ✅   |
 
 **15/15 全部通过**。
 
@@ -292,13 +305,13 @@ Phase 4 完成后，跑了 15 项验收测试：
 
 Phase 4 留下了一些已知债务，不是问题，是有意识的权衡：
 
-| 债务 | 当前状态 | 计划 |
-|------|---------|------|
-| Token 存 localStorage | 可接受（无敏感操作） | Phase 5 评估 httpOnly-only 方案 |
-| 无邮箱验证 | 简单 regex | Phase 5 加 OTP 验证流 |
-| 无密码重置 | 未实现 | Phase 5 |
-| Rate limit 仅内存存储 | 单进程够用 | Phase 6 迁移 Redis |
-| 无 JWT 黑名单 | 登出后 token 仍有效 15 分钟 | Phase 5 评估 |
+| 债务                  | 当前状态                    | 计划                            |
+| --------------------- | --------------------------- | ------------------------------- |
+| Token 存 localStorage | 可接受（无敏感操作）        | Phase 5 评估 httpOnly-only 方案 |
+| 无邮箱验证            | 简单 regex                  | Phase 5 加 OTP 验证流           |
+| 无密码重置            | 未实现                      | Phase 5                         |
+| Rate limit 仅内存存储 | 单进程够用                  | Phase 6 迁移 Redis              |
+| 无 JWT 黑名单         | 登出后 token 仍有效 15 分钟 | Phase 5 评估                    |
 
 Phase 5 的重点是**安全与性能硬化**：express-validator 输入校验、ufw 替代 iptables、HTTP 安全头（helmet）、图片懒加载。
 

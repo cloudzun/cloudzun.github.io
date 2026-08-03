@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-07'
+title: "HN Daily Digest: 2026-03-07"
 pubDatetime: 2026-03-06T16:17:02Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,59 +162,68 @@ Astra对天文技术社区具有重要意义，它打破了传统天文台控制
 ## 📑 更多热门文章 (11-20)
 
 **11. Apache Otava**
-   ⭐ 73 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47206990) · [原文](https://otava.apache.org/)
-   > Apache Otava是一个用于持续性能工程的变化检测工具，通过统计分析CSV、PostgreSQL、BigQuery或Graphite中的性能测试数据，自动识别性能变化点并发出性能回归预警。
+⭐ 73 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47206990) · [原文](https://otava.apache.org/)
+
+> Apache Otava是一个用于持续性能工程的变化检测工具，通过统计分析CSV、PostgreSQL、BigQuery或Graphite中的性能测试数据，自动识别性能变化点并发出性能回归预警。
 
 **12. Triplet Superconductor**
-   ⭐ 44 分 · 💬 8 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47215112) · [原文](https://www.sciencedaily.com/releases/2026/02/260221000252.htm)
-   > 科学家发现稀有金属合金NbRe可能是三重态超导体，能够零电阻传输电流和电子自旋，有望大幅提升量子计算机稳定性并降低能耗。
+⭐ 44 分 · 💬 8 条
+[HN 讨论](https://news.ycombinator.com/item?id=47215112) · [原文](https://www.sciencedaily.com/releases/2026/02/260221000252.htm)
+
+> 科学家发现稀有金属合金NbRe可能是三重态超导体，能够零电阻传输电流和电子自旋，有望大幅提升量子计算机稳定性并降低能耗。
 
 **13. Art Bits from HyperCard**
-   ⭐ 43 分 · 💬 12 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47281485) · [原文](https://archives.somnolescent.net/web/mari_v2/junk/hypercard/)
-   > 介绍苹果经典超媒体系统HyperCard中自带的"Art Bits"剪贴画素材库，展示了这个影响了JavaScript、维基和《神秘岛》等诸多技术与作品的软件遗产。
+⭐ 43 分 · 💬 12 条
+[HN 讨论](https://news.ycombinator.com/item?id=47281485) · [原文](https://archives.somnolescent.net/web/mari_v2/junk/hypercard/)
+
+> 介绍苹果经典超媒体系统HyperCard中自带的"Art Bits"剪贴画素材库，展示了这个影响了JavaScript、维基和《神秘岛》等诸多技术与作品的软件遗产。
 
 **14. Math Notepad**
-   ⭐ 39 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47214708) · [原文](https://mathnotepad.com)
-   > 一款基于JavaScript和Math.js开发的在线数学记事本工具，支持文件管理、编辑撤销重做等基础功能，可用于数学计算和笔记记录。
+⭐ 39 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47214708) · [原文](https://mathnotepad.com)
+
+> 一款基于JavaScript和Math.js开发的在线数学记事本工具，支持文件管理、编辑撤销重做等基础功能，可用于数学计算和笔记记录。
 
 **15. The Shady World of IP Leasing**
-   ⭐ 37 分 · 💬 15 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47281221) · [原文](https://acid.vegas/blog/the-shady-world-of-ip-leasing/)
-   > 揭露IPv4地址并未真正耗尽，而是被囤积并形成灰色转租市场，允许买家任意选择IP归属地、所有权记录并清洗使用历史。
+⭐ 37 分 · 💬 15 条
+[HN 讨论](https://news.ycombinator.com/item?id=47281221) · [原文](https://acid.vegas/blog/the-shady-world-of-ip-leasing/)
+
+> 揭露IPv4地址并未真正耗尽，而是被囤积并形成灰色转租市场，允许买家任意选择IP归属地、所有权记录并清洗使用历史。
 
 **16. C# strings silently kill your SQL Server indexes in Dapper**
-   ⭐ 28 分 · 💬 17 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47282230) · [原文](https://consultwithgriff.com/dapper-nvarchar-implicit-conversion-performance-trap)
-   > 揭示了C#字符串在Dapper中因类型不匹配（string映射为nvarchar而非varchar）导致SQL Server索引失效，引发严重性能问题的隐蔽陷阱。
+⭐ 28 分 · 💬 17 条
+[HN 讨论](https://news.ycombinator.com/item?id=47282230) · [原文](https://consultwithgriff.com/dapper-nvarchar-implicit-conversion-performance-trap)
+
+> 揭示了C#字符串在Dapper中因类型不匹配（string映射为nvarchar而非varchar）导致SQL Server索引失效，引发严重性能问题的隐蔽陷阱。
 
 **17. Plasma Bigscreen – 10-foot interface for KDE plasma**
-   ⭐ 13 分 · 💬 1 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47282736) · [原文](https://plasma-bigscreen.org)
-   > Plasma Bigscreen是KDE为Linux系统开发的开源电视界面，专为大屏幕设备设计，可在沙发上轻松控制应用和系统设置。
+⭐ 13 分 · 💬 1 条
+[HN 讨论](https://news.ycombinator.com/item?id=47282736) · [原文](https://plasma-bigscreen.org)
+
+> Plasma Bigscreen是KDE为Linux系统开发的开源电视界面，专为大屏幕设备设计，可在沙发上轻松控制应用和系统设置。
 
 **18. Show HN: The Roman Industrial Revolution that could have been (Vol 2)**
-   ⭐ 12 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47282390) · [原文](https://thelydianstone.com/volume-2)
-   > 讲述罗马庞贝灾后重建中，主人公通过引入机械化生产技术拯救羊毛产业，却因产能过剩引发新挑战的历史架空故事。
+⭐ 12 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47282390) · [原文](https://thelydianstone.com/volume-2)
+
+> 讲述罗马庞贝灾后重建中，主人公通过引入机械化生产技术拯救羊毛产业，却因产能过剩引发新挑战的历史架空故事。
 
 **19. Multifactor (YC F25) Is Hiring an Engineering Lead**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47277679) · [原文](https://www.ycombinator.com/companies/multifactor/jobs/lcpd60A-engineering-lead)
-   > Multifactor招聘首位工程主管，负责零信任AI代理安全平台的技术执行，需6年以上经验，提供16.5-19.5万美元薪资及1-4%股权。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47277679) · [原文](https://www.ycombinator.com/companies/multifactor/jobs/lcpd60A-engineering-lead)
+
+> Multifactor招聘首位工程主管，负责零信任AI代理安全平台的技术执行，需6年以上经验，提供16.5-19.5万美元薪资及1-4%股权。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 140 分 |
-| 总讨论数 | 1104 条 |
+| 指标     | 数值                                                                               |
+| -------- | ---------------------------------------------------------------------------------- |
+| 平均热度 | 140 分                                                                             |
+| 总讨论数 | 1104 条                                                                            |
 | 最热文章 | "Tech employment now significantly worse than the 2008 or 2020 recessions" (670⭐) |
 | 讨论最多 | "Tech employment now significantly worse than the 2008 or 2020 recessions" (445💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

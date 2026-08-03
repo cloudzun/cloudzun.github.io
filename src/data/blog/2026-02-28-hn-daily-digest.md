@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-28'
+title: "HN Daily Digest: 2026-02-28"
 pubDatetime: 2026-02-27T16:16:56Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -162,64 +162,74 @@ NASA新任局长贾里德·艾萨克曼宣布对阿尔忒弥斯登月计划进�
 ## 📑 更多热门文章 (11-20)
 
 **11. Writing a Guide to SDF Fonts**
-   ⭐ 64 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47183725) · [原文](https://www.redblobgames.com/blog/2026-02-26-writing-a-guide-to-sdf-fonts/)
-   > 作者分享了撰写SDF字体技术指南的过程，从2024年学习实践到2025年将不完整的笔记完善成搜索结果靠前的参考资料。
+⭐ 64 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47183725) · [原文](https://www.redblobgames.com/blog/2026-02-26-writing-a-guide-to-sdf-fonts/)
+
+> 作者分享了撰写SDF字体技术指南的过程，从2024年学习实践到2025年将不完整的笔记完善成搜索结果靠前的参考资料。
 
 **12. Open source calculator firmware DB48X forbids CA/CO use due to age verification**
-   ⭐ 128 分 · 💬 57 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47181753) · [原文](https://github.com/c3d/db48x/commit/7819972b641ac808d46c54d3f5d1df70d706d286)
-   > 开源计算器固件DB48X因加州和科罗拉多州年龄验证法案要求，宣布禁止这两个地区用户使用该软件，以抗议过度监管。
+⭐ 128 分 · 💬 57 条
+[HN 讨论](https://news.ycombinator.com/item?id=47181753) · [原文](https://github.com/c3d/db48x/commit/7819972b641ac808d46c54d3f5d1df70d706d286)
+
+> 开源计算器固件DB48X因加州和科罗拉多州年龄验证法案要求，宣布禁止这两个地区用户使用该软件，以抗议过度监管。
 
 **13. Get free Claude max 20x for open-source maintainers**
-   ⭐⭐⭐ 404 分 · 💬 186 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47178371) · [原文](https://claude.com/contact-sales/claude-for-oss)
-   > Anthropic为开源项目维护者提供免费的Claude Max订阅，使用量最高可达标准版本的20倍，助力开源社区发展。
+⭐⭐⭐ 404 分 · 💬 186 条
+[HN 讨论](https://news.ycombinator.com/item?id=47178371) · [原文](https://claude.com/contact-sales/claude-for-oss)
+
+> Anthropic为开源项目维护者提供免费的Claude Max订阅，使用量最高可达标准版本的20倍，助力开源社区发展。
 
 **14. Show HN: I built a self-hosted course platform in Clojure**
-   ⭐ 27 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47165813) · [原文](https://clojure.stream)
-   > 一个使用Clojure构建的自托管课程平台，提供Clojure/ClojureScript/Datalog的项目实战课程、在线工作坊和播客内容，帮助开发者通过实践学习惯用编程方法。
+⭐ 27 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47165813) · [原文](https://clojure.stream)
+
+> 一个使用Clojure构建的自托管课程平台，提供Clojure/ClojureScript/Datalog的项目实战课程、在线工作坊和播客内容，帮助开发者通过实践学习惯用编程方法。
 
 **15. Allocating on the Stack**
-   ⭐ 113 分 · 💬 46 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47182487) · [原文](https://go.dev/blog/allocation-optimizations)
-   > 本文深入讲解Go语言编译器如何通过逃逸分析优化内存分配，将对象分配在栈上而非堆上，从而减少垃圾回收压力并提升程序性能。
+⭐ 113 分 · 💬 46 条
+[HN 讨论](https://news.ycombinator.com/item?id=47182487) · [原文](https://go.dev/blog/allocation-optimizations)
+
+> 本文深入讲解Go语言编译器如何通过逃逸分析优化内存分配，将对象分配在栈上而非堆上，从而减少垃圾回收压力并提升程序性能。
 
 **16. Rob Grant, creator of Red Dwarf, has died**
-   ⭐⭐ 199 分 · 💬 59 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47184480) · [原文](https://www.beyondthejoke.co.uk/content/17193/red-dwarf-rob-grant)
-   > 《红矮星号》联合创作者、英国知名喜剧编剧罗布·格兰特去世，曾参与创作《吐痰木偶秀》等经典作品，引发业界和粉丝悼念。
+⭐⭐ 199 分 · 💬 59 条
+[HN 讨论](https://news.ycombinator.com/item?id=47184480) · [原文](https://www.beyondthejoke.co.uk/content/17193/red-dwarf-rob-grant)
+
+> 《红矮星号》联合创作者、英国知名喜剧编剧罗布·格兰特去世，曾参与创作《吐痰木偶秀》等经典作品，引发业界和粉丝悼念。
 
 **17. Kyber (YC W23) Is Hiring an Enterprise Account Executive**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47183907) · [原文](https://www.ycombinator.com/companies/kyber/jobs/59yPaCs-enterprise-account-executive-ae)
-   > Kyber是一家YC孵化的AI文档平台公司，正在招聘企业客户销售经理，该职位年薪22-26万美元并提供股权激励，需3年以上销售经验。
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47183907) · [原文](https://www.ycombinator.com/companies/kyber/jobs/59yPaCs-enterprise-account-executive-ae)
+
+> Kyber是一家YC孵化的AI文档平台公司，正在招聘企业客户销售经理，该职位年薪22-26万美元并提供股权激励，需3年以上销售经验。
 
 **18. A Chinese official’s use of ChatGPT revealed an intimidation operation**
-   ⭐ 105 分 · 💬 81 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47181944) · [原文](https://www.cnn.com/2026/02/25/politics/chatgpt-china-intimidation-operation)
-   > 一名中国官员因使用ChatGPT时操作失误，意外暴露了针对特定目标的施压恐吓行动，揭示了AI工具在敏感操作中的安全风险。
+⭐ 105 分 · 💬 81 条
+[HN 讨论](https://news.ycombinator.com/item?id=47181944) · [原文](https://www.cnn.com/2026/02/25/politics/chatgpt-china-intimidation-operation)
+
+> 一名中国官员因使用ChatGPT时操作失误，意外暴露了针对特定目标的施压恐吓行动，揭示了AI工具在敏感操作中的安全风险。
 
 **19. PCB Tracer**
-   ⭐ 38 分 · 💬 18 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47135009) · [原文](https://pcbtracer.com)
-   > 这是一个基于浏览器的PCB电路板逆向工程工具，可通过上传电路板图片自动识别和追踪走线，帮助工程师快速还原电路原理图和分析硬件设计。
+⭐ 38 分 · 💬 18 条
+[HN 讨论](https://news.ycombinator.com/item?id=47135009) · [原文](https://pcbtracer.com)
+
+> 这是一个基于浏览器的PCB电路板逆向工程工具，可通过上传电路板图片自动识别和追踪走线，帮助工程师快速还原电路原理图和分析硬件设计。
 
 **20. Modeling cycles of grift with evolutionary game theory**
-   ⭐ 75 分 · 💬 32 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47137199) · [原文](https://www.oranlooney.com/post/grifters-skeptics-marks/)
-   > 运用演化博弈论建立GSM模型，分析骗子、怀疑者与受害者之间的动态循环关系，揭示欺诈行为在社会中兴衰演变的数学机制。
+⭐ 75 分 · 💬 32 条
+[HN 讨论](https://news.ycombinator.com/item?id=47137199) · [原文](https://www.oranlooney.com/post/grifters-skeptics-marks/)
+
+> 运用演化博弈论建立GSM模型，分析骗子、怀疑者与受害者之间的动态循环关系，揭示欺诈行为在社会中兴衰演变的数学机制。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 156 分 |
-| 总讨论数 | 2062 条 |
+| 指标     | 数值                                                                                      |
+| -------- | ----------------------------------------------------------------------------------------- |
+| 平均热度 | 156 分                                                                                    |
+| 总讨论数 | 2062 条                                                                                   |
 | 最热文章 | "I am directing the Department of War to designate Anthropic a supply-chain risk" (624⭐) |
 | 讨论最多 | "I am directing the Department of War to designate Anthropic a supply-chain risk" (500💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_
