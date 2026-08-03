@@ -1,8 +1,8 @@
 ---
-title: 'From Zero to Hero: Building a Production-Ready OpenClaw Skill'
+title: "From Zero to Hero: Building a Production-Ready OpenClaw Skill"
 pubDatetime: 2026-02-23T04:00:00Z
-tags: ['OpenClaw', 'Skill', 'AI', 'Tutorial', 'Python']
-description: '技术博客文章'
+tags: ["OpenClaw", "Skill", "AI", "Tutorial", "Python"]
+description: "技术博客文章"
 ---
 
 # 从零开始：打造一个生产级 OpenClaw Skill
@@ -21,6 +21,7 @@ description: '技术博客文章'
 - ✅ 详细的文档（从设计到使用）
 
 **最终成果**：
+
 - 📦 GitHub 仓库: https://github.com/cloudzun/tech-blog-writer
 - 📝 代码行数: ~1,200行
 - 📚 文档字数: ~15,000字
@@ -51,12 +52,12 @@ description: '技术博客文章'
 
 ### 技术选型
 
-| 组件 | 技术选择 | 理由 |
-|------|---------|------|
+| 组件         | 技术选择                   | 理由                |
+| ------------ | -------------------------- | ------------------- |
 | **核心定义** | SKILL.md (YAML + Markdown) | OpenClaw 2.10+ 标准 |
-| **脚本语言** | Python 3.8+ | 生态丰富、易读易写 |
-| **配置格式** | JSON | 简单易用、易于解析 |
-| **模板格式** | Markdown | 通用格式、易于编辑 |
+| **脚本语言** | Python 3.8+                | 生态丰富、易读易写  |
+| **配置格式** | JSON                       | 简单易用、易于解析  |
+| **模板格式** | Markdown                   | 通用格式、易于编辑  |
 
 ---
 
@@ -137,6 +138,7 @@ description: 当用户提到"写技术博客"、"技术文章"、"教程"或"技
 ```
 
 **关键点**：
+
 - `name`: 必须与目录名一致，使用小写 + 连字符
 - `description`: 清晰描述触发场景，AI 用此判断是否激活
 
@@ -146,38 +148,53 @@ description: 当用户提到"写技术博客"、"技术文章"、"教程"或"技
 # 技术博客写作助手 V1.0
 
 ## 版本历史
+
 ### V1.0.0 (2026-02-22)
+
 - 初始版本
 
 ## 一、角色定义
+
 你是一位经验丰富的技术博客作者...
 
 ## 二、核心能力
+
 1. 文章结构设计
 2. 技术深度把控
 3. 代码示例质量
 4. 质量检测
 
 ## 三、工作流程
+
 ### 步骤1：需求分析
+
 ### 步骤2：内容创作
+
 ### 步骤3：质量检测
+
 ### 步骤4：优化改进
 
 ## 四、规则约束
+
 ### 必须遵守
+
 ### 禁止事项
 
 ## 五、示例展示
+
 ### ✅ 好的示例
+
 ### ❌ 差的示例
 
 ## 六、输出格式
+
 ## 七、工具调用
+
 ## 八、配置文件
 ```
 
 **设计要点**：
+
 - 使用清晰的章节结构（## 一、二、三...）
 - 提供好/坏示例对比
 - 说明工具调用方式
@@ -194,7 +211,7 @@ description: 当用户提到"写技术博客"、"技术文章"、"教程"或"技
 ```python
 class QualityChecker:
     """技术博客质量检测器"""
-    
+
     def __init__(self):
         self.max_scores = {
             "accuracy": 30,      # 技术准确性
@@ -202,7 +219,7 @@ class QualityChecker:
             "practicality": 25,  # 实用性
             "structure": 20      # 结构完整性
         }
-    
+
     def check(self, content: str) -> QualityReport:
         """检测文章质量"""
         # 执行各维度检测
@@ -210,13 +227,13 @@ class QualityChecker:
         readability_score = self._check_readability(content)
         practicality_score = self._check_practicality(content)
         structure_score = self._check_structure(content)
-        
+
         # 计算总分
         total_score = sum([...])
-        
+
         # 生成建议
         suggestions = self._generate_suggestions(...)
-        
+
         return QualityReport(...)
 ```
 
@@ -224,52 +241,52 @@ class QualityChecker:
 
 **技术准确性（30分）**：
 
-```python
+````python
 def _check_accuracy(self, content: str) -> Tuple[int, Dict]:
     score = 0
-    
+
     # 1. 是否有代码示例（10分）
     code_blocks = re.findall(r'```[\s\S]*?```', content)
     if code_blocks:
         score += 10
-    
+
     # 2. 代码块是否指定语言（5分）
     if all(re.match(r'```\w+', block) for block in code_blocks):
         score += 5
-    
+
     # 3. 是否有版本号说明（5分）
     if re.search(r'v?\d+\.\d+', content):
         score += 5
-    
+
     # 4. 是否有输出示例（10分）
     if any(word in content for word in ['输出', 'output', '结果']):
         score += 10
-    
+
     return score, details
-```
+````
 
 **可读性（25分）**：
 
 ```python
 def _check_readability(self, content: str) -> Tuple[int, Dict]:
     score = 0
-    
+
     # 1. 段落长度适中（10分）
     paragraphs = content.split('\n\n')
     avg_length = sum(len(p) for p in paragraphs) / len(paragraphs)
     if 100 <= avg_length <= 500:
         score += 10
-    
+
     # 2. 使用标题分层（10分）
     h2_count = len(re.findall(r'^##\s', content, re.MULTILINE))
     if h2_count >= 3:
         score += 5
-    
+
     # 3. 使用列表（5分）
     list_count = len(re.findall(r'^\s*[-*]\s', content, re.MULTILINE))
     if list_count >= 5:
         score += 5
-    
+
     return score, details
 ```
 
@@ -278,21 +295,21 @@ def _check_readability(self, content: str) -> Tuple[int, Dict]:
 ```python
 def _generate_suggestions(self, dimensions: Dict) -> List[str]:
     suggestions = []
-    
+
     # 技术准确性建议
     if dimensions["accuracy"] < 20:
         suggestions.append("建议添加代码示例以提高技术准确性")
         suggestions.append("建议为所有代码块指定编程语言")
-    
+
     # 可读性建议
     if dimensions["readability"] < 15:
         suggestions.append("建议使用更多二级标题（##）组织内容")
-    
+
     # 总分建议
     total = sum(dimensions.values())
     if total < 70:
         suggestions.insert(0, f"⚠️ 总分 {total} 分，低于合格线（70分）")
-    
+
     return suggestions
 ```
 
@@ -340,24 +357,24 @@ class TitleGenerator:
 ```python
 def _score_title(self, title: str) -> int:
     score = 50  # 基础分
-    
+
     # 长度适中（15-30字）
     if 15 <= len(title) <= 30:
         score += 20
-    
+
     # 包含数字
     if any(char.isdigit() for char in title):
         score += 10
-    
+
     # 包含动作词
     action_words = ['搞懂', '教你', '实现', '搭建']
     if any(word in title for word in action_words):
         score += 10
-    
+
     # 包含时间承诺
     if any(word in title for word in ['分钟', '小时']):
         score += 10
-    
+
     return min(score, 100)
 ```
 
@@ -390,33 +407,43 @@ def _score_title(self, title: str) -> int:
 
 `templates/tutorial-template.md`：
 
-```markdown
+````markdown
 # {title}
 
 > **摘要**：{summary}
 
 ## 前置知识
+
 - **需要了解**：{prerequisites}
 - **环境要求**：{environment}
 
 ## 核心概念
+
 ### {concept_name}
+
 {concept_explanation}
 
 ## 实战演练
+
 ### 步骤1：{step1_name}
+
 ```{language}
 {step1_code}
 ```
+````
 
 ## 常见问题
+
 ### Q1：{question1}
+
 **A**：{answer1}
 
 ## 总结
+
 - {summary_point1}
 - {summary_point2}
-```
+
+````
 
 ---
 
@@ -456,7 +483,7 @@ def _score_title(self, title: str) -> int:
     }
   ]
 }
-```
+````
 
 ---
 
@@ -476,6 +503,7 @@ Docker是一个容器化平台。
 ```
 
 **输出**：
+
 ```json
 {
   "success": true,
@@ -574,6 +602,7 @@ gh repo create tech-blog-writer \
 ```
 
 **结果**：
+
 - 🔗 仓库地址: https://github.com/cloudzun/tech-blog-writer
 - ✅ 10个文件
 - ✅ 2,390行代码
@@ -585,14 +614,14 @@ gh repo create tech-blog-writer \
 
 ### 代码统计
 
-| 文件 | 行数 | 说明 |
-|------|------|------|
-| SKILL.md | ~250 | 核心定义文件 |
-| quality_checker.py | ~450 | 质量检测器 |
-| title_generator.py | ~300 | 标题生成器 |
-| README.md | ~200 | 项目文档 |
-| design.md | ~150 | 设计文档 |
-| **总计** | **~1,350** | |
+| 文件               | 行数       | 说明         |
+| ------------------ | ---------- | ------------ |
+| SKILL.md           | ~250       | 核心定义文件 |
+| quality_checker.py | ~450       | 质量检测器   |
+| title_generator.py | ~300       | 标题生成器   |
+| README.md          | ~200       | 项目文档     |
+| design.md          | ~150       | 设计文档     |
+| **总计**           | **~1,350** |              |
 
 ### 功能统计
 
@@ -750,6 +779,7 @@ gh repo create tech-blog-writer \
 5. ✅ 如何发布到 GitHub
 
 **关键要点**：
+
 - 从简单开始，逐步迭代
 - 模块化设计，易于扩展
 - 文档优先，便于学习

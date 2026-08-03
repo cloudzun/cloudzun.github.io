@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest - 2026-03-11'
+title: "HN Daily Digest - 2026-03-11"
 pubDatetime: 2026-03-11T00:00:00Z
-tags: ['hacker-news', 'tech-news', 'daily-digest', 'ai-analysis']
-description: '技术博客文章'
+tags: ["hacker-news", "tech-news", "daily-digest", "ai-analysis"]
+description: "技术博客文章"
 author: "HuaQloud"
 ---
 
@@ -224,4 +224,4 @@ Cloudflare Crawl Endpoint 是一个信号：**内容创作者正在通过技术�
 
 ---
 
-*本报告由 HN Daily Digest 自动生成 | 数据来源：Hacker News | 分析：Claude Sonnet 4.5*
+_本报告由 HN Daily Digest 自动生成 | 数据来源：Hacker News | 分析：Claude Sonnet 4.5_

@@ -1,8 +1,8 @@
 ---
-title: 'OpenClaw 2026.2.3 Upgrade Complete Operation Log'
+title: "OpenClaw 2026.2.3 Upgrade Complete Operation Log"
 pubDatetime: 2026-02-05T00:36:00Z
-tags: ['openclaw', 'upgrade', 'qmd', 'discord', 'hugo', 'maintenance']
-description: '技术博客文章'
+tags: ["openclaw", "upgrade", "qmd", "discord", "hugo", "maintenance"]
+description: "技术博客文章"
 ---
 
 # OpenClaw 2026.2.3 升级完整操作记录
@@ -14,12 +14,14 @@ description: '技术博客文章'
 ## 升级前准备
 
 ### 检查当前版本
+
 ```bash
 $ openclaw --version
 2026.2.1
 ```
 
 ### 检查 QMD 功能状态
+
 ```bash
 $ ls /home/chengzh/clawd/qmd-sessions | wc -l
 72
@@ -132,6 +134,7 @@ $ openclaw update
 ## 升级结果
 
 ### 验证新版本
+
 ```bash
 $ openclaw --version
 2026.2.3
@@ -142,16 +145,20 @@ $ openclaw --version
 ### 功能验证
 
 1. **QMD 功能**：
+
    ```bash
    $ ls /home/chengzh/clawd/qmd-sessions | wc -l
    72
    ```
+
    QMD 功能继续正常工作。
 
 2. **服务状态**：
+
    ```bash
    $ ps aux | grep openclaw
    ```
+
    OpenClaw 服务正常运行。
 
 3. **Discord 配置**：

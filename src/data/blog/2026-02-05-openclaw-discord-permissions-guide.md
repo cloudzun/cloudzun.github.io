@@ -1,8 +1,8 @@
 ---
-title: 'OpenClaw Discord权限配置详解'
+title: "OpenClaw Discord权限配置详解"
 pubDatetime: 2026-02-05T03:48:00Z
-tags: ['openclaw', 'discord', 'permissions', 'configuration', 'troubleshooting']
-description: '技术博客文章'
+tags: ["openclaw", "discord", "permissions", "configuration", "troubleshooting"]
+description: "技术博客文章"
 ---
 
 # OpenClaw Discord权限配置详解
@@ -25,22 +25,24 @@ description: '技术博客文章'
 {
   "channels": {
 ```
+
 "discord": {
-  "enabled": true,
-  "token": "YOUR_BOT_TOKEN",
-  "groupPolicy": "allowlist",
-  "guilds": {
-    "YOUR_GUILD_ID": {
-      "requireMention": false,
-      "users": ["USER_ID_1", "USER_ID_2"],  // 指定允许的用户ID
-      "channels": {
-        "CHANNEL_ID_1": {
-          "requireMention": false
-        }
-      }
-    }
-  }
+"enabled": true,
+"token": "YOUR_BOT_TOKEN",
+"groupPolicy": "allowlist",
+"guilds": {
+"YOUR_GUILD_ID": {
+"requireMention": false,
+"users": ["USER_ID_1", "USER_ID_2"], // 指定允许的用户ID
+"channels": {
+"CHANNEL_ID_1": {
+"requireMention": false
 }
+}
+}
+}
+}
+
 ```
   }
 }

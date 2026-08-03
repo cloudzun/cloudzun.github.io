@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-08'
+title: "HN Daily Digest: 2026-03-08"
 pubDatetime: 2026-03-07T14:42:13Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,64 +160,84 @@ CasNum值得关注的原因在于它为开发社区提供了可复用的解决�
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Show HN: ANSI-Saver – A macOS Screensaver
-   ⭐ 80 分 · 💬 26 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47288007) · [原文](https://github.com/lardissone/ansi-saver)
-   > 这是一款为macOS设计的屏保应用，可以流式播放来自16colo.rs BBS档案库的ANSI艺术作品。
+
+⭐ 80 分 · 💬 26 条
+[HN 讨论](https://news.ycombinator.com/item?id=47288007) · [原文](https://github.com/lardissone/ansi-saver)
+
+> 这是一款为macOS设计的屏保应用，可以流式播放来自16colo.rs BBS档案库的ANSI艺术作品。
 
 #### 12. Re-creating the complex cuisine of prehistoric Europeans
-   ⭐ 51 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47280958) · [原文](https://arstechnica.com/science/2026/03/recreating-the-complex-cuisine-of-prehistoric-europeans/)
-   > 通过分析陶器残留物，研究人员发现史前欧洲人烹饪时将鱼类与多种植物混合使用，揭示了他们拥有复杂精致的饮食文化。
+
+⭐ 51 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47280958) · [原文](https://arstechnica.com/science/2026/03/recreating-the-complex-cuisine-of-prehistoric-europeans/)
+
+> 通过分析陶器残留物，研究人员发现史前欧洲人烹饪时将鱼类与多种植物混合使用，揭示了他们拥有复杂精致的饮食文化。
 
 #### 13. macOS code injection for fun and no profit (2024)
-   ⭐ 48 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47250500) · [原文](https://mariozechner.at/posts/2024-07-20-macos-code-injection-fun/)
-   > 本文介绍了在macOS平台上实现代码注入技术的方法和原理，包括进程附加、内存读写、代码注入等关键步骤，为开发者提供热重载编程的解决方案。
+
+⭐ 48 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47250500) · [原文](https://mariozechner.at/posts/2024-07-20-macos-code-injection-fun/)
+
+> 本文介绍了在macOS平台上实现代码注入技术的方法和原理，包括进程附加、内存读写、代码注入等关键步骤，为开发者提供热重载编程的解决方案。
 
 #### 14. In 1985 Maxell built a bunch of life-size robots for its bad floppy ad
-   ⭐ 33 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47247644) · [原文](https://buttondown.com/suchbadtechads/archive/maxell-life-size-robots/)
-   > 本文介绍了美孚公司1985年为软盘产品制作的创意广告，采用真人尺寸机器人角色，展现了80年代科技广告的独特创意风格和营销策略。
+
+⭐ 33 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47247644) · [原文](https://buttondown.com/suchbadtechads/archive/maxell-life-size-robots/)
+
+> 本文介绍了美孚公司1985年为软盘产品制作的创意广告，采用真人尺寸机器人角色，展现了80年代科技广告的独特创意风格和营销策略。
 
 #### 15. Does Apple‘s M5 Max Really “Destroy” a 96-Core Threadripper?
-   ⭐ 32 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47291906) · [原文](https://slashdot.org/submission/17345398/does-apples-m5-max-really-destroy-a-96-core-threadripper)
-   > 本文探讨Apple M5 Max芯片与96核Threadripper处理器的性能对比，分析其在实际应用中的真实表现差异。
+
+⭐ 32 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47291906) · [原文](https://slashdot.org/submission/17345398/does-apples-m5-max-really-destroy-a-96-core-threadripper)
+
+> 本文探讨Apple M5 Max芯片与96核Threadripper处理器的性能对比，分析其在实际应用中的真实表现差异。
 
 #### 16. Bourdieu's theory of taste: a grumbling abrégé (2023)
-   ⭐ 31 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47260028) · [原文](https://dynomight.net/bourdieu/)
-   > 本文通过分析个人品味偏好的矛盾性，揭示布迪厄品味理论中关于文化品味如何反映社会阶层和身份认同的深层机制。
+
+⭐ 31 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47260028) · [原文](https://dynomight.net/bourdieu/)
+
+> 本文通过分析个人品味偏好的矛盾性，揭示布迪厄品味理论中关于文化品味如何反映社会阶层和身份认同的深层机制。
 
 #### 17. The Day NY Publishing Lost Its Soul
-   ⭐ 11 分 · 💬 2 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47291525) · [原文](https://www.honest-broker.com/p/the-day-ny-publishing-lost-its-soul)
-   > 本文揭示了纽约出版业的衰退现象，分析了出版社过度依赖少数作者、设计创意匮乏等问题，反思行业失去创新精神的根本原因。
+
+⭐ 11 分 · 💬 2 条
+[HN 讨论](https://news.ycombinator.com/item?id=47291525) · [原文](https://www.honest-broker.com/p/the-day-ny-publishing-lost-its-soul)
+
+> 本文揭示了纽约出版业的衰退现象，分析了出版社过度依赖少数作者、设计创意匮乏等问题，反思行业失去创新精神的根本原因。
 
 #### 18. LLM Writing Tropes.md
-   ⭐ 6 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47291513) · [原文](https://tropes.fyi/tropes-md)
-   > 本文汇总了大语言模型常见的写作套路库，可添加到AI系统提示词中帮助其避免重复使用"quietly"等陈词滥调和刻板表达模式。
+
+⭐ 6 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47291513) · [原文](https://tropes.fyi/tropes-md)
+
+> 本文汇总了大语言模型常见的写作套路库，可添加到AI系统提示词中帮助其避免重复使用"quietly"等陈词滥调和刻板表达模式。
 
 #### 19. Package Managers Need to Cool Down
-   ⭐ 4 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47255869) · [原文](https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html)
-   > 本文探讨包管理器应实施依赖冷却期机制，通过延迟新版本安装来防止恶意包快速传播，给安全社区反应时间。
+
+⭐ 4 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47255869) · [原文](https://nesbitt.io/2026/03/04/package-managers-need-to-cool-down.html)
+
+> 本文探讨包管理器应实施依赖冷却期机制，通过延迟新版本安装来防止恶意包快速传播，给安全社区反应时间。
 
 #### 20. SigNoz (YC W21, open source Datadog) Is Hiring across roles
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47289357) · [原文](https://signoz.io/careers)
-   > SigNoz是一个开源的可观测性平台，致力于提供Datadog的开源替代方案，目前正在招聘多个职位以扩展团队。
+
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47289357) · [原文](https://signoz.io/careers)
+
+> SigNoz是一个开源的可观测性平台，致力于提供Datadog的开源替代方案，目前正在招聘多个职位以扩展团队。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 102 分 |
-| 总讨论数 | 856 条 |
+| 指标     | 数值                                                 |
+| -------- | ---------------------------------------------------- |
+| 平均热度 | 102 分                                               |
+| 总讨论数 | 856 条                                               |
 | 最热文章 | "UUID package coming to Go standard library" (338⭐) |
 | 讨论最多 | "UUID package coming to Go standard library" (215💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

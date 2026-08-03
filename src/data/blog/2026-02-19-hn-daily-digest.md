@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-02-19'
+title: "HN Daily Digest: 2026-02-19"
 pubDatetime: 2026-02-18T16:53:13Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -53,7 +53,7 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [jasonfantl.com](https://jasonfantl.com/posts/Universal-Unique-IDs/)
 **热度**: ⭐⭐⭐ 267 分 | **讨论**: 💬 80 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
@@ -63,7 +63,7 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [old.reddit.com](https://old.reddit.com/r/MacOS/comments/1r8900z/macos_which_officially_supports_27_year_old/)
 **热度**: ⭐⭐ 107 分 | **讨论**: 💬 62 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
@@ -73,7 +73,7 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [tailscale.com](https://tailscale.com/blog/peer-relays-ga)
 **热度**: ⭐⭐⭐⭐ 309 分 | **讨论**: 💬 165 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
@@ -83,7 +83,7 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [chromereleases.googleblog.com](https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_13.html)
 **热度**: ⭐⭐⭐ 244 分 | **讨论**: 💬 131 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
@@ -93,7 +93,7 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [alllooksame.com](https://alllooksame.com/)
 **热度**: ⭐ 23 分 | **讨论**: 💬 11 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
@@ -103,7 +103,7 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [letsencrypt.org](https://letsencrypt.org/2026/02/18/dns-persist-01.html)
 **热度**: ⭐⭐ 175 分 | **讨论**: 💬 87 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
@@ -113,7 +113,7 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [github.com](https://github.com/phreda4/r3/blob/main/doc/r3forth_tutorial.md)
 **热度**: ⭐ 49 分 | **讨论**: 💬 8 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
@@ -123,57 +123,57 @@ Ladybird浏览器项目团队宣布关闭此前关于采用Swift编程语言的�
 **原文链接**: [rygoldstein.com](https://rygoldstein.com/posts/perils-of-isbn)
 **热度**: ⭐ 59 分 | **讨论**: 💬 27 条
 
-*摘要生成中...*
+_摘要生成中..._
 
 ---
 
 ## 📑 更多热门文章 (11-20)
 
 **11. Making a font with ligatures to display thirteenth-century monk numerals**
-   ⭐ 30 分 · 💬 6 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47024585) · [原文](https://digitalseams.com/blog/making-a-font-with-9999-ligatures-to-display-thirteenth-century-monk-numerals)
+⭐ 30 分 · 💬 6 条
+[HN 讨论](https://news.ycombinator.com/item?id=47024585) · [原文](https://digitalseams.com/blog/making-a-font-with-9999-ligatures-to-display-thirteenth-century-monk-numerals)
 
 **12. Portugal: The First Global Empire (2015)**
-   ⭐ 51 分 · 💬 40 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47058368) · [原文](https://www.historytoday.com/archive/first-global-empire)
+⭐ 51 分 · 💬 40 条
+[HN 讨论](https://news.ycombinator.com/item?id=47058368) · [原文](https://www.historytoday.com/archive/first-global-empire)
 
 **13. Metriport (YC S22) is hiring a security engineer to harden healthcare infra**
-   ⭐ 1 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47066310) · [原文](https://www.ycombinator.com/companies/metriport/jobs/XC2AF8s-senior-security-engineer)
+⭐ 1 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47066310) · [原文](https://www.ycombinator.com/companies/metriport/jobs/XC2AF8s-senior-security-engineer)
 
 **14. Learning Lean: Part 1**
-   ⭐ 72 分 · 💬 7 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47022604) · [原文](https://rkirov.github.io/posts/lean1/)
+⭐ 72 分 · 💬 7 条
+[HN 讨论](https://news.ycombinator.com/item?id=47022604) · [原文](https://rkirov.github.io/posts/lean1/)
 
 **15. What is happening to writing? Cognitive debt, Claude Code, the space around AI**
-   ⭐ 88 分 · 💬 64 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47061642) · [原文](https://resobscura.substack.com/p/what-is-happening-to-writing)
+⭐ 88 分 · 💬 64 条
+[HN 讨论](https://news.ycombinator.com/item?id=47061642) · [原文](https://resobscura.substack.com/p/what-is-happening-to-writing)
 
 **16. Pocketbase lost its funding from FLOSS fund**
-   ⭐ 112 分 · 💬 72 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47062561) · [原文](https://github.com/pocketbase/pocketbase/discussions/7287)
+⭐ 112 分 · 💬 72 条
+[HN 讨论](https://news.ycombinator.com/item?id=47062561) · [原文](https://github.com/pocketbase/pocketbase/discussions/7287)
 
 **17. Roads to Rome (2015)**
-   ⭐ 3 分 · 💬 0 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47023240) · [原文](https://benedikt-gross.de/projects/roads-to-rome/)
+⭐ 3 分 · 💬 0 条
+[HN 讨论](https://news.ycombinator.com/item?id=47023240) · [原文](https://benedikt-gross.de/projects/roads-to-rome/)
 
 **18. Microsoft offers guide to pirating Harry Potter series for LLM training**
-   ⭐ 121 分 · 💬 64 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47067759) · [原文](https://devblogs.microsoft.com/azure-sql/langchain-with-sqlvectorstore-example/)
+⭐ 121 分 · 💬 64 条
+[HN 讨论](https://news.ycombinator.com/item?id=47067759) · [原文](https://devblogs.microsoft.com/azure-sql/langchain-with-sqlvectorstore-example/)
 
 **19. A solver for Semantle**
-   ⭐ 31 分 · 💬 5 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47065146) · [原文](https://victoriaritvo.com/blog/semantle-solver/)
+⭐ 31 分 · 💬 5 条
+[HN 讨论](https://news.ycombinator.com/item?id=47065146) · [原文](https://victoriaritvo.com/blog/semantle-solver/)
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 110 分 |
-| 总讨论数 | 1000 条 |
+| 指标     | 数值                                                                         |
+| -------- | ---------------------------------------------------------------------------- |
+| 平均热度 | 110 分                                                                       |
+| 总讨论数 | 1000 条                                                                      |
 | 最热文章 | "Ladybird: Closing this as we are no longer pursuing Swift adoption" (114⭐) |
-| 讨论最多 | "Tailscale Peer Relays is now generally available" (165💬) |
+| 讨论最多 | "Tailscale Peer Relays is now generally available" (165💬)                   |
 
-*本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Rocco Claude Sonnet 4.5)_

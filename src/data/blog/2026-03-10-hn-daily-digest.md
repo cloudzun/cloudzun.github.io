@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-10'
+title: "HN Daily Digest: 2026-03-10"
 pubDatetime: 2026-03-09T14:47:59Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ X-76由贝尔德克斯特罗公司制造，已完成关键设计评审并进入*
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Show HN: The Mog Programming Language
-   ⭐ 95 分 · 💬 43 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47312728) · [原文](https://moglang.org)
-   > Mog是一种专为AI代理设计的编程语言，提供异步HTTP、张量计算等能力，具有独特的能力系统和编译器架构。
+
+⭐ 95 分 · 💬 43 条
+[HN 讨论](https://news.ycombinator.com/item?id=47312728) · [原文](https://moglang.org)
+
+> Mog是一种专为AI代理设计的编程语言，提供异步HTTP、张量计算等能力，具有独特的能力系统和编译器架构。
 
 #### 12. Restoring a Sun SPARCstation IPX part 1: PSU and NVRAM (2020)
-   ⭐ 83 分 · 💬 46 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47310296) · [原文](https://www.rs-online.com/designspark/restoring-a-sun-sparcstation-ipx-part-1-psu-and-nvram)
-   > 本文详细介绍了如何修复经典Sun SPARCstation IPX工作站的电源供应单元和非易失性内存，涵盖硬件诊断和维修的实践步骤。
+
+⭐ 83 分 · 💬 46 条
+[HN 讨论](https://news.ycombinator.com/item?id=47310296) · [原文](https://www.rs-online.com/designspark/restoring-a-sun-sparcstation-ipx-part-1-psu-and-nvram)
+
+> 本文详细介绍了如何修复经典Sun SPARCstation IPX工作站的电源供应单元和非易失性内存，涵盖硬件诊断和维修的实践步骤。
 
 #### 13. Show HN: DenchClaw – Local CRM on Top of OpenClaw
-   ⭐ 67 分 · 💬 70 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47309953) · [原文](https://github.com/DenchHQ/DenchClaw)
-   > DenchClaw是一个基于OpenClaw框架的本地CRM工具，集成自动化和外联代理功能，为知识工作提供一体化生产力解决方案。
+
+⭐ 67 分 · 💬 70 条
+[HN 讨论](https://news.ycombinator.com/item?id=47309953) · [原文](https://github.com/DenchHQ/DenchClaw)
+
+> DenchClaw是一个基于OpenClaw框架的本地CRM工具，集成自动化和外联代理功能，为知识工作提供一体化生产力解决方案。
 
 #### 14. Rendezvous with Rama
-   ⭐ 61 分 · 💬 61 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47315869) · [原文](https://blog.engora.com/2026/03/rendezvous-with-rama.html)
-   > 本文通过讨论科幻小说《与拉玛相会》及其作者阿瑟·克拉克的背景，探讨该作品的文学价值和对科幻文化的影响。
+
+⭐ 61 分 · 💬 61 条
+[HN 讨论](https://news.ycombinator.com/item?id=47315869) · [原文](https://blog.engora.com/2026/03/rendezvous-with-rama.html)
+
+> 本文通过讨论科幻小说《与拉玛相会》及其作者阿瑟·克拉克的背景，探讨该作品的文学价值和对科幻文化的影响。
 
 #### 15. An opinionated take on how to do important research that matters
-   ⭐ 58 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47311179) · [原文](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html)
-   > 本文作者分享了如何进行有影响力的研究工作的个人见解，通过获奖经历总结了做出重要科研成果的实践建议和经验。
+
+⭐ 58 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47311179) · [原文](https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html)
+
+> 本文作者分享了如何进行有影响力的研究工作的个人见解，通过获奖经历总结了做出重要科研成果的实践建议和经验。
 
 #### 16. Rethinking Syntax: Binding by Adjacency
-   ⭐ 35 分 · 💬 11 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47294572) · [原文](https://github.com/manifold-systems/manifold/blob/master/docs/articles/binding_exprs.md)
-   > 本文探讨了Manifold编程语言中基于邻接性的新型语法绑定机制，重新思考了传统语法规则的设计方式。
+
+⭐ 35 分 · 💬 11 条
+[HN 讨论](https://news.ycombinator.com/item?id=47294572) · [原文](https://github.com/manifold-systems/manifold/blob/master/docs/articles/binding_exprs.md)
+
+> 本文探讨了Manifold编程语言中基于邻接性的新型语法绑定机制，重新思考了传统语法规则的设计方式。
 
 #### 17. The First Airplane Fatality
-   ⭐ 27 分 · 💬 3 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47315079) · [原文](https://www.amusingplanet.com/2026/03/thomas-selfridge-first-airplane-fatality.html)
-   > 本文记述了1908年9月17日美国军官托马斯·塞尔弗里奇在莱特兄弟设计的飞行器坠毁事故中丧生，成为人类航空史上首位动力飞机坠机遇难者的历史事件。
+
+⭐ 27 分 · 💬 3 条
+[HN 讨论](https://news.ycombinator.com/item?id=47315079) · [原文](https://www.amusingplanet.com/2026/03/thomas-selfridge-first-airplane-fatality.html)
+
+> 本文记述了1908年9月17日美国军官托马斯·塞尔弗里奇在莱特兄弟设计的飞行器坠毁事故中丧生，成为人类航空史上首位动力飞机坠机遇难者的历史事件。
 
 #### 18. Notes on Baking at the South Pole
-   ⭐ 19 分 · 💬 4 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47313934) · [原文](https://www.newyorker.com/culture/the-weekend-essay/the-most-beautiful-freezer-in-the-world)
-   > 本文记录了作者在南极极端恶劣环境中的烘焙经历，展现了在零下四十五度低温下进行日常活动的独特挑战与意义。
+
+⭐ 19 分 · 💬 4 条
+[HN 讨论](https://news.ycombinator.com/item?id=47313934) · [原文](https://www.newyorker.com/culture/the-weekend-essay/the-most-beautiful-freezer-in-the-world)
+
+> 本文记录了作者在南极极端恶劣环境中的烘焙经历，展现了在零下四十五度低温下进行日常活动的独特挑战与意义。
 
 #### 19. So you want to write an "app" (2025)
-   ⭐ 18 分 · 💬 6 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47315341) · [原文](https://arcanenibble.github.io/so-you-want-to-write-an-app.html)
-   > 本文作者通过开发一个随机数生成应用，深入体验和总结了2025年各主流平台原生应用开发的现状与开发者体验。
+
+⭐ 18 分 · 💬 6 条
+[HN 讨论](https://news.ycombinator.com/item?id=47315341) · [原文](https://arcanenibble.github.io/so-you-want-to-write-an-app.html)
+
+> 本文作者通过开发一个随机数生成应用，深入体验和总结了2025年各主流平台原生应用开发的现状与开发者体验。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 136 分 |
-| 总讨论数 | 1538 条 |
-| 最热文章 | "Fontcrafter: Turn Your Handwriting into a Real Font" (398⭐) |
+| 指标     | 数值                                                                        |
+| -------- | --------------------------------------------------------------------------- |
+| 平均热度 | 136 分                                                                      |
+| 总讨论数 | 1538 条                                                                     |
+| 最热文章 | "Fontcrafter: Turn Your Handwriting into a Real Font" (398⭐)               |
 | 讨论最多 | "Florida judge rules red light camera tickets are unconstitutional" (370💬) |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

@@ -1,8 +1,8 @@
 ---
-title: 'Building OpenCode Labs: How Human + OpenClaw + OpenCode Collaborated to Create a 15-Lab AI Programming Curriculum'
+title: "Building OpenCode Labs: How Human + OpenClaw + OpenCode Collaborated to Create a 15-Lab AI Programming Curriculum"
 pubDatetime: 2026-03-02T06:00:00Z
-tags: ['OpenCode', 'AI协同编程', '课程开发', 'OpenClaw', '百炼', 'Qwen']
-description: '技术博客文章'
+tags: ["OpenCode", "AI协同编程", "课程开发", "OpenClaw", "百炼", "Qwen"]
+description: "技术博客文章"
 ---
 
 # 三方协同创作：用 AI 协同编程的方式，做一套 AI 协同编程课程
@@ -33,18 +33,21 @@ OpenCode 是一个开源的终端 AI 编程工具（[opencode.ai](https://openco
 整个课程由三方协同完成：
 
 **人类（课程设计者）**
+
 - 定义每个实验的学习目标
 - 审查手册质量，提出修改意见
 - 做关键的技术决策（如用 SQLite 替代 SQL Server、int 主键而非 GUID）
 - 最终质量把关
 
 **OpenClaw**（运行在服务器上的 AI 助手，负责任务编排）
+
 - 任务编排和进度管理
 - 调用 OpenCode 生成手册内容
 - 验证每个实验的实际可运行性
 - 修复发现的问题，更新手册
 
 **OpenCode**（终端 AI 编程工具）
+
 - 生成实验手册的具体内容
 - 执行实际的代码操作（安装依赖、修改配置、运行迁移）
 - 验证编译和测试结果
@@ -122,6 +125,7 @@ LAB-13 是今天改版最多的实验。原版手册（v1.0）有 1,100 行，�
 唯一没有标准答案的实验。
 
 五个阶段模拟真实产品演进：
+
 1. Vibe Coding 快速原型（能跑就行）
 2. 功能迭代（代码开始腐烂）
 3. 性能优化 + 安全加固
@@ -200,14 +204,14 @@ LAB-13 v2.0 手册重写后，我们发现一个问题：手册里的 Prompt 是
 
 ## 最终成果
 
-| 指标 | 数值 |
-|------|------|
-| 实验数量 | 15（LAB-00 ~ LAB-14）|
-| 总行数 | ~8,000 行 |
-| 验证状态 | 全部经过实际运行验证 |
-| 覆盖技术 | Python、.NET 8.0、Blazor、EF Core、SQLite |
-| 自定义 Agent | 4 个（code-reviewer、performance-auditor、security-auditor、spec-writer）|
-| GitHub | [cloudzun/opencode-labs](https://github.com/cloudzun/opencode-labs) |
+| 指标         | 数值                                                                      |
+| ------------ | ------------------------------------------------------------------------- |
+| 实验数量     | 15（LAB-00 ~ LAB-14）                                                     |
+| 总行数       | ~8,000 行                                                                 |
+| 验证状态     | 全部经过实际运行验证                                                      |
+| 覆盖技术     | Python、.NET 8.0、Blazor、EF Core、SQLite                                 |
+| 自定义 Agent | 4 个（code-reviewer、performance-auditor、security-auditor、spec-writer） |
+| GitHub       | [cloudzun/opencode-labs](https://github.com/cloudzun/opencode-labs)       |
 
 ---
 

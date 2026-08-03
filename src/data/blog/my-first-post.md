@@ -1,7 +1,7 @@
 ---
-title: 'My First Post'
+title: "My First Post"
 pubDatetime: 2026-02-06T00:00:00Z
-description: 'Welcome to my new blog hosted on Vercel'
+description: "Welcome to my new blog hosted on Vercel"
 ---
 
 # Welcome to My New Blog

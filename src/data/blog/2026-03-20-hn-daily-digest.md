@@ -1,8 +1,8 @@
 ---
-title: 'HN Daily Digest: 2026-03-20'
+title: "HN Daily Digest: 2026-03-20"
 pubDatetime: 2026-03-19T14:49:30Z
-tags: ['hacker-news', 'AI', 'tech-news', 'daily-digest']
-description: '技术博客文章'
+tags: ["hacker-news", "AI", "tech-news", "daily-digest"]
+description: "技术博客文章"
 ---
 
 # 📰 HN 每日精选日报
@@ -160,59 +160,77 @@ Waymo公司发布了其自动驾驶安全影响数据，展示了Waymo Driver在
 ## 📑 更多热门文章 (11-20)
 
 #### 11. Noq: n0's new QUIC implementation in Rust
-   ⭐ 117 分 · 💬 14 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47443588) · [原文](https://www.iroh.computer/blog/noq-announcement)
-   > n0团队发布了Noq，一个用Rust编写的通用QUIC实现，具备多路径和NAT穿透支持，已在iroh v0.96+中作为传输层使用。
+
+⭐ 117 分 · 💬 14 条
+[HN 讨论](https://news.ycombinator.com/item?id=47443588) · [原文](https://www.iroh.computer/blog/noq-announcement)
+
+> n0团队发布了Noq，一个用Rust编写的通用QUIC实现，具备多路径和NAT穿透支持，已在iroh v0.96+中作为传输层使用。
 
 #### 12. Scaling Karpathy's Autoresearch: What Happens When the Agent Gets a GPU Cluster
-   ⭐ 97 分 · 💬 41 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47442435) · [原文](https://blog.skypilot.co/scaling-autoresearch/)
-   > 本文探讨了将Karpathy自动研究系统扩展到GPU集群后的效果，展示了并行化如何加速机器学习实验搜索并改变智能体的研究策略。
+
+⭐ 97 分 · 💬 41 条
+[HN 讨论](https://news.ycombinator.com/item?id=47442435) · [原文](https://blog.skypilot.co/scaling-autoresearch/)
+
+> 本文探讨了将Karpathy自动研究系统扩展到GPU集群后的效果，展示了并行化如何加速机器学习实验搜索并改变智能体的研究策略。
 
 #### 13. Cockpit is a web-based graphical interface for servers
-   ⭐ 87 分 · 💬 48 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47445599) · [原文](https://github.com/cockpit-project/cockpit)
-   > Cockpit是一个开源的服务器Web管理界面，提供图形化的系统管理和监控功能，简化了Linux服务器的远程管理操作。
+
+⭐ 87 分 · 💬 48 条
+[HN 讨论](https://news.ycombinator.com/item?id=47445599) · [原文](https://github.com/cockpit-project/cockpit)
+
+> Cockpit是一个开源的服务器Web管理界面，提供图形化的系统管理和监控功能，简化了Linux服务器的远程管理操作。
 
 #### 14. NanoGPT Slowrun: 10x Data Efficiency with Infinite Compute
-   ⭐ 70 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47444072) · [原文](https://qlabs.sh/10x)
-   > NanoGPT Slowrun通过集合小型模型实现了10倍数据效率提升，使有限数据能训练出更强性能模型，突破传统缩放法则的限制。
+
+⭐ 70 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47444072) · [原文](https://qlabs.sh/10x)
+
+> NanoGPT Slowrun通过集合小型模型实现了10倍数据效率提升，使有限数据能训练出更强性能模型，突破传统缩放法则的限制。
 
 #### 15. From Oscilloscope to Wireshark: A UDP Story (2022)
-   ⭐ 56 分 · 💬 9 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47444460) · [原文](https://www.mattkeeter.com/blog/2022-08-11-udp/)
-   > 本文通过从物理层示波器观测到应用层Wireshark分析，深入讲解UDP协议的工作原理和网络数据包的传输过程。
+
+⭐ 56 分 · 💬 9 条
+[HN 讨论](https://news.ycombinator.com/item?id=47444460) · [原文](https://www.mattkeeter.com/blog/2022-08-11-udp/)
+
+> 本文通过从物理层示波器观测到应用层Wireshark分析，深入讲解UDP协议的工作原理和网络数据包的传输过程。
 
 #### 16. How the Turner twins are mythbusting modern technical apparel
-   ⭐ 55 分 · 💬 25 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47416972) · [原文](https://www.carryology.com/insights/how-the-turner-twins-are-mythbusting-modern-gear/)
-   > Turner双胞胎通过实际测试和分析，揭示现代户外装备的真实性能，打破围绕技术服装的常见误区和营销夸大。
+
+⭐ 55 分 · 💬 25 条
+[HN 讨论](https://news.ycombinator.com/item?id=47416972) · [原文](https://www.carryology.com/insights/how-the-turner-twins-are-mythbusting-modern-gear/)
+
+> Turner双胞胎通过实际测试和分析，揭示现代户外装备的真实性能，打破围绕技术服装的常见误区和营销夸大。
 
 #### 17. Clockwise acquired by Salesforce and shutting down next week
-   ⭐ 41 分 · 💬 20 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47444906) · [原文](https://www.getclockwise.com)
-   > Clockwise日程管理工具被Salesforce收购并即将关闭，该公司曾帮助用户创建超800万小时专注时间并优化2300万场会议。
+
+⭐ 41 分 · 💬 20 条
+[HN 讨论](https://news.ycombinator.com/item?id=47444906) · [原文](https://www.getclockwise.com)
+
+> Clockwise日程管理工具被Salesforce收购并即将关闭，该公司曾帮助用户创建超800万小时专注时间并优化2300万场会议。
 
 #### 18. EsoLang-Bench: Evaluating Genuine Reasoning in LLMs via Esoteric Languages
-   ⭐ 30 分 · 💬 10 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47446021) · [原文](https://esolang-bench.vercel.app/)
-   > 该研究通过设计涵盖五种小众编程语言的基准测试，揭示了大模型在代码生成中存在严重的训练数据记忆问题，而非真正的推理能力。
+
+⭐ 30 分 · 💬 10 条
+[HN 讨论](https://news.ycombinator.com/item?id=47446021) · [原文](https://esolang-bench.vercel.app/)
+
+> 该研究通过设计涵盖五种小众编程语言的基准测试，揭示了大模型在代码生成中存在严重的训练数据记忆问题，而非真正的推理能力。
 
 #### 19. Be intentional about how AI changes your codebase
-   ⭐ 24 分 · 💬 13 条
-   [HN 讨论](https://news.ycombinator.com/item?id=47446373) · [原文](https://aicode.swerdlow.dev)
-   > 本文阐述了在使用AI编码代理时保持代码质量的最佳实践，强调通过语义函数设计和自文档化代码来防止代码库退化。
+
+⭐ 24 分 · 💬 13 条
+[HN 讨论](https://news.ycombinator.com/item?id=47446373) · [原文](https://aicode.swerdlow.dev)
+
+> 本文阐述了在使用AI编码代理时保持代码质量的最佳实践，强调通过语义函数设计和自文档化代码来防止代码库退化。
 
 ---
 
 ## 📊 统计信息
 
-| 指标 | 数值 |
-|------|------|
-| 平均热度 | 203 分 |
-| 总讨论数 | 2390 条 |
+| 指标     | 数值                             |
+| -------- | -------------------------------- |
+| 平均热度 | 203 分                           |
+| 总讨论数 | 2390 条                          |
 | 最热文章 | "Astral to Join OpenAI" (1128⭐) |
-| 讨论最多 | "Astral to Join OpenAI" (703💬) |
+| 讨论最多 | "Astral to Join OpenAI" (703💬)  |
 
-*本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)*
+_本报告由 HN Daily Digest 自动生成 (Claude Haiku 4.5)_

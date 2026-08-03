@@ -1,8 +1,8 @@
 ---
-title: 'SearxNG Wrapper v2.0: JSON API + High-Performance Caching Optimization'
+title: "SearxNG Wrapper v2.0: JSON API + High-Performance Caching Optimization"
 pubDatetime: 2026-02-12T06:35:00Z
-tags: ['SearxNG', 'API', 'Caching', 'Performance', 'OpenClaw']
-description: '技术博客文章'
+tags: ["SearxNG", "API", "Caching", "Performance", "OpenClaw"]
+description: "技术博客文章"
 ---
 
 # SearxNG Wrapper v2.0：JSON API + 高性能缓存优化
@@ -142,11 +142,11 @@ cache = SimpleMemoryCache(
 
 #### 性能数据
 
-| 场景 | 响应时间 | 备注 |
-|------|---------|------|
-| 首次查询 | 0.79s | 无缓存 |
-| 缓存命中 | <10ms | 从内存读取 |
-| 加速倍数 | **531.9x** | 实测数据 |
+| 场景     | 响应时间   | 备注       |
+| -------- | ---------- | ---------- |
+| 首次查询 | 0.79s      | 无缓存     |
+| 缓存命中 | <10ms      | 从内存读取 |
+| 加速倍数 | **531.9x** | 实测数据   |
 
 ---
 
@@ -154,13 +154,13 @@ cache = SimpleMemoryCache(
 
 ### v1.0 vs v2.0
 
-| 指标 | v1.0 | v2.0 | 改进 |
-|------|------|------|------|
-| 首次查询 | 2-5s | 2-5s | 无变化 |
-| 缓存命中 | N/A | <100ms | ∞ 倍 |
-| 热门查询 | 2-5s | <100ms | **20-50x** |
-| 并发请求 | 2-5s | <100ms | **20-50x** |
-| 内存占用 | ~50MB | ~52MB | +2MB |
+| 指标     | v1.0  | v2.0   | 改进       |
+| -------- | ----- | ------ | ---------- |
+| 首次查询 | 2-5s  | 2-5s   | 无变化     |
+| 缓存命中 | N/A   | <100ms | ∞ 倍       |
+| 热门查询 | 2-5s  | <100ms | **20-50x** |
+| 并发请求 | 2-5s  | <100ms | **20-50x** |
+| 内存占用 | ~50MB | ~52MB  | +2MB       |
 
 ### 实际测试结果
 
@@ -245,12 +245,12 @@ cache = SimpleMemoryCache(
 
 ### 核心代码
 
-| 文件 | 大小 | 说明 |
-|------|------|------|
+| 文件            | 大小    | 说明                            |
+| --------------- | ------- | ------------------------------- |
 | `wrapper-v2.py` | 13.9 KB | 核心 Wrapper（JSON API + 缓存） |
-| `test-v2.py` | 8.7 KB | 功能测试套件（8 个测试用例） |
-| `benchmark.py` | 9.9 KB | 性能基准测试工具 |
-| `deploy-v2.sh` | 4.8 KB | 自动化部署脚本 |
+| `test-v2.py`    | 8.7 KB  | 功能测试套件（8 个测试用例）    |
+| `benchmark.py`  | 9.9 KB  | 性能基准测试工具                |
+| `deploy-v2.sh`  | 4.8 KB  | 自动化部署脚本                  |
 
 ### 配置文件
 
@@ -259,12 +259,12 @@ cache = SimpleMemoryCache(
 
 ### 文档
 
-| 文档 | 大小 | 说明 |
-|------|------|------|
-| `UPGRADE_GUIDE.md` | 5.6 KB | 详细升级指南 |
-| `IMPLEMENTATION_SUMMARY.md` | 6.3 KB | 实现总结 |
-| `README_V2.md` | 6.3 KB | 快速开始指南 |
-| `DEPLOYMENT_REPORT.txt` | 5.2 KB | 部署完成报告 |
+| 文档                        | 大小   | 说明         |
+| --------------------------- | ------ | ------------ |
+| `UPGRADE_GUIDE.md`          | 5.6 KB | 详细升级指南 |
+| `IMPLEMENTATION_SUMMARY.md` | 6.3 KB | 实现总结     |
+| `README_V2.md`              | 6.3 KB | 快速开始指南 |
+| `DEPLOYMENT_REPORT.txt`     | 5.2 KB | 部署完成报告 |
 
 ---
 
@@ -275,41 +275,41 @@ cache = SimpleMemoryCache(
 ```python
 class SimpleMemoryCache:
     """内存 LRU 缓存实现"""
-    
+
     def __init__(self, max_size=1000, ttl_seconds=3600):
         self.cache = {}                    # 缓存存储
         self.access_times = {}             # 访问时间记录
         self.max_size = max_size           # 最大缓存条数
         self.ttl_seconds = ttl_seconds     # TTL（秒）
         self.lock = threading.Lock()       # 线程锁
-    
+
     def get(self, query, params):
         """获取缓存"""
         with self.lock:
             key = self._get_key(query, params)
             if key not in self.cache:
                 return None
-            
+
             # 检查 TTL
             if time.time() - self.access_times[key] > self.ttl_seconds:
                 del self.cache[key]
                 del self.access_times[key]
                 return None
-            
+
             self.access_times[key] = time.time()
             return self.cache[key]
-    
+
     def set(self, query, params, value):
         """设置缓存"""
         with self.lock:
             key = self._get_key(query, params)
-            
+
             # LRU 淘汰
             if len(self.cache) >= self.max_size:
                 oldest_key = min(self.access_times, key=self.access_times.get)
                 del self.cache[oldest_key]
                 del self.access_times[oldest_key]
-            
+
             self.cache[key] = value
             self.access_times[key] = time.time()
 ```
@@ -319,26 +319,26 @@ class SimpleMemoryCache:
 ```python
 def _check_auth(self):
     """三层认证检查"""
-    
+
     # 1. Bearer Token
     auth = self.headers.get('Authorization', '')
     if auth.startswith('Bearer '):
         if auth.split(' ', 1)[1].strip() == api_key:
             return True
-    
+
     # 2. Query Parameter
     qs = parse.urlparse(self.path).query
     params = dict(parse.parse_qsl(qs))
     if params.get('api_key', '') == api_key:
         return True
-    
+
     # 3. POST Body
     if self.command == 'POST':
         body = self.rfile.read(length)
         post_params = json.loads(body.decode())
         if post_params.get('api_key', '') == api_key:
             return True
-    
+
     return False
 ```
 
@@ -588,14 +588,14 @@ curl "http://127.0.0.1:8765/search?q=test&api_key=$API_KEY"
 
 ## 📊 项目统计
 
-| 指标 | 数值 |
-|------|------|
-| 代码行数 | ~1,500 行 |
-| 测试用例 | 8 个 |
-| 文档页数 | 50+ 页 |
-| 部署时间 | <5 分钟 |
-| 测试覆盖率 | 100% |
-| 性能提升 | 531.9x |
+| 指标       | 数值      |
+| ---------- | --------- |
+| 代码行数   | ~1,500 行 |
+| 测试用例   | 8 个      |
+| 文档页数   | 50+ 页    |
+| 部署时间   | <5 分钟   |
+| 测试覆盖率 | 100%      |
+| 性能提升   | 531.9x    |
 
 ---
 
